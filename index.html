@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MLTeC — Configurateur PC 2024-2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -150,6 +151,55 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .dd-item:hover{background:rgba(96,165,250,.12);color:#fff;}
 .dd-item.selected{color:#60a5fa;background:rgba(96,165,250,.08);}
 .dd-item.placeholder{color:#475569;}
+
+/* ── ENCADRÉ FORFAITS ── */
+.forf-wrap{max-width:1350px;margin:30px auto 0;background:rgba(17,25,40,.82);border-radius:20px;border:1px solid rgba(96,165,250,.18);padding:24px;overflow:hidden}
+.forf-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:12px}
+.forf-header-left{display:flex;align-items:center;gap:12px}
+.forf-icon{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.forf-title{font-family:'Orbitron',Arial,sans-serif;font-size:13px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
+.forf-subtitle{font-size:12px;color:#64748b;margin-top:2px}
+.forf-toggle{color:#60a5fa;font-size:20px;transition:transform .3s;flex-shrink:0}
+.forf-toggle.open{transform:rotate(180deg)}
+.forf-body{display:none;margin-top:20px}
+.forf-body.open{display:block}
+.forf-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.forf-tab{padding:7px 16px;border-radius:20px;border:1px solid rgba(96,165,250,.25);background:transparent;color:#94a3b8;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
+.forf-tab:hover{border-color:rgba(96,165,250,.6);color:#fff}
+.forf-tab.active{background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:#fff;border-color:transparent}
+.forf-panel{display:none}
+.forf-panel.active{display:block}
+.forf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.forf-card{border-radius:14px;padding:18px;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s;border:2px solid transparent}
+.forf-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.forf-card.selected{border-color:rgba(255,255,255,.5);box-shadow:0 0 0 3px rgba(96,165,250,.3)}
+.forf-card-badge{position:absolute;top:10px;right:10px;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;background:rgba(255,255,255,.2);backdrop-filter:blur(4px)}
+.forf-card-name{font-size:16px;font-weight:700;color:#fff;margin-bottom:4px}
+.forf-card-price{font-size:28px;font-weight:900;color:#fff;margin-bottom:10px}
+.forf-card-list{list-style:none;margin-bottom:10px}
+.forf-card-list li{font-size:12px;color:rgba(255,255,255,.85);padding:3px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.forf-card-list li:last-child{border:none}
+.forf-card-win{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.12);padding:8px 10px;border-radius:8px;margin-top:6px}
+.forf-card-win i{font-size:16px}
+.forf-card-note{font-size:11px;color:rgba(255,255,255,.7);margin-top:6px;font-weight:600}
+.forf-selected-bar{margin-top:16px;padding:12px 16px;background:rgba(59,130,246,.1);border:1px solid rgba(96,165,250,.2);border-radius:12px;display:none;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.forf-selected-bar.show{display:flex}
+.forf-selected-name{font-size:13px;color:#d1d1d1;font-weight:600}
+.forf-selected-name b{color:#60a5fa}
+.forf-selected-price{font-family:'Orbitron',Arial,sans-serif;font-size:16px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.forf-clear{font-size:12px;color:#64748b;cursor:pointer;text-decoration:underline;background:none;border:none;padding:0}
+.forf-clear:hover{color:#f87171}
+/* couleurs forfaits */
+.fg1{background:linear-gradient(135deg,#2563eb,#1e3a8a)}
+.fg2{background:linear-gradient(135deg,#7c3aed,#4c1d95)}
+.fg3{background:linear-gradient(135deg,#06b6d4,#0f766e)}
+.fm1{background:linear-gradient(135deg,#475569,#1e293b)}
+.fm2{background:linear-gradient(135deg,#f59e0b,#b45309)}
+.fm3{background:linear-gradient(135deg,#ef4444,#7f1d1d)}
+.fo1{background:linear-gradient(160deg,#b45309,#f59e0b)}
+.fo2{background:linear-gradient(160deg,#06b6d4,#0f766e)}
+.fo3{background:linear-gradient(160deg,#1d4ed8,#6d28d9)}
+.fo4{background:linear-gradient(160deg,#7c3aed,#a855f7)}
 </style>
 </head>
 <body>
@@ -201,6 +251,200 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
   </div>
 </div>
 <div class="foot">Configurateur by <b>MLTeC</b> · Montage · Expertise · Technologie · 2026</div>
+
+<!-- ══ ENCADRÉ FORFAITS ══ -->
+<div class="forf-wrap">
+  <div class="forf-header" id="forfHeader">
+    <div class="forf-header-left">
+      <div class="forf-icon">🛠️</div>
+      <div>
+        <div class="forf-title">FORFAITS & OPTIONS MLTeC</div>
+        <div class="forf-subtitle">Ajoute un forfait de montage à ta configuration</div>
+      </div>
+    </div>
+    <div class="forf-toggle" id="forfToggle">▾</div>
+  </div>
+
+  <div class="forf-body" id="forfBody">
+
+    <!-- TABS -->
+    <div class="forf-tabs">
+      <button class="forf-tab active" data-tab="gaming">🎮 Gaming</button>
+      <button class="forf-tab" data-tab="bureau">🖥 Bureautique</button>
+      <button class="forf-tab" data-tab="options">⚙️ Options supplémentaires</button>
+    </div>
+
+    <!-- PANEL GAMING -->
+    <div class="forf-panel active" id="panel-gaming">
+      <div class="forf-grid">
+
+        <div class="forf-card fg1" data-forfait="Gaming — Essentiel" data-price="69">
+          <div class="forf-card-name">Essentiel</div>
+          <div class="forf-card-price">69€</div>
+          <ul class="forf-card-list">
+            <li>✔ Montage complet du PC</li>
+            <li>✔ Gestion des câbles</li>
+            <li>✔ Mise à jour BIOS</li>
+            <li>✔ Vérification fonctionnement</li>
+            <li>✔ Test stabilité</li>
+          </ul>
+          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows non installé</div>
+          <p class="forf-card-note">Licence Windows à partir de 45€</p>
+        </div>
+
+        <div class="forf-card fg2" data-forfait="Gaming — Prêt à l'emploi" data-price="99">
+          <div class="forf-card-badge">POPULAIRE</div>
+          <div class="forf-card-name">Prêt à l'emploi</div>
+          <div class="forf-card-price">99€</div>
+          <ul class="forf-card-list">
+            <li>✔ Tout du forfait Essentiel</li>
+            <li>✔ Installation Windows non activé</li>
+            <li>✔ Installation logiciels utiles</li>
+            <li>✔ Optimisation gaming</li>
+            <li>✔ Réglages RGB basiques</li>
+          </ul>
+          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows installé non activé</div>
+          <p class="forf-card-note">Licence Windows à partir de 45€</p>
+        </div>
+
+        <div class="forf-card fg3" data-forfait="Gaming — Gaming Optimisé" data-price="149">
+          <div class="forf-card-badge">ULTIMATE</div>
+          <div class="forf-card-name">Gaming Optimisé</div>
+          <div class="forf-card-price">149€</div>
+          <ul class="forf-card-list">
+            <li>✔ Toutes les options incluses</li>
+            <li>✔ Optimisation avancée</li>
+            <li>✔ Configuration RGB complète</li>
+            <li>✔ Benchmarks & températures</li>
+            <li>✔ Paramétrage gaming premium</li>
+          </ul>
+          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows installé non activé</div>
+          <p class="forf-card-note">Licence Windows à partir de 45€</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PANEL BUREAUTIQUE -->
+    <div class="forf-panel" id="panel-bureau">
+      <div class="forf-grid">
+
+        <div class="forf-card fm1" data-forfait="Bureautique — Lite Essentiel" data-price="59">
+          <div class="forf-card-name">Lite Essentiel</div>
+          <div class="forf-card-price">59€</div>
+          <ul class="forf-card-list">
+            <li>✔ Montage PC bureautique</li>
+            <li>✔ Gestion des câbles</li>
+            <li>✔ Mise à jour BIOS</li>
+            <li>✔ Vérification fonctionnement</li>
+          </ul>
+          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows non installé</div>
+          <p class="forf-card-note">Licence Windows à partir de 45€</p>
+        </div>
+
+        <div class="forf-card fm2" data-forfait="Bureautique — Confort" data-price="89">
+          <div class="forf-card-badge">RECOMMANDÉ</div>
+          <div class="forf-card-name">Confort</div>
+          <div class="forf-card-price">89€</div>
+          <ul class="forf-card-list">
+            <li>✔ Tout du forfait Lite</li>
+            <li>✔ Installation Windows non activé</li>
+            <li>✔ Installation logiciels essentiels</li>
+            <li>✔ Optimisation système</li>
+          </ul>
+          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows installé non activé</div>
+          <p class="forf-card-note">Licence Windows à partir de 45€</p>
+        </div>
+
+        <div class="forf-card fm3" data-forfait="Bureautique — Pro" data-price="149">
+          <div class="forf-card-badge">PRO</div>
+          <div class="forf-card-name">Pro</div>
+          <div class="forf-card-price">149€</div>
+          <ul class="forf-card-list">
+            <li>✔ Toutes les options incluses</li>
+            <li>✔ Optimisation avancée</li>
+            <li>✔ Sauvegarde & sécurité</li>
+            <li>✔ Installation suite bureautique</li>
+          </ul>
+          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows installé non activé</div>
+          <p class="forf-card-note">Licence Windows à partir de 45€</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PANEL OPTIONS -->
+    <div class="forf-panel" id="panel-options">
+      <div class="forf-grid">
+
+        <div class="forf-card fo1" data-forfait="Option — Nettoyage Premium" data-price="30">
+          <div class="forf-card-badge">ENTRETIEN</div>
+          <div class="forf-card-name">Nettoyage Premium</div>
+          <div class="forf-card-price">30€</div>
+          <ul class="forf-card-list">
+            <li>✔ Dépoussiérage complet</li>
+            <li>✔ Nettoyage ventilateurs</li>
+            <li>✔ Remplacement pâte thermique</li>
+            <li>✔ Optimisation températures</li>
+            <li>✔ Vérification générale</li>
+          </ul>
+          <div class="forf-card-win"><i class="fa-solid fa-fan"></i>Entretien & optimisation</div>
+        </div>
+
+        <div class="forf-card fo2" data-forfait="Option — Pack Upgrade" data-price="79">
+          <div class="forf-card-badge">UPGRADE</div>
+          <div class="forf-card-name">Pack Upgrade</div>
+          <div class="forf-card-price">79€+</div>
+          <ul class="forf-card-list">
+            <li>✔ Changement CPU / RAM / GPU</li>
+            <li>✔ Changement carte mère</li>
+            <li>✔ Mise à jour BIOS</li>
+            <li>✔ Nettoyage + pâte thermique</li>
+            <li>✔ Tests températures & stabilité</li>
+          </ul>
+          <div class="forf-card-win"><i class="fa-solid fa-screwdriver-wrench"></i>Sur devis</div>
+          <p class="forf-card-note">Prix variable selon composants</p>
+        </div>
+
+        <div class="forf-card fo3" data-forfait="Option — Licence Windows" data-price="45">
+          <div class="forf-card-badge">WINDOWS</div>
+          <div class="forf-card-name">Licence Windows</div>
+          <div class="forf-card-price">45€</div>
+          <ul class="forf-card-list">
+            <li>✔ Activation officielle</li>
+            <li>✔ Windows 10 / 11</li>
+            <li>✔ Configuration système</li>
+            <li>✔ Installation pilotes</li>
+            <li>✔ PC prêt à l'emploi</li>
+          </ul>
+          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Licence officielle</div>
+        </div>
+
+        <div class="forf-card fo4" data-forfait="Option — Microsoft Office" data-price="60">
+          <div class="forf-card-badge">OFFICE</div>
+          <div class="forf-card-name">Microsoft Office</div>
+          <div class="forf-card-price">60€</div>
+          <ul class="forf-card-list">
+            <li>✔ Installation Office</li>
+            <li>✔ Word, Excel & PowerPoint</li>
+            <li>✔ Configuration complète</li>
+            <li>✔ Activation licence</li>
+          </ul>
+          <div class="forf-card-win"><i class="fa-solid fa-file-word"></i>Suite bureautique</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BARRE FORFAIT SÉLECTIONNÉ -->
+    <div class="forf-selected-bar" id="forfBar">
+      <div class="forf-selected-name">Forfait sélectionné : <b id="forfBarName">—</b></div>
+      <div class="forf-selected-price" id="forfBarPrice">—</div>
+      <button class="forf-clear" id="forfClear">✕ Retirer</button>
+    </div>
+
+  </div>
+</div>
 
 <!-- ══════════════════════════════
      POPUP DEMANDE DE DEVIS
@@ -512,10 +756,21 @@ function openPopup(){
       recap.appendChild(r);
     }
   });
+  // Ajoute le forfait sélectionné
+  if(selectedForfait){
+    var rf=document.createElement('div');
+    rf.className='popup-recap-row';
+    rf.innerHTML='<span class="prl">🛠️ Forfait MLTeC</span><span class="prp">'+selectedForfait.name+' ('+selectedForfait.price+' €)</span>';
+    recap.appendChild(rf);
+    hasAny=true;
+  }
   if(!hasAny){
     recap.innerHTML='<p style="color:#64748b;font-size:13px;text-align:center;padding:8px 0">Aucun composant sélectionné<br><span style="font-size:12px">Choisis tes composants avant de demander un devis</span></p>';
   }
-  totalVal.textContent=document.getElementById('TOT').textContent;
+  // Total composants + forfait
+  var compTotal=parseInt(document.getElementById('TOT').textContent)||0;
+  var grandTotal=compTotal+(selectedForfait?selectedForfait.price:0);
+  totalVal.textContent=grandTotal>0?grandTotal+' €':'0 €';
   document.getElementById('popupForm').style.display='block';
   document.getElementById('popupSuccess').style.display='none';
   document.getElementById('popupError').style.display='none';
@@ -548,7 +803,8 @@ function sendEmail(){
   sendBtn.textContent='Envoi en cours…';
 
   var configText=getConfigText();
-  var total=document.getElementById('TOT').textContent;
+  if(selectedForfait)configText+='\n\n🛠️ Forfait MLTeC : '+selectedForfait.name+' ('+selectedForfait.price+' €)';
+  var total=document.getElementById('popupTotalVal').textContent;
 
   emailjs.send('service_ubovst8','template_g0ceasb',{
     from_name: nom,
@@ -572,6 +828,49 @@ function sendEmail(){
 
 /* Init — charge les JSON puis démarre */
 loadAllJSON();
+
+/* ══ FORFAITS ══ */
+var selectedForfait = null;
+
+// Toggle ouverture
+document.getElementById('forfHeader').addEventListener('click', function(){
+  var body = document.getElementById('forfBody');
+  var toggle = document.getElementById('forfToggle');
+  body.classList.toggle('open');
+  toggle.classList.toggle('open');
+});
+
+// Tabs
+document.querySelectorAll('.forf-tab').forEach(function(tab){
+  tab.addEventListener('click', function(){
+    document.querySelectorAll('.forf-tab').forEach(function(t){t.classList.remove('active');});
+    document.querySelectorAll('.forf-panel').forEach(function(p){p.classList.remove('active');});
+    this.classList.add('active');
+    document.getElementById('panel-'+this.getAttribute('data-tab')).classList.add('active');
+  });
+});
+
+// Sélection forfait
+document.querySelectorAll('.forf-card').forEach(function(card){
+  card.addEventListener('click', function(){
+    document.querySelectorAll('.forf-card').forEach(function(c){c.classList.remove('selected');});
+    this.classList.add('selected');
+    selectedForfait = {
+      name: this.getAttribute('data-forfait'),
+      price: parseInt(this.getAttribute('data-price')) || 0
+    };
+    document.getElementById('forfBarName').textContent = selectedForfait.name;
+    document.getElementById('forfBarPrice').textContent = selectedForfait.price + (this.getAttribute('data-price')==='79'?' €+':' €');
+    document.getElementById('forfBar').classList.add('show');
+  });
+});
+
+// Retirer forfait
+document.getElementById('forfClear').addEventListener('click', function(){
+  document.querySelectorAll('.forf-card').forEach(function(c){c.classList.remove('selected');});
+  selectedForfait = null;
+  document.getElementById('forfBar').classList.remove('show');
+});
 </script>
 </body>
 </html>
