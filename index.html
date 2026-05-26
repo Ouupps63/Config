@@ -27,17 +27,66 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .pb.on{background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:#fff;border-color:transparent;box-shadow:0 4px 16px rgba(59,130,246,.35)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin-bottom:22px}
 .card{background:rgba(17,25,40,.82);border-radius:16px;border:1px solid rgba(96,165,250,.18);padding:18px;transition:transform .3s,box-shadow .3s;position:relative;z-index:1}
-.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.3),0 0 16px rgba(59,130,246,.15);z-index:10}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.3),0 0 16px rgba(59,130,246,.15)}
 .ch{display:flex;align-items:center;gap:10px;margin-bottom:11px}
 .ico{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
 .clbl{font-family:'Orbitron',Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:#60a5fa;text-transform:uppercase}
 .ctit{font-size:14px;font-weight:700;color:#fff}
-.sel{width:100%;background:#0f172a;border:1px solid rgba(96,165,250,.25);border-radius:9px;color:#fff;padding:9px 11px;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;cursor:pointer;outline:none;transition:.25s}
-.sel:focus{border-color:#60a5fa}
-.sel option{background:#1e293b;color:#fff}
 .inf{margin-top:8px;padding:7px 10px;background:rgba(59,130,246,.08);border-left:2px solid rgba(96,165,250,.4);border-radius:0 7px 7px 0;font-size:11px;color:#93c5fd;min-height:32px;line-height:1.5}
 .inf.e{color:#475569;border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.02)}
 .inf.w{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.4);color:#fbbf24}
+
+/* ── DROPDOWN CUSTOM ── */
+.dd{position:relative;width:100%}
+.dd-btn{width:100%;background:#0f172a;border:1px solid rgba(96,165,250,.25);border-radius:9px;color:#fff;padding:9px 36px 9px 11px;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;cursor:pointer;outline:none;transition:.25s;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative}
+.dd-btn::after{content:'▾';position:absolute;right:11px;top:50%;transform:translateY(-50%);color:#60a5fa;font-size:14px;transition:transform .2s;pointer-events:none}
+.dd-btn.open::after{transform:translateY(-50%) rotate(180deg)}
+.dd-btn:hover,.dd-btn.open{border-color:rgba(96,165,250,.6)}
+.dd-list{position:fixed;background:#0f172a;border:1px solid rgba(96,165,250,.35);border-radius:9px;z-index:999999;max-height:260px;overflow-y:auto;box-shadow:0 12px 32px rgba(0,0,0,.85);display:none;min-width:200px}
+.dd-list.open{display:block}
+.dd-list::-webkit-scrollbar{width:5px}
+.dd-list::-webkit-scrollbar-thumb{background:rgba(96,165,250,.3);border-radius:99px}
+.dd-group{padding:6px 11px 3px;font-size:10px;font-weight:700;letter-spacing:1.5px;color:#475569;text-transform:uppercase;border-top:1px solid rgba(255,255,255,.05);margin-top:2px}
+.dd-group:first-child{border-top:none;margin-top:0}
+.dd-item{padding:9px 11px;font-size:13px;font-weight:600;color:#d1d1d1;cursor:pointer;transition:background .15s,color .15s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dd-item:hover{background:rgba(96,165,250,.12);color:#fff}
+.dd-item.selected{color:#60a5fa;background:rgba(96,165,250,.08)}
+.dd-item.placeholder{color:#475569}
+
+/* ── ENCADRÉ OPTIONS ── */
+.forf-wrap{background:rgba(17,25,40,.82);border-radius:20px;border:1px solid rgba(96,165,250,.18);padding:22px;margin-bottom:22px}
+.forf-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:12px}
+.forf-header-left{display:flex;align-items:center;gap:12px}
+.forf-icon{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.forf-title{font-family:'Orbitron',Arial,sans-serif;font-size:13px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
+.forf-subtitle{font-size:12px;color:#64748b;margin-top:2px}
+.forf-toggle{color:#60a5fa;font-size:20px;transition:transform .3s;flex-shrink:0}
+.forf-toggle.open{transform:rotate(180deg)}
+.forf-body{display:none;margin-top:20px}
+.forf-body.open{display:block}
+.forf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.forf-card{border-radius:14px;padding:18px;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s;border:2px solid transparent}
+.forf-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.forf-card.selected{border-color:rgba(255,255,255,.5);box-shadow:0 0 0 3px rgba(96,165,250,.3)}
+.forf-card-badge{position:absolute;top:10px;right:10px;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;background:rgba(255,255,255,.2);backdrop-filter:blur(4px)}
+.forf-card-name{font-size:16px;font-weight:700;color:#fff !important;-webkit-text-fill-color:#fff !important;margin-bottom:4px}
+.forf-card-price{font-size:28px;font-weight:900;color:#fff !important;-webkit-text-fill-color:#fff !important;margin-bottom:10px}
+.forf-card-list{list-style:none;margin-bottom:10px}
+.forf-card-list li{font-size:12px;color:rgba(255,255,255,.85);padding:3px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.forf-card-list li:last-child{border:none}
+.forf-card-win{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.12);padding:8px 10px;border-radius:8px;margin-top:6px}
+.forf-card-win i{font-size:16px}
+.forf-selected-bar{margin-top:16px;padding:12px 16px;background:rgba(59,130,246,.1);border:1px solid rgba(96,165,250,.2);border-radius:12px;display:none;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.forf-selected-bar.show{display:flex}
+.forf-selected-name{font-size:13px;color:#d1d1d1;font-weight:600}
+.forf-selected-name b{color:#60a5fa}
+.forf-selected-price{font-family:'Orbitron',Arial,sans-serif;font-size:16px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.forf-clear{font-size:12px;color:#64748b;cursor:pointer;text-decoration:underline;background:none;border:none;padding:0}
+.forf-clear:hover{color:#f87171}
+.fo3{background:linear-gradient(160deg,#1d4ed8,#6d28d9)}
+.fo4{background:linear-gradient(160deg,#7c3aed,#a855f7)}
+
+/* ── RÉCAP ── */
 .sum{background:rgba(17,25,40,.9);border-radius:18px;border:1px solid rgba(96,165,250,.2);padding:24px}
 .sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
 .stit{font-family:'Orbitron',Arial,sans-serif;font-size:14px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
@@ -104,103 +153,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .popup-error{display:none;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:9px;padding:10px 13px;font-size:13px;color:#f87171;margin-bottom:12px}
 
 @media(max-width:500px){.logo{font-size:28px}.grid{grid-template-columns:1fr}body{padding:20px 3% 34px}.popup{padding:20px}}
-
-/* ── DROPDOWN CUSTOM (toujours vers le bas) ── */
-.dd{position:relative;width:100%}
-.dd-btn{
-  width:100%;background:#0f172a;
-  border:1px solid rgba(96,165,250,.25);border-radius:9px;
-  color:#fff;padding:9px 36px 9px 11px;
-  font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;
-  cursor:pointer;outline:none;transition:.25s;
-  text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-  position:relative;
-}
-.dd-btn::after{
-  content:'▾';position:absolute;right:11px;top:50%;
-  transform:translateY(-50%);color:#60a5fa;font-size:14px;
-  transition:transform .2s;pointer-events:none;
-}
-.dd-btn.open::after{transform:translateY(-50%) rotate(180deg);}
-.dd-btn:hover,.dd-btn.open{border-color:rgba(96,165,250,.6);}
-.dd-list{
-  position:fixed;
-  background:#0f172a;border:1px solid rgba(96,165,250,.35);
-  border-radius:9px;z-index:999999;
-  max-height:260px;overflow-y:auto;
-  box-shadow:0 12px 32px rgba(0,0,0,.8);
-  display:none;
-  min-width:200px;
-}
-.dd-list.open{display:block;}
-.dd-list::-webkit-scrollbar{width:5px;}
-.dd-list::-webkit-scrollbar-track{background:transparent;}
-.dd-list::-webkit-scrollbar-thumb{background:rgba(96,165,250,.3);border-radius:99px;}
-.dd-group{
-  padding:6px 11px 3px;
-  font-size:10px;font-weight:700;letter-spacing:1.5px;
-  color:#475569;text-transform:uppercase;
-  border-top:1px solid rgba(255,255,255,.05);
-  margin-top:2px;
-}
-.dd-group:first-child{border-top:none;margin-top:0;}
-.dd-item{
-  padding:9px 11px;font-size:13px;font-weight:600;
-  color:#d1d1d1;cursor:pointer;transition:background .15s,color .15s;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-}
-.dd-item:hover{background:rgba(96,165,250,.12);color:#fff;}
-.dd-item.selected{color:#60a5fa;background:rgba(96,165,250,.08);}
-.dd-item.placeholder{color:#475569;}
-
-/* ── ENCADRÉ FORFAITS ── */
-.forf-wrap{max-width:1350px;margin:30px auto 0;background:rgba(17,25,40,.82);border-radius:20px;border:1px solid rgba(96,165,250,.18);padding:24px;overflow:hidden}
-.forf-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:12px}
-.forf-header-left{display:flex;align-items:center;gap:12px}
-.forf-icon{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
-.forf-title{font-family:'Orbitron',Arial,sans-serif;font-size:13px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
-.forf-subtitle{font-size:12px;color:#64748b;margin-top:2px}
-.forf-toggle{color:#60a5fa;font-size:20px;transition:transform .3s;flex-shrink:0}
-.forf-toggle.open{transform:rotate(180deg)}
-.forf-body{display:none;margin-top:20px}
-.forf-body.open{display:block}
-.forf-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.forf-tab{padding:7px 16px;border-radius:20px;border:1px solid rgba(96,165,250,.25);background:transparent;color:#94a3b8;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
-.forf-tab:hover{border-color:rgba(96,165,250,.6);color:#fff}
-.forf-tab.active{background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:#fff;border-color:transparent}
-.forf-panel{display:none}
-.forf-panel.active{display:block}
-.forf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.forf-card{border-radius:14px;padding:18px;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s;border:2px solid transparent}
-.forf-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
-.forf-card.selected{border-color:rgba(255,255,255,.5);box-shadow:0 0 0 3px rgba(96,165,250,.3)}
-.forf-card-badge{position:absolute;top:10px;right:10px;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;background:rgba(255,255,255,.2);backdrop-filter:blur(4px)}
-.forf-card-name{font-size:16px;font-weight:700;color:#fff;margin-bottom:4px}
-.forf-card-price{font-size:28px;font-weight:900;color:#fff;margin-bottom:10px}
-.forf-card-list{list-style:none;margin-bottom:10px}
-.forf-card-list li{font-size:12px;color:rgba(255,255,255,.85);padding:3px 0;border-bottom:1px solid rgba(255,255,255,.1)}
-.forf-card-list li:last-child{border:none}
-.forf-card-win{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.12);padding:8px 10px;border-radius:8px;margin-top:6px}
-.forf-card-win i{font-size:16px}
-.forf-card-note{font-size:11px;color:rgba(255,255,255,.7);margin-top:6px;font-weight:600}
-.forf-selected-bar{margin-top:16px;padding:12px 16px;background:rgba(59,130,246,.1);border:1px solid rgba(96,165,250,.2);border-radius:12px;display:none;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.forf-selected-bar.show{display:flex}
-.forf-selected-name{font-size:13px;color:#d1d1d1;font-weight:600}
-.forf-selected-name b{color:#60a5fa}
-.forf-selected-price{font-family:'Orbitron',Arial,sans-serif;font-size:16px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.forf-clear{font-size:12px;color:#64748b;cursor:pointer;text-decoration:underline;background:none;border:none;padding:0}
-.forf-clear:hover{color:#f87171}
-/* couleurs forfaits */
-.fg1{background:linear-gradient(135deg,#2563eb,#1e3a8a)}
-.fg2{background:linear-gradient(135deg,#7c3aed,#4c1d95)}
-.fg3{background:linear-gradient(135deg,#06b6d4,#0f766e)}
-.fm1{background:linear-gradient(135deg,#475569,#1e293b)}
-.fm2{background:linear-gradient(135deg,#f59e0b,#b45309)}
-.fm3{background:linear-gradient(135deg,#ef4444,#7f1d1d)}
-.fo1{background:linear-gradient(160deg,#b45309,#f59e0b)}
-.fo2{background:linear-gradient(160deg,#06b6d4,#0f766e)}
-.fo3{background:linear-gradient(160deg,#1d4ed8,#6d28d9)}
-.fo4{background:linear-gradient(160deg,#7c3aed,#a855f7)}
 </style>
 </head>
 <body>
@@ -225,7 +177,64 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
   <button class="pb" data-p="stream">📡 Streaming</button>
   <button class="pb" data-p="silent">🔇 Silent Build</button>
 </div>
+
+<!-- GRILLE COMPOSANTS -->
 <div class="grid" id="G"></div>
+
+<!-- ══ ENCADRÉ OPTIONS SUPPLÉMENTAIRES ══ -->
+<div class="forf-wrap">
+  <div class="forf-header" id="forfHeader">
+    <div class="forf-header-left">
+      <div class="forf-icon">⚙️</div>
+      <div>
+        <div class="forf-title">OPTIONS SUPPLÉMENTAIRES</div>
+        <div class="forf-subtitle">Ajoute une option à ta configuration</div>
+      </div>
+    </div>
+    <div class="forf-toggle" id="forfToggle">▾</div>
+  </div>
+  <div class="forf-body" id="forfBody">
+    <div class="forf-grid">
+
+      <div class="forf-card fo3" data-forfait="Licence Windows" data-price="45">
+        <div class="forf-card-badge">WINDOWS</div>
+        <div class="forf-card-name">Licence Windows</div>
+        <div class="forf-card-price">45€</div>
+        <ul class="forf-card-list">
+          <li>✔ Activation officielle</li>
+          <li>✔ Installation Windows 10 / 11</li>
+          <li>✔ Configuration système</li>
+          <li>✔ Installation pilotes</li>
+          <li>✔ PC prêt à l'emploi</li>
+        </ul>
+        <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Licence officielle</div>
+      </div>
+
+      <div class="forf-card fo4" data-forfait="Microsoft Office" data-price="60">
+        <div class="forf-card-badge">OFFICE</div>
+        <div class="forf-card-name">Microsoft Office</div>
+        <div class="forf-card-price">60€</div>
+        <ul class="forf-card-list">
+          <li>✔ Installation Office</li>
+          <li>✔ Word, Excel & PowerPoint</li>
+          <li>✔ Configuration complète</li>
+          <li>✔ Activation licence</li>
+        </ul>
+        <div class="forf-card-win"><i class="fa-solid fa-file-word"></i>Suite bureautique</div>
+      </div>
+
+    </div>
+
+    <!-- BARRE SÉLECTION -->
+    <div class="forf-selected-bar" id="forfBar">
+      <div class="forf-selected-name">Option sélectionnée : <b id="forfBarName">—</b></div>
+      <div class="forf-selected-price" id="forfBarPrice">—</div>
+      <button class="forf-clear" id="forfClear">✕ Retirer</button>
+    </div>
+  </div>
+</div>
+
+<!-- RÉCAPITULATIF -->
 <div class="sum">
   <div class="sh">
     <div class="stit">RÉCAPITULATIF</div>
@@ -253,220 +262,18 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 </div>
 <div class="foot">Configurateur by <b>MLTeC</b> · Montage · Expertise · Technologie · 2026</div>
 
-<!-- ══ ENCADRÉ FORFAITS ══ -->
-<div class="forf-wrap">
-  <div class="forf-header" id="forfHeader">
-    <div class="forf-header-left">
-      <div class="forf-icon">🛠️</div>
-      <div>
-        <div class="forf-title">FORFAITS & OPTIONS MLTeC</div>
-        <div class="forf-subtitle">Ajoute un forfait de montage à ta configuration</div>
-      </div>
-    </div>
-    <div class="forf-toggle" id="forfToggle">▾</div>
-  </div>
-
-  <div class="forf-body" id="forfBody">
-
-    <!-- TABS -->
-    <div class="forf-tabs">
-      <button class="forf-tab active" data-tab="gaming">🎮 Gaming</button>
-      <button class="forf-tab" data-tab="bureau">🖥 Bureautique</button>
-      <button class="forf-tab" data-tab="options">⚙️ Options supplémentaires</button>
-    </div>
-
-    <!-- PANEL GAMING -->
-    <div class="forf-panel active" id="panel-gaming">
-      <div class="forf-grid">
-
-        <div class="forf-card fg1" data-forfait="Gaming — Essentiel" data-price="69">
-          <div class="forf-card-name">Essentiel</div>
-          <div class="forf-card-price">69€</div>
-          <ul class="forf-card-list">
-            <li>✔ Montage complet du PC</li>
-            <li>✔ Gestion des câbles</li>
-            <li>✔ Mise à jour BIOS</li>
-            <li>✔ Vérification fonctionnement</li>
-            <li>✔ Test stabilité</li>
-          </ul>
-          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows non installé</div>
-          <p class="forf-card-note">Licence Windows à partir de 45€</p>
-        </div>
-
-        <div class="forf-card fg2" data-forfait="Gaming — Prêt à l'emploi" data-price="99">
-          <div class="forf-card-badge">POPULAIRE</div>
-          <div class="forf-card-name">Prêt à l'emploi</div>
-          <div class="forf-card-price">99€</div>
-          <ul class="forf-card-list">
-            <li>✔ Tout du forfait Essentiel</li>
-            <li>✔ Installation Windows non activé</li>
-            <li>✔ Installation logiciels utiles</li>
-            <li>✔ Optimisation gaming</li>
-            <li>✔ Réglages RGB basiques</li>
-          </ul>
-          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows installé non activé</div>
-          <p class="forf-card-note">Licence Windows à partir de 45€</p>
-        </div>
-
-        <div class="forf-card fg3" data-forfait="Gaming — Gaming Optimisé" data-price="149">
-          <div class="forf-card-badge">ULTIMATE</div>
-          <div class="forf-card-name">Gaming Optimisé</div>
-          <div class="forf-card-price">149€</div>
-          <ul class="forf-card-list">
-            <li>✔ Toutes les options incluses</li>
-            <li>✔ Optimisation avancée</li>
-            <li>✔ Configuration RGB complète</li>
-            <li>✔ Benchmarks & températures</li>
-            <li>✔ Paramétrage gaming premium</li>
-          </ul>
-          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows installé non activé</div>
-          <p class="forf-card-note">Licence Windows à partir de 45€</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- PANEL BUREAUTIQUE -->
-    <div class="forf-panel" id="panel-bureau">
-      <div class="forf-grid">
-
-        <div class="forf-card fm1" data-forfait="Bureautique — Lite Essentiel" data-price="59">
-          <div class="forf-card-name">Lite Essentiel</div>
-          <div class="forf-card-price">59€</div>
-          <ul class="forf-card-list">
-            <li>✔ Montage PC bureautique</li>
-            <li>✔ Gestion des câbles</li>
-            <li>✔ Mise à jour BIOS</li>
-            <li>✔ Vérification fonctionnement</li>
-          </ul>
-          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows non installé</div>
-          <p class="forf-card-note">Licence Windows à partir de 45€</p>
-        </div>
-
-        <div class="forf-card fm2" data-forfait="Bureautique — Confort" data-price="89">
-          <div class="forf-card-badge">RECOMMANDÉ</div>
-          <div class="forf-card-name">Confort</div>
-          <div class="forf-card-price">89€</div>
-          <ul class="forf-card-list">
-            <li>✔ Tout du forfait Lite</li>
-            <li>✔ Installation Windows non activé</li>
-            <li>✔ Installation logiciels essentiels</li>
-            <li>✔ Optimisation système</li>
-          </ul>
-          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows installé non activé</div>
-          <p class="forf-card-note">Licence Windows à partir de 45€</p>
-        </div>
-
-        <div class="forf-card fm3" data-forfait="Bureautique — Pro" data-price="149">
-          <div class="forf-card-badge">PRO</div>
-          <div class="forf-card-name">Pro</div>
-          <div class="forf-card-price">149€</div>
-          <ul class="forf-card-list">
-            <li>✔ Toutes les options incluses</li>
-            <li>✔ Optimisation avancée</li>
-            <li>✔ Sauvegarde & sécurité</li>
-            <li>✔ Installation suite bureautique</li>
-          </ul>
-          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Windows installé non activé</div>
-          <p class="forf-card-note">Licence Windows à partir de 45€</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- PANEL OPTIONS -->
-    <div class="forf-panel" id="panel-options">
-      <div class="forf-grid">
-
-        <div class="forf-card fo1" data-forfait="Option — Nettoyage Premium" data-price="30">
-          <div class="forf-card-badge">ENTRETIEN</div>
-          <div class="forf-card-name">Nettoyage Premium</div>
-          <div class="forf-card-price">30€</div>
-          <ul class="forf-card-list">
-            <li>✔ Dépoussiérage complet</li>
-            <li>✔ Nettoyage ventilateurs</li>
-            <li>✔ Remplacement pâte thermique</li>
-            <li>✔ Optimisation températures</li>
-            <li>✔ Vérification générale</li>
-          </ul>
-          <div class="forf-card-win"><i class="fa-solid fa-fan"></i>Entretien & optimisation</div>
-        </div>
-
-        <div class="forf-card fo2" data-forfait="Option — Pack Upgrade" data-price="79">
-          <div class="forf-card-badge">UPGRADE</div>
-          <div class="forf-card-name">Pack Upgrade</div>
-          <div class="forf-card-price">79€+</div>
-          <ul class="forf-card-list">
-            <li>✔ Changement CPU / RAM / GPU</li>
-            <li>✔ Changement carte mère</li>
-            <li>✔ Mise à jour BIOS</li>
-            <li>✔ Nettoyage + pâte thermique</li>
-            <li>✔ Tests températures & stabilité</li>
-          </ul>
-          <div class="forf-card-win"><i class="fa-solid fa-screwdriver-wrench"></i>Sur devis</div>
-          <p class="forf-card-note">Prix variable selon composants</p>
-        </div>
-
-        <div class="forf-card fo3" data-forfait="Option — Licence Windows" data-price="45">
-          <div class="forf-card-badge">WINDOWS</div>
-          <div class="forf-card-name">Licence Windows</div>
-          <div class="forf-card-price">45€</div>
-          <ul class="forf-card-list">
-            <li>✔ Activation officielle</li>
-            <li>✔ Windows 10 / 11</li>
-            <li>✔ Configuration système</li>
-            <li>✔ Installation pilotes</li>
-            <li>✔ PC prêt à l'emploi</li>
-          </ul>
-          <div class="forf-card-win"><i class="fa-brands fa-windows"></i>Licence officielle</div>
-        </div>
-
-        <div class="forf-card fo4" data-forfait="Option — Microsoft Office" data-price="60">
-          <div class="forf-card-badge">OFFICE</div>
-          <div class="forf-card-name">Microsoft Office</div>
-          <div class="forf-card-price">60€</div>
-          <ul class="forf-card-list">
-            <li>✔ Installation Office</li>
-            <li>✔ Word, Excel & PowerPoint</li>
-            <li>✔ Configuration complète</li>
-            <li>✔ Activation licence</li>
-          </ul>
-          <div class="forf-card-win"><i class="fa-solid fa-file-word"></i>Suite bureautique</div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- BARRE FORFAIT SÉLECTIONNÉ -->
-    <div class="forf-selected-bar" id="forfBar">
-      <div class="forf-selected-name">Forfait sélectionné : <b id="forfBarName">—</b></div>
-      <div class="forf-selected-price" id="forfBarPrice">—</div>
-      <button class="forf-clear" id="forfClear">✕ Retirer</button>
-    </div>
-
-  </div>
-</div>
-
-<!-- ══════════════════════════════
-     POPUP DEMANDE DE DEVIS
-══════════════════════════════ -->
+<!-- POPUP -->
 <div class="popup-overlay" id="popupOverlay">
   <div class="popup">
     <button class="popup-close" id="popupClose">✕</button>
     <div id="popupForm">
       <div class="popup-logo">MLTeC · Demande de devis</div>
       <div class="popup-title">VOTRE CONFIGURATION</div>
-
-      <!-- Récap config -->
       <div class="popup-recap" id="popupRecap"></div>
-
-      <!-- Total -->
       <div class="popup-total">
         <span class="popup-total-lbl">Total estimé</span>
         <span class="popup-total-val" id="popupTotalVal">0 €</span>
       </div>
-
-      <!-- Formulaire -->
       <div class="pf-group">
         <label for="pf-nom">Votre nom *</label>
         <input id="pf-nom" type="text" placeholder="Prénom Nom">
@@ -479,20 +286,13 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
         <label for="pf-msg">Message (optionnel)</label>
         <textarea id="pf-msg" placeholder="Précisez vos besoins, votre budget, vos questions…"></textarea>
       </div>
-
       <div class="popup-error" id="popupError">Merci de remplir votre nom et votre adresse e-mail.</div>
-
       <button class="popup-send" id="popupSend">Envoyer ma demande →</button>
     </div>
-
-    <!-- Message succès -->
     <div class="popup-success" id="popupSuccess">
       <div class="popup-success-icon">✅</div>
       <div class="popup-success-title">Demande envoyée !</div>
-      <div class="popup-success-text">
-        MLTeC a bien reçu ta configuration.<br>
-        On te recontacte très vite par email pour ton devis personnalisé !
-      </div>
+      <div class="popup-success-text">MLTeC a bien reçu ta configuration.<br>On te recontacte très vite par email !</div>
     </div>
   </div>
 </div>
@@ -500,63 +300,53 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 <script>
 emailjs.init('_EeHlzJZOkVpZhwDd');
 
-/* ══ STRUCTURE DES CATÉGORIES ══
-   L'ordre et les libellés sont définis ici.
-   Les données viennent des fichiers JSON externes.
-═══════════════════════════════════════════════ */
-var CATS = {
-  cpu:     {l:'Processeur (CPU)',       i:'⚙️',  s:'Socket & fréquence',    file:'Cpu.json'},
-  mb:      {l:'Carte mère',             i:'🟩',  s:'Socket & chipset',       file:'Mb.json'},
-  ram:     {l:'Mémoire RAM',            i:'🔵',  s:'Capacité & fréquence',   file:'Ram.json'},
-  gpu:     {l:'Carte graphique (GPU)',  i:'🎮',  s:'VRAM & résolution',      file:'Gpu.json'},
-  storage: {l:'Stockage (SSD + HDD)',   i:'💾',  s:'Capacité & vitesse',     file:'Ssd.json'},
-  psu:     {l:'Alimentation (PSU)',     i:'⚡',  s:'Puissance & certification',file:'Alim.json'},
-  cooling: {l:'Refroidissement CPU',    i:'❄️',  s:'Air ou watercooling',    file:'Cool.json'},
-  pccase:  {l:'Boîtier',               i:'🖥️', s:'Format & airflow',       file:'Case.json'}
+var CATS={
+  cpu:    {l:'Processeur (CPU)',      i:'⚙️', s:'Socket & fréquence',      file:'Cpu.json'},
+  mb:     {l:'Carte mère',            i:'🟩', s:'Socket & chipset',         file:'Mb.json'},
+  ram:    {l:'Mémoire RAM',           i:'🔵', s:'Capacité & fréquence',     file:'Ram.json'},
+  gpu:    {l:'Carte graphique (GPU)', i:'🎮', s:'VRAM & résolution',        file:'Gpu.json'},
+  storage:{l:'Stockage (SSD + HDD)',  i:'💾', s:'Capacité & vitesse',       file:'Ssd.json'},
+  psu:    {l:'Alimentation (PSU)',    i:'⚡', s:'Puissance & certification', file:'Alim.json'},
+  cooling:{l:'Refroidissement CPU',   i:'❄️', s:'Air ou watercooling',      file:'Cool.json'},
+  pccase: {l:'Boîtier',              i:'🖥️',s:'Format & airflow',         file:'Case.json'}
 };
 
 var PR={
-bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to',psu:'450w-seasonic',cooling:'air-budget',pccase:'case-core1000'},
-budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to',psu:'650w-bequiet',cooling:'air-assassin',pccase:'case-4000d'},
-mid:{cpu:'r7-7800x3d',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240',pccase:'case-meshify2c'},
-high:{cpu:'r7-9800x3d',mb:'x670-gigabyte',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to',psu:'1000w-seasonic',cooling:'aio-360-corsair',pccase:'case-o11-evo'},
-ultra:{cpu:'r9-9950x3d',mb:'x870-asus',ram:'64-ddr5-7200',gpu:'rtx5090',storage:'gen5-2to-sam',psu:'1600w-corsair',cooling:'custom-360',pccase:'case-rog'},
-stream:{cpu:'r9-9900x',mb:'x670-gigabyte',ram:'64-ddr5-6000',gpu:'rtx5070ti',storage:'gen4-2to',psu:'1000w-asus',cooling:'aio-360-arctic',pccase:'case-o11-evo'},
-silent:{cpu:'r7-9700x',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070',storage:'gen4-1to-wd',psu:'750w-bequiet',cooling:'air-noctua',pccase:'case-define7c'}
+  bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to',psu:'450w-seasonic',cooling:'air-budget',pccase:'case-core1000'},
+  budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to',psu:'650w-bequiet',cooling:'air-assassin',pccase:'case-4000d'},
+  mid:{cpu:'r7-7800x3d',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240',pccase:'case-meshify2c'},
+  high:{cpu:'r7-9800x3d',mb:'x670-gigabyte',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to',psu:'1000w-seasonic',cooling:'aio-360-corsair',pccase:'case-o11-evo'},
+  ultra:{cpu:'r9-9950x3d',mb:'x870-asus',ram:'64-ddr5-7200',gpu:'rtx5090',storage:'gen5-2to-sam',psu:'1600w-corsair',cooling:'custom-360',pccase:'case-rog'},
+  stream:{cpu:'r9-9900x',mb:'x670-gigabyte',ram:'64-ddr5-6000',gpu:'rtx5070ti',storage:'gen4-2to',psu:'1000w-asus',cooling:'aio-360-arctic',pccase:'case-o11-evo'},
+  silent:{cpu:'r7-9700x',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070',storage:'gen4-1to-wd',psu:'750w-bequiet',cooling:'air-noctua',pccase:'case-define7c'}
 };
 
-/* ══ CHARGEMENT DES JSON ══ */
-var D = {};
-var S = {};
+var D={};var S={};
+var selectedForfait=null;
 
+/* ══ CHARGEMENT JSON ══ */
 function loadAllJSON(){
-  var keys = Object.keys(CATS);
-  var promises = keys.map(function(k){
+  var keys=Object.keys(CATS);
+  var promises=keys.map(function(k){
     return fetch(CATS[k].file)
-      .then(function(r){ return r.json(); })
+      .then(function(r){return r.json();})
       .then(function(data){
-        D[k] = { l:CATS[k].l, i:CATS[k].i, s:CATS[k].s, d:data };
-        S[k] = 'none';
+        D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:data};
+        S[k]='none';
       })
-      .catch(function(err){
-        console.error('Erreur chargement '+CATS[k].file, err);
-        D[k] = { l:CATS[k].l, i:CATS[k].i, s:CATS[k].s, d:[{id:'none',n:'-- Erreur chargement --',p:0,inf:''}] };
-        S[k] = 'none';
+      .catch(function(){
+        D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:[{id:'none',n:'-- Erreur chargement --',p:0,inf:''}]};
+        S[k]='none';
       });
   });
   Promise.all(promises).then(function(){
     build();
     upSum();
-    document.querySelectorAll('.pb').forEach(function(b){b.addEventListener('click',function(){preset(this.getAttribute('data-p'));});});
-    document.getElementById('RST').addEventListener('click',reset);
-    document.getElementById('CTA').addEventListener('click',openPopup);
-    document.getElementById('popupClose').addEventListener('click',closePopup);
-    document.getElementById('popupSend').addEventListener('click',sendEmail);
-    document.getElementById('popupOverlay').addEventListener('click',function(e){if(e.target===this)closePopup();});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
+    initEvents();
   });
 }
 
+/* ══ DROPDOWNS ══ */
 function gi(k){var a=D[k].d;for(var i=0;i<a.length;i++){if(a[i].id===S[k])return a[i];}return null;}
 
 function build(){
@@ -564,66 +354,58 @@ function build(){
   Object.keys(D).forEach(function(k){
     var c=D[k];
     var el=document.createElement('div');el.className='card';
-
-    // Bouton affiché
-    var btnHTML='<div class="dd" id="dd-'+k+'">'
-      +'<button class="dd-btn" id="ddbtn-'+k+'" data-k="'+k+'">-- Choisir '+c.l+' --</button>'
-      +'<div class="dd-list" id="ddlist-'+k+'">';
-
+    var items='';
     c.d.forEach(function(x){
       if(x.g){
-        // Groupe
-        btnHTML+='<div class="dd-group">'+x.n+'</div>';
+        items+='<div class="dd-group">'+x.n+'</div>';
       } else {
-        var label=x.n+(x.p>0?' — '+x.p+' €':'');
+        var lbl=x.n+(x.p>0?' — '+x.p+' €':'');
         var cls='dd-item'+(x.id==='none'?' placeholder':'');
-        btnHTML+='<div class="'+cls+'" data-k="'+k+'" data-id="'+x.id+'">'+label+'</div>';
+        items+='<div class="'+cls+'" data-k="'+k+'" data-id="'+x.id+'">'+lbl+'</div>';
       }
     });
-
-    btnHTML+='</div></div>';
-
     el.innerHTML=
       '<div class="ch"><div class="ico">'+c.i+'</div>'
       +'<div><div class="clbl">'+c.s+'</div><div class="ctit">'+c.l+'</div></div></div>'
-      +btnHTML
+      +'<div class="dd" id="dd-'+k+'">'
+      +'<button class="dd-btn" id="ddbtn-'+k+'" data-k="'+k+'">-- Choisir '+c.l+' --</button>'
+      +'<div class="dd-list" id="ddlist-'+k+'">'+items+'</div>'
+      +'</div>'
       +'<div class="inf e" id="I'+k+'">Aucun composant sélectionné</div>';
     g.appendChild(el);
   });
 
-  // Events boutons dropdown
+  // Boutons dropdown
   document.querySelectorAll('.dd-btn').forEach(function(btn){
     btn.addEventListener('click',function(e){
       e.stopPropagation();
       var k=this.getAttribute('data-k');
       var list=document.getElementById('ddlist-'+k);
       var isOpen=list.classList.contains('open');
-      // Ferme tous
       closeAllDD();
       if(!isOpen){
-        // Calcule la position du bouton
         var rect=this.getBoundingClientRect();
-        list.style.top=(rect.bottom+4)+'px';
+        list.style.top=(rect.bottom+window.scrollY+4)+'px';
         list.style.left=rect.left+'px';
         list.style.width=rect.width+'px';
+        // Remet en fixed
+        list.style.position='fixed';
+        list.style.top=(rect.bottom+4)+'px';
         list.classList.add('open');
         this.classList.add('open');
       }
     });
   });
 
-  // Events items
+  // Items dropdown
   document.querySelectorAll('.dd-item').forEach(function(item){
     item.addEventListener('click',function(e){
       e.stopPropagation();
       var k=this.getAttribute('data-k');
       var id=this.getAttribute('data-id');
       S[k]=id;
-      // Met à jour le bouton
       var btn=document.getElementById('ddbtn-'+k);
-      var label=id==='none'?'-- Choisir '+D[k].l+' --':this.textContent;
-      btn.textContent=label;
-      // Selected style
+      btn.textContent=id==='none'?'-- Choisir '+D[k].l+' --':this.textContent;
       document.querySelectorAll('.dd-item[data-k="'+k+'"]').forEach(function(i){
         i.classList.toggle('selected',i.getAttribute('data-id')===id);
       });
@@ -639,13 +421,11 @@ function closeAllDD(){
   document.querySelectorAll('.dd-btn').forEach(function(b){b.classList.remove('open');});
 }
 
-// Ferme au clic dehors
 document.addEventListener('click',function(){closeAllDD();});
-
-// Remet à jour la position si scroll ou resize
 window.addEventListener('scroll',function(){closeAllDD();},true);
 window.addEventListener('resize',function(){closeAllDD();});
 
+/* ══ INFOS & RÉCAP ══ */
 function upInf(k){
   var it=gi(k),el=document.getElementById('I'+k);if(!el)return;
   if(!it||!it.inf){el.textContent='Aucun composant sélectionné';el.className='inf e';return;}
@@ -716,7 +496,6 @@ function preset(p){
   var pr=PR[p];
   Object.keys(pr).forEach(function(k){
     S[k]=pr[k];
-    // Met à jour le bouton dropdown
     var ddBtn=document.getElementById('ddbtn-'+k);
     if(ddBtn){
       var item=document.querySelector('.dd-item[data-k="'+k+'"][data-id="'+pr[k]+'"]');
@@ -753,34 +532,29 @@ function getConfigText(){
 
 function openPopup(){
   var recap=document.getElementById('popupRecap');
-  var totalVal=document.getElementById('popupTotalVal');
   recap.innerHTML='';
   var hasAny=false;
   Object.keys(D).forEach(function(k){
     var it=gi(k);
     if(it&&it.p>0){
       hasAny=true;
-      var r=document.createElement('div');
-      r.className='popup-recap-row';
+      var r=document.createElement('div');r.className='popup-recap-row';
       r.innerHTML='<span class="prl">'+D[k].i+' '+D[k].l+'</span><span class="prp">'+it.n.replace(' ⭐','')+'</span>';
       recap.appendChild(r);
     }
   });
-  // Ajoute le forfait sélectionné
   if(selectedForfait){
-    var rf=document.createElement('div');
-    rf.className='popup-recap-row';
-    rf.innerHTML='<span class="prl">🛠️ Forfait MLTeC</span><span class="prp">'+selectedForfait.name+' ('+selectedForfait.price+' €)</span>';
-    recap.appendChild(rf);
     hasAny=true;
+    var rf=document.createElement('div');rf.className='popup-recap-row';
+    rf.innerHTML='<span class="prl">⚙️ Option</span><span class="prp">'+selectedForfait.name+' ('+selectedForfait.price+' €)</span>';
+    recap.appendChild(rf);
   }
   if(!hasAny){
-    recap.innerHTML='<p style="color:#64748b;font-size:13px;text-align:center;padding:8px 0">Aucun composant sélectionné<br><span style="font-size:12px">Choisis tes composants avant de demander un devis</span></p>';
+    recap.innerHTML='<p style="color:#64748b;font-size:13px;text-align:center;padding:8px 0">Aucun composant sélectionné</p>';
   }
-  // Total composants + forfait
   var compTotal=parseInt(document.getElementById('TOT').textContent)||0;
   var grandTotal=compTotal+(selectedForfait?selectedForfait.price:0);
-  totalVal.textContent=grandTotal>0?grandTotal+' €':'0 €';
+  document.getElementById('popupTotalVal').textContent=grandTotal>0?grandTotal+' €':'0 €';
   document.getElementById('popupForm').style.display='block';
   document.getElementById('popupSuccess').style.display='none';
   document.getElementById('popupError').style.display='none';
@@ -801,86 +575,66 @@ function sendEmail(){
   var email=document.getElementById('pf-email').value.trim();
   var msg=document.getElementById('pf-msg').value.trim();
   var errEl=document.getElementById('popupError');
-
-  if(!nom||!email){
-    errEl.style.display='block';
-    return;
-  }
+  if(!nom||!email){errEl.style.display='block';return;}
   errEl.style.display='none';
-
   var sendBtn=document.getElementById('popupSend');
-  sendBtn.disabled=true;
-  sendBtn.textContent='Envoi en cours…';
-
+  sendBtn.disabled=true;sendBtn.textContent='Envoi en cours…';
   var configText=getConfigText();
-  if(selectedForfait)configText+='\n\n🛠️ Forfait MLTeC : '+selectedForfait.name+' ('+selectedForfait.price+' €)';
+  if(selectedForfait)configText+='\n\n⚙️ Option : '+selectedForfait.name+' ('+selectedForfait.price+' €)';
   var total=document.getElementById('popupTotalVal').textContent;
-
   emailjs.send('service_ubovst8','template_g0ceasb',{
-    from_name: nom,
-    from_email: email,
-    message: msg||'Aucun message',
-    config: configText||'Aucun composant sélectionné',
-    total: total
+    from_name:nom,from_email:email,
+    message:msg||'Aucun message',
+    config:configText||'Aucun composant sélectionné',
+    total:total
   }).then(function(){
     document.getElementById('popupForm').style.display='none';
     document.getElementById('popupSuccess').style.display='block';
-    sendBtn.disabled=false;
-    sendBtn.textContent='Envoyer ma demande →';
+    sendBtn.disabled=false;sendBtn.textContent='Envoyer ma demande →';
   },function(err){
-    sendBtn.disabled=false;
-    sendBtn.textContent='Envoyer ma demande →';
+    sendBtn.disabled=false;sendBtn.textContent='Envoyer ma demande →';
     errEl.textContent='Erreur lors de l\'envoi. Réessaie ou contacte-nous directement.';
     errEl.style.display='block';
     console.error('EmailJS error:',err);
   });
 }
 
-/* Init — charge les JSON puis démarre */
-loadAllJSON();
+/* ══ INIT EVENTS ══ */
+function initEvents(){
+  document.querySelectorAll('.pb').forEach(function(b){b.addEventListener('click',function(){preset(this.getAttribute('data-p'));});});
+  document.getElementById('RST').addEventListener('click',reset);
+  document.getElementById('CTA').addEventListener('click',openPopup);
+  document.getElementById('popupClose').addEventListener('click',closePopup);
+  document.getElementById('popupSend').addEventListener('click',sendEmail);
+  document.getElementById('popupOverlay').addEventListener('click',function(e){if(e.target===this)closePopup();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
+}
 
-/* ══ FORFAITS ══ */
-var selectedForfait = null;
-
-// Toggle ouverture
-document.getElementById('forfHeader').addEventListener('click', function(){
-  var body = document.getElementById('forfBody');
-  var toggle = document.getElementById('forfToggle');
-  body.classList.toggle('open');
-  toggle.classList.toggle('open');
+/* ══ ENCADRÉ OPTIONS ══ */
+document.getElementById('forfHeader').addEventListener('click',function(){
+  document.getElementById('forfBody').classList.toggle('open');
+  document.getElementById('forfToggle').classList.toggle('open');
 });
 
-// Tabs
-document.querySelectorAll('.forf-tab').forEach(function(tab){
-  tab.addEventListener('click', function(){
-    document.querySelectorAll('.forf-tab').forEach(function(t){t.classList.remove('active');});
-    document.querySelectorAll('.forf-panel').forEach(function(p){p.classList.remove('active');});
-    this.classList.add('active');
-    document.getElementById('panel-'+this.getAttribute('data-tab')).classList.add('active');
-  });
-});
-
-// Sélection forfait
 document.querySelectorAll('.forf-card').forEach(function(card){
-  card.addEventListener('click', function(){
+  card.addEventListener('click',function(){
     document.querySelectorAll('.forf-card').forEach(function(c){c.classList.remove('selected');});
     this.classList.add('selected');
-    selectedForfait = {
-      name: this.getAttribute('data-forfait'),
-      price: parseInt(this.getAttribute('data-price')) || 0
-    };
-    document.getElementById('forfBarName').textContent = selectedForfait.name;
-    document.getElementById('forfBarPrice').textContent = selectedForfait.price + (this.getAttribute('data-price')==='79'?' €+':' €');
+    selectedForfait={name:this.getAttribute('data-forfait'),price:parseInt(this.getAttribute('data-price'))||0};
+    document.getElementById('forfBarName').textContent=selectedForfait.name;
+    document.getElementById('forfBarPrice').textContent=selectedForfait.price+' €';
     document.getElementById('forfBar').classList.add('show');
   });
 });
 
-// Retirer forfait
-document.getElementById('forfClear').addEventListener('click', function(){
+document.getElementById('forfClear').addEventListener('click',function(){
   document.querySelectorAll('.forf-card').forEach(function(c){c.classList.remove('selected');});
-  selectedForfait = null;
+  selectedForfait=null;
   document.getElementById('forfBar').classList.remove('show');
 });
+
+/* ══ DÉMARRAGE ══ */
+loadAllJSON();
 </script>
 </body>
 </html>
