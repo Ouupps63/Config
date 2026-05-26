@@ -8,7 +8,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#0b1120,#111827,#172554,#1e1b4b);background-size:400% 400%;animation:bg 15s ease infinite;color:#fff;min-height:100vh;padding:36px 4% 50px;padding-bottom:20px}
+body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#0b1120,#111827,#172554,#1e1b4b);background-size:400% 400%;animation:bg 15s ease infinite;color:#fff;min-height:100vh;padding:36px 4% 50px}
 @keyframes bg{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 .logo{font-family:'Orbitron',Arial,sans-serif;font-size:44px;font-weight:900;background:linear-gradient(90deg,#fff,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:5px;animation:pulse 3s ease-in-out infinite;display:inline-block}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
@@ -103,70 +103,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .popup-error{display:none;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:9px;padding:10px 13px;font-size:13px;color:#f87171;margin-bottom:12px}
 
 @media(max-width:500px){.logo{font-size:28px}.grid{grid-template-columns:1fr}body{padding:20px 3% 34px}.popup{padding:20px}}
-
-
-.dd{
-  position:relative;
-  width:100%;
-  user-select:none;
-}
-
-.dd-selected{
-  background:#0f172a;
-  border:1px solid rgba(96,165,250,.25);
-  padding:10px 12px;
-  border-radius:10px;
-  cursor:pointer;
-  font-size:13px;
-  font-weight:600;
-  color:#fff;
-  transition:.2s;
-}
-
-.dd-selected:hover{
-  border-color:#60a5fa;
-}
-
-.dd-menu{
-  position:absolute;
-  top:calc(100% + 6px);
-  left:0;
-  right:0;
-  background:#0b1220;
-  border:1px solid rgba(96,165,250,.25);
-  border-radius:12px;
-  max-height:240px;
-  overflow-y:auto;
-  display:none;
-  z-index:9999;
-  box-shadow:0 12px 30px rgba(0,0,0,.4);
-}
-
-.dd.open .dd-menu{
-  display:block;
-}
-
-.dd-item{
-  padding:10px 12px;
-  cursor:pointer;
-  font-size:13px;
-  transition:.15s;
-  color:#d1d5db;
-}
-
-.dd-item:hover{
-  background:rgba(96,165,250,.15);
-  color:#fff;
-}
-
-.dd-group{
-  padding:8px 12px;
-  font-size:11px;
-  color:#475569;
-  text-transform:uppercase;
-  letter-spacing:2px;
-}
-
 </style>
 </head>
 <body>
@@ -317,8 +253,7 @@ function loadAllJSON(){
       });
   });
   Promise.all(promises).then(function(){
-	build();
-	initDropdowns();
+    build();
     upSum();
     document.querySelectorAll('.pb').forEach(function(b){b.addEventListener('click',function(){preset(this.getAttribute('data-p'));});});
     document.getElementById('RST').addEventListener('click',reset);
@@ -327,43 +262,6 @@ function loadAllJSON(){
     document.getElementById('popupSend').addEventListener('click',sendEmail);
     document.getElementById('popupOverlay').addEventListener('click',function(e){if(e.target===this)closePopup();});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
-  });
-}
-
-
-function initDropdowns(){
-  document.querySelectorAll('.dd').forEach(function(dd){
-
-    var k = dd.getAttribute('data-k');
-    var selectedBox = dd.querySelector('.dd-selected');
-
-    dd.addEventListener('click', function(e){
-      dd.classList.toggle('open');
-    });
-
-    dd.querySelectorAll('.dd-item').forEach(function(item){
-      item.addEventListener('click', function(e){
-        e.stopPropagation();
-
-        var id = this.getAttribute('data-id');
-
-        S[k] = id;
-
-        selectedBox.textContent = this.textContent;
-
-        dd.classList.remove('open');
-
-        upInf(k);
-        upSum();
-      });
-    });
-
-  });
-
-  document.addEventListener('click', function(){
-    document.querySelectorAll('.dd').forEach(function(d){
-      d.classList.remove('open');
-    });
   });
 }
 
@@ -378,17 +276,7 @@ function build(){
       return'<option value="'+x.id+'">'+x.n+(x.p>0?' — '+x.p+' €':'')+'</option>';
     }).join('');
     var el=document.createElement('div');el.className='card';
-    el.innerHTML='<div class="ch"><div class="ico">'+c.i+'</div><div><div class="clbl">'+c.s+'</div><div class="ctit">'+c.l+'</div></div></div>
-	<div class="dd" data-k="'+k+'">
-  <div class="dd-selected">Choisir un composant</div>
-  <div class="dd-menu">
-    '+D[k].d.map(function(x){
-      if(x.g) return '<div class="dd-group">'+x.n+'</div>';
-      return '<div class="dd-item" data-id="'+x.id+'">'+x.n+(x.p>0?' — '+x.p+' €':'')+'</div>';
-    }).join('')+'
-  </div>
-</div>
-	<div class="inf e" id="I'+k+'">Aucun composant sélectionné</div>';
+    el.innerHTML='<div class="ch"><div class="ico">'+c.i+'</div><div><div class="clbl">'+c.s+'</div><div class="ctit">'+c.l+'</div></div></div><select class="sel" data-k="'+k+'">'+o+'</select><div class="inf e" id="I'+k+'">Aucun composant sélectionné</div>';
     g.appendChild(el);
   });
   document.querySelectorAll('.sel').forEach(function(el){
@@ -468,13 +356,6 @@ function preset(p){
   var pr=PR[p];
   Object.keys(pr).forEach(function(k){
     S[k]=pr[k];
-	
-	var dd = document.querySelector('.dd[data-k="'+k+'"] .dd-selected');
-if(dd && D[k]){
-  var it = D[k].d.find(function(x){return x.id===pr[k];});
-  if(it) dd.textContent = it.n;
-}
-
     var el=document.querySelector('.sel[data-k="'+k+'"]');if(el)el.value=pr[k];
     upInf(k);
   });
