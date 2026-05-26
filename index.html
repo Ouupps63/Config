@@ -77,9 +77,9 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
   <div class="logo">MLTeC</div>
   <div class="tag">Montage · Expertise · Technologie</div>
   <div class="title">Configurateur PC 2024 — 2026</div>
-  <div class="desc">150+ composants actuels · Compatibilité vérifiée en temps réel</div>
+  <div class="desc">250+ composants · Toutes marques · Toutes générations · Compatibilité temps réel</div>
   <div><span class="gpill">✔ Base de données 2024–2026 · Mai 2026</span></div>
-  <div><span class="wpill">⚠ Prix indicatifs — non actualisés en temps réel</span></div>
+  <div><span class="wpill">⚠ Prix indicatifs — non actualisés en temps réel · peuvent varier</span></div>
 </div>
 <div class="div"></div>
 <div class="plbl">Configurations prédéfinies MLTeC</div>
@@ -90,7 +90,8 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
   <button class="pb" data-p="mid">🔥 Gaming 1440p</button>
   <button class="pb" data-p="high">⚡ High-end 4K</button>
   <button class="pb" data-p="ultra">💎 Ultra / Créateur</button>
-  <button class="pb" data-p="stream">📡 Streaming / Montage</button>
+  <button class="pb" data-p="stream">📡 Streaming</button>
+  <button class="pb" data-p="silent">🔇 Silent Build</button>
 </div>
 <div class="grid" id="G"></div>
 <div class="sum">
@@ -115,8 +116,8 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
     <b>⚠ Avis important sur les prix</b><br>
     Les prix sont <b>purement indicatifs</b> — marché français 2024-2026.<br>
     Ils <b>ne sont pas actualisés en temps réel</b> et varient selon revendeurs, promotions et stocks.<br>
-    <b>RAM DDR5 et SSD NVMe</b> : fortes hausses de prix en 2025-2026.<br>
-    Contacte <b>MLTeC</b> pour un devis précis et personnalisé.
+    <b>RAM DDR5, SSD NVMe Gen5 et GPU RTX 50xx</b> : fortes hausses de prix en 2025-2026.<br>
+    Contacte <b>MLTeC</b> pour un devis précis, à jour et personnalisé.
   </div>
 </div>
 <div class="foot">Configurateur by <b>MLTeC</b> · Montage · Expertise · Technologie · 2026</div>
@@ -125,223 +126,283 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 var D={
 cpu:{l:'Processeur (CPU)',i:'⚙️',s:'Socket & fréquence',d:[
 {id:'none',n:'-- Choisir un CPU --',p:0,inf:'',sk:'',tdp:0,pf:0},
-// AM4
-{id:'g_am4_entry',g:1,n:'──── AM4 — Entrée de gamme (2020-2022) ────'},
+// ── AM4 ENTRÉE
+{id:'gam4a',g:1,n:'──── AMD AM4 — Entrée de gamme ────'},
+{id:'r3-4100',n:'AMD Ryzen 3 4100',p:59,inf:'4c/8t · 3.8GHz boost 4.0GHz · AM4 · 65W · DDR4 [2021]',sk:'AM4',tdp:65,pf:22},
 {id:'r3-5300g',n:'AMD Ryzen 3 5300G',p:79,inf:'4c/8t · 4.2GHz · AM4 · iGPU Vega 6 · 65W — bureau sans GPU [2021]',sk:'AM4',tdp:65,pf:28},
-{id:'r5-5500',n:'AMD Ryzen 5 5500',p:75,inf:'6c/12t · 4.2GHz · AM4 · 65W — budget [2022]',sk:'AM4',tdp:65,pf:38},
-{id:'r5-5600g',n:'AMD Ryzen 5 5600G',p:99,inf:'6c/12t · 4.4GHz · AM4 · iGPU Vega 7 · 65W — bureau sans GPU [2021]',sk:'AM4',tdp:65,pf:40},
+{id:'r5-5500',n:'AMD Ryzen 5 5500',p:75,inf:'6c/12t · 4.2GHz · AM4 · 65W — budget gaming [2022]',sk:'AM4',tdp:65,pf:38},
+{id:'r5-5500gt',n:'AMD Ryzen 5 5500GT',p:89,inf:'6c/12t · 4.4GHz · AM4 · iGPU Vega 7 · 65W [2023]',sk:'AM4',tdp:65,pf:40},
+{id:'r5-5600g',n:'AMD Ryzen 5 5600G',p:99,inf:'6c/12t · 4.4GHz · AM4 · iGPU Vega 7 · 65W [2021]',sk:'AM4',tdp:65,pf:40},
 {id:'r5-5600',n:'AMD Ryzen 5 5600',p:89,inf:'6c/12t · 4.4GHz · AM4 · 65W — excellent Q/P [2021]',sk:'AM4',tdp:65,pf:42},
 {id:'r5-5600x',n:'AMD Ryzen 5 5600X',p:105,inf:'6c/12t · 4.6GHz · AM4 · 65W [2020]',sk:'AM4',tdp:65,pf:45},
-{id:'g_am4_mid',g:1,n:'──── AM4 — Milieu & haut (2020-2022) ────'},
+// ── AM4 MILIEU/HAUT
+{id:'gam4b',g:1,n:'──── AMD AM4 — Milieu & haut de gamme ────'},
 {id:'r7-5700',n:'AMD Ryzen 7 5700',p:119,inf:'8c/16t · 4.6GHz · AM4 · 65W [2022]',sk:'AM4',tdp:65,pf:50},
 {id:'r7-5700x',n:'AMD Ryzen 7 5700X',p:139,inf:'8c/16t · 4.6GHz · AM4 · 65W [2022]',sk:'AM4',tdp:65,pf:54},
-{id:'r7-5700x3d',n:'AMD Ryzen 7 5700X3D',p:159,inf:'8c/16t · 4.1GHz · AM4 · 65W · 3D V-Cache [2023]',sk:'AM4',tdp:65,pf:65},
+{id:'r7-5700x3d',n:'AMD Ryzen 7 5700X3D',p:159,inf:'8c/16t · 4.1GHz · AM4 · 65W · 3D V-Cache [2023]',sk:'AM4',tdp:65,pf:66},
+{id:'r7-5800',n:'AMD Ryzen 7 5800',p:139,inf:'8c/16t · 4.6GHz · AM4 · 65W [2021]',sk:'AM4',tdp:65,pf:52},
 {id:'r7-5800x',n:'AMD Ryzen 7 5800X',p:149,inf:'8c/16t · 4.7GHz · AM4 · 105W [2020]',sk:'AM4',tdp:105,pf:55},
 {id:'r7-5800x3d',n:'AMD Ryzen 7 5800X3D',p:179,inf:'8c/16t · 4.5GHz · AM4 · 105W · 3D V-Cache [2022]',sk:'AM4',tdp:105,pf:72},
-{id:'r9-5900x',n:'AMD Ryzen 9 5900X',p:199,inf:'12c/24t · 4.8GHz · AM4 · 105W [2020]',sk:'AM4',tdp:105,pf:62},
 {id:'r9-5900',n:'AMD Ryzen 9 5900',p:179,inf:'12c/24t · 4.7GHz · AM4 · 65W [2021]',sk:'AM4',tdp:65,pf:60},
+{id:'r9-5900x',n:'AMD Ryzen 9 5900X',p:199,inf:'12c/24t · 4.8GHz · AM4 · 105W [2020]',sk:'AM4',tdp:105,pf:62},
 {id:'r9-5950x',n:'AMD Ryzen 9 5950X',p:259,inf:'16c/32t · 4.9GHz · AM4 · 105W — flagship AM4 [2020]',sk:'AM4',tdp:105,pf:68},
-// AM5 7000
-{id:'g_am5_7k_entry',g:1,n:'──── AM5 — Ryzen 7000 entrée/milieu (2022-2023) ────'},
+// ── AM5 RYZEN 7000
+{id:'gam5a',g:1,n:'──── AMD AM5 — Ryzen 7000 entrée/milieu (2022-2023) ────'},
 {id:'r5-7500f',n:'AMD Ryzen 5 7500F',p:149,inf:'6c/12t · 5.0GHz · AM5 · 65W · sans iGPU [2023]',sk:'AM5',tdp:65,pf:50},
 {id:'r5-7600',n:'AMD Ryzen 5 7600',p:159,inf:'6c/12t · 5.1GHz · AM5 · 65W [2022]',sk:'AM5',tdp:65,pf:52},
 {id:'r5-7600x',n:'AMD Ryzen 5 7600X',p:169,inf:'6c/12t · 5.3GHz · AM5 · 105W [2022]',sk:'AM5',tdp:105,pf:55},
 {id:'r7-7700',n:'AMD Ryzen 7 7700',p:199,inf:'8c/16t · 5.3GHz · AM5 · 65W [2023]',sk:'AM5',tdp:65,pf:64},
 {id:'r7-7700x',n:'AMD Ryzen 7 7700X',p:219,inf:'8c/16t · 5.4GHz · AM5 · 105W [2022]',sk:'AM5',tdp:105,pf:67},
-{id:'g_am5_7k_high',g:1,n:'──── AM5 — Ryzen 7000 haut de gamme (2022-2023) ────'},
+{id:'gam5b',g:1,n:'──── AMD AM5 — Ryzen 7000 haut de gamme (2022-2023) ────'},
 {id:'r7-7800x3d',n:'AMD Ryzen 7 7800X3D ⭐',p:329,inf:'8c/16t · 5.0GHz · AM5 · 120W · 3D V-Cache — roi gaming [2023]',sk:'AM5',tdp:120,pf:85},
 {id:'r9-7900',n:'AMD Ryzen 9 7900',p:249,inf:'12c/24t · 5.4GHz · AM5 · 65W [2023]',sk:'AM5',tdp:65,pf:70},
 {id:'r9-7900x',n:'AMD Ryzen 9 7900X',p:299,inf:'12c/24t · 5.6GHz · AM5 · 170W [2022]',sk:'AM5',tdp:170,pf:74},
 {id:'r9-7900x3d',n:'AMD Ryzen 9 7900X3D',p:369,inf:'12c/24t · 5.6GHz · AM5 · 120W · 3D V-Cache [2023]',sk:'AM5',tdp:120,pf:82},
 {id:'r9-7950x',n:'AMD Ryzen 9 7950X',p:449,inf:'16c/32t · 5.7GHz · AM5 · 170W [2022]',sk:'AM5',tdp:170,pf:82},
 {id:'r9-7950x3d',n:'AMD Ryzen 9 7950X3D',p:519,inf:'16c/32t · 5.7GHz · AM5 · 170W · 3D V-Cache [2023]',sk:'AM5',tdp:170,pf:90},
-// AM5 9000
-{id:'g_am5_9k_entry',g:1,n:'──── AM5 — Ryzen 9000 Zen 5 entrée/milieu (2024-2025) ────'},
-{id:'r5-9600x',n:'AMD Ryzen 5 9600X',p:229,inf:'6c/12t · 5.4GHz · AM5 · 65W · Zen 5 [2024]',sk:'AM5',tdp:65,pf:62},
+// ── AM5 RYZEN 9000
+{id:'gam5c',g:1,n:'──── AMD AM5 — Ryzen 9000 Zen 5 (2024-2025) ────'},
 {id:'r5-9600',n:'AMD Ryzen 5 9600',p:199,inf:'6c/12t · 5.3GHz · AM5 · 65W · Zen 5 [2024]',sk:'AM5',tdp:65,pf:58},
-{id:'r7-9700x',n:'AMD Ryzen 7 9700X',p:319,inf:'8c/16t · 5.5GHz · AM5 · 65W · Zen 5 [2024]',sk:'AM5',tdp:65,pf:72},
+{id:'r5-9600x',n:'AMD Ryzen 5 9600X',p:229,inf:'6c/12t · 5.4GHz · AM5 · 65W · Zen 5 [2024]',sk:'AM5',tdp:65,pf:62},
 {id:'r7-9700',n:'AMD Ryzen 7 9700',p:279,inf:'8c/16t · 5.4GHz · AM5 · 65W · Zen 5 [2024]',sk:'AM5',tdp:65,pf:68},
-{id:'g_am5_9k_high',g:1,n:'──── AM5 — Ryzen 9000 Zen 5 haut de gamme (2024-2025) ────'},
+{id:'r7-9700x',n:'AMD Ryzen 7 9700X',p:319,inf:'8c/16t · 5.5GHz · AM5 · 65W · Zen 5 [2024]',sk:'AM5',tdp:65,pf:72},
 {id:'r7-9800x3d',n:'AMD Ryzen 7 9800X3D ⭐',p:469,inf:'8c/16t · 5.2GHz · AM5 · 120W · Zen 5 3D V-Cache — meilleur gaming 2026 [2024]',sk:'AM5',tdp:120,pf:95},
-{id:'r9-9900x',n:'AMD Ryzen 9 9900X',p:399,inf:'12c/24t · 5.6GHz · AM5 · 120W · Zen 5 [2024]',sk:'AM5',tdp:120,pf:82},
 {id:'r9-9900',n:'AMD Ryzen 9 9900',p:349,inf:'12c/24t · 5.4GHz · AM5 · 65W · Zen 5 [2024]',sk:'AM5',tdp:65,pf:78},
+{id:'r9-9900x',n:'AMD Ryzen 9 9900X',p:399,inf:'12c/24t · 5.6GHz · AM5 · 120W · Zen 5 [2024]',sk:'AM5',tdp:120,pf:82},
 {id:'r9-9950x',n:'AMD Ryzen 9 9950X',p:619,inf:'16c/32t · 5.7GHz · AM5 · 170W · Zen 5 [2024]',sk:'AM5',tdp:170,pf:90},
 {id:'r9-9950x3d',n:'AMD Ryzen 9 9950X3D',p:829,inf:'16c/32t · AM5 · 170W · V-Cache gen2 — ultime 2026 [2025]',sk:'AM5',tdp:170,pf:98},
-// Intel 12e gen
-{id:'g_i12_entry',g:1,n:'──── LGA1700 — Intel 12e gen entrée (2021-2022) ────'},
-{id:'i3-12100',n:'Intel Core i3-12100',p:79,inf:'4c/8t · 4.3GHz · LGA1700 · 60W · iGPU [2022]',sk:'LGA1700',tdp:60,pf:28},
+// ── INTEL 12e GEN
+{id:'gi12a',g:1,n:'──── Intel LGA1700 — 12e gen Alder Lake (2021-2022) ────'},
+{id:'i3-12100',n:'Intel Core i3-12100',p:79,inf:'4c/8t · 4.3GHz · LGA1700 · 60W · iGPU UHD 730 [2022]',sk:'LGA1700',tdp:60,pf:28},
 {id:'i3-12100f',n:'Intel Core i3-12100F',p:69,inf:'4c/8t · 4.3GHz · LGA1700 · 58W · sans iGPU [2022]',sk:'LGA1700',tdp:58,pf:30},
-{id:'i5-12400',n:'Intel Core i5-12400',p:129,inf:'6c/12t · 4.4GHz · LGA1700 · 65W · iGPU [2022]',sk:'LGA1700',tdp:65,pf:48},
+{id:'i5-12400',n:'Intel Core i5-12400',p:129,inf:'6c/12t · 4.4GHz · LGA1700 · 65W · iGPU UHD 730 [2022]',sk:'LGA1700',tdp:65,pf:48},
 {id:'i5-12400f',n:'Intel Core i5-12400F',p:109,inf:'6c/12t · 4.4GHz · LGA1700 · 65W · sans iGPU [2022]',sk:'LGA1700',tdp:65,pf:50},
-{id:'g_i12_high',g:1,n:'──── LGA1700 — Intel 12e gen haut (2021-2022) ────'},
-{id:'i5-12600k',n:'Intel Core i5-12600K',p:149,inf:'10c · 4.9GHz · LGA1700 · 125W [2021]',sk:'LGA1700',tdp:125,pf:58},
-{id:'i7-12700',n:'Intel Core i7-12700',p:169,inf:'12c · 4.9GHz · LGA1700 · 65W · iGPU [2021]',sk:'LGA1700',tdp:65,pf:65},
-{id:'i7-12700k',n:'Intel Core i7-12700K',p:189,inf:'12c · 5.0GHz · LGA1700 · 125W [2021]',sk:'LGA1700',tdp:125,pf:68},
-{id:'i9-12900k',n:'Intel Core i9-12900K',p:269,inf:'16c · 5.2GHz · LGA1700 · 241W [2021]',sk:'LGA1700',tdp:241,pf:76},
-{id:'i9-12900ks',n:'Intel Core i9-12900KS',p:299,inf:'16c · 5.5GHz · LGA1700 · 241W — boost max [2022]',sk:'LGA1700',tdp:241,pf:78},
-// Intel 13e gen
-{id:'g_i13_entry',g:1,n:'──── LGA1700 — Intel 13e gen entrée (2022-2023) ────'},
+{id:'i5-12500',n:'Intel Core i5-12500',p:139,inf:'6c/12t · 4.6GHz · LGA1700 · 65W · iGPU [2022]',sk:'LGA1700',tdp:65,pf:50},
+{id:'i5-12600k',n:'Intel Core i5-12600K',p:149,inf:'10c(6P+4E) · 4.9GHz · LGA1700 · 125W [2021]',sk:'LGA1700',tdp:125,pf:58},
+{id:'i5-12600kf',n:'Intel Core i5-12600KF',p:139,inf:'10c(6P+4E) · 4.9GHz · LGA1700 · 125W · sans iGPU [2021]',sk:'LGA1700',tdp:125,pf:58},
+{id:'i7-12700',n:'Intel Core i7-12700',p:169,inf:'12c(8P+4E) · 4.9GHz · LGA1700 · 65W · iGPU [2021]',sk:'LGA1700',tdp:65,pf:65},
+{id:'i7-12700f',n:'Intel Core i7-12700F',p:159,inf:'12c(8P+4E) · 4.9GHz · LGA1700 · 65W · sans iGPU [2021]',sk:'LGA1700',tdp:65,pf:65},
+{id:'i7-12700k',n:'Intel Core i7-12700K',p:189,inf:'12c(8P+4E) · 5.0GHz · LGA1700 · 125W [2021]',sk:'LGA1700',tdp:125,pf:68},
+{id:'i7-12700kf',n:'Intel Core i7-12700KF',p:179,inf:'12c(8P+4E) · 5.0GHz · LGA1700 · 125W · sans iGPU [2021]',sk:'LGA1700',tdp:125,pf:68},
+{id:'i9-12900',n:'Intel Core i9-12900',p:249,inf:'16c(8P+8E) · 5.1GHz · LGA1700 · 65W · iGPU [2021]',sk:'LGA1700',tdp:65,pf:74},
+{id:'i9-12900k',n:'Intel Core i9-12900K',p:269,inf:'16c(8P+8E) · 5.2GHz · LGA1700 · 125W [2021]',sk:'LGA1700',tdp:125,pf:76},
+{id:'i9-12900kf',n:'Intel Core i9-12900KF',p:259,inf:'16c(8P+8E) · 5.2GHz · LGA1700 · 125W · sans iGPU [2021]',sk:'LGA1700',tdp:125,pf:76},
+{id:'i9-12900ks',n:'Intel Core i9-12900KS',p:299,inf:'16c(8P+8E) · 5.5GHz · LGA1700 · 150W — boost max [2022]',sk:'LGA1700',tdp:150,pf:78},
+// ── INTEL 13e GEN
+{id:'gi13a',g:1,n:'──── Intel LGA1700 — 13e gen Raptor Lake (2022-2023) ────'},
 {id:'i3-13100',n:'Intel Core i3-13100',p:89,inf:'4c/8t · 4.5GHz · LGA1700 · 60W · iGPU [2022]',sk:'LGA1700',tdp:60,pf:31},
 {id:'i3-13100f',n:'Intel Core i3-13100F',p:79,inf:'4c/8t · 4.5GHz · LGA1700 · 58W · sans iGPU [2022]',sk:'LGA1700',tdp:58,pf:33},
-{id:'i5-13400',n:'Intel Core i5-13400',p:159,inf:'10c · 4.6GHz · LGA1700 · 65W · iGPU [2023]',sk:'LGA1700',tdp:65,pf:56},
-{id:'i5-13400f',n:'Intel Core i5-13400F',p:139,inf:'10c · 4.6GHz · LGA1700 · 65W · sans iGPU [2023]',sk:'LGA1700',tdp:65,pf:58},
-{id:'g_i13_high',g:1,n:'──── LGA1700 — Intel 13e gen haut (2022-2023) ────'},
-{id:'i5-13600k',n:'Intel Core i5-13600K',p:209,inf:'14c · 5.1GHz · LGA1700 · 125W [2022]',sk:'LGA1700',tdp:125,pf:68},
-{id:'i5-13600kf',n:'Intel Core i5-13600KF',p:199,inf:'14c · 5.1GHz · LGA1700 · 125W · sans iGPU [2022]',sk:'LGA1700',tdp:125,pf:68},
-{id:'i7-13700',n:'Intel Core i7-13700',p:249,inf:'16c · 5.2GHz · LGA1700 · 65W · iGPU [2022]',sk:'LGA1700',tdp:65,pf:72},
-{id:'i7-13700k',n:'Intel Core i7-13700K',p:279,inf:'16c · 5.4GHz · LGA1700 · 125W [2022]',sk:'LGA1700',tdp:125,pf:76},
-{id:'i7-13700kf',n:'Intel Core i7-13700KF',p:269,inf:'16c · 5.4GHz · LGA1700 · 125W · sans iGPU [2022]',sk:'LGA1700',tdp:125,pf:76},
-{id:'i9-13900',n:'Intel Core i9-13900',p:339,inf:'24c · 5.6GHz · LGA1700 · 65W · iGPU [2022]',sk:'LGA1700',tdp:65,pf:82},
-{id:'i9-13900k',n:'Intel Core i9-13900K',p:379,inf:'24c · 5.8GHz · LGA1700 · 253W [2022]',sk:'LGA1700',tdp:253,pf:86},
-{id:'i9-13900kf',n:'Intel Core i9-13900KF',p:369,inf:'24c · 5.8GHz · LGA1700 · 253W · sans iGPU [2022]',sk:'LGA1700',tdp:253,pf:86},
-{id:'i9-13900ks',n:'Intel Core i9-13900KS',p:429,inf:'24c · 6.0GHz · LGA1700 · 253W — boost max [2023]',sk:'LGA1700',tdp:253,pf:88},
-// Intel 14e gen
-{id:'g_i14_entry',g:1,n:'──── LGA1700 — Intel 14e gen entrée (2023-2024) ────'},
+{id:'i5-13400',n:'Intel Core i5-13400',p:159,inf:'10c(6P+4E) · 4.6GHz · LGA1700 · 65W · iGPU [2023]',sk:'LGA1700',tdp:65,pf:56},
+{id:'i5-13400f',n:'Intel Core i5-13400F',p:139,inf:'10c(6P+4E) · 4.6GHz · LGA1700 · 65W · sans iGPU [2023]',sk:'LGA1700',tdp:65,pf:58},
+{id:'i5-13500',n:'Intel Core i5-13500',p:169,inf:'14c(6P+8E) · 4.8GHz · LGA1700 · 65W · iGPU [2022]',sk:'LGA1700',tdp:65,pf:62},
+{id:'i5-13600k',n:'Intel Core i5-13600K',p:209,inf:'14c(6P+8E) · 5.1GHz · LGA1700 · 125W [2022]',sk:'LGA1700',tdp:125,pf:68},
+{id:'i5-13600kf',n:'Intel Core i5-13600KF',p:199,inf:'14c(6P+8E) · 5.1GHz · LGA1700 · 125W · sans iGPU [2022]',sk:'LGA1700',tdp:125,pf:68},
+{id:'i7-13700',n:'Intel Core i7-13700',p:249,inf:'16c(8P+8E) · 5.2GHz · LGA1700 · 65W · iGPU [2022]',sk:'LGA1700',tdp:65,pf:72},
+{id:'i7-13700f',n:'Intel Core i7-13700F',p:239,inf:'16c(8P+8E) · 5.2GHz · LGA1700 · 65W · sans iGPU [2022]',sk:'LGA1700',tdp:65,pf:72},
+{id:'i7-13700k',n:'Intel Core i7-13700K',p:279,inf:'16c(8P+8E) · 5.4GHz · LGA1700 · 125W [2022]',sk:'LGA1700',tdp:125,pf:76},
+{id:'i7-13700kf',n:'Intel Core i7-13700KF',p:269,inf:'16c(8P+8E) · 5.4GHz · LGA1700 · 125W · sans iGPU [2022]',sk:'LGA1700',tdp:125,pf:76},
+{id:'i9-13900',n:'Intel Core i9-13900',p:339,inf:'24c(8P+16E) · 5.6GHz · LGA1700 · 65W · iGPU [2022]',sk:'LGA1700',tdp:65,pf:82},
+{id:'i9-13900f',n:'Intel Core i9-13900F',p:329,inf:'24c(8P+16E) · 5.6GHz · LGA1700 · 65W · sans iGPU [2022]',sk:'LGA1700',tdp:65,pf:82},
+{id:'i9-13900k',n:'Intel Core i9-13900K',p:379,inf:'24c(8P+16E) · 5.8GHz · LGA1700 · 253W [2022]',sk:'LGA1700',tdp:253,pf:86},
+{id:'i9-13900kf',n:'Intel Core i9-13900KF',p:369,inf:'24c(8P+16E) · 5.8GHz · LGA1700 · 253W · sans iGPU [2022]',sk:'LGA1700',tdp:253,pf:86},
+{id:'i9-13900ks',n:'Intel Core i9-13900KS',p:429,inf:'24c(8P+16E) · 6.0GHz · LGA1700 · 253W — boost max [2023]',sk:'LGA1700',tdp:253,pf:88},
+// ── INTEL 14e GEN
+{id:'gi14a',g:1,n:'──── Intel LGA1700 — 14e gen Raptor Lake Refresh (2023-2024) ────'},
 {id:'i3-14100',n:'Intel Core i3-14100',p:99,inf:'4c/8t · 4.7GHz · LGA1700 · 60W · iGPU [2024]',sk:'LGA1700',tdp:60,pf:33},
 {id:'i3-14100f',n:'Intel Core i3-14100F',p:89,inf:'4c/8t · 4.7GHz · LGA1700 · 58W · sans iGPU [2024]',sk:'LGA1700',tdp:58,pf:35},
-{id:'i5-14400',n:'Intel Core i5-14400',p:169,inf:'10c · 4.7GHz · LGA1700 · 65W · iGPU [2024]',sk:'LGA1700',tdp:65,pf:58},
-{id:'i5-14400f',n:'Intel Core i5-14400F',p:149,inf:'10c · 4.7GHz · LGA1700 · 65W · sans iGPU [2024]',sk:'LGA1700',tdp:65,pf:60},
-{id:'g_i14_high',g:1,n:'──── LGA1700 — Intel 14e gen haut (2023-2024) ────'},
-{id:'i5-14600k',n:'Intel Core i5-14600K',p:219,inf:'14c · 5.3GHz · LGA1700 · 125W [2023]',sk:'LGA1700',tdp:125,pf:65},
-{id:'i5-14600kf',n:'Intel Core i5-14600KF',p:209,inf:'14c · 5.3GHz · LGA1700 · 125W · sans iGPU [2023]',sk:'LGA1700',tdp:125,pf:65},
-{id:'i7-14700',n:'Intel Core i7-14700',p:289,inf:'20c · 5.4GHz · LGA1700 · 65W · iGPU [2023]',sk:'LGA1700',tdp:65,pf:74},
-{id:'i7-14700k',n:'Intel Core i7-14700K',p:329,inf:'20c · 5.6GHz · LGA1700 · 125W [2023]',sk:'LGA1700',tdp:125,pf:78},
-{id:'i7-14700kf',n:'Intel Core i7-14700KF',p:319,inf:'20c · 5.6GHz · LGA1700 · 125W · sans iGPU [2023]',sk:'LGA1700',tdp:125,pf:78},
-{id:'i9-14900',n:'Intel Core i9-14900',p:399,inf:'24c · 5.8GHz · LGA1700 · 65W · iGPU [2023]',sk:'LGA1700',tdp:65,pf:83},
-{id:'i9-14900k',n:'Intel Core i9-14900K',p:469,inf:'24c · 6.0GHz · LGA1700 · 253W [2023]',sk:'LGA1700',tdp:253,pf:87},
-{id:'i9-14900kf',n:'Intel Core i9-14900KF',p:459,inf:'24c · 6.0GHz · LGA1700 · 253W · sans iGPU [2023]',sk:'LGA1700',tdp:253,pf:87},
-{id:'i9-14900ks',n:'Intel Core i9-14900KS',p:519,inf:'24c · 6.2GHz · LGA1700 · 253W — boost max [2024]',sk:'LGA1700',tdp:253,pf:89},
-// Intel Arrow Lake
-{id:'g_i_arrow',g:1,n:'──── LGA1851 — Intel Arrow Lake (2024-2025) ────'},
-{id:'i5-245k',n:'Intel Core Ultra 5 245K',p:279,inf:'14c · 5.2GHz · LGA1851 · 125W [2024]',sk:'LGA1851',tdp:125,pf:60},
-{id:'i5-245kf',n:'Intel Core Ultra 5 245KF',p:259,inf:'14c · 5.2GHz · LGA1851 · 125W · sans iGPU [2024]',sk:'LGA1851',tdp:125,pf:60},
-{id:'i7-265k',n:'Intel Core Ultra 7 265K',p:389,inf:'20c · 5.5GHz · LGA1851 · 125W [2024]',sk:'LGA1851',tdp:125,pf:75},
-{id:'i7-265kf',n:'Intel Core Ultra 7 265KF',p:369,inf:'20c · 5.5GHz · LGA1851 · 125W · sans iGPU [2024]',sk:'LGA1851',tdp:125,pf:75},
-{id:'i9-285k',n:'Intel Core Ultra 9 285K',p:519,inf:'24c · 5.7GHz · LGA1851 · 253W [2024]',sk:'LGA1851',tdp:253,pf:88}
+{id:'i5-14400',n:'Intel Core i5-14400',p:169,inf:'10c(6P+4E) · 4.7GHz · LGA1700 · 65W · iGPU [2024]',sk:'LGA1700',tdp:65,pf:58},
+{id:'i5-14400f',n:'Intel Core i5-14400F',p:149,inf:'10c(6P+4E) · 4.7GHz · LGA1700 · 65W · sans iGPU [2024]',sk:'LGA1700',tdp:65,pf:60},
+{id:'i5-14500',n:'Intel Core i5-14500',p:179,inf:'14c(6P+8E) · 5.0GHz · LGA1700 · 65W · iGPU [2024]',sk:'LGA1700',tdp:65,pf:62},
+{id:'i5-14600k',n:'Intel Core i5-14600K',p:219,inf:'14c(6P+8E) · 5.3GHz · LGA1700 · 125W [2023]',sk:'LGA1700',tdp:125,pf:65},
+{id:'i5-14600kf',n:'Intel Core i5-14600KF',p:209,inf:'14c(6P+8E) · 5.3GHz · LGA1700 · 125W · sans iGPU [2023]',sk:'LGA1700',tdp:125,pf:65},
+{id:'i7-14700',n:'Intel Core i7-14700',p:289,inf:'20c(8P+12E) · 5.4GHz · LGA1700 · 65W · iGPU [2023]',sk:'LGA1700',tdp:65,pf:74},
+{id:'i7-14700f',n:'Intel Core i7-14700F',p:279,inf:'20c(8P+12E) · 5.4GHz · LGA1700 · 65W · sans iGPU [2023]',sk:'LGA1700',tdp:65,pf:74},
+{id:'i7-14700k',n:'Intel Core i7-14700K',p:329,inf:'20c(8P+12E) · 5.6GHz · LGA1700 · 125W [2023]',sk:'LGA1700',tdp:125,pf:78},
+{id:'i7-14700kf',n:'Intel Core i7-14700KF',p:319,inf:'20c(8P+12E) · 5.6GHz · LGA1700 · 125W · sans iGPU [2023]',sk:'LGA1700',tdp:125,pf:78},
+{id:'i9-14900',n:'Intel Core i9-14900',p:399,inf:'24c(8P+16E) · 5.8GHz · LGA1700 · 65W · iGPU [2023]',sk:'LGA1700',tdp:65,pf:83},
+{id:'i9-14900f',n:'Intel Core i9-14900F',p:389,inf:'24c(8P+16E) · 5.8GHz · LGA1700 · 65W · sans iGPU [2023]',sk:'LGA1700',tdp:65,pf:83},
+{id:'i9-14900k',n:'Intel Core i9-14900K',p:469,inf:'24c(8P+16E) · 6.0GHz · LGA1700 · 253W [2023]',sk:'LGA1700',tdp:253,pf:87},
+{id:'i9-14900kf',n:'Intel Core i9-14900KF',p:459,inf:'24c(8P+16E) · 6.0GHz · LGA1700 · 253W · sans iGPU [2023]',sk:'LGA1700',tdp:253,pf:87},
+{id:'i9-14900ks',n:'Intel Core i9-14900KS',p:519,inf:'24c(8P+16E) · 6.2GHz · LGA1700 · 253W — boost max [2024]',sk:'LGA1700',tdp:253,pf:89},
+// ── INTEL ARROW LAKE
+{id:'gi_arrow',g:1,n:'──── Intel LGA1851 — Arrow Lake Core Ultra 200S (2024-2025) ────'},
+{id:'i3-240',n:'Intel Core Ultra 3 240',p:139,inf:'8c(4P+4E) · 4.3GHz · LGA1851 · 65W · iGPU [2025]',sk:'LGA1851',tdp:65,pf:32},
+{id:'i5-225',n:'Intel Core Ultra 5 225',p:179,inf:'14c(6P+8E) · 4.9GHz · LGA1851 · 65W · iGPU [2025]',sk:'LGA1851',tdp:65,pf:52},
+{id:'i5-235',n:'Intel Core Ultra 5 235',p:199,inf:'14c(6P+8E) · 5.0GHz · LGA1851 · 65W · iGPU [2025]',sk:'LGA1851',tdp:65,pf:55},
+{id:'i5-245',n:'Intel Core Ultra 5 245',p:219,inf:'14c(6P+8E) · 5.1GHz · LGA1851 · 65W · iGPU [2025]',sk:'LGA1851',tdp:65,pf:57},
+{id:'i5-245k',n:'Intel Core Ultra 5 245K',p:279,inf:'14c(6P+8E) · 5.2GHz · LGA1851 · 125W · iGPU [2024]',sk:'LGA1851',tdp:125,pf:60},
+{id:'i5-245kf',n:'Intel Core Ultra 5 245KF',p:259,inf:'14c(6P+8E) · 5.2GHz · LGA1851 · 125W · sans iGPU [2024]',sk:'LGA1851',tdp:125,pf:60},
+{id:'i7-265',n:'Intel Core Ultra 7 265',p:299,inf:'20c(8P+12E) · 5.3GHz · LGA1851 · 65W · iGPU [2025]',sk:'LGA1851',tdp:65,pf:70},
+{id:'i7-265k',n:'Intel Core Ultra 7 265K',p:389,inf:'20c(8P+12E) · 5.5GHz · LGA1851 · 125W · iGPU [2024]',sk:'LGA1851',tdp:125,pf:75},
+{id:'i7-265kf',n:'Intel Core Ultra 7 265KF',p:369,inf:'20c(8P+12E) · 5.5GHz · LGA1851 · 125W · sans iGPU [2024]',sk:'LGA1851',tdp:125,pf:75},
+{id:'i7-270k',n:'Intel Core Ultra 7 270K Plus',p:359,inf:'24c(8P+16E) · 5.5GHz · LGA1851 · 125W · refresh 2025',sk:'LGA1851',tdp:125,pf:78},
+{id:'i9-285',n:'Intel Core Ultra 9 285',p:419,inf:'24c(8P+16E) · 5.6GHz · LGA1851 · 65W · iGPU [2025]',sk:'LGA1851',tdp:65,pf:83},
+{id:'i9-285k',n:'Intel Core Ultra 9 285K',p:519,inf:'24c(8P+16E) · 5.7GHz · LGA1851 · 253W · iGPU [2024]',sk:'LGA1851',tdp:253,pf:88}
 ]},
 
 mb:{l:'Carte mère',i:'🟩',s:'Socket & chipset',d:[
 {id:'none',n:'-- Choisir une carte mère --',p:0,inf:'',sk:''},
-// AM4
-{id:'g_am4_budget',g:1,n:'──── AM4 — Budget ────'},
-{id:'a520-asrock',n:'ASRock A520M-HDV',p:59,inf:'AM4 · DDR4 · PCIe 3.0 · mATX — entrée absolue',sk:'AM4'},
-{id:'b450-msi',n:'MSI B450M PRO-VDH MAX',p:69,inf:'AM4 · DDR4 · PCIe 3.0 · mATX — populaire budget',sk:'AM4'},
+// AM4 Budget
+{id:'gm_am4_a',g:1,n:'──── AM4 — Entrée de gamme ────'},
+{id:'a520-asrock',n:'ASRock A520M-HDV',p:55,inf:'AM4 · DDR4 · PCIe 3.0 · mATX — entrée absolue',sk:'AM4'},
+{id:'a520-gigabyte',n:'Gigabyte A520M S2H',p:59,inf:'AM4 · DDR4 · PCIe 3.0 · mATX',sk:'AM4'},
+{id:'b450-msi-b',n:'MSI B450M-A PRO MAX',p:65,inf:'AM4 · DDR4 · PCIe 3.0 · mATX — budget',sk:'AM4'},
+{id:'b450-msi',n:'MSI B450M PRO-VDH MAX',p:69,inf:'AM4 · DDR4 · PCIe 3.0 · mATX — populaire',sk:'AM4'},
 {id:'b450-asus',n:'ASUS PRIME B450M-A II',p:79,inf:'AM4 · DDR4 · PCIe 3.0 · mATX',sk:'AM4'},
-{id:'g_am4_mid',g:1,n:'──── AM4 — Milieu/haut de gamme ────'},
+{id:'b450-gigabyte',n:'Gigabyte B450M DS3H',p:69,inf:'AM4 · DDR4 · PCIe 3.0 · mATX',sk:'AM4'},
+// AM4 Mid/High
+{id:'gm_am4_b',g:1,n:'──── AM4 — Milieu / haut de gamme ────'},
 {id:'b550-asrock',n:'ASRock B550 Steel Legend',p:99,inf:'AM4 · DDR4 · PCIe 4.0 · ATX',sk:'AM4'},
-{id:'b550-msi',n:'MSI MAG B550 TOMAHAWK',p:119,inf:'AM4 · DDR4 · PCIe 4.0 · Wi-Fi · ATX — très populaire',sk:'AM4'},
+{id:'b550-asrock-m',n:'ASRock B550M Pro4',p:89,inf:'AM4 · DDR4 · PCIe 4.0 · mATX',sk:'AM4'},
+{id:'b550-msi',n:'MSI MAG B550 TOMAHAWK',p:119,inf:'AM4 · DDR4 · PCIe 4.0 · Wi-Fi · ATX',sk:'AM4'},
+{id:'b550-msi-wifi',n:'MSI MAG B550M MORTAR WiFi',p:109,inf:'AM4 · DDR4 · PCIe 4.0 · Wi-Fi · mATX',sk:'AM4'},
+{id:'b550-asus-tuf',n:'ASUS TUF Gaming B550-Plus WiFi',p:129,inf:'AM4 · DDR4 · PCIe 4.0 · Wi-Fi · ATX',sk:'AM4'},
 {id:'b550-gigabyte',n:'Gigabyte B550 AORUS Pro AX',p:129,inf:'AM4 · DDR4 · PCIe 4.0 · Wi-Fi 6 · ATX',sk:'AM4'},
 {id:'x570-asus',n:'ASUS TUF Gaming X570-Plus WiFi',p:149,inf:'AM4 · DDR4 · PCIe 4.0 · Wi-Fi · ATX',sk:'AM4'},
-{id:'x570-msi-ace',n:'MSI MEG X570S ACE MAX',p:249,inf:'AM4 · DDR4 · PCIe 4.0 · Wi-Fi 6E · ATX — flagship AM4',sk:'AM4'},
+{id:'x570-msi-unify',n:'MSI MEG X570S UNIFY-X MAX',p:219,inf:'AM4 · DDR4 · PCIe 4.0 · ATX premium',sk:'AM4'},
+{id:'x570-gigabyte-master',n:'Gigabyte X570 AORUS Master',p:199,inf:'AM4 · DDR4 · PCIe 4.0 · Wi-Fi 6 · ATX flagship',sk:'AM4'},
 // AM5 B650
-{id:'g_am5_b650',g:1,n:'──── AM5 — Chipset B650 (entrée/milieu) ────'},
+{id:'gm_am5_a',g:1,n:'──── AM5 — Chipset B650 (entrée/milieu) ────'},
 {id:'b650-asrock',n:'ASRock B650M Pro RS WiFi',p:149,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6 · mATX',sk:'AM5'},
+{id:'b650-asrock-taichi',n:'ASRock B650E Taichi Lite',p:219,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · ATX',sk:'AM5'},
 {id:'b650-gigabyte',n:'Gigabyte B650M AORUS Elite AX',p:159,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · mATX',sk:'AM5'},
-{id:'b650-mortar',n:'MSI MAG B650M MORTAR WiFi',p:169,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · mATX — compact solide',sk:'AM5'},
+{id:'b650-gigabyte-atx',n:'Gigabyte B650 AORUS Elite AX',p:189,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · ATX',sk:'AM5'},
+{id:'b650-mortar',n:'MSI MAG B650M MORTAR WiFi',p:169,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · mATX',sk:'AM5'},
 {id:'b650e-msi',n:'MSI MAG B650 TOMAHAWK WiFi ⭐',p:189,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · ATX — recommandé',sk:'AM5'},
 {id:'b650-asus',n:'ASUS TUF Gaming B650-Plus WiFi',p:199,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6 · ATX',sk:'AM5'},
-{id:'b650-asrock-taichi',n:'ASRock B650E Taichi Lite',p:219,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · ATX',sk:'AM5'},
+{id:'b650-asus-pro',n:'ASUS ProArt B650-Creator',p:229,inf:'AM5 · DDR5 · PCIe 5.0 · Thunderbolt 4 · ATX créateur',sk:'AM5'},
 // AM5 X670/X870
-{id:'g_am5_x670',g:1,n:'──── AM5 — Chipset X670 / X870 (haut de gamme) ────'},
+{id:'gm_am5_b',g:1,n:'──── AM5 — Chipset X670 / X870 (haut de gamme) ────'},
 {id:'x670-gigabyte',n:'Gigabyte X670E AORUS Elite AX',p:289,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · USB4 · ATX',sk:'AM5'},
+{id:'x670-gigabyte-master',n:'Gigabyte X670E AORUS Master',p:359,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · USB4 · ATX premium',sk:'AM5'},
 {id:'x670e-asus',n:'ASUS ROG Strix X670E-F Gaming',p:349,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · Thunderbolt 4 · ATX',sk:'AM5'},
-{id:'x670e-msi',n:'MSI MEG X670E ACE',p:379,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · ATX · flagship 2022',sk:'AM5'},
-{id:'x870-gigabyte',n:'Gigabyte X870E AORUS Master',p:419,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 7 · USB4 · ATX 2024',sk:'AM5'},
+{id:'x670e-msi',n:'MSI MEG X670E ACE',p:379,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 6E · ATX flagship 2022',sk:'AM5'},
+{id:'x870-gigabyte-master',n:'Gigabyte X870E AORUS Master',p:419,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 7 · USB4 · ATX 2024',sk:'AM5'},
 {id:'x870-msi',n:'MSI MEG X890E ACE',p:429,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 7 · USB4 · flagship 2026',sk:'AM5'},
 {id:'x870-asus',n:'ASUS ROG Crosshair X870E Hero',p:489,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 7 · flagship AM5 2025',sk:'AM5'},
-{id:'x870e-asus-extreme',n:'ASUS ROG Crosshair X870E Extreme',p:699,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 7 · Thunderbolt 5 · E-ATX flagship',sk:'AM5'},
+{id:'x870-asus-gene',n:'ASUS ROG Crosshair X870E Gene',p:429,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 7 · mATX premium',sk:'AM5'},
+{id:'x870-asus-extreme',n:'ASUS ROG Crosshair X870E Extreme',p:699,inf:'AM5 · DDR5 · PCIe 5.0 · Wi-Fi 7 · Thunderbolt 5 · E-ATX',sk:'AM5'},
 // LGA1700 Budget
-{id:'g_lga1700_budget',g:1,n:'──── LGA1700 — Budget B660 / B760 ────'},
-{id:'b660-msi',n:'MSI PRO B660M-A DDR4',p:89,inf:'LGA1700 · DDR4 · PCIe 4.0 · mATX',sk:'LGA1700'},
-{id:'b660-asrock',n:'ASRock B660M Pro RS DDR4',p:79,inf:'LGA1700 · DDR4 · PCIe 4.0 · mATX — budget',sk:'LGA1700'},
+{id:'gm_lga17_a',g:1,n:'──── LGA1700 — Budget B660 / B760 ────'},
+{id:'b660-msi-ddr4',n:'MSI PRO B660M-A DDR4',p:79,inf:'LGA1700 · DDR4 · PCIe 4.0 · mATX',sk:'LGA1700'},
+{id:'b660-asrock',n:'ASRock B660M Pro RS DDR4',p:75,inf:'LGA1700 · DDR4 · PCIe 4.0 · mATX — budget',sk:'LGA1700'},
+{id:'b660-gigabyte',n:'Gigabyte B660M DS3H DDR4',p:79,inf:'LGA1700 · DDR4 · PCIe 4.0 · mATX',sk:'LGA1700'},
 {id:'b760-msi',n:'MSI PRO B760M-A WiFi DDR5',p:129,inf:'LGA1700 · DDR5 · PCIe 4.0 · Wi-Fi 6 · mATX',sk:'LGA1700'},
 {id:'b760-asus',n:'ASUS TUF Gaming B760-Plus WiFi DDR5',p:159,inf:'LGA1700 · DDR5 · PCIe 4.0 · Wi-Fi 6E · ATX',sk:'LGA1700'},
 {id:'b760-gigabyte',n:'Gigabyte B760 AORUS Elite AX DDR5',p:169,inf:'LGA1700 · DDR5 · PCIe 4.0 · Wi-Fi 6E · ATX',sk:'LGA1700'},
-// LGA1700 Haut de gamme
-{id:'g_lga1700_high',g:1,n:'──── LGA1700 — Haut Z690 / Z790 ────'},
+{id:'b760-msi-tom',n:'MSI MAG B760 TOMAHAWK WiFi DDR5',p:179,inf:'LGA1700 · DDR5 · PCIe 4.0 · Wi-Fi 6E · ATX',sk:'LGA1700'},
+// LGA1700 Z690/Z790
+{id:'gm_lga17_b',g:1,n:'──── LGA1700 — Haut de gamme Z690 / Z790 ────'},
 {id:'z690-asrock',n:'ASRock Z690 Steel Legend DDR4',p:139,inf:'LGA1700 · DDR4 · PCIe 5.0 · ATX',sk:'LGA1700'},
 {id:'z690-gigabyte',n:'Gigabyte Z690 AORUS Pro DDR4',p:169,inf:'LGA1700 · DDR4 · PCIe 5.0 · Wi-Fi 6 · ATX',sk:'LGA1700'},
+{id:'z690-msi',n:'MSI MEG Z690 UNIFY DDR4',p:189,inf:'LGA1700 · DDR4/DDR5 · PCIe 5.0 · ATX',sk:'LGA1700'},
 {id:'z790-gigabyte',n:'Gigabyte Z790 AORUS Elite AX DDR5 ⭐',p:269,inf:'LGA1700 · DDR5 · PCIe 5.0 · Wi-Fi 6E · ATX — recommandé',sk:'LGA1700'},
 {id:'z790-asus-tuf',n:'ASUS TUF Gaming Z790-Plus WiFi DDR5',p:249,inf:'LGA1700 · DDR5 · PCIe 5.0 · Wi-Fi 6E · ATX',sk:'LGA1700'},
+{id:'z790-msi',n:'MSI MEG Z790 GODLIKE',p:649,inf:'LGA1700 · DDR5 · PCIe 5.0 · Wi-Fi 6E · flagship absolu',sk:'LGA1700'},
 {id:'z790-asus',n:'ASUS ROG Maximus Z790 Hero',p:529,inf:'LGA1700 · DDR5 · PCIe 5.0 · Wi-Fi 6E · flagship',sk:'LGA1700'},
-// LGA1851
-{id:'g_lga1851',g:1,n:'──── LGA1851 — Intel Arrow Lake Z890 (2024-2025) ────'},
-{id:'z890-msi',n:'MSI MAG Z890 TOMAHAWK WiFi',p:229,inf:'LGA1851 · DDR5 · PCIe 5.0 · Wi-Fi 7 · ATX',sk:'LGA1851'},
+// LGA1851 Z890
+{id:'gm_lga1851',g:1,n:'──── LGA1851 — Intel Arrow Lake Z890 (2024-2025) ────'},
+{id:'z890-msi-tom',n:'MSI MAG Z890 TOMAHAWK WiFi',p:229,inf:'LGA1851 · DDR5 · PCIe 5.0 · Wi-Fi 7 · ATX',sk:'LGA1851'},
 {id:'z890-gigabyte',n:'Gigabyte Z890 AORUS Elite AX',p:289,inf:'LGA1851 · DDR5 · PCIe 5.0 · Wi-Fi 7 · ATX',sk:'LGA1851'},
+{id:'z890-gigabyte-master',n:'Gigabyte Z890 AORUS Master',p:369,inf:'LGA1851 · DDR5 · PCIe 5.0 · Wi-Fi 7 · ATX premium',sk:'LGA1851'},
 {id:'z890-asus-tuf',n:'ASUS TUF Gaming Z890-Plus WiFi',p:259,inf:'LGA1851 · DDR5 · PCIe 5.0 · Wi-Fi 7 · ATX',sk:'LGA1851'},
 {id:'z890-asus',n:'ASUS ROG Strix Z890-F Gaming WiFi',p:389,inf:'LGA1851 · DDR5 · PCIe 5.0 · Wi-Fi 7 · Thunderbolt 5',sk:'LGA1851'},
-{id:'z890-asus-hero',n:'ASUS ROG Maximus Z890 Hero',p:549,inf:'LGA1851 · DDR5 · PCIe 5.0 · Wi-Fi 7 · flagship Intel 2025',sk:'LGA1851'}
+{id:'z890-msi-ace',n:'MSI MEG Z890 ACE',p:449,inf:'LGA1851 · DDR5 · PCIe 5.0 · Wi-Fi 7 · ATX flagship',sk:'LGA1851'},
+{id:'z890-asus-hero',n:'ASUS ROG Maximus Z890 Hero',p:549,inf:'LGA1851 · DDR5 · PCIe 5.0 · Wi-Fi 7 · flagship Intel 2025',sk:'LGA1851'},
+{id:'z890-asus-apex',n:'ASUS ROG Maximus Z890 Apex',p:699,inf:'LGA1851 · DDR5 · PCIe 5.0 · Wi-Fi 7 · OC extrême flagship',sk:'LGA1851'}
 ]},
 
 ram:{l:'Mémoire RAM',i:'🔵',s:'Capacité & fréquence',d:[
 {id:'none',n:'-- Choisir de la RAM --',p:0,inf:'',pf:0},
-// DDR4
-{id:'g_ddr4_8',g:1,n:'──── DDR4 — 8 Go (bureau entrée) ────'},
-{id:'8-ddr4-3200',n:'8 Go DDR4-3200 (1×8 Go)',p:18,inf:'DDR4 3200MHz · CL22 · Corsair Vengeance — bureau minimal',pf:3},
-{id:'8-ddr4-3200-dual',n:'8 Go DDR4-3200 (2×4 Go)',p:22,inf:'DDR4 3200MHz · CL16 · dual channel — meilleur que 1×8',pf:4},
-{id:'g_ddr4_16',g:1,n:'──── DDR4 — 16 Go ────'},
+// DDR4 Small
+{id:'gr_d4_s',g:1,n:'──── DDR4 — 8 Go / 16 Go ────'},
+{id:'8-ddr4-3200',n:'8 Go DDR4-3200 (1×8 Go)',p:18,inf:'DDR4 3200MHz · CL22 · Kingston Fury Beast — bureau minimal',pf:3},
+{id:'8-ddr4-3200d',n:'8 Go DDR4-3200 (2×4 Go) Dual',p:22,inf:'DDR4 3200MHz · CL16 · dual channel — mieux que 1×8',pf:4},
+{id:'16-ddr4-2666',n:'16 Go DDR4-2666 (2×8 Go)',p:28,inf:'DDR4 2666MHz · CL19 · Kingston Value RAM — entrée',pf:4},
+{id:'16-ddr4-3000',n:'16 Go DDR4-3000 (2×8 Go)',p:32,inf:'DDR4 3000MHz · CL15 · G.Skill',pf:4},
 {id:'16-ddr4-3200',n:'16 Go DDR4-3200 (2×8 Go)',p:35,inf:'DDR4 3200MHz · CL16 · Corsair Vengeance LPX',pf:5},
 {id:'16-ddr4-3600',n:'16 Go DDR4-3600 (2×8 Go)',p:45,inf:'DDR4 3600MHz · CL18 · G.Skill Ripjaws V',pf:7},
-{id:'g_ddr4_32',g:1,n:'──── DDR4 — 32 Go ────'},
+// DDR4 32/64/128
+{id:'gr_d4_m',g:1,n:'──── DDR4 — 32 Go à 128 Go ────'},
 {id:'32-ddr4-3200',n:'32 Go DDR4-3200 (2×16 Go)',p:55,inf:'DDR4 3200MHz · CL16 · G.Skill Aegis',pf:7},
 {id:'32-ddr4-3600',n:'32 Go DDR4-3600 (2×16 Go) ⭐',p:65,inf:'DDR4 3600MHz · CL18 · G.Skill Ripjaws V — sweet spot AM4',pf:10},
-{id:'32-ddr4-4000',n:'32 Go DDR4-4000 (2×16 Go)',p:89,inf:'DDR4 4000MHz · CL16 · G.Skill Trident Z — OC AM4',pf:12},
-{id:'g_ddr4_64',g:1,n:'──── DDR4 — 64 Go ────'},
+{id:'32-ddr4-4000',n:'32 Go DDR4-4000 (2×16 Go)',p:89,inf:'DDR4 4000MHz · CL16 · G.Skill Trident Z — OC',pf:12},
+{id:'32-ddr4-3600-rgb',n:'32 Go DDR4-3600 RGB (2×16 Go)',p:75,inf:'DDR4 3600MHz · CL18 · Corsair Vengeance RGB Pro',pf:10},
 {id:'64-ddr4-3200',n:'64 Go DDR4-3200 (2×32 Go)',p:89,inf:'DDR4 3200MHz · CL16',pf:8},
 {id:'64-ddr4-3600',n:'64 Go DDR4-3600 (2×32 Go)',p:105,inf:'DDR4 3600MHz · CL18 — workstation AM4',pf:10},
+{id:'64-ddr4-3200-4s',n:'64 Go DDR4-3200 (4×16 Go)',p:99,inf:'DDR4 3200MHz · CL16 · 4 slots remplis',pf:8},
 {id:'128-ddr4-3200',n:'128 Go DDR4-3200 (4×32 Go)',p:199,inf:'DDR4 3200MHz · 4 slots · workstation extrême',pf:10},
-// DDR5 entrée
-{id:'g_ddr5_entry',g:1,n:'──── DDR5 entrée 4800-5600 MHz (2022-2024) ────'},
-{id:'16-ddr5-4800',n:'16 Go DDR5-4800 (2×8 Go)',p:65,inf:'DDR5 4800MHz · CL40 · Kingston — entrée DDR5 économique',pf:8},
-{id:'16-ddr5-5200',n:'16 Go DDR5-5200 (2×8 Go)',p:75,inf:'DDR5 5200MHz · CL42 · Kingston Fury Beast',pf:9},
+// DDR5 Entrée
+{id:'gr_d5_a',g:1,n:'──── DDR5 — Entrée 4800-5600 MHz (2022-2024) ────'},
+{id:'16-ddr5-4800',n:'16 Go DDR5-4800 (2×8 Go)',p:65,inf:'DDR5 4800MHz · CL40 · Kingston Fury Beast — plus économique',pf:8},
+{id:'16-ddr5-5200',n:'16 Go DDR5-5200 (2×8 Go)',p:75,inf:'DDR5 5200MHz · CL42 · Kingston Fury Beast [2022]',pf:9},
+{id:'16-ddr5-5600',n:'16 Go DDR5-5600 (2×8 Go)',p:82,inf:'DDR5 5600MHz · CL40 · Corsair Vengeance',pf:10},
 {id:'32-ddr5-4800',n:'32 Go DDR5-4800 (2×16 Go)',p:95,inf:'DDR5 4800MHz · CL40 · Corsair Vengeance',pf:8},
-{id:'32-ddr5-5200',n:'32 Go DDR5-5200 (2×16 Go)',p:110,inf:'DDR5 5200MHz · CL42 · Corsair Vengeance',pf:9},
-{id:'32-ddr5-5600',n:'32 Go DDR5-5600 (2×16 Go)',p:120,inf:'DDR5 5600MHz · CL40 · G.Skill Flare X5',pf:11},
-// DDR5 milieu
-{id:'g_ddr5_mid',g:1,n:'──── DDR5 ⚠ Prix hausse 2025-2026 ────'},
-{id:'16-ddr5-6000',n:'16 Go DDR5-6000 (2×8 Go)',p:89,inf:'DDR5 6000MHz · CL30 · Kingston Fury Beast',pf:12},
+{id:'32-ddr5-5200',n:'32 Go DDR5-5200 (2×16 Go)',p:110,inf:'DDR5 5200MHz · CL42 · Corsair Vengeance [2022]',pf:9},
+{id:'32-ddr5-5600',n:'32 Go DDR5-5600 (2×16 Go)',p:120,inf:'DDR5 5600MHz · CL40 · G.Skill Flare X5 [2024]',pf:11},
+{id:'32-ddr5-5600-rgb',n:'32 Go DDR5-5600 RGB (2×16 Go)',p:129,inf:'DDR5 5600MHz · CL36 · Corsair Dominator Platinum RGB',pf:11},
+// DDR5 Milieu
+{id:'gr_d5_b',g:1,n:'──── DDR5 ⚠ Prix hausse 2025-2026 — 6000-6400 MHz ────'},
+{id:'16-ddr5-6000',n:'16 Go DDR5-6000 (2×8 Go)',p:89,inf:'DDR5 6000MHz · CL30 · Kingston Fury Beast [2024]',pf:12},
 {id:'32-ddr5-6000',n:'32 Go DDR5-6000 (2×16 Go) ⭐',p:135,inf:'DDR5 6000MHz · CL30 EXPO · G.Skill Trident Z5 — sweet spot AM5',pf:22},
-{id:'32-ddr5-6200',n:'32 Go DDR5-6200 (2×16 Go)',p:139,inf:'DDR5 6200MHz · CL32 · Corsair Dominator',pf:23},
-{id:'32-ddr5-6400',n:'32 Go DDR5-6400 (2×16 Go)',p:149,inf:'DDR5 6400MHz · CL32 · Corsair Dominator Titanium',pf:24},
+{id:'32-ddr5-6000-rgb',n:'32 Go DDR5-6000 RGB (2×16 Go)',p:149,inf:'DDR5 6000MHz · CL30 · G.Skill Trident Z5 RGB',pf:22},
+{id:'32-ddr5-6200',n:'32 Go DDR5-6200 (2×16 Go)',p:139,inf:'DDR5 6200MHz · CL32 · Corsair Dominator Titanium',pf:23},
+{id:'32-ddr5-6400',n:'32 Go DDR5-6400 (2×16 Go)',p:149,inf:'DDR5 6400MHz · CL32 · Corsair Dominator Titanium [2024]',pf:24},
+{id:'32-ddr5-6400-kf',n:'32 Go DDR5-6400 (2×16 Go)',p:155,inf:'DDR5 6400MHz · CL32 · Kingston Fury Renegade RGB',pf:24},
 {id:'48-ddr5-6000',n:'48 Go DDR5-6000 (2×24 Go)',p:179,inf:'DDR5 6000MHz · CL30 · G.Skill — compromis capacité/perf',pf:22},
-{id:'64-ddr5-5600',n:'64 Go DDR5-5600 (2×32 Go)',p:219,inf:'DDR5 5600MHz · CL40 · Corsair — grande capacité',pf:20},
-{id:'64-ddr5-6000',n:'64 Go DDR5-6000 (2×32 Go)',p:279,inf:'DDR5 6000MHz · CL30 · Corsair — création contenu',pf:22},
-// DDR5 haut
-{id:'g_ddr5_high',g:1,n:'──── DDR5 haute fréquence 7000+ MHz ────'},
-{id:'32-ddr5-7200',n:'32 Go DDR5-7200 (2×16 Go)',p:199,inf:'DDR5 7200MHz · CL34 — perf max Intel Arrow Lake',pf:28},
+{id:'64-ddr5-5600',n:'64 Go DDR5-5600 (2×32 Go)',p:219,inf:'DDR5 5600MHz · CL40 · Corsair Vengeance — grande capacité',pf:20},
+{id:'64-ddr5-6000',n:'64 Go DDR5-6000 (2×32 Go)',p:279,inf:'DDR5 6000MHz · CL30 · Corsair Dominator Platinum',pf:22},
+{id:'64-ddr5-6000-kf',n:'64 Go DDR5-6000 (2×32 Go)',p:289,inf:'DDR5 6000MHz · CL30 · Kingston Fury Beast',pf:22},
+// DDR5 Haute fréquence
+{id:'gr_d5_c',g:1,n:'──── DDR5 — Haute fréquence 7000-8200 MHz ────'},
+{id:'32-ddr5-7200',n:'32 Go DDR5-7200 (2×16 Go)',p:199,inf:'DDR5 7200MHz · CL34 · G.Skill Trident Z5 — perf max',pf:28},
 {id:'32-ddr5-7600',n:'32 Go DDR5-7600 (2×16 Go)',p:229,inf:'DDR5 7600MHz · CL36 · G.Skill Trident Z5 RGB [2024]',pf:30},
 {id:'32-ddr5-8000',n:'32 Go DDR5-8000 (2×16 Go)',p:279,inf:'DDR5 8000MHz · CL38 · Kingston Fury Renegade — OC extrême',pf:32},
-{id:'64-ddr5-7200',n:'64 Go DDR5-7200 (2×32 Go)',p:399,inf:'DDR5 7200MHz · CL34 — workstation ultra',pf:28},
-{id:'64-ddr5-7600',n:'64 Go DDR5-7600 (2×32 Go)',p:449,inf:'DDR5 7600MHz · CL36 — workstation performance max',pf:30},
+{id:'32-ddr5-8200',n:'32 Go DDR5-8200 (2×16 Go)',p:319,inf:'DDR5 8200MHz · CL40 · G.Skill Trident Z5 — OC absolu [2025]',pf:33},
+{id:'64-ddr5-7200',n:'64 Go DDR5-7200 (2×32 Go)',p:399,inf:'DDR5 7200MHz · CL34 — workstation ultra [2025]',pf:28},
+{id:'64-ddr5-7600',n:'64 Go DDR5-7600 (2×32 Go)',p:449,inf:'DDR5 7600MHz · CL36 — workstation perf max',pf:30},
 {id:'96-ddr5-6000',n:'96 Go DDR5-6000 (2×48 Go)',p:359,inf:'DDR5 6000MHz · CL30 · G.Skill — AI/ML ou montage 8K',pf:24},
-{id:'96-ddr5-6400',n:'96 Go DDR5-6400 (2×48 Go)',p:449,inf:'DDR5 6400MHz · CL32 · Kingston Fury — AI/ML workstation',pf:24},
-{id:'128-ddr5-6000',n:'128 Go DDR5-6000 (2×64 Go)',p:599,inf:'DDR5 6000MHz · 128 Go — serveur / workstation extrême',pf:24}
+{id:'96-ddr5-6400',n:'96 Go DDR5-6400 (2×48 Go)',p:449,inf:'DDR5 6400MHz · CL32 · Kingston Fury Beast — workstation IA',pf:24},
+{id:'128-ddr5-6000',n:'128 Go DDR5-6000 (2×64 Go)',p:599,inf:'DDR5 6000MHz · CL30 · Corsair — workstation extrême',pf:22},
+{id:'128-ddr5-6400',n:'128 Go DDR5-6400 (4×32 Go)',p:649,inf:'DDR5 6400MHz · CL32 · 4 barrettes · serveur/workstation',pf:22}
 ]},
 
 gpu:{l:'Carte graphique (GPU)',i:'🎮',s:'VRAM & résolution',d:[
 {id:'none',n:'-- Choisir un GPU --',p:0,inf:'',pf:0,tdp:0},
 // Recond
-{id:'g_recond',g:1,n:'──── Générations précédentes reconditionnées ────'},
-{id:'rtx3060',n:'NVIDIA RTX 3060 12 Go (recond.)',p:189,inf:'12 Go GDDR6 · 1080p · DLSS 2 · 170W [2021]',pf:32,tdp:170},
-{id:'rtx3060ti',n:'NVIDIA RTX 3060 Ti (recond.)',p:219,inf:'8 Go GDDR6 · 1080p/1440p · DLSS 2 · 200W [2021]',pf:40,tdp:200},
+{id:'gg_recond',g:1,n:'──── Générations précédentes reconditionnées (AMD & NVIDIA) ────'},
+{id:'rx5700xt',n:'AMD RX 5700 XT (recond.)',p:129,inf:'8 Go GDDR6 · 1080p · FSR 1 · 225W — RDNA1 [2019]',pf:22,tdp:225},
+{id:'rx6600',n:'AMD RX 6600 (recond.)',p:149,inf:'8 Go GDDR6 · 1080p · FSR 2 · 132W — RDNA2 [2021]',pf:28,tdp:132},
+{id:'rx6600xt',n:'AMD RX 6600 XT (recond.)',p:169,inf:'8 Go GDDR6 · 1080p · FSR 2 · 160W — RDNA2 [2021]',pf:30,tdp:160},
+{id:'rx6650xt',n:'AMD RX 6650 XT (recond.)',p:189,inf:'8 Go GDDR6 · 1080p · FSR 2 · 180W — RDNA2 [2022]',pf:33,tdp:180},
+{id:'rx6700',n:'AMD RX 6700 (recond.)',p:199,inf:'10 Go GDDR6 · 1080p/1440p · FSR 2 · 175W — RDNA2 [2022]',pf:38,tdp:175},
+{id:'rx6700xt',n:'AMD RX 6700 XT (recond.)',p:229,inf:'12 Go GDDR6 · 1080p/1440p · FSR 2 · 230W — RDNA2 [2021]',pf:42,tdp:230},
+{id:'rx6750xt',n:'AMD RX 6750 XT (recond.)',p:259,inf:'12 Go GDDR6 · 1440p · FSR 2 · 250W — RDNA2 [2022]',pf:46,tdp:250},
+{id:'rx6800xt',n:'AMD RX 6800 XT (recond.)',p:299,inf:'16 Go GDDR6 · 1440p/4K · FSR 2 · 300W [2020]',pf:58,tdp:300},
+{id:'rx6900xt',n:'AMD RX 6900 XT (recond.)',p:349,inf:'16 Go GDDR6 · 1440p/4K · FSR 2 · 300W — flagship RDNA2 [2020]',pf:64,tdp:300},
+{id:'rtx3060',n:'NVIDIA RTX 3060 12 Go (recond.)',p:189,inf:'12 Go GDDR6 · 1080p · DLSS 2 · 170W — Ampere [2021]',pf:32,tdp:170},
+{id:'rtx3060ti',n:'NVIDIA RTX 3060 Ti (recond.)',p:219,inf:'8 Go GDDR6 · 1080p/1440p · DLSS 2 · 200W [2020]',pf:40,tdp:200},
 {id:'rtx3070',n:'NVIDIA RTX 3070 (recond.)',p:269,inf:'8 Go GDDR6 · 1440p · DLSS 2 · 220W [2020]',pf:48,tdp:220},
 {id:'rtx3070ti',n:'NVIDIA RTX 3070 Ti (recond.)',p:299,inf:'8 Go GDDR6X · 1440p · DLSS 2 · 290W [2021]',pf:52,tdp:290},
 {id:'rtx3080',n:'NVIDIA RTX 3080 10 Go (recond.)',p:349,inf:'10 Go GDDR6X · 1440p/4K · DLSS 2 · 320W [2020]',pf:62,tdp:320},
-{id:'rx6600xt',n:'AMD RX 6600 XT (recond.)',p:169,inf:'8 Go GDDR6 · 1080p · FSR 2 · 160W [2022]',pf:30,tdp:160},
-{id:'rx6700xt',n:'AMD RX 6700 XT (recond.)',p:229,inf:'12 Go GDDR6 · 1080p/1440p · FSR 2 · 230W [2021]',pf:42,tdp:230},
-{id:'rx6800xt',n:'AMD RX 6800 XT (recond.)',p:299,inf:'16 Go GDDR6 · 1440p/4K · FSR 2 · 300W [2020]',pf:58,tdp:300},
-// RTX 40xx 1080p
-{id:'g_rtx40_1080',g:1,n:'──── RTX 40xx / RX 7000 — 1080p (2023-2024) ────'},
+{id:'rtx3080ti',n:'NVIDIA RTX 3080 Ti (recond.)',p:429,inf:'12 Go GDDR6X · 4K · DLSS 2 · 350W [2021]',pf:70,tdp:350},
+{id:'rtx3090',n:'NVIDIA RTX 3090 (recond.)',p:499,inf:'24 Go GDDR6X · 4K · DLSS 2 · 350W — créateur [2020]',pf:74,tdp:350},
+// RX 7000 + RTX 40xx 1080p
+{id:'gg_40_1080',g:1,n:'──── RTX 40xx / RX 7000 — 1080p (2023-2024) ────'},
 {id:'rx7600',n:'AMD RX 7600',p:219,inf:'8 Go GDDR6 · 1080p · FSR 3 · 165W [2023]',pf:38,tdp:165},
-{id:'rx7600xt',n:'AMD RX 7600 XT 16 Go',p:249,inf:'16 Go GDDR6 · 1080p/1440p · FSR 3 · 190W [2024]',pf:42,tdp:190},
+{id:'rx7600xt8',n:'AMD RX 7600 XT 8 Go',p:239,inf:'8 Go GDDR6 · 1080p · FSR 3 · 190W [2024]',pf:40,tdp:190},
+{id:'rx7600xt16',n:'AMD RX 7600 XT 16 Go',p:249,inf:'16 Go GDDR6 · 1080p/1440p · FSR 3 · 190W [2024]',pf:42,tdp:190},
 {id:'rtx4060',n:'NVIDIA RTX 4060',p:259,inf:'8 Go GDDR6 · 1080p · DLSS 3 · 115W [2023]',pf:42,tdp:115},
 {id:'rtx4060ti8',n:'NVIDIA RTX 4060 Ti 8 Go',p:339,inf:'8 Go GDDR6 · 1080p · DLSS 3 · 160W [2023]',pf:50,tdp:160},
 {id:'rtx4060ti16',n:'NVIDIA RTX 4060 Ti 16 Go',p:379,inf:'16 Go GDDR6 · 1080p/1440p · DLSS 3 · 165W [2023]',pf:52,tdp:165},
+{id:'arc-a380',n:'Intel Arc A380 6 Go',p:99,inf:'6 Go GDDR6 · 1080p médium · XeSS · 75W — bureautique renforcé [2022]',pf:18,tdp:75},
+{id:'arc-a750',n:'Intel Arc A750 8 Go',p:189,inf:'8 Go GDDR6 · 1080p · XeSS · 225W [2022]',pf:36,tdp:225},
 {id:'arc-a770',n:'Intel Arc A770 16 Go',p:249,inf:'16 Go GDDR6 · 1080p/1440p · XeSS · 225W [2022]',pf:40,tdp:225},
-{id:'arc-b580',n:'Intel Arc B580 12 Go',p:279,inf:'12 Go GDDR6 · 1080p · XeSS · 190W [2024]',pf:44,tdp:190},
+{id:'arc-b580',n:'Intel Arc B580 12 Go',p:279,inf:'12 Go GDDR6 · 1080p · XeSS · 190W — Battlemage [2024]',pf:44,tdp:190},
 {id:'arc-b770',n:'Intel Arc B770 16 Go',p:349,inf:'16 Go GDDR6 · 1080p/1440p · XeSS · 225W [2025]',pf:54,tdp:225},
-// RTX 40xx 1440p
-{id:'g_rtx40_1440',g:1,n:'──── RTX 40xx / RX 7000 — 1440p (2023-2024) ────'},
+// RX 7000 + RTX 40xx 1440p
+{id:'gg_40_1440',g:1,n:'──── RTX 40xx / RX 7000 — 1440p (2023-2024) ────'},
+{id:'rx7700',n:'AMD RX 7700',p:279,inf:'12 Go GDDR6 · 1440p entrée · FSR 3 · 200W [2023]',pf:48,tdp:200},
 {id:'rx7700xt',n:'AMD RX 7700 XT',p:309,inf:'12 Go GDDR6 · 1440p · FSR 3 · 245W [2023]',pf:52,tdp:245},
 {id:'rx7800xt',n:'AMD RX 7800 XT',p:349,inf:'16 Go GDDR6 · 1440p · FSR 3 · 263W [2023]',pf:58,tdp:263},
 {id:'rx7900gre',n:'AMD RX 7900 GRE',p:389,inf:'16 Go GDDR6 · 1440p/4K · FSR 3 · 260W [2024]',pf:63,tdp:260},
@@ -349,189 +410,261 @@ gpu:{l:'Carte graphique (GPU)',i:'🎮',s:'VRAM & résolution',d:[
 {id:'rtx4070s',n:'NVIDIA RTX 4070 Super',p:449,inf:'12 Go GDDR6X · 1440p · DLSS 3 · 220W [2024]',pf:65,tdp:220},
 {id:'rtx4070ti',n:'NVIDIA RTX 4070 Ti',p:499,inf:'12 Go GDDR6X · 1440p/4K · DLSS 3 · 285W [2023]',pf:68,tdp:285},
 {id:'rtx4070tis',n:'NVIDIA RTX 4070 Ti Super',p:559,inf:'16 Go GDDR6X · 1440p/4K · DLSS 3.5 · 285W [2024]',pf:72,tdp:285},
-// RTX 40xx 4K
-{id:'g_rtx40_4k',g:1,n:'──── RTX 40xx / RX 7000 — 4K (2022-2024) ────'},
+// RX 7000 + RTX 40xx 4K
+{id:'gg_40_4k',g:1,n:'──── RTX 40xx / RX 7000 — 4K (2022-2024) ────'},
 {id:'rx7900xt',n:'AMD RX 7900 XT',p:539,inf:'20 Go GDDR6 · 4K · FSR 3 · 315W [2023]',pf:70,tdp:315},
 {id:'rx7900xtx',n:'AMD RX 7900 XTX',p:679,inf:'24 Go GDDR6 · 4K Ultra · FSR 3 · 355W [2023]',pf:78,tdp:355},
 {id:'rtx4080',n:'NVIDIA RTX 4080 16 Go',p:879,inf:'16 Go GDDR6X · 4K · DLSS 3 · 320W [2022]',pf:80,tdp:320},
 {id:'rtx4080s',n:'NVIDIA RTX 4080 Super',p:929,inf:'16 Go GDDR6X · 4K · DLSS 3.5 · 320W [2024]',pf:84,tdp:320},
 {id:'rtx4090',n:'NVIDIA RTX 4090',p:1649,inf:'24 Go GDDR6X · 4K Ultra · DLSS 3.5 · 450W [2022]',pf:94,tdp:450},
 // RTX 50xx / RX 9000 entrée/milieu
-{id:'g_rtx50_entry',g:1,n:'──── RTX 50xx / RX 9000 — 1080p/1440p (2025-2026) ────'},
-{id:'rx9060',n:'AMD RX 9060 8 Go',p:329,inf:'8 Go GDDR6 · 1080p · FSR 4 · 150W [2025]',pf:45,tdp:150},
-{id:'rx9060xt8',n:'AMD RX 9060 XT 8 Go',p:369,inf:'8 Go GDDR6 · 1080p · FSR 4 · 150W [2025]',pf:50,tdp:150},
+{id:'gg_50_entry',g:1,n:'──── RTX 50xx / RX 9000 — 1080p / 1440p entrée (2025-2026) ────'},
+{id:'rx9060',n:'AMD RX 9060 8 Go',p:329,inf:'8 Go GDDR6 · 1080p · FSR 4 · 150W — RDNA4 [2025]',pf:45,tdp:150},
+{id:'rx9060xt8',n:'AMD RX 9060 XT 8 Go',p:369,inf:'8 Go GDDR6 · 1080p · FSR 4 · 150W — RDNA4 [2025]',pf:50,tdp:150},
 {id:'rx9060xt16',n:'AMD RX 9060 XT 16 Go ⭐',p:409,inf:'16 Go GDDR6 · 1080p/1440p · FSR 4 · 180W — meilleur Q/P 2026 [2025]',pf:58,tdp:180},
-{id:'rtx5060',n:'NVIDIA RTX 5060 8 Go',p:309,inf:'8 Go GDDR7 · 1080p · DLSS 4 · 150W [2025]',pf:48,tdp:150},
+{id:'rtx5060',n:'NVIDIA RTX 5060 8 Go',p:309,inf:'8 Go GDDR7 · 1080p · DLSS 4 · 150W — Blackwell [2025]',pf:48,tdp:150},
 {id:'rtx5060ti8',n:'NVIDIA RTX 5060 Ti 8 Go',p:369,inf:'8 Go GDDR7 · 1080p/1440p · DLSS 4 · 180W [2025]',pf:54,tdp:180},
 {id:'rtx5060ti16',n:'NVIDIA RTX 5060 Ti 16 Go',p:429,inf:'16 Go GDDR7 · 1080p/1440p · DLSS 4 · 180W [2025]',pf:60,tdp:180},
 // RTX 50xx / RX 9000 haut
-{id:'g_rtx50_high',g:1,n:'──── RTX 50xx / RX 9000 — 1440p / 4K (2025-2026) ────'},
-{id:'rx9070',n:'AMD RX 9070',p:619,inf:'16 Go GDDR6 · 1440p · FSR 4 · 220W [2025]',pf:72,tdp:220},
+{id:'gg_50_high',g:1,n:'──── RTX 50xx / RX 9000 — 1440p / 4K (2025-2026) ────'},
+{id:'rx9070',n:'AMD RX 9070',p:619,inf:'16 Go GDDR6 · 1440p · FSR 4 · 220W — RDNA4 [2025]',pf:72,tdp:220},
 {id:'rx9070xt',n:'AMD RX 9070 XT ⭐',p:669,inf:'16 Go GDDR6 · 1440p haut · FSR 4 · 304W — meilleur Q/P [2025]',pf:80,tdp:304},
-{id:'rtx5070',n:'NVIDIA RTX 5070',p:589,inf:'12 Go GDDR7 · 1440p · DLSS 4 · 200W [2025]',pf:74,tdp:200},
-{id:'rtx5070ti',n:'NVIDIA RTX 5070 Ti',p:849,inf:'16 Go GDDR7 · 1440p/4K · DLSS 4 · 300W [2025]',pf:83,tdp:300},
-{id:'rtx5080',n:'NVIDIA RTX 5080',p:1189,inf:'16 Go GDDR7 · 4K · DLSS 4 · 360W [2025]',pf:92,tdp:360},
-{id:'rtx5090',n:'NVIDIA RTX 5090',p:3299,inf:'32 Go GDDR7 · 4K Ultra · DLSS 4 · 575W — GPU le plus puissant 2026 [2025]',pf:100,tdp:575}
+{id:'rtx5070',n:'NVIDIA RTX 5070 12 Go',p:589,inf:'12 Go GDDR7 · 1440p · DLSS 4 MFG · 200W [2025]',pf:74,tdp:200},
+{id:'rtx5070ti',n:'NVIDIA RTX 5070 Ti 16 Go',p:849,inf:'16 Go GDDR7 · 1440p/4K · DLSS 4 · 300W [2025]',pf:83,tdp:300},
+{id:'rtx5080',n:'NVIDIA RTX 5080 16 Go',p:1189,inf:'16 Go GDDR7 · 4K gaming · DLSS 4 · 360W [2025]',pf:92,tdp:360},
+{id:'rtx5090',n:'NVIDIA RTX 5090 32 Go',p:3299,inf:'32 Go GDDR7 · 4K Ultra · DLSS 4 MFG 6x · 575W — GPU le plus puissant 2026 [2025]',pf:100,tdp:575}
 ]},
 
 storage:{l:'Stockage (SSD + HDD)',i:'💾',s:'Capacité & vitesse',d:[
 {id:'none',n:'-- Choisir un stockage --',p:0,inf:'',pf:0},
 // SATA
-{id:'g_sata',g:1,n:'──── SSD SATA — bon rapport Q/P ────'},
-{id:'sata-240',n:'240 Go SSD SATA (Kingston A400)',p:29,inf:'500 Mo/s · SATA III · 2.5" — OS bureau minimal',pf:1},
-{id:'sata-480',n:'480 Go SSD SATA (Kingston A400)',p:39,inf:'500 Mo/s · SATA III · 2.5"',pf:2},
-{id:'sata-500',n:'500 Go SSD SATA (Samsung 870 EVO)',p:49,inf:'560 Mo/s · SATA III · 2.5"',pf:2},
+{id:'gs_sata',g:1,n:'──── SSD SATA 2.5" — bon rapport Q/P ────'},
+{id:'sata-120',n:'120 Go SSD SATA (Kingston A400)',p:19,inf:'500 Mo/s · SATA III · 2.5" — OS ultra budget',pf:1},
+{id:'sata-240',n:'240 Go SSD SATA (Kingston A400)',p:27,inf:'500 Mo/s · SATA III · 2.5"',pf:1},
+{id:'sata-480',n:'480 Go SSD SATA (Kingston A400)',p:37,inf:'500 Mo/s · SATA III · 2.5"',pf:2},
+{id:'sata-500-sam',n:'500 Go SSD SATA (Samsung 870 EVO)',p:49,inf:'560 Mo/s · SATA III · 2.5" — premium SATA',pf:2},
+{id:'sata-500-crucial',n:'500 Go SSD SATA (Crucial MX500)',p:42,inf:'560 Mo/s · SATA III · 2.5"',pf:2},
+{id:'sata-1to-sam',n:'1 To SSD SATA (Samsung 870 EVO)',p:79,inf:'560 Mo/s · SATA III · 2.5"',pf:2},
 {id:'sata-1to',n:'1 To SSD SATA (Crucial MX500)',p:65,inf:'560 Mo/s · SATA III · 2.5"',pf:2},
-{id:'sata-2to',n:'2 To SSD SATA (Samsung 870 QVO)',p:99,inf:'560 Mo/s · SATA III · grande capacité',pf:2},
-{id:'sata-4to',n:'4 To SSD SATA (Crucial MX500)',p:189,inf:'560 Mo/s · SATA III · 2.5" — archivage SSD',pf:2},
+{id:'sata-1to-wd',n:'1 To SSD SATA (WD Blue)',p:68,inf:'560 Mo/s · SATA III · 2.5"',pf:2},
+{id:'sata-2to-sam',n:'2 To SSD SATA (Samsung 870 QVO)',p:99,inf:'560 Mo/s · SATA III · grande capacité',pf:2},
+{id:'sata-2to-crucial',n:'2 To SSD SATA (Crucial MX500)',p:99,inf:'560 Mo/s · SATA III · 2.5"',pf:2},
+{id:'sata-4to',n:'4 To SSD SATA (Crucial MX500)',p:189,inf:'560 Mo/s · SATA III · archivage SSD',pf:2},
 // NVMe Gen3
-{id:'g_nvme3',g:1,n:'──── NVMe Gen3 PCIe 3.0 ────'},
-{id:'nvme3-250',n:'250 Go NVMe Gen3 (Samsung 970 EVO+)',p:39,inf:'3500 Mo/s · PCIe 3.0 · M.2 — budget NVMe',pf:3},
-{id:'nvme3-500',n:'500 Go NVMe Gen3 (Samsung 970 EVO+)',p:55,inf:'3500 Mo/s · PCIe 3.0 · M.2',pf:4},
-{id:'nvme3-1to',n:'1 To NVMe Gen3 (WD Blue SN570)',p:65,inf:'3500 Mo/s · PCIe 3.0 · M.2 — bon rapport Q/P',pf:4},
-{id:'nvme3-2to',n:'2 To NVMe Gen3 (WD Blue SN570)',p:99,inf:'3500 Mo/s · PCIe 3.0 · M.2',pf:4},
+{id:'gs_nvme3',g:1,n:'──── NVMe Gen3 PCIe 3.0 ────'},
+{id:'nvme3-250',n:'250 Go NVMe Gen3 (Samsung 970 EVO+)',p:38,inf:'3500 Mo/s · PCIe 3.0 · M.2 2280',pf:3},
+{id:'nvme3-500-sam',n:'500 Go NVMe Gen3 (Samsung 970 EVO+)',p:55,inf:'3500 Mo/s · PCIe 3.0 · M.2 2280',pf:4},
+{id:'nvme3-500-wd',n:'500 Go NVMe Gen3 (WD Blue SN570)',p:49,inf:'3500 Mo/s · PCIe 3.0 · M.2 2280',pf:4},
+{id:'nvme3-1to-sam',n:'1 To NVMe Gen3 (Samsung 970 EVO+)',p:75,inf:'3500 Mo/s · PCIe 3.0 · M.2 2280',pf:4},
+{id:'nvme3-1to-wd',n:'1 To NVMe Gen3 (WD Blue SN570)',p:65,inf:'3500 Mo/s · PCIe 3.0 · M.2 2280 — bon Q/P',pf:4},
+{id:'nvme3-2to',n:'2 To NVMe Gen3 (WD Blue SN570)',p:99,inf:'3500 Mo/s · PCIe 3.0 · M.2 2280',pf:4},
 // NVMe Gen4
-{id:'g_nvme4',g:1,n:'──── NVMe Gen4 PCIe 4.0 ⚠ prix hausse 2025-2026 ────'},
-{id:'gen4-512',n:'512 Go NVMe Gen4 (Samsung 980 Pro)',p:85,inf:'7000 Mo/s · PCIe 4.0 · M.2',pf:5},
-{id:'gen4-1to-crucial',n:'1 To NVMe Gen4 (Crucial P5 Plus)',p:99,inf:'6600 Mo/s · PCIe 4.0 · M.2 — bon Q/P 2024',pf:7},
-{id:'gen4-1to-wd',n:'1 To NVMe Gen4 (WD Black SN850X) ⭐',p:145,inf:'7300 Mo/s · PCIe 4.0 · M.2 — recommandé',pf:8},
-{id:'gen4-1to-sam',n:'1 To NVMe Gen4 (Samsung 990 Pro)',p:155,inf:'7450 Mo/s · PCIe 4.0 · M.2',pf:8},
-{id:'gen4-1to-sea',n:'1 To NVMe Gen4 (Seagate FireCuda 530)',p:139,inf:'7300 Mo/s · PCIe 4.0 · M.2',pf:8},
-{id:'gen4-2to-crucial',n:'2 To NVMe Gen4 (Crucial P5 Plus)',p:179,inf:'6600 Mo/s · PCIe 4.0 · M.2',pf:7},
-{id:'gen4-2to',n:'2 To NVMe Gen4 (WD Black SN850X)',p:249,inf:'7300 Mo/s · PCIe 4.0 · M.2',pf:8},
-{id:'gen4-2to-sam',n:'2 To NVMe Gen4 (Samsung 990 Pro)',p:269,inf:'7450 Mo/s · PCIe 4.0 · M.2',pf:8},
-{id:'gen4-4to',n:'4 To NVMe Gen4 (WD Black SN850X)',p:469,inf:'7300 Mo/s · PCIe 4.0 · 4 To',pf:8},
+{id:'gs_nvme4',g:1,n:'──── NVMe Gen4 PCIe 4.0 ⚠ prix hausse 2025-2026 ────'},
+{id:'gen4-512-sam',n:'512 Go NVMe Gen4 (Samsung 980 Pro)',p:85,inf:'7000 Mo/s · PCIe 4.0 · M.2 2280',pf:5},
+{id:'gen4-512-wd',n:'512 Go NVMe Gen4 (WD Black SN770)',p:65,inf:'5150 Mo/s · PCIe 4.0 · M.2 2280 — budget Gen4',pf:4},
+{id:'gen4-1to-crucial',n:'1 To NVMe Gen4 (Crucial P5 Plus)',p:99,inf:'6600 Mo/s · PCIe 4.0 · M.2 2280 — bon Q/P',pf:7},
+{id:'gen4-1to-wd',n:'1 To NVMe Gen4 (WD Black SN850X) ⭐',p:145,inf:'7300 Mo/s · PCIe 4.0 · M.2 2280 — recommandé gaming',pf:8},
+{id:'gen4-1to-sam',n:'1 To NVMe Gen4 (Samsung 990 Pro)',p:155,inf:'7450 Mo/s · PCIe 4.0 · M.2 2280',pf:8},
+{id:'gen4-1to-sea',n:'1 To NVMe Gen4 (Seagate FireCuda 530)',p:139,inf:'7300 Mo/s · PCIe 4.0 · M.2 2280',pf:8},
+{id:'gen4-1to-kf',n:'1 To NVMe Gen4 (Kingston Fury Renegade)',p:129,inf:'7300 Mo/s · PCIe 4.0 · M.2 2280',pf:8},
+{id:'gen4-2to-crucial',n:'2 To NVMe Gen4 (Crucial P5 Plus)',p:179,inf:'6600 Mo/s · PCIe 4.0 · M.2 2280',pf:7},
+{id:'gen4-2to-wd',n:'2 To NVMe Gen4 (WD Black SN850X)',p:249,inf:'7300 Mo/s · PCIe 4.0 · M.2 2280',pf:8},
+{id:'gen4-2to-sam',n:'2 To NVMe Gen4 (Samsung 990 Pro)',p:269,inf:'7450 Mo/s · PCIe 4.0 · M.2 2280',pf:8},
+{id:'gen4-2to-sea',n:'2 To NVMe Gen4 (Seagate FireCuda 530)',p:239,inf:'7300 Mo/s · PCIe 4.0 · M.2 2280',pf:8},
+{id:'gen4-2to-kf',n:'2 To NVMe Gen4 (Kingston Fury Renegade)',p:229,inf:'7300 Mo/s · PCIe 4.0 · M.2 2280',pf:8},
+{id:'gen4-4to-wd',n:'4 To NVMe Gen4 (WD Black SN850X)',p:469,inf:'7300 Mo/s · PCIe 4.0 · 4 To',pf:8},
+{id:'gen4-4to-sam',n:'4 To NVMe Gen4 (Samsung 990 Pro)',p:489,inf:'7450 Mo/s · PCIe 4.0 · 4 To',pf:8},
 // NVMe Gen5
-{id:'g_nvme5',g:1,n:'──── NVMe Gen5 PCIe 5.0 ultra rapide 2024-2026 ────'},
-{id:'gen5-1to-phison',n:'1 To NVMe Gen5 (Phison E26)',p:169,inf:'12000 Mo/s · PCIe 5.0 · M.2 [2024]',pf:11},
-{id:'gen5-1to',n:'1 To NVMe Gen5 (Crucial T705)',p:185,inf:'14500 Mo/s · PCIe 5.0 · M.2',pf:12},
-{id:'gen5-1to-sam',n:'1 To NVMe Gen5 (Samsung 9100 Pro)',p:199,inf:'14900 Mo/s · PCIe 5.0 · M.2 [2025]',pf:13},
-{id:'gen5-2to',n:'2 To NVMe Gen5 (WD Black SN850X G2)',p:339,inf:'14000 Mo/s · PCIe 5.0 · M.2',pf:12},
-{id:'gen5-2to-sam',n:'2 To NVMe Gen5 (Samsung 9100 Pro)',p:359,inf:'14800 Mo/s · PCIe 5.0 · M.2',pf:13},
-{id:'gen5-2to-crucial',n:'2 To NVMe Gen5 (Crucial T705)',p:349,inf:'14500 Mo/s · PCIe 5.0 · M.2',pf:12},
-{id:'gen5-4to',n:'4 To NVMe Gen5 (Crucial T705)',p:629,inf:'14500 Mo/s · PCIe 5.0 · 4 To',pf:13},
+{id:'gs_nvme5',g:1,n:'──── NVMe Gen5 PCIe 5.0 ultra rapide 2024-2026 ────'},
+{id:'gen5-1to-crucial',n:'1 To NVMe Gen5 (Crucial T705)',p:185,inf:'14500 Mo/s · PCIe 5.0 · M.2 2280',pf:12},
+{id:'gen5-1to-sam',n:'1 To NVMe Gen5 (Samsung 9100 Pro)',p:199,inf:'14900 Mo/s · PCIe 5.0 · M.2 2280 [2025]',pf:13},
+{id:'gen5-1to-wd',n:'1 To NVMe Gen5 (WD Black SN850X G2)',p:189,inf:'14000 Mo/s · PCIe 5.0 · M.2 2280',pf:12},
+{id:'gen5-2to-crucial',n:'2 To NVMe Gen5 (Crucial T705)',p:349,inf:'14500 Mo/s · PCIe 5.0 · M.2 2280',pf:12},
+{id:'gen5-2to-sam',n:'2 To NVMe Gen5 (Samsung 9100 Pro)',p:359,inf:'14800 Mo/s · PCIe 5.0 · M.2 2280',pf:13},
+{id:'gen5-2to-wd',n:'2 To NVMe Gen5 (WD Black SN850X G2)',p:339,inf:'14000 Mo/s · PCIe 5.0 · M.2 2280',pf:12},
+{id:'gen5-4to-crucial',n:'4 To NVMe Gen5 (Crucial T705)',p:629,inf:'14500 Mo/s · PCIe 5.0 · 4 To [2026]',pf:13},
 // HDD
-{id:'g_hdd',g:1,n:'──── HDD stockage secondaire ────'},
-{id:'hdd-1to',n:'1 To HDD (Seagate Barracuda)',p:29,inf:'1 To · 7200 RPM · SATA III — entrée masse',pf:1},
-{id:'hdd-2to',n:'2 To HDD (Seagate Barracuda)',p:45,inf:'2 To · 7200 RPM · SATA III',pf:1},
-{id:'hdd-4to',n:'4 To HDD (WD Blue)',p:75,inf:'4 To · 5400 RPM · SATA III',pf:1},
-{id:'hdd-6to',n:'6 To HDD (Seagate Barracuda)',p:99,inf:'6 To · 5400 RPM · SATA III',pf:1},
-{id:'hdd-8to',n:'8 To HDD (Seagate IronWolf)',p:145,inf:'8 To · 7200 RPM · SATA III — NAS',pf:1},
-{id:'hdd-12to',n:'12 To HDD (WD Red Plus)',p:229,inf:'12 To · 7200 RPM · SATA III — serveur/NAS',pf:1}
+{id:'gs_hdd',g:1,n:'──── HDD stockage secondaire ────'},
+{id:'hdd-1to-sg',n:'1 To HDD (Seagate Barracuda)',p:29,inf:'1 To · 7200 RPM · SATA III',pf:1},
+{id:'hdd-1to-wd',n:'1 To HDD (WD Blue)',p:32,inf:'1 To · 7200 RPM · SATA III',pf:1},
+{id:'hdd-2to-sg',n:'2 To HDD (Seagate Barracuda)',p:45,inf:'2 To · 7200 RPM · SATA III',pf:1},
+{id:'hdd-2to-wd',n:'2 To HDD (WD Blue)',p:48,inf:'2 To · 5400 RPM · SATA III',pf:1},
+{id:'hdd-4to-sg',n:'4 To HDD (Seagate Barracuda)',p:75,inf:'4 To · 5400 RPM · SATA III',pf:1},
+{id:'hdd-4to-wd',n:'4 To HDD (WD Blue)',p:79,inf:'4 To · 5400 RPM · SATA III',pf:1},
+{id:'hdd-6to-sg',n:'6 To HDD (Seagate Barracuda)',p:99,inf:'6 To · 5400 RPM · SATA III',pf:1},
+{id:'hdd-8to-sg',n:'8 To HDD (Seagate IronWolf)',p:145,inf:'8 To · 7200 RPM · SATA III — NAS',pf:1},
+{id:'hdd-8to-wd',n:'8 To HDD (WD Red Plus)',p:149,inf:'8 To · 7200 RPM · SATA III — NAS',pf:1},
+{id:'hdd-12to',n:'12 To HDD (WD Red Plus)',p:229,inf:'12 To · 7200 RPM · SATA III — serveur/NAS',pf:1},
+{id:'hdd-16to',n:'16 To HDD (Seagate IronWolf Pro)',p:329,inf:'16 To · 7200 RPM · SATA III — datacenter',pf:1}
 ]},
 
 psu:{l:'Alimentation (PSU)',i:'⚡',s:'Puissance & certification',d:[
 {id:'none',n:'-- Choisir une alimentation --',p:0,inf:'',w:0},
-{id:'g_psu_entry',g:1,n:'──── Budget 400W-550W ────'},
-{id:'400w-bronze',n:'400W 80+ Bronze (Seasonic S12III)',p:39,inf:'400W · 80+ Bronze · Non modulaire — mini config bureau',w:400},
-{id:'450w-bronze',n:'450W 80+ Bronze (Seasonic S12III)',p:45,inf:'450W · 80+ Bronze · Non modulaire',w:450},
-{id:'500w-bronze',n:'500W 80+ Bronze (Corsair CX500)',p:55,inf:'500W · 80+ Bronze · Non modulaire',w:500},
-{id:'550w-bronze',n:'550W 80+ Bronze (Corsair CV550)',p:59,inf:'550W · 80+ Bronze · Non modulaire',w:550},
-{id:'550w-gold',n:'550W 80+ Gold (SeaSonic Focus GX-550)',p:79,inf:'550W · 80+ Gold · Full modulaire — bon Q/P',w:550},
-{id:'g_psu_mid',g:1,n:'──── Milieu de gamme 650W-850W ────'},
-{id:'650w-gold',n:'650W 80+ Gold (Be Quiet! Pure Power 12)',p:85,inf:'650W · 80+ Gold · Semi-modulaire',w:650},
-{id:'650w-gold-corsair',n:'650W 80+ Gold (Corsair RM650x)',p:99,inf:'650W · 80+ Gold · Full modulaire',w:650},
-{id:'750w-gold',n:'750W 80+ Gold (Corsair RM750x) ⭐',p:109,inf:'750W · 80+ Gold · Full modulaire — recommandé',w:750},
-{id:'750w-gold-bq',n:'750W 80+ Gold (Be Quiet! Straight Power 12)',p:119,inf:'750W · 80+ Gold · Full modulaire · silencieux',w:750},
-{id:'750w-gold-seasonic',n:'750W 80+ Gold (Seasonic Focus GX-750)',p:109,inf:'750W · 80+ Gold · Full modulaire',w:750},
-{id:'850w-gold',n:'850W 80+ Gold (Seasonic Focus GX-850)',p:129,inf:'850W · 80+ Gold · Full modulaire',w:850},
-{id:'850w-cor',n:'850W 80+ Gold (Corsair RM850x)',p:139,inf:'850W · 80+ Gold · Full modulaire',w:850},
-{id:'850w-bq',n:'850W 80+ Gold (Be Quiet! Straight Power 12)',p:139,inf:'850W · 80+ Gold · Full modulaire · silencieux',w:850},
-{id:'g_psu_high',g:1,n:'──── Haut de gamme 1000W-1200W ────'},
-{id:'1000w-gold',n:'1000W 80+ Gold (ASUS ROG STRIX)',p:169,inf:'1000W · 80+ Gold · Full modulaire',w:1000},
-{id:'1000w-plat',n:'1000W 80+ Platinum (Seasonic PRIME TX)',p:199,inf:'1000W · 80+ Platinum · Full modulaire',w:1000},
-{id:'1000w-gold-corsair',n:'1000W 80+ Gold (Corsair RM1000x)',p:179,inf:'1000W · 80+ Gold · Full modulaire',w:1000},
-{id:'1200w-plat',n:'1200W 80+ Platinum (Be Quiet! Dark Power 13)',p:249,inf:'1200W · 80+ Platinum',w:1200},
-{id:'1200w-gold-corsair',n:'1200W 80+ Gold (Corsair HX1200)',p:219,inf:'1200W · 80+ Gold · Full modulaire',w:1200},
-{id:'g_psu_ultra',g:1,n:'──── Ultra / RTX 5090 (1600W) ────'},
-{id:'1600w-plat',n:'1600W 80+ Platinum (Seasonic PRIME TX-1600)',p:379,inf:'1600W · 80+ Platinum',w:1600},
-{id:'1600w-titan',n:'1600W 80+ Titanium (Corsair AX1600i)',p:479,inf:'1600W · 80+ Titanium',w:1600},
-{id:'1800w-titan',n:'1800W 80+ Titanium (Seasonic PRIME TX-1800)',p:529,inf:'1800W · 80+ Titanium — dual GPU / workstation',w:1800}
+// Budget
+{id:'gp_budget',g:1,n:'──── Budget 400W-550W ────'},
+{id:'400w-evga',n:'400W 80 Bronze (EVGA 400 N1)',p:35,inf:'400W · 80 Bronze · Non modulaire — mini config',w:400},
+{id:'450w-seasonic',n:'450W 80+ Bronze (Seasonic S12III)',p:45,inf:'450W · 80+ Bronze · Non modulaire — fiable',w:450},
+{id:'450w-corsair',n:'450W 80+ Bronze (Corsair CX450)',p:49,inf:'450W · 80+ Bronze · Non modulaire',w:450},
+{id:'500w-bequiet',n:'500W 80+ Bronze (Be Quiet! System Power 10)',p:55,inf:'500W · 80+ Bronze · Non modulaire',w:500},
+{id:'550w-corsair',n:'550W 80+ Bronze (Corsair CV550)',p:59,inf:'550W · 80+ Bronze · Non modulaire',w:550},
+{id:'550w-seasonic',n:'550W 80+ Gold (Seasonic Focus GX-550)',p:79,inf:'550W · 80+ Gold · Full modulaire — excellent Q/P',w:550},
+// Mid
+{id:'gp_mid',g:1,n:'──── Milieu de gamme 650W-850W ────'},
+{id:'650w-bequiet',n:'650W 80+ Gold (Be Quiet! Pure Power 12M)',p:85,inf:'650W · 80+ Gold · Semi-modulaire · silencieux',w:650},
+{id:'650w-corsair',n:'650W 80+ Gold (Corsair RM650x)',p:99,inf:'650W · 80+ Gold · Full modulaire',w:650},
+{id:'650w-seasonic',n:'650W 80+ Gold (Seasonic Focus GX-650)',p:95,inf:'650W · 80+ Gold · Full modulaire',w:650},
+{id:'750w-corsair',n:'750W 80+ Gold (Corsair RM750x) ⭐',p:109,inf:'750W · 80+ Gold · Full modulaire — recommandé',w:750},
+{id:'750w-bequiet',n:'750W 80+ Gold (Be Quiet! Straight Power 12)',p:119,inf:'750W · 80+ Gold · Full modulaire · silencieux',w:750},
+{id:'750w-seasonic',n:'750W 80+ Gold (Seasonic Focus GX-750)',p:109,inf:'750W · 80+ Gold · Full modulaire',w:750},
+{id:'750w-evga',n:'750W 80+ Gold (EVGA SuperNOVA G6)',p:99,inf:'750W · 80+ Gold · Full modulaire',w:750},
+{id:'850w-corsair',n:'850W 80+ Gold (Corsair RM850x)',p:139,inf:'850W · 80+ Gold · Full modulaire',w:850},
+{id:'850w-bequiet',n:'850W 80+ Gold (Be Quiet! Straight Power 12)',p:139,inf:'850W · 80+ Gold · Full modulaire · silencieux',w:850},
+{id:'850w-seasonic',n:'850W 80+ Gold (Seasonic Focus GX-850)',p:129,inf:'850W · 80+ Gold · Full modulaire',w:850},
+{id:'850w-asus',n:'850W 80+ Gold (ASUS ROG STRIX 850G)',p:149,inf:'850W · 80+ Gold · Full modulaire · premium',w:850},
+// High
+{id:'gp_high',g:1,n:'──── Haut de gamme 1000W-1200W ────'},
+{id:'1000w-asus',n:'1000W 80+ Gold (ASUS ROG STRIX 1000G)',p:169,inf:'1000W · 80+ Gold · Full modulaire',w:1000},
+{id:'1000w-corsair',n:'1000W 80+ Gold (Corsair RM1000x)',p:179,inf:'1000W · 80+ Gold · Full modulaire',w:1000},
+{id:'1000w-seasonic',n:'1000W 80+ Platinum (Seasonic PRIME TX-1000)',p:199,inf:'1000W · 80+ Platinum · Full modulaire — ultra efficace',w:1000},
+{id:'1000w-bequiet',n:'1000W 80+ Gold (Be Quiet! Dark Power 13)',p:189,inf:'1000W · 80+ Gold · Full modulaire · silencieux premium',w:1000},
+{id:'1200w-corsair',n:'1200W 80+ Gold (Corsair HX1200)',p:219,inf:'1200W · 80+ Gold · Full modulaire',w:1200},
+{id:'1200w-bequiet',n:'1200W 80+ Platinum (Be Quiet! Dark Power 13)',p:249,inf:'1200W · 80+ Platinum — RTX 5080 + CPU TDP élevé',w:1200},
+{id:'1200w-seasonic',n:'1200W 80+ Platinum (Seasonic PRIME TX-1200)',p:239,inf:'1200W · 80+ Platinum · Full modulaire',w:1200},
+// Ultra
+{id:'gp_ultra',g:1,n:'──── Ultra / RTX 5090 (1600W+) ────'},
+{id:'1600w-seasonic',n:'1600W 80+ Platinum (Seasonic PRIME TX-1600)',p:379,inf:'1600W · 80+ Platinum — requis RTX 5090 OC',w:1600},
+{id:'1600w-corsair',n:'1600W 80+ Titanium (Corsair AX1600i)',p:479,inf:'1600W · 80+ Titanium — efficacité maximale',w:1600},
+{id:'1800w-seasonic',n:'1800W 80+ Titanium (Seasonic PRIME TX-1800)',p:529,inf:'1800W · 80+ Titanium — dual GPU / workstation extrême',w:1800}
 ]},
 
 cooling:{l:'Refroidissement CPU',i:'❄️',s:'Air ou watercooling',d:[
 {id:'none',n:'-- Choisir un refroidissement --',p:0,inf:''},
-{id:'g_air_entry',g:1,n:'──── Air Cooling entrée ────'},
-{id:'air-stock',n:'Ventirad stock AMD (Wraith Stealth)',p:0,inf:'Air cooling · 65W TDP max · inclus avec certains CPU AMD — gratuit',},
-{id:'air-budget',n:'Cooler Master Hyper 212 Black',p:35,inf:'Air cooling · 150W TDP max · silencieux'},
+// Air entry
+{id:'gc_air_a',g:1,n:'──── Air Cooling — Entrée de gamme ────'},
+{id:'air-stock-amd',n:'Ventirad AMD Wraith Stealth (inclus)',p:0,inf:'Air cooling · 65W TDP max · inclus avec CPU AMD box [gratuit]'},
+{id:'air-stock-amd-spire',n:'Ventirad AMD Wraith Prism (inclus)',p:0,inf:'Air cooling · 95W TDP max · inclus avec Ryzen 9 box [gratuit]'},
 {id:'air-id-cooling',n:'ID-COOLING SE-224-XT',p:25,inf:'Air cooling · 180W TDP max · très bon Q/P budget'},
-{id:'air-thermalright-120',n:'Thermalright Assassin X 120',p:29,inf:'Air cooling · 200W TDP max · compact'},
-{id:'g_air_mid',g:1,n:'──── Air Cooling milieu ────'},
-{id:'air-assassin',n:'Thermalright Peerless Assassin 120 SE ⭐',p:39,inf:'Air cooling · 260W TDP max · très silencieux — meilleur Q/P'},
-{id:'air-be120',n:'Be Quiet! Pure Rock 2',p:39,inf:'Air cooling · 150W TDP max · silencieux'},
-{id:'air-dark-rock4',n:'Be Quiet! Dark Rock 4',p:59,inf:'Air cooling · 200W TDP max · silencieux'},
-{id:'air-nh-u12s',n:'Noctua NH-U12S Redux',p:49,inf:'Air cooling · 200W TDP max · ultra silencieux'},
-{id:'g_air_high',g:1,n:'──── Air Cooling premium ────'},
-{id:'air-bequiet',n:'Be Quiet! Dark Rock Pro 5',p:89,inf:'Air cooling · 270W TDP max · silencieux — 2 fans'},
-{id:'air-noctua-u14',n:'Noctua NH-U14S',p:79,inf:'Air cooling · 250W TDP max · silencieux'},
-{id:'air-noctua',n:'Noctua NH-D15 G2',p:109,inf:'Air cooling premium · 300W TDP max · ultra silencieux — référence'},
-{id:'air-thermalright-pa120se',n:'Thermalright PA120 SE',p:35,inf:'Air cooling dual fan · 250W TDP max — excellent Q/P'},
-{id:'g_aio_entry',g:1,n:'──── AIO Watercooling entrée ────'},
-{id:'aio-120',n:'AIO 120mm (Corsair H60)',p:45,inf:'Watercooling · 120mm · 150W TDP max'},
+{id:'air-thermalright-ax90',n:'Thermalright Assassin X 90',p:22,inf:'Air cooling · 150W TDP max · compact low profile'},
+{id:'air-thermalright-ax120',n:'Thermalright Assassin X 120',p:29,inf:'Air cooling · 200W TDP max · silencieux compact'},
+{id:'air-cm-212',n:'Cooler Master Hyper 212 Black',p:35,inf:'Air cooling · 150W TDP max — référence entrée [2022]'},
+{id:'air-cm-212s',n:'Cooler Master Hyper 212 Spectrum V3',p:39,inf:'Air cooling · 150W TDP max · ARGB'},
+// Air mid
+{id:'gc_air_b',g:1,n:'──── Air Cooling — Milieu de gamme ────'},
+{id:'air-tr-pa120',n:'Thermalright PA120 SE',p:35,inf:'Air cooling dual fan · 250W TDP max — excellent Q/P'},
+{id:'air-assassin',n:'Thermalright Peerless Assassin 120 SE ⭐',p:39,inf:'Air cooling · 260W TDP max · très silencieux — meilleur Q/P 2026'},
+{id:'air-tr-120-ex',n:'Thermalright Peerless Assassin 120 EX',p:49,inf:'Air cooling · 280W TDP max · version améliorée'},
+{id:'air-bq-pure2',n:'Be Quiet! Pure Rock 2',p:39,inf:'Air cooling · 150W TDP max · silencieux'},
+{id:'air-bq-dr4',n:'Be Quiet! Dark Rock 4',p:59,inf:'Air cooling · 200W TDP max · silencieux'},
+{id:'air-noctua-u12',n:'Noctua NH-U12S Redux',p:49,inf:'Air cooling · 200W TDP max · ultra silencieux'},
+{id:'air-noctua-u14',n:'Noctua NH-U14S',p:79,inf:'Air cooling · 250W TDP max · très silencieux'},
+{id:'air-noctua-u12a',n:'Noctua NH-U12A',p:89,inf:'Air cooling · 250W TDP max · référence compact'},
+// Air high
+{id:'gc_air_c',g:1,n:'──── Air Cooling — Premium ────'},
+{id:'air-bq-drp5',n:'Be Quiet! Dark Rock Pro 5',p:89,inf:'Air cooling · 270W TDP max · silencieux · double tour'},
+{id:'air-noctua-d15',n:'Noctua NH-D15 G2 ⭐',p:109,inf:'Air cooling premium · 300W TDP max · ultra silencieux — référence'},
+{id:'air-noctua-d15-black',n:'Noctua NH-D15 G2 (chromax.black)',p:119,inf:'Air cooling premium · 300W TDP max · version noire'},
+{id:'air-be-quiet-darkpro',n:'Be Quiet! Dark Rock Pro 4',p:79,inf:'Air cooling · 250W TDP max · silencieux premium'},
+// AIO Entry
+{id:'gc_aio_a',g:1,n:'──── AIO Watercooling — Entrée ────'},
+{id:'aio-120-corsair',n:'AIO 120mm (Corsair H60 2018)',p:45,inf:'Watercooling · 120mm · 150W TDP max'},
 {id:'aio-120-arctic',n:'AIO 120mm (ARCTIC Liquid Freezer III 120)',p:49,inf:'Watercooling · 120mm · 180W TDP max'},
-{id:'aio-240-arctic-ii',n:'AIO 240mm (ARCTIC Liquid Freezer II)',p:69,inf:'Watercooling · 240mm · 280W TDP max'},
-{id:'g_aio_mid',g:1,n:'──── AIO Watercooling milieu ────'},
-{id:'aio-240',n:'AIO 240mm (ARCTIC Liquid Freezer III) ⭐',p:79,inf:'Watercooling · 240mm · 300W TDP max — meilleur Q/P AIO'},
-{id:'aio-240-corsair',n:'AIO 240mm (Corsair iCUE H100i Elite)',p:99,inf:'Watercooling · 240mm · 300W TDP max · RGB · LCD'},
+{id:'aio-120-bequiet',n:'AIO 120mm (Be Quiet! Pure Loop 2)',p:55,inf:'Watercooling · 120mm · 180W TDP max · silencieux'},
+{id:'aio-240-arctic-ii',n:'AIO 240mm (ARCTIC Liquid Freezer II 240)',p:69,inf:'Watercooling · 240mm · 280W TDP max'},
+// AIO Mid
+{id:'gc_aio_b',g:1,n:'──── AIO Watercooling — Milieu ────'},
+{id:'aio-240-arctic',n:'AIO 240mm (ARCTIC Liquid Freezer III 240) ⭐',p:79,inf:'Watercooling · 240mm · 300W TDP max — meilleur Q/P AIO 2026'},
+{id:'aio-240-corsair',n:'AIO 240mm (Corsair iCUE H100i Elite Capellix)',p:99,inf:'Watercooling · 240mm · 300W TDP max · LCD · RGB'},
 {id:'aio-240-nzxt',n:'AIO 240mm (NZXT Kraken 240)',p:89,inf:'Watercooling · 240mm · 300W TDP max · LCD'},
-{id:'aio-280',n:'AIO 280mm (Be Quiet! Pure Loop 2 FX)',p:99,inf:'Watercooling · 280mm · 320W TDP max'},
+{id:'aio-240-bequiet',n:'AIO 240mm (Be Quiet! Pure Loop 2 FX)',p:89,inf:'Watercooling · 240mm · 300W TDP max · silencieux'},
 {id:'aio-280-arctic',n:'AIO 280mm (ARCTIC Liquid Freezer III 280)',p:89,inf:'Watercooling · 280mm · 350W TDP max'},
-{id:'g_aio_high',g:1,n:'──── AIO Watercooling haut de gamme ────'},
-{id:'aio-360-arctic',n:'AIO 360mm (ARCTIC Liquid Freezer III 360)',p:119,inf:'Watercooling · 360mm · 400W TDP max'},
-{id:'aio-360-corsair',n:'AIO 360mm (Corsair iCUE H150i Elite)',p:149,inf:'Watercooling · 360mm · 400W TDP max · RGB'},
-{id:'aio-360-asus',n:'AIO 360mm (ASUS ROG RYUJIN III)',p:199,inf:'Watercooling · 360mm · LCD · RGB premium'},
-{id:'aio-360-kraken',n:'AIO 360mm (NZXT Kraken Elite 360)',p:229,inf:'Watercooling · 360mm · 400W TDP max · grand LCD'},
+{id:'aio-280-bequiet',n:'AIO 280mm (Be Quiet! Pure Loop 2 FX 280)',p:99,inf:'Watercooling · 280mm · 320W TDP max · silencieux'},
+{id:'aio-280-corsair',n:'AIO 280mm (Corsair iCUE H115i Elite)',p:119,inf:'Watercooling · 280mm · 350W TDP max · RGB'},
+// AIO High
+{id:'gc_aio_c',g:1,n:'──── AIO Watercooling — Haut de gamme 360mm ────'},
+{id:'aio-360-arctic',n:'AIO 360mm (ARCTIC Liquid Freezer III 360)',p:119,inf:'Watercooling · 360mm · 400W TDP max — excellent Q/P'},
+{id:'aio-360-corsair',n:'AIO 360mm (Corsair iCUE H150i Elite Capellix)',p:149,inf:'Watercooling · 360mm · 400W TDP max · RGB'},
+{id:'aio-360-asus',n:'AIO 360mm (ASUS ROG RYUJIN III 360)',p:199,inf:'Watercooling · 360mm · 400W TDP max · LCD · RGB premium'},
+{id:'aio-360-nzxt',n:'AIO 360mm (NZXT Kraken Elite 360)',p:229,inf:'Watercooling · 360mm · 400W TDP max · grand LCD'},
+{id:'aio-360-bequiet',n:'AIO 360mm (Be Quiet! Silent Loop 3)',p:159,inf:'Watercooling · 360mm · 400W TDP max · silencieux absolu'},
 {id:'aio-420-arctic',n:'AIO 420mm (ARCTIC Liquid Freezer III 420)',p:149,inf:'Watercooling · 420mm · 500W TDP max — silencieux extrême'},
-{id:'g_custom',g:1,n:'──── Custom Loop ────'},
-{id:'custom-240',n:'Kit custom 240mm (EK Basic Kit 240)',p:229,inf:'Watercooling custom · 400W+ TDP max'},
-{id:'custom-360',n:'Kit custom 360mm (EK Basic Kit 360)',p:289,inf:'Watercooling custom · 500W+ TDP max'},
-{id:'custom-480',n:'Kit custom 480mm (Alphacool Eiswolf 2)',p:439,inf:'Watercooling custom · 600W+ TDP max'}
+{id:'aio-420-corsair',n:'AIO 420mm (Corsair iCUE H170i Elite)',p:179,inf:'Watercooling · 420mm · 500W TDP max · LCD · RGB'},
+// Custom loop
+{id:'gc_custom',g:1,n:'──── Custom Loop ────'},
+{id:'custom-240-ek',n:'Kit custom 240mm (EK Quantum Basic Kit)',p:229,inf:'Watercooling custom · 400W+ TDP max · silence absolu'},
+{id:'custom-360-ek',n:'Kit custom 360mm (EK Quantum Deluxe Kit)',p:289,inf:'Watercooling custom · 500W+ TDP max'},
+{id:'custom-360-alphacool',n:'Kit custom 360mm (Alphacool Eiswolf 2)',p:319,inf:'Watercooling custom · 500W+ TDP max · sans compromis'},
+{id:'custom-480-ek',n:'Kit custom 480mm (EK Pro Kit)',p:439,inf:'Watercooling custom · 600W+ TDP max · workstation/flagship'},
+{id:'custom-480-alphacool',n:'Kit custom 480mm (Alphacool Eiswolf 2 AIO)',p:469,inf:'Watercooling custom · 600W+ TDP max · ultra silencieux [2025]'}
 ]},
 
 pccase:{l:'Boîtier',i:'🖥️',s:'Format & airflow',d:[
 {id:'none',n:'-- Choisir un boîtier --',p:0,inf:''},
-{id:'g_mini_itx',g:1,n:'──── Mini-ITX — Compact ────'},
+// Mini-ITX
+{id:'gc_itx',g:1,n:'──── Mini-ITX — Compact (ITX only) ────'},
 {id:'case-nr200',n:'Cooler Master NR200P',p:99,inf:'Mini-ITX · Compact · Très bon airflow — populaire ITX'},
-{id:'case-dan-a4',n:'Dan Cases A4-SFX',p:149,inf:'Mini-ITX · Ultra compact · SFX PSU — elite ITX'},
-{id:'case-ncase-m1',n:'NCASE M1',p:169,inf:'Mini-ITX · Ultra compact · premium — référence ITX'},
-{id:'g_matx_budget',g:1,n:'──── Micro-ATX — Budget ────'},
-{id:'case-core1000',n:'Fractal Design Core 1000',p:49,inf:'mATX · Mini-Tower · Bon airflow — budget'},
-{id:'case-h400',n:'NZXT H400i',p:79,inf:'mATX · Mid-Tower · Airflow correct'},
+{id:'case-nr200-max',n:'Cooler Master NR200P MAX',p:189,inf:'Mini-ITX · AIO 280mm intégré · PSU SFX inclus'},
+{id:'case-nh',n:'Lian Li A4-H2O',p:119,inf:'Mini-ITX · Ultra compact · SFX PSU — très petit'},
+{id:'case-dan-a4',n:'Dan Cases A4-SFX v5',p:149,inf:'Mini-ITX · Ultra compact · SFX PSU — elite ITX'},
+{id:'case-ncase',n:'NCASE M1 v6.1',p:169,inf:'Mini-ITX · Ultra compact · premium — référence ITX'},
+{id:'case-fractal-node',n:'Fractal Design Node 304',p:79,inf:'Mini-ITX · Compact · Format cube — discret'},
+// Micro-ATX
+{id:'gc_matx',g:1,n:'──── Micro-ATX ────'},
+{id:'case-h400',n:'NZXT H400',p:79,inf:'mATX · Mid-Tower · Design épuré · panneau verre'},
 {id:'case-arc-mini',n:'Fractal Design Arc Mini R2',p:69,inf:'mATX · Mid-Tower · Bon airflow'},
-{id:'g_atx_budget',g:1,n:'──── ATX — Budget ────'},
+{id:'case-meshify-mini',n:'Fractal Design Meshify C Mini',p:89,inf:'mATX · Mid-Tower · Excellent airflow mesh'},
+{id:'case-pure-mini',n:'Be Quiet! Pure Base 500 (Micro)',p:79,inf:'mATX · Mid-Tower · Silencieux'},
+// ATX Budget
+{id:'gc_atx_a',g:1,n:'──── ATX — Budget ────'},
 {id:'case-h5',n:'NZXT H5 Flow',p:95,inf:'ATX · Mid-Tower · Excellent airflow · verre trempé'},
-{id:'case-4000d',n:'Corsair 4000D Airflow ⭐',p:99,inf:'ATX · Mid-Tower · Airflow optimisé — très populaire'},
-{id:'case-pure300',n:'Be Quiet! Pure Base 500',p:89,inf:'ATX · Mid-Tower · Silencieux — budget silencieux'},
-{id:'g_atx_mid',g:1,n:'──── ATX — Milieu de gamme ────'},
-{id:'case-meshify2c',n:'Fractal Design Meshify 2 Compact ⭐',p:109,inf:'ATX · Mid-Tower · Airflow mesh — recommandé'},
-{id:'case-define7c',n:'Fractal Design Define 7 Compact',p:129,inf:'ATX · Mid-Tower · Silencieux · isolation phonique'},
+{id:'case-4000d',n:'Corsair 4000D Airflow ⭐',p:99,inf:'ATX · Mid-Tower · Airflow optimisé — très populaire 2022-2026'},
+{id:'case-pure-base',n:'Be Quiet! Pure Base 500',p:89,inf:'ATX · Mid-Tower · Silencieux — budget silencieux'},
 {id:'case-p400a',n:'Phanteks Eclipse P400A',p:89,inf:'ATX · Mid-Tower · Mesh frontal · excellent airflow'},
+{id:'case-view51',n:'Thermaltake View 51 TG ARGB',p:99,inf:'ATX · Mid-Tower · Panoramique · RGB — show build'},
+// ATX Mid
+{id:'gc_atx_b',g:1,n:'──── ATX — Milieu de gamme ────'},
+{id:'case-meshify2c',n:'Fractal Design Meshify 2 Compact ⭐',p:109,inf:'ATX · Mid-Tower · Airflow mesh exceptionnel — recommandé'},
+{id:'case-meshify2',n:'Fractal Design Meshify 2',p:139,inf:'ATX · Mid-Tower · Airflow mesh · E-ATX compatible'},
+{id:'case-define7c',n:'Fractal Design Define 7 Compact',p:129,inf:'ATX · Mid-Tower · Silencieux · isolation phonique'},
+{id:'case-define7',n:'Fractal Design Define 7',p:149,inf:'ATX/E-ATX · Mid-Tower · Silencieux · premium'},
 {id:'case-p500a',n:'Phanteks Eclipse P500A',p:119,inf:'ATX · Mid-Tower · Mesh frontal · très bon airflow'},
+{id:'case-p600s',n:'Phanteks Eclipse P600S',p:149,inf:'ATX · Mid-Tower · Hybride silence/airflow'},
 {id:'case-pure500',n:'Be Quiet! Pure Base 500DX',p:109,inf:'ATX · Mid-Tower · Silencieux · RGB intégré'},
-{id:'case-lancool',n:'Lian Li LANCOOL 216',p:119,inf:'ATX · Mid-Tower · Excellent airflow dual-fan'},
+{id:'case-lancool',n:'Lian Li LANCOOL 216',p:119,inf:'ATX · Mid-Tower · Excellent airflow dual-fan 200mm'},
+{id:'case-lancool215',n:'Lian Li LANCOOL 215',p:99,inf:'ATX · Mid-Tower · Bon airflow · compact'},
+{id:'case-lancool3',n:'Lian Li LANCOOL III',p:139,inf:'ATX/E-ATX · Mid-Tower · Airflow exceptionnel 2024'},
 {id:'case-h7',n:'NZXT H7 Flow',p:139,inf:'ATX · Mid-Tower · Airflow premium · RGB'},
-{id:'case-meshify2',n:'Fractal Design Meshify 2',p:139,inf:'ATX · Mid-Tower · Mesh exceptionnel · E-ATX compatible'},
-{id:'g_atx_high',g:1,n:'──── ATX — Haut de gamme / RGB ────'},
-{id:'case-o11-evo',n:'Lian Li O11 Dynamic EVO ⭐',p:155,inf:'ATX/E-ATX · Mid-Tower · Parfait custom loop'},
-{id:'case-o11-air',n:'Lian Li O11 Air Mini',p:129,inf:'ATX · Mid-Tower · Mesh 360° · airflow max'},
-{id:'case-o11-xl',n:'Lian Li O11 XL',p:215,inf:'E-ATX · Full-Tower · Grand radiateur'},
+{id:'case-h7-elite',n:'NZXT H7 Elite',p:169,inf:'ATX · Mid-Tower · Full RGB · LCD strip · premium'},
+{id:'case-torrent',n:'Fractal Design Torrent',p:179,inf:'ATX · Mid-Tower · Airflow EXTRÊME · 2×180mm fans'},
+{id:'case-torrent-nano',n:'Fractal Design Torrent Nano',p:119,inf:'Mini-ITX · Airflow EXTRÊME · 2×140mm fans'},
+// ATX High
+{id:'gc_atx_c',g:1,n:'──── ATX — Haut de gamme / RGB ────'},
+{id:'case-o11-evo',n:'Lian Li O11 Dynamic EVO ⭐',p:155,inf:'ATX/E-ATX · Mid-Tower · Parfait custom loop · showcase'},
+{id:'case-o11-air',n:'Lian Li O11 Air Mini',p:129,inf:'ATX · Mid-Tower · Mesh 360° · airflow maximal'},
+{id:'case-o11-xl',n:'Lian Li O11 XL',p:215,inf:'E-ATX · Full-Tower · Grand radiateur · custom loop'},
+{id:'case-o11d-evo',n:'Lian Li O11 Dynamic EVO RGB',p:169,inf:'ATX/E-ATX · Mid-Tower · RGB · showcase premium'},
 {id:'case-h9elite',n:'NZXT H9 Elite',p:245,inf:'ATX · Mid-Tower · Panoramique 4 faces verre · RGB'},
-{id:'case-phanteks',n:'Phanteks Enthoo Pro 2',p:189,inf:'E-ATX · Full-Tower · Spacieux · excellent airflow'},
-{id:'case-torrent',n:'Fractal Design Torrent',p:179,inf:'ATX · Mid-Tower · Airflow extrême · 2 fans 180mm'},
-{id:'g_eatx_flagship',g:1,n:'──── E-ATX / Full-Tower Flagship ────'},
-{id:'case-rog',n:'ASUS ROG Hyperion GR701',p:289,inf:'E-ATX · Full-Tower · RGB · ultra haut de gamme'},
-{id:'case-haf700',n:'Cooler Master HAF 700 EVO',p:399,inf:'E-ATX · Full-Tower · Airflow extrême · LCD · RGB'},
-{id:'case-cosmos',n:'Cooler Master Cosmos Infinity 30th',p:499,inf:'E-ATX · Full-Tower · Edition anniversaire · premium absolu'}
+{id:'case-h9flow',n:'NZXT H9 Flow',p:199,inf:'ATX · Mid-Tower · 4 faces verre · airflow optimisé'},
+{id:'case-phanteks-pro',n:'Phanteks Enthoo Pro 2',p:189,inf:'E-ATX · Full-Tower · Spacieux · excellent airflow'},
+{id:'case-phanteks-evolv',n:'Phanteks Enthoo Evolv X',p:199,inf:'E-ATX · Mid-Tower · Double chambre · premium'},
+{id:'case-corsair-7000d',n:'Corsair 7000D AIRFLOW',p:229,inf:'E-ATX · Full-Tower · Airflow maximal · 3 fans 140mm'},
+{id:'case-corsair-5000x',n:'Corsair 5000X RGB',p:189,inf:'ATX · Mid-Tower · RGB · panoramique verre'},
+// Flagship E-ATX
+{id:'gc_eatx',g:1,n:'──── E-ATX / Full-Tower Flagship ────'},
+{id:'case-rog',n:'ASUS ROG Hyperion GR701',p:289,inf:'E-ATX · Full-Tower · RGB · ultra haut de gamme [2023]'},
+{id:'case-rog-strix',n:'ASUS ROG Strix Helios',p:229,inf:'E-ATX · Mid-Tower · RGB · window panel · premium'},
+{id:'case-haf700',n:'Cooler Master HAF 700 EVO',p:399,inf:'E-ATX · Full-Tower · Airflow extrême · LCD · ARGB'},
+{id:'case-cosmos',n:'Cooler Master Cosmos Infinity',p:499,inf:'E-ATX · Full-Tower · Edition luxe · aluminium · premium absolu'}
 ]}
 };
 
 var PR={
-bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to',psu:'450w-bronze',cooling:'air-budget',pccase:'case-core1000'},
-budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to',psu:'650w-gold',cooling:'air-assassin',pccase:'case-4000d'},
-mid:{cpu:'r7-7800x3d',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-gold',cooling:'aio-240',pccase:'case-meshify2c'},
-high:{cpu:'r7-9800x3d',mb:'x670-gigabyte',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to',psu:'1000w-plat',cooling:'aio-360-corsair',pccase:'case-o11-evo'},
-ultra:{cpu:'r9-9950x3d',mb:'x870-asus',ram:'64-ddr5-7200',gpu:'rtx5090',storage:'gen5-2to-sam',psu:'1600w-plat',cooling:'custom-360',pccase:'case-rog'},
-stream:{cpu:'r9-9900x',mb:'x670-gigabyte',ram:'64-ddr5-6000',gpu:'rtx5070ti',storage:'gen4-2to-sam',psu:'1000w-gold',cooling:'aio-360-arctic',pccase:'case-torrent'}
+bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to',psu:'450w-seasonic',cooling:'air-stock-amd',pccase:'case-pure-base'},
+budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to-wd',psu:'650w-seasonic',cooling:'air-assassin',pccase:'case-4000d'},
+mid:{cpu:'r7-7800x3d',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240-arctic',pccase:'case-meshify2c'},
+high:{cpu:'r7-9800x3d',mb:'x670-gigabyte',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to-wd',psu:'1000w-seasonic',cooling:'aio-360-corsair',pccase:'case-o11-evo'},
+ultra:{cpu:'r9-9950x3d',mb:'x870-asus',ram:'64-ddr5-7200',gpu:'rtx5090',storage:'gen5-2to-sam',psu:'1600w-corsair',cooling:'custom-360-ek',pccase:'case-rog'},
+stream:{cpu:'r9-9900x',mb:'x670-gigabyte',ram:'64-ddr5-6000',gpu:'rtx5070ti',storage:'gen4-2to-sam',psu:'1000w-asus',cooling:'aio-360-arctic',pccase:'case-torrent'},
+silent:{cpu:'r7-9700x',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070',storage:'gen4-1to-wd',psu:'750w-bequiet',cooling:'air-noctua-d15',pccase:'case-define7'}
 };
 
 var S={};
@@ -583,13 +716,13 @@ function upSum(){
   document.getElementById('PB').style.width=pc+'%';
   document.getElementById('PS').textContent=pc>0?pc+' / 100':'—';
   var lb=pc===0?'Sélectionne des composants pour commencer'
-    :pc<20?'Config bureautique basique'
-    :pc<35?'Gaming 1080p entrée de gamme'
-    :pc<50?'Gaming 1080p solide'
-    :pc<62?'Gaming 1440p équilibré'
-    :pc<75?'Gaming 1440p haut de gamme'
-    :pc<85?'4K gaming'
-    :pc<95?'4K ultra — config enthusiaste'
+    :pc<15?'Config bureautique basique'
+    :pc<28?'Gaming 1080p entrée de gamme'
+    :pc<42?'Gaming 1080p solide'
+    :pc<55?'Gaming 1080p/1440p équilibré'
+    :pc<68?'Gaming 1440p haut de gamme'
+    :pc<80?'4K gaming — config sérieuse'
+    :pc<92?'4K ultra — config enthusiaste'
     :'Config ultime — sans limite';
   document.getElementById('PD').textContent=lb;
   compat();
@@ -602,18 +735,22 @@ function compat(){
     cpu.sk===mb.sk?badg(bd,'✔ CPU + Carte mère compatibles','ok'):badg(bd,'✘ Incompatibilité socket CPU / Carte mère','er');
   }
   if(mb&&ram&&ram.id!=='none'&&mb.sk&&mb.sk!=='AM4'){
-    if(ram.id.indexOf('ddr4')>-1)badg(bd,'⚠ Cette carte mère requiert de la DDR5','wn');
+    if(ram.id&&ram.id.indexOf('ddr4')>-1)badg(bd,'⚠ Cette carte mère requiert de la DDR5','wn');
   }
   if(psu&&cpu&&gpu&&psu.w>0&&cpu.id!=='none'&&gpu.id!=='none'){
     var t=(cpu.tdp||0)+(gpu.tdp||0)+100;
     if(t<psu.w*0.75)badg(bd,'✔ Alimentation suffisante','ok');
-    else if(t<psu.w)badg(bd,'⚠ Alimentation à la limite','wn');
-    else badg(bd,'✘ Alimentation insuffisante','er');
+    else if(t<psu.w)badg(bd,'⚠ Alimentation à la limite — prévoir plus grand','wn');
+    else badg(bd,'✘ Alimentation insuffisante — augmenter la puissance','er');
   }
   if(cool&&cpu&&cool.id!=='none'&&cpu.id!=='none'){
-    var ba=cool.id==='air-budget'||cool.id==='air-assassin'||cool.id==='air-id-cooling'||cool.id==='air-thermalright-120';
-    if(cpu.tdp>=170&&ba)badg(bd,'⚠ CPU haute conso — préférer un AIO 240mm+','wn');
+    var ba=['air-stock-amd','air-stock-amd-spire','air-id-cooling','air-thermalright-ax90','air-thermalright-ax120','air-cm-212','air-cm-212s'];
+    var isBasic=ba.indexOf(cool.id)>-1;
+    if(cpu.tdp>=120&&isBasic)badg(bd,'⚠ CPU haute conso — préférer un AIO 240mm+','wn');
     else if(cool.id!=='none')badg(bd,'✔ Refroidissement adapté','ok');
+  }
+  if(cpu&&mb&&cpu.sk==='LGA1700'&&mb.sk==='LGA1700'){
+    badg(bd,'ℹ️ Rappel : i9-13900K/14900K — patch microcode conseillé','wn');
   }
   var n=Object.keys(S).filter(function(k){return S[k]!=='none';}).length;
   if(n>=7)badg(bd,'✔ Configuration complète','ok');
@@ -657,3 +794,4 @@ document.getElementById('CTA').addEventListener('click',contact);
 </script>
 </body>
 </html>
+
