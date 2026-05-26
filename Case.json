@@ -1,0 +1,53 @@
+[
+  {"id":"none","n":"-- Choisir un boîtier --","p":0,"inf":""},
+
+  {"id":"gc_itx","g":true,"n":"──── Mini-ITX — Compact ────"},
+  {"id":"case-nr200","n":"Cooler Master NR200P","p":99,"inf":"Mini-ITX · Compact · Très bon airflow — populaire ITX"},
+  {"id":"case-nr200-max","n":"Cooler Master NR200P MAX","p":189,"inf":"Mini-ITX · AIO 280mm intégré · PSU SFX inclus"},
+  {"id":"case-dan-a4","n":"Dan Cases A4-SFX v5","p":149,"inf":"Mini-ITX · Ultra compact · SFX PSU — elite ITX"},
+  {"id":"case-fractal-node","n":"Fractal Design Node 304","p":79,"inf":"Mini-ITX · Compact · Format cube — discret"},
+
+  {"id":"gc_matx","g":true,"n":"──── Micro-ATX ────"},
+  {"id":"case-h400","n":"NZXT H400","p":79,"inf":"mATX · Mid-Tower · Design épuré · panneau verre"},
+  {"id":"case-arc-mini","n":"Fractal Design Arc Mini R2","p":69,"inf":"mATX · Mid-Tower · Bon airflow"},
+  {"id":"case-meshify-mini","n":"Fractal Design Meshify C Mini","p":89,"inf":"mATX · Mid-Tower · Excellent airflow mesh"},
+
+  {"id":"gc_atx_a","g":true,"n":"──── ATX — Budget ────"},
+  {"id":"case-pure-base","n":"Be Quiet! Pure Base 500","p":89,"inf":"ATX · Mid-Tower · Silencieux — budget silencieux"},
+  {"id":"case-h5","n":"NZXT H5 Flow","p":95,"inf":"ATX · Mid-Tower · Excellent airflow · verre trempé"},
+  {"id":"case-4000d","n":"Corsair 4000D Airflow ⭐","p":99,"inf":"ATX · Mid-Tower · Airflow optimisé — très populaire 2022-2026"},
+  {"id":"case-p400a","n":"Phanteks Eclipse P400A","p":89,"inf":"ATX · Mid-Tower · Mesh frontal · excellent airflow"},
+
+  {"id":"gc_atx_b","g":true,"n":"──── ATX — Milieu de gamme ────"},
+  {"id":"case-meshify2c","n":"Fractal Design Meshify 2 Compact ⭐","p":109,"inf":"ATX · Mid-Tower · Airflow mesh exceptionnel — recommandé"},
+  {"id":"case-define7c","n":"Fractal Design Define 7 Compact","p":129,"inf":"ATX · Mid-Tower · Silencieux · isolation phonique"},
+  {"id":"case-define7","n":"Fractal Design Define 7","p":149,"inf":"ATX/E-ATX · Mid-Tower · Silencieux · premium"},
+  {"id":"case-meshify2","n":"Fractal Design Meshify 2","p":139,"inf":"ATX · Mid-Tower · Airflow mesh · E-ATX compatible"},
+  {"id":"case-p500a","n":"Phanteks Eclipse P500A","p":119,"inf":"ATX · Mid-Tower · Mesh frontal · très bon airflow"},
+  {"id":"case-p600s","n":"Phanteks Eclipse P600S","p":149,"inf":"ATX · Mid-Tower · Hybride silence/airflow"},
+  {"id":"case-pure500","n":"Be Quiet! Pure Base 500DX","p":109,"inf":"ATX · Mid-Tower · Silencieux · RGB intégré"},
+  {"id":"case-lancool","n":"Lian Li LANCOOL 216","p":119,"inf":"ATX · Mid-Tower · Excellent airflow dual-fan 200mm"},
+  {"id":"case-lancool215","n":"Lian Li LANCOOL 215","p":99,"inf":"ATX · Mid-Tower · Bon airflow · compact"},
+  {"id":"case-lancool3","n":"Lian Li LANCOOL III","p":139,"inf":"ATX/E-ATX · Mid-Tower · Airflow exceptionnel 2024"},
+  {"id":"case-h7","n":"NZXT H7 Flow","p":139,"inf":"ATX · Mid-Tower · Airflow premium · RGB"},
+  {"id":"case-h7-elite","n":"NZXT H7 Elite","p":169,"inf":"ATX · Mid-Tower · Full RGB · LCD strip · premium"},
+  {"id":"case-torrent","n":"Fractal Design Torrent","p":179,"inf":"ATX · Mid-Tower · Airflow EXTRÊME · 2×180mm fans"},
+  {"id":"case-corsair-4000x","n":"Corsair 4000X RGB","p":119,"inf":"ATX · Mid-Tower · RGB · panneau verre · bon airflow"},
+  {"id":"case-corsair-5000x","n":"Corsair 5000X RGB","p":189,"inf":"ATX · Mid-Tower · RGB · panoramique verre"},
+
+  {"id":"gc_atx_c","g":true,"n":"──── ATX — Haut de gamme / RGB ────"},
+  {"id":"case-o11-evo","n":"Lian Li O11 Dynamic EVO ⭐","p":155,"inf":"ATX/E-ATX · Mid-Tower · Parfait custom loop · showcase"},
+  {"id":"case-o11-air","n":"Lian Li O11 Air Mini","p":129,"inf":"ATX · Mid-Tower · Mesh 360° · airflow maximal"},
+  {"id":"case-o11-xl","n":"Lian Li O11 XL","p":215,"inf":"E-ATX · Full-Tower · Grand radiateur · custom loop"},
+  {"id":"case-o11d-evo-rgb","n":"Lian Li O11 Dynamic EVO RGB","p":169,"inf":"ATX/E-ATX · Mid-Tower · RGB · showcase premium"},
+  {"id":"case-h9elite","n":"NZXT H9 Elite","p":245,"inf":"ATX · Mid-Tower · Panoramique 4 faces verre · RGB"},
+  {"id":"case-h9flow","n":"NZXT H9 Flow","p":199,"inf":"ATX · Mid-Tower · 4 faces verre · airflow optimisé"},
+  {"id":"case-phanteks-pro","n":"Phanteks Enthoo Pro 2","p":189,"inf":"E-ATX · Full-Tower · Spacieux · excellent airflow"},
+  {"id":"case-corsair-7000d","n":"Corsair 7000D AIRFLOW","p":229,"inf":"E-ATX · Full-Tower · Airflow maximal · 3 fans 140mm"},
+  {"id":"case-rog-strix","n":"ASUS ROG Strix Helios","p":229,"inf":"E-ATX · Mid-Tower · RGB · window panel · premium"},
+
+  {"id":"gc_eatx","g":true,"n":"──── E-ATX / Full-Tower Flagship ────"},
+  {"id":"case-rog","n":"ASUS ROG Hyperion GR701","p":289,"inf":"E-ATX · Full-Tower · RGB · ultra haut de gamme [2023]"},
+  {"id":"case-haf700","n":"Cooler Master HAF 700 EVO","p":399,"inf":"E-ATX · Full-Tower · Airflow extrême · LCD · ARGB"},
+  {"id":"case-cosmos","n":"Cooler Master Cosmos Infinity","p":499,"inf":"E-ATX · Full-Tower · Edition luxe · aluminium · premium absolu"}
+]

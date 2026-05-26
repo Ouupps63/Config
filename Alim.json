@@ -1,0 +1,38 @@
+[
+  {"id":"none","n":"-- Choisir une alimentation --","p":0,"inf":"","w":0},
+
+  {"id":"gp_entry","g":true,"n":"──── Budget 400W-550W ────"},
+  {"id":"400w-evga","n":"400W 80 Bronze (EVGA 400 N1)","p":35,"inf":"400W · 80 Bronze · Non modulaire — mini config","w":400},
+  {"id":"450w-seasonic","n":"450W 80+ Bronze (Seasonic S12III)","p":45,"inf":"450W · 80+ Bronze · Non modulaire — fiable","w":450},
+  {"id":"450w-corsair","n":"450W 80+ Bronze (Corsair CX450)","p":49,"inf":"450W · 80+ Bronze · Non modulaire","w":450},
+  {"id":"500w-bequiet","n":"500W 80+ Bronze (Be Quiet! System Power 10)","p":55,"inf":"500W · 80+ Bronze · Non modulaire","w":500},
+  {"id":"550w-corsair","n":"550W 80+ Bronze (Corsair CV550)","p":59,"inf":"550W · 80+ Bronze · Non modulaire","w":550},
+  {"id":"550w-seasonic","n":"550W 80+ Gold (Seasonic Focus GX-550)","p":79,"inf":"550W · 80+ Gold · Full modulaire — excellent Q/P","w":550},
+
+  {"id":"gp_mid","g":true,"n":"──── Milieu de gamme 650W-850W ────"},
+  {"id":"650w-bequiet","n":"650W 80+ Gold (Be Quiet! Pure Power 12M)","p":85,"inf":"650W · 80+ Gold · Semi-modulaire · silencieux","w":650},
+  {"id":"650w-seasonic","n":"650W 80+ Gold (Seasonic Focus GX-650)","p":95,"inf":"650W · 80+ Gold · Full modulaire","w":650},
+  {"id":"650w-corsair","n":"650W 80+ Gold (Corsair RM650x)","p":99,"inf":"650W · 80+ Gold · Full modulaire","w":650},
+  {"id":"750w-evga","n":"750W 80+ Gold (EVGA SuperNOVA G6)","p":99,"inf":"750W · 80+ Gold · Full modulaire","w":750},
+  {"id":"750w-corsair","n":"750W 80+ Gold (Corsair RM750x) ⭐","p":109,"inf":"750W · 80+ Gold · Full modulaire — recommandé","w":750},
+  {"id":"750w-seasonic","n":"750W 80+ Gold (Seasonic Focus GX-750)","p":109,"inf":"750W · 80+ Gold · Full modulaire","w":750},
+  {"id":"750w-bequiet","n":"750W 80+ Gold (Be Quiet! Straight Power 12)","p":119,"inf":"750W · 80+ Gold · Full modulaire · silencieux","w":750},
+  {"id":"850w-seasonic","n":"850W 80+ Gold (Seasonic Focus GX-850)","p":129,"inf":"850W · 80+ Gold · Full modulaire","w":850},
+  {"id":"850w-corsair","n":"850W 80+ Gold (Corsair RM850x)","p":139,"inf":"850W · 80+ Gold · Full modulaire","w":850},
+  {"id":"850w-bequiet","n":"850W 80+ Gold (Be Quiet! Straight Power 12)","p":139,"inf":"850W · 80+ Gold · Full modulaire · silencieux","w":850},
+  {"id":"850w-asus","n":"850W 80+ Gold (ASUS ROG STRIX 850G)","p":149,"inf":"850W · 80+ Gold · Full modulaire · premium","w":850},
+
+  {"id":"gp_high","g":true,"n":"──── Haut de gamme 1000W-1200W ────"},
+  {"id":"1000w-asus","n":"1000W 80+ Gold (ASUS ROG STRIX 1000G)","p":169,"inf":"1000W · 80+ Gold · Full modulaire","w":1000},
+  {"id":"1000w-corsair","n":"1000W 80+ Gold (Corsair RM1000x)","p":179,"inf":"1000W · 80+ Gold · Full modulaire","w":1000},
+  {"id":"1000w-bequiet","n":"1000W 80+ Gold (Be Quiet! Dark Power 13)","p":189,"inf":"1000W · 80+ Gold · Full modulaire · silencieux premium","w":1000},
+  {"id":"1000w-seasonic","n":"1000W 80+ Platinum (Seasonic PRIME TX-1000)","p":199,"inf":"1000W · 80+ Platinum · Full modulaire — ultra efficace","w":1000},
+  {"id":"1200w-corsair","n":"1200W 80+ Gold (Corsair HX1200)","p":219,"inf":"1200W · 80+ Gold · Full modulaire","w":1200},
+  {"id":"1200w-seasonic","n":"1200W 80+ Platinum (Seasonic PRIME TX-1200)","p":239,"inf":"1200W · 80+ Platinum · Full modulaire","w":1200},
+  {"id":"1200w-bequiet","n":"1200W 80+ Platinum (Be Quiet! Dark Power 13)","p":249,"inf":"1200W · 80+ Platinum — RTX 5080 + CPU TDP élevé","w":1200},
+
+  {"id":"gp_ultra","g":true,"n":"──── Ultra / RTX 5090 (1600W+) ────"},
+  {"id":"1600w-seasonic","n":"1600W 80+ Platinum (Seasonic PRIME TX-1600)","p":379,"inf":"1600W · 80+ Platinum — requis RTX 5090 OC","w":1600},
+  {"id":"1600w-corsair","n":"1600W 80+ Titanium (Corsair AX1600i)","p":479,"inf":"1600W · 80+ Titanium — efficacité maximale","w":1600},
+  {"id":"1800w-seasonic","n":"1800W 80+ Titanium (Seasonic PRIME TX-1800)","p":529,"inf":"1800W · 80+ Titanium — dual GPU / workstation extrême","w":1800}
+]

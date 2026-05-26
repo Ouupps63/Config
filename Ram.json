@@ -1,0 +1,50 @@
+[
+  {"id":"none","n":"-- Choisir de la RAM --","p":0,"inf":"","pf":0},
+
+  {"id":"gr_d4_s","g":true,"n":"──── DDR4 — 8 Go / 16 Go ────"},
+  {"id":"8-ddr4-3200","n":"8 Go DDR4-3200 (1×8 Go)","p":18,"inf":"DDR4 3200MHz · CL22 · Kingston — bureau minimal","pf":3},
+  {"id":"8-ddr4-3200d","n":"8 Go DDR4-3200 (2×4 Go) Dual","p":22,"inf":"DDR4 3200MHz · CL16 · dual channel — mieux que 1×8","pf":4},
+  {"id":"16-ddr4-3200","n":"16 Go DDR4-3200 (2×8 Go)","p":35,"inf":"DDR4 3200MHz · CL16 · Corsair Vengeance LPX","pf":5},
+  {"id":"16-ddr4-3600","n":"16 Go DDR4-3600 (2×8 Go)","p":45,"inf":"DDR4 3600MHz · CL18 · G.Skill Ripjaws V","pf":7},
+
+  {"id":"gr_d4_m","g":true,"n":"──── DDR4 — 32 Go à 128 Go ────"},
+  {"id":"32-ddr4-3200","n":"32 Go DDR4-3200 (2×16 Go)","p":55,"inf":"DDR4 3200MHz · CL16 · G.Skill Aegis","pf":7},
+  {"id":"32-ddr4-3600","n":"32 Go DDR4-3600 (2×16 Go) ⭐","p":65,"inf":"DDR4 3600MHz · CL18 · G.Skill Ripjaws V — sweet spot AM4","pf":10},
+  {"id":"32-ddr4-3600-rgb","n":"32 Go DDR4-3600 RGB (2×16 Go)","p":75,"inf":"DDR4 3600MHz · CL18 · Corsair Vengeance RGB Pro","pf":10},
+  {"id":"32-ddr4-4000","n":"32 Go DDR4-4000 (2×16 Go)","p":89,"inf":"DDR4 4000MHz · CL16 · G.Skill Trident Z — OC","pf":12},
+  {"id":"64-ddr4-3200","n":"64 Go DDR4-3200 (2×32 Go)","p":89,"inf":"DDR4 3200MHz · CL16","pf":8},
+  {"id":"64-ddr4-3600","n":"64 Go DDR4-3600 (2×32 Go)","p":105,"inf":"DDR4 3600MHz · CL18 — workstation AM4","pf":10},
+  {"id":"128-ddr4-3200","n":"128 Go DDR4-3200 (4×32 Go)","p":199,"inf":"DDR4 3200MHz · 4 slots · workstation extrême","pf":10},
+
+  {"id":"gr_d5_a","g":true,"n":"──── DDR5 — Entrée 4800-5600 MHz (2022-2024) ────"},
+  {"id":"16-ddr5-4800","n":"16 Go DDR5-4800 (2×8 Go)","p":65,"inf":"DDR5 4800MHz · CL40 · Kingston — entrée DDR5","pf":8},
+  {"id":"16-ddr5-5200","n":"16 Go DDR5-5200 (2×8 Go)","p":75,"inf":"DDR5 5200MHz · CL42 · Kingston Fury Beast [2022]","pf":9},
+  {"id":"16-ddr5-5600","n":"16 Go DDR5-5600 (2×8 Go)","p":82,"inf":"DDR5 5600MHz · CL40 · Corsair Vengeance","pf":10},
+  {"id":"32-ddr5-4800","n":"32 Go DDR5-4800 (2×16 Go)","p":95,"inf":"DDR5 4800MHz · CL40 · Corsair Vengeance","pf":8},
+  {"id":"32-ddr5-5200","n":"32 Go DDR5-5200 (2×16 Go)","p":110,"inf":"DDR5 5200MHz · CL42 · Corsair Vengeance [2022]","pf":9},
+  {"id":"32-ddr5-5600","n":"32 Go DDR5-5600 (2×16 Go)","p":120,"inf":"DDR5 5600MHz · CL40 · G.Skill Flare X5 [2024]","pf":11},
+
+  {"id":"gr_d5_b","g":true,"n":"──── DDR5 ⚠ Prix hausse 2025-2026 — 6000-6400 MHz ────"},
+  {"id":"16-ddr5-6000","n":"16 Go DDR5-6000 (2×8 Go)","p":89,"inf":"DDR5 6000MHz · CL30 · Kingston Fury Beast [2024]","pf":12},
+  {"id":"32-ddr5-6000","n":"32 Go DDR5-6000 (2×16 Go) ⭐","p":135,"inf":"DDR5 6000MHz · CL30 EXPO · G.Skill Trident Z5 — sweet spot AM5","pf":22},
+  {"id":"32-ddr5-6000-rgb","n":"32 Go DDR5-6000 RGB (2×16 Go)","p":149,"inf":"DDR5 6000MHz · CL30 · G.Skill Trident Z5 RGB","pf":22},
+  {"id":"32-ddr5-6400","n":"32 Go DDR5-6400 (2×16 Go)","p":149,"inf":"DDR5 6400MHz · CL32 · Corsair Dominator Titanium [2024]","pf":24},
+  {"id":"32-ddr5-6400-kf","n":"32 Go DDR5-6400 Kingston (2×16 Go)","p":155,"inf":"DDR5 6400MHz · CL32 · Kingston Fury Renegade RGB","pf":24},
+  {"id":"48-ddr5-6000","n":"48 Go DDR5-6000 (2×24 Go)","p":179,"inf":"DDR5 6000MHz · CL30 · G.Skill — compromis capacité/perf","pf":22},
+  {"id":"64-ddr5-5600","n":"64 Go DDR5-5600 (2×32 Go)","p":219,"inf":"DDR5 5600MHz · CL40 · Corsair Vengeance — grande capacité","pf":20},
+  {"id":"64-ddr5-6000","n":"64 Go DDR5-6000 (2×32 Go)","p":279,"inf":"DDR5 6000MHz · CL30 · Corsair Dominator Platinum","pf":22},
+  {"id":"64-ddr5-6000-kf","n":"64 Go DDR5-6000 Kingston (2×32 Go)","p":289,"inf":"DDR5 6000MHz · CL30 · Kingston Fury Beast","pf":22},
+
+  {"id":"gr_d5_c","g":true,"n":"──── DDR5 — Haute fréquence 7000-8200 MHz ────"},
+  {"id":"32-ddr5-7200","n":"32 Go DDR5-7200 (2×16 Go)","p":199,"inf":"DDR5 7200MHz · CL34 · G.Skill Trident Z5 — perf max","pf":28},
+  {"id":"32-ddr5-7600","n":"32 Go DDR5-7600 (2×16 Go)","p":229,"inf":"DDR5 7600MHz · CL36 · G.Skill Trident Z5 RGB [2024]","pf":30},
+  {"id":"32-ddr5-8000","n":"32 Go DDR5-8000 (2×16 Go)","p":279,"inf":"DDR5 8000MHz · CL38 · Kingston Fury Renegade — OC extrême","pf":32},
+  {"id":"32-ddr5-8200","n":"32 Go DDR5-8200 (2×16 Go)","p":319,"inf":"DDR5 8200MHz · CL40 · G.Skill Trident Z5 — OC absolu [2025]","pf":33},
+  {"id":"64-ddr5-7200","n":"64 Go DDR5-7200 (2×32 Go)","p":399,"inf":"DDR5 7200MHz · CL34 — workstation ultra [2025]","pf":28},
+  {"id":"64-ddr5-7600","n":"64 Go DDR5-7600 (2×32 Go)","p":449,"inf":"DDR5 7600MHz · CL36 — workstation perf max","pf":30},
+  {"id":"96-ddr5-6000","n":"96 Go DDR5-6000 (2×48 Go)","p":359,"inf":"DDR5 6000MHz · CL30 · G.Skill — AI/ML ou montage 8K","pf":24},
+  {"id":"96-ddr5-6400","n":"96 Go DDR5-6400 (2×48 Go)","p":449,"inf":"DDR5 6400MHz · CL32 · Kingston Fury — workstation IA","pf":24},
+  {"id":"128-ddr5-6000","n":"128 Go DDR5-6000 (2×64 Go)","p":599,"inf":"DDR5 6000MHz · CL30 · Corsair — workstation extrême","pf":22},
+  {"id":"128-ddr5-6400","n":"128 Go DDR5-6400 (4×32 Go)","p":649,"inf":"DDR5 6400MHz · CL32 · 4 barrettes · serveur/workstation","pf":22}
+]
+]
