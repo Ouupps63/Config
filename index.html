@@ -269,7 +269,8 @@ function loadAllJSON(){
   });
   Promise.all(promises).then(function(){
     build();
-    upSum();
+    var saved=loadConfig();
+    if(saved)applyConfig(saved); else upSum();
     document.querySelectorAll('.pb').forEach(function(b){b.addEventListener('click',function(){preset(this.getAttribute('data-p'));});});
     document.getElementById('RST').addEventListener('click',reset);
     document.getElementById('CTA').addEventListener('click',openPopup);
@@ -281,6 +282,23 @@ function loadAllJSON(){
 }
 
 function gi(k){var a=D[k].d;for(var i=0;i<a.length;i++){if(a[i].id===S[k])return a[i];}return null;}
+
+/* ══ SAUVEGARDE LOCALE ══ */
+var LS_KEY='mltec_config';
+function saveConfig(){try{localStorage.setItem(LS_KEY,JSON.stringify(S));}catch(e){}}
+function loadConfig(){try{var s=localStorage.getItem(LS_KEY);return s?JSON.parse(s):null;}catch(e){return null;}}
+function applyConfig(cfg){
+  Object.keys(cfg).forEach(function(k){
+    if(!D[k]||cfg[k]==='none')return;
+    var item=D[k].d.filter(function(x){return x.id===cfg[k];})[0];
+    if(!item)return;
+    S[k]=cfg[k];
+    var dd=document.querySelector('.cdd[data-k="'+k+'"]');
+    if(dd){var tr=dd.querySelector('.cdd-trigger');if(tr)tr.textContent=item.n;}
+    upInf(k);
+  });
+  upSum();
+}
 
 /* ══ CUSTOM DROPDOWN ENGINE ══ */
 var _openDD = null;
@@ -356,7 +374,7 @@ function makeDD(k, items){
         S[k]=x.id;
         trigger.textContent=x.n;
         sel.value=x.id;
-        upInf(k);upSum();
+        upInf(k);upSum();saveConfig();
         closeAllDD();
       });
       list.appendChild(item);
@@ -480,6 +498,7 @@ function reset(){
     upInf(k);
   });
   upSum();
+  try{localStorage.removeItem(LS_KEY);}catch(e){}
 }
 
 /* ══ POPUP ══ */
