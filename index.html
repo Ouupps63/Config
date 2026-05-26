@@ -103,6 +103,53 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .popup-error{display:none;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:9px;padding:10px 13px;font-size:13px;color:#f87171;margin-bottom:12px}
 
 @media(max-width:500px){.logo{font-size:28px}.grid{grid-template-columns:1fr}body{padding:20px 3% 34px}.popup{padding:20px}}
+
+/* ── DROPDOWN CUSTOM (toujours vers le bas) ── */
+.dd{position:relative;width:100%}
+.dd-btn{
+  width:100%;background:#0f172a;
+  border:1px solid rgba(96,165,250,.25);border-radius:9px;
+  color:#fff;padding:9px 36px 9px 11px;
+  font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;
+  cursor:pointer;outline:none;transition:.25s;
+  text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  position:relative;
+}
+.dd-btn::after{
+  content:'▾';position:absolute;right:11px;top:50%;
+  transform:translateY(-50%);color:#60a5fa;font-size:14px;
+  transition:transform .2s;pointer-events:none;
+}
+.dd-btn.open::after{transform:translateY(-50%) rotate(180deg);}
+.dd-btn:hover,.dd-btn.open{border-color:rgba(96,165,250,.6);}
+.dd-list{
+  position:absolute;top:calc(100% + 4px);left:0;right:0;
+  background:#0f172a;border:1px solid rgba(96,165,250,.35);
+  border-radius:9px;z-index:99999;
+  max-height:260px;overflow-y:auto;
+  box-shadow:0 12px 32px rgba(0,0,0,.6);
+  display:none;
+}
+.dd-list.open{display:block;}
+.dd-list::-webkit-scrollbar{width:5px;}
+.dd-list::-webkit-scrollbar-track{background:transparent;}
+.dd-list::-webkit-scrollbar-thumb{background:rgba(96,165,250,.3);border-radius:99px;}
+.dd-group{
+  padding:6px 11px 3px;
+  font-size:10px;font-weight:700;letter-spacing:1.5px;
+  color:#475569;text-transform:uppercase;
+  border-top:1px solid rgba(255,255,255,.05);
+  margin-top:2px;
+}
+.dd-group:first-child{border-top:none;margin-top:0;}
+.dd-item{
+  padding:9px 11px;font-size:13px;font-weight:600;
+  color:#d1d1d1;cursor:pointer;transition:background .15s,color .15s;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.dd-item:hover{background:rgba(96,165,250,.12);color:#fff;}
+.dd-item.selected{color:#60a5fa;background:rgba(96,165,250,.08);}
+.dd-item.placeholder{color:#475569;}
 </style>
 </head>
 <body>
@@ -271,20 +318,79 @@ function build(){
   var g=document.getElementById('G');if(!g)return;g.innerHTML='';
   Object.keys(D).forEach(function(k){
     var c=D[k];
-    var o=c.d.map(function(x){
-      if(x.g)return'<optgroup label="'+x.n+'"></optgroup>';
-      return'<option value="'+x.id+'">'+x.n+(x.p>0?' — '+x.p+' €':'')+'</option>';
-    }).join('');
     var el=document.createElement('div');el.className='card';
-    el.innerHTML='<div class="ch"><div class="ico">'+c.i+'</div><div><div class="clbl">'+c.s+'</div><div class="ctit">'+c.l+'</div></div></div><select class="sel" data-k="'+k+'">'+o+'</select><div class="inf e" id="I'+k+'">Aucun composant sélectionné</div>';
+
+    // Bouton affiché
+    var btnHTML='<div class="dd" id="dd-'+k+'">'
+      +'<button class="dd-btn" id="ddbtn-'+k+'" data-k="'+k+'">-- Choisir '+c.l+' --</button>'
+      +'<div class="dd-list" id="ddlist-'+k+'">';
+
+    c.d.forEach(function(x){
+      if(x.g){
+        // Groupe
+        btnHTML+='<div class="dd-group">'+x.n+'</div>';
+      } else {
+        var label=x.n+(x.p>0?' — '+x.p+' €':'');
+        var cls='dd-item'+(x.id==='none'?' placeholder':'');
+        btnHTML+='<div class="'+cls+'" data-k="'+k+'" data-id="'+x.id+'">'+label+'</div>';
+      }
+    });
+
+    btnHTML+='</div></div>';
+
+    el.innerHTML=
+      '<div class="ch"><div class="ico">'+c.i+'</div>'
+      +'<div><div class="clbl">'+c.s+'</div><div class="ctit">'+c.l+'</div></div></div>'
+      +btnHTML
+      +'<div class="inf e" id="I'+k+'">Aucun composant sélectionné</div>';
     g.appendChild(el);
   });
-  document.querySelectorAll('.sel').forEach(function(el){
-    el.addEventListener('change',function(){
-      var k=this.getAttribute('data-k');S[k]=this.value;upInf(k);upSum();
+
+  // Events boutons dropdown
+  document.querySelectorAll('.dd-btn').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var k=this.getAttribute('data-k');
+      var list=document.getElementById('ddlist-'+k);
+      var isOpen=list.classList.contains('open');
+      // Ferme tous
+      closeAllDD();
+      if(!isOpen){
+        list.classList.add('open');
+        this.classList.add('open');
+      }
+    });
+  });
+
+  // Events items
+  document.querySelectorAll('.dd-item').forEach(function(item){
+    item.addEventListener('click',function(e){
+      e.stopPropagation();
+      var k=this.getAttribute('data-k');
+      var id=this.getAttribute('data-id');
+      S[k]=id;
+      // Met à jour le bouton
+      var btn=document.getElementById('ddbtn-'+k);
+      var label=id==='none'?'-- Choisir '+D[k].l+' --':this.textContent;
+      btn.textContent=label;
+      // Selected style
+      document.querySelectorAll('.dd-item[data-k="'+k+'"]').forEach(function(i){
+        i.classList.toggle('selected',i.getAttribute('data-id')===id);
+      });
+      closeAllDD();
+      upInf(k);
+      upSum();
     });
   });
 }
+
+function closeAllDD(){
+  document.querySelectorAll('.dd-list').forEach(function(l){l.classList.remove('open');});
+  document.querySelectorAll('.dd-btn').forEach(function(b){b.classList.remove('open');});
+}
+
+// Ferme au clic dehors
+document.addEventListener('click',function(){closeAllDD();});
 
 function upInf(k){
   var it=gi(k),el=document.getElementById('I'+k);if(!el)return;
@@ -356,7 +462,15 @@ function preset(p){
   var pr=PR[p];
   Object.keys(pr).forEach(function(k){
     S[k]=pr[k];
-    var el=document.querySelector('.sel[data-k="'+k+'"]');if(el)el.value=pr[k];
+    // Met à jour le bouton dropdown
+    var ddBtn=document.getElementById('ddbtn-'+k);
+    if(ddBtn){
+      var item=document.querySelector('.dd-item[data-k="'+k+'"][data-id="'+pr[k]+'"]');
+      ddBtn.textContent=item?item.textContent:'-- Choisir '+D[k].l+' --';
+      document.querySelectorAll('.dd-item[data-k="'+k+'"]').forEach(function(i){
+        i.classList.toggle('selected',i.getAttribute('data-id')===pr[k]);
+      });
+    }
     upInf(k);
   });
   upSum();
@@ -365,7 +479,9 @@ function preset(p){
 function reset(){
   Object.keys(S).forEach(function(k){
     S[k]='none';
-    var el=document.querySelector('.sel[data-k="'+k+'"]');if(el)el.value='none';
+    var ddBtn=document.getElementById('ddbtn-'+k);
+    if(ddBtn)ddBtn.textContent='-- Choisir '+D[k].l+' --';
+    document.querySelectorAll('.dd-item[data-k="'+k+'"]').forEach(function(i){i.classList.remove('selected');});
     upInf(k);
   });
   upSum();
