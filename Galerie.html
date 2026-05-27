@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLTeC · Réalisations</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  background:#111;
+  font-family:Arial,sans-serif;
+  color:#fff;
+}
+
+.projects{
+  padding:80px 8%;
+}
+
+/* HEADER */
+
+.projects-header{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.projects-label{
+  font-size:11px;
+  letter-spacing:4px;
+  color:#4d7cff;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.projects-title{
+  font-size:36px;
+  font-weight:700;
+  color:#fff;
+  margin-bottom:10px;
+}
+
+.projects-sub{
+  font-size:15px;
+  color:#64748b;
+}
+
+/* FILTERS */
+
+.filters{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-bottom:40px;
+}
+
+.filter-btn{
+  padding:8px 20px;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,0.12);
+  background:transparent;
+  color:#94a3b8;
+  font-size:13px;
+  font-family:Arial,sans-serif;
+  cursor:pointer;
+  transition:0.2s ease;
+}
+
+.filter-btn:hover{
+  border-color:rgba(77,124,255,0.6);
+  color:#7aa2ff;
+}
+
+.filter-btn.active{
+  background:#4d7cff;
+  border-color:#4d7cff;
+  color:#fff;
+}
+
+/* GRID */
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:24px;
+}
+
+/* CARD */
+
+.project-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid rgba(77,124,255,0.25);
+  background:#181818;
+  transition:0.4s ease;
+}
+
+.project-card img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  display:block;
+  transition:0.5s ease;
+}
+
+/* BADGE */
+
+.project-badge{
+  position:absolute;
+  top:14px;
+  left:14px;
+  font-size:11px;
+  padding:4px 12px;
+  border-radius:20px;
+  background:rgba(77,124,255,0.2);
+  border:1px solid rgba(77,124,255,0.4);
+  color:#7aa2ff;
+  letter-spacing:0.5px;
+  backdrop-filter:blur(4px);
+  z-index:2;
+}
+
+/* OVERLAY */
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.95) 0%,
+    rgba(0,0,0,0.0) 55%
+  );
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:24px;
+  opacity:0;
+  transition:0.35s ease;
+}
+
+.overlay h3{
+  color:#4d7cff;
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.overlay p{
+  color:#cbd5e1;
+  font-size:13px;
+  line-height:1.6;
+  margin-bottom:14px;
+}
+
+.overlay-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  color:#fff;
+  text-decoration:none;
+  background:rgba(77,124,255,0.25);
+  border:1px solid rgba(77,124,255,0.4);
+  padding:7px 16px;
+  border-radius:20px;
+  width:fit-content;
+  transition:0.2s;
+}
+
+.overlay-link:hover{
+  background:rgba(77,124,255,0.45);
+}
+
+/* HOVER */
+
+.project-card:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 0 20px rgba(77,124,255,0.25),
+    0 16px 40px rgba(0,0,0,0.4);
+}
+
+.project-card:hover img{
+  transform:scale(1.07);
+}
+
+.project-card:hover .overlay{
+  opacity:1;
+}
+
+/* COUNTER */
+
+.projects-count{
+  text-align:center;
+  margin-top:30px;
+  font-size:13px;
+  color:#475569;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+  .projects{
+    padding:60px 5%;
+  }
+  .project-card img{
+    height:240px;
+  }
+  .projects-title{
+    font-size:26px;
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="projects">
+
+  <div class="projects-header">
+    <div class="projects-label">MLTeC · Portfolio</div>
+    <h2 class="projects-title">Nos réalisations</h2>
+    <p class="projects-sub">Chaque build est unique, conçu avec soin pour nos clients</p>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="rgb">RGB</button>
+    <button class="filter-btn" data-filter="white">White build</button>
+    <button class="filter-btn" data-filter="gaming">Gaming</button>
+    <button class="filter-btn" data-filter="dark">Dark</button>
+  </div>
+
+  <div class="projects-grid" id="grid"></div>
+
+  <div class="projects-count" id="count"></div>
+
+</section>
+
+<script>
+const PROJECTS = [
+  {
+    title: 'White RGB Build',
+    desc: 'Configuration premium blanche avec composants RGB synchronisés.',
+    tag: 'White build', cat: 'white',
+    img: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250829_143952-high-abwyej.jpg',
+    href: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250829_143952-high-abwyej.jpg'
+  },
+  {
+    title: 'Gaming RTX',
+    desc: 'Montage gaming performant avec refroidissement optimisé.',
+    tag: 'Gaming', cat: 'gaming',
+    img: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250721_181926-copie-high-54vevu.jpg',
+    href: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250721_181926-copie-high-54vevu.jpg'
+  },
+  {
+    title: 'Full RGB Setup',
+    desc: 'Installation gaming moderne avec airflow avancé.',
+    tag: 'RGB', cat: 'rgb',
+    img: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250723_182214-high-dlq2w3.jpg',
+    href: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250723_182214-high-dlq2w3.jpg'
+  },
+  {
+    title: 'Custom White Build',
+    desc: 'Build élégant avec design propre et éclairage RGB.',
+    tag: 'White build', cat: 'white',
+    img: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250804_183837-high.jpg',
+    href: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250804_183837-high.jpg'
+  },
+  {
+    title: 'Performance Edition',
+    desc: 'PC gaming avancé avec finitions premium.',
+    tag: 'Gaming', cat: 'gaming',
+    img: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250804_190211-high-tosueu.jpg',
+    href: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250804_190211-high-tosueu.jpg'
+  },
+  {
+    title: 'Ultimate Setup',
+    desc: 'Configuration performante et design moderne.',
+    tag: 'RGB', cat: 'rgb',
+    img: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20260101_144148-high.jpg',
+    href: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20260101_144148-high.jpg'
+  },
+  {
+    title: 'Dark Gaming',
+    desc: 'Build sombre orienté silence et performance.',
+    tag: 'Dark', cat: 'dark',
+    img: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20240514_204445-high-5hsv1v.jpg',
+    href: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20240514_204445-high-5hsv1v.jpg'
+  },
+  {
+    title: 'Classic RGB',
+    desc: 'Projet gaming personnalisé avec optimisation complète.',
+    tag: 'RGB', cat: 'rgb',
+    img: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img20221217184744-high.jpg',
+    href: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img20221217184744-high.jpg'
+  },
+  {
+    title: 'RTX Airflow',
+    desc: 'Montage gaming moderne avec ventilation renforcée.',
+    tag: 'Gaming', cat: 'gaming',
+    img: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250717_120458-high.jpg',
+    href: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20250717_120458-high.jpg'
+  },
+  {
+    title: 'Ultimate RGB',
+    desc: 'Configuration ultra esthétique avec synchronisation RGB avancée.',
+    tag: 'RGB', cat: 'rgb',
+    img: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20251127_101015-high.jpg?enable-io=true&width=532',
+    href: 'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20251127_101015-high.jpg'
+  }
+];
+
+let current = 'all';
+
+function render() {
+  const grid = document.getElementById('grid');
+  const list = current === 'all' ? PROJECTS : PROJECTS.filter(p => p.cat === current);
+
+  grid.innerHTML = list.map(p => `
+    <div class="project-card">
+      <img src="${p.img}" alt="${p.title}" loading="lazy">
+      <span class="project-badge">${p.tag}</span>
+      <div class="overlay">
+        <h3>${p.title}</h3>
+        <p>${p.desc}</p>
+        <a class="overlay-link" href="${p.href}" target="_blank">Voir en grand ↗</a>
+      </div>
+    </div>
+  `).join('');
+
+  const n = list.length;
+  document.getElementById('count').textContent = n + ' projet' + (n > 1 ? 's' : '') + ' affiché' + (n > 1 ? 's' : '');
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    current = this.dataset.filter;
+    render();
+  });
+});
+
+render();
+</script>
+
+</body>
+</html>
