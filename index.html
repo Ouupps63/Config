@@ -38,27 +38,31 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .cdd-trigger:after{content:'▾';position:absolute;right:11px;top:50%;transform:translateY(-50%);color:#60a5fa;font-size:12px;pointer-events:none;transition:transform .2s}
 .cdd.open .cdd-trigger{border-color:#60a5fa}
 .cdd.open .cdd-trigger:after{transform:translateY(-50%) rotate(180deg)}
-.cdd-list{position:fixed;background:#1e293b;border:1px solid rgba(96,165,250,.35);border-radius:9px;overflow-y:auto;max-height:440px;z-index:99999;box-shadow:0 12px 32px rgba(0,0,0,.6);min-width:10px}
+.cdd-list{position:fixed;background:#1e293b;border:1px solid rgba(96,165,250,.35);border-radius:9px;overflow:hidden;z-index:99999;box-shadow:0 12px 32px rgba(0,0,0,.6);min-width:10px;display:flex;flex-direction:column}
 .cdd-list::-webkit-scrollbar{width:5px}
 .cdd-list::-webkit-scrollbar-track{background:rgba(255,255,255,.05)}
 .cdd-list::-webkit-scrollbar-thumb{background:rgba(96,165,250,.3);border-radius:3px}
+.cdd-search{width:100%;background:#0f172a;border:none;border-bottom:1px solid rgba(96,165,250,.25);color:#fff;padding:8px 12px;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;outline:none;box-sizing:border-box;flex-shrink:0}
+.cdd-search::placeholder{color:#475569}
+.cdd-search:focus{border-bottom-color:rgba(96,165,250,.6)}
+.cdd-items{overflow-y:auto;max-height:390px}
+.cdd-items::-webkit-scrollbar{width:5px}
+.cdd-items::-webkit-scrollbar-track{background:rgba(255,255,255,.05)}
+.cdd-items::-webkit-scrollbar-thumb{background:rgba(96,165,250,.3);border-radius:3px}
 .cdd-item{padding:6px 12px;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;color:#cbd5e1;cursor:pointer;transition:.15s;white-space:nowrap}
 .cdd-item:hover{background:rgba(59,130,246,.18);color:#fff}
 .cdd-item.selected{color:#60a5fa;background:rgba(59,130,246,.1)}
-.cdd-item.cdd-sep{font-size:7px;color:#ffffff !important;opacity:.7;cursor:default;padding:3px 12px;pointer-events:none;background:none !important}
+.cdd-noresult{padding:10px 12px;font-size:12px;color:#475569;font-style:italic;text-align:center}
 .inf{margin-top:8px;padding:7px 10px;background:rgba(59,130,246,.08);border-left:2px solid rgba(96,165,250,.4);border-radius:0 7px 7px 0;font-size:15px;color:#93c5fd;min-height:32px;line-height:1.5}
 .inf.e{color:#475569;border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.02)}
 .inf.w{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.4);color:#fbbf24}
-
-/* ── OPTIONS SUPPLÉMENTAIRES ── */
+/* OPTIONS SUPPLÉMENTAIRES */
 .opts-wrap{background:rgba(17,25,40,.82);border-radius:18px;border:1px solid rgba(96,165,250,.18);padding:18px;margin-bottom:22px}
 .opts-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .opts-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
 .opts-title{font-family:'Orbitron',Arial,sans-serif;font-size:11px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
 .opts-sub{font-size:11px;color:#64748b;margin-top:2px}
 .opts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-
-/* Cartes options petites */
 .opt-card{border-radius:14px;padding:14px 16px;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s;border:2px solid transparent;display:flex;flex-direction:column;gap:4px}
 .opt-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.3)}
 .opt-card.selected{border-color:rgba(255,255,255,.55);box-shadow:0 0 0 3px rgba(96,165,250,.3)}
@@ -74,8 +78,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .opt-win i{font-size:14px}
 .opt-win-blue{background:linear-gradient(160deg,#1d4ed8,#6d28d9)}
 .opt-win-purple{background:linear-gradient(160deg,#7c3aed,#a855f7)}
-
-/* Carte forfait montage dynamique */
 .opt-montage{background:linear-gradient(135deg,#0f172a,#1e3a5f);border:2px solid transparent !important;cursor:pointer}
 .opt-montage:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.3)}
 .opt-montage.selected{border-color:rgba(255,255,255,.55) !important;box-shadow:0 0 0 3px rgba(96,165,250,.3) !important}
@@ -90,7 +92,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .opt-montage-list li:last-child{border:none}
 .opt-montage-badge{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(96,165,250,.2);border:1px solid rgba(96,165,250,.3);color:#60a5fa;margin-top:8px}
 .opt-montage-reco{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80;margin-top:4px;margin-left:4px}
-
 /* RÉCAP */
 .sum{background:rgba(17,25,40,.9);border-radius:18px;border:1px solid rgba(96,165,250,.2);padding:24px}
 .sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
@@ -187,7 +188,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 </div>
 <div class="grid" id="G"></div>
 
-<!-- ══ OPTIONS SUPPLÉMENTAIRES ══ -->
 <div class="opts-wrap">
   <div class="opts-header">
     <div class="opts-icon">⚙️</div>
@@ -197,8 +197,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
     </div>
   </div>
   <div class="opts-grid">
-
-    <!-- Windows -->
     <div class="opt-card opt-win-blue" id="opt-windows" data-name="Licence Windows" data-price="45">
       <div class="opt-badge">WINDOWS</div>
       <div class="opt-check" id="chk-windows">✓</div>
@@ -213,8 +211,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
       </ul>
       <div class="opt-win"><i class="fa-brands fa-windows"></i>Licence officielle</div>
     </div>
-
-    <!-- Office -->
     <div class="opt-card opt-win-purple" id="opt-office" data-name="Microsoft Office" data-price="60">
       <div class="opt-badge">OFFICE</div>
       <div class="opt-check" id="chk-office">✓</div>
@@ -228,8 +224,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
       </ul>
       <div class="opt-win"><i class="fa-solid fa-file-word"></i>Suite bureautique</div>
     </div>
-
-    <!-- Forfait montage dynamique -->
     <div class="opt-card opt-montage disabled" id="opt-montage-card">
       <div class="opt-badge">MONTAGE</div>
       <div class="opt-check" id="chk-montage">✓</div>
@@ -242,7 +236,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
         🖥️ Sélectionne tes composants<br>pour voir le forfait adapté
       </div>
     </div>
-
   </div>
 </div>
 
@@ -284,18 +277,9 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
         <span class="popup-total-lbl">Total estimé</span>
         <span class="popup-total-val" id="popupTotalVal">0 €</span>
       </div>
-      <div class="pf-group">
-        <label for="pf-nom">Votre nom *</label>
-        <input id="pf-nom" type="text" placeholder="Prénom Nom">
-      </div>
-      <div class="pf-group">
-        <label for="pf-email">Votre adresse e-mail *</label>
-        <input id="pf-email" type="email" placeholder="exemple@mail.com">
-      </div>
-      <div class="pf-group">
-        <label for="pf-msg">Message (optionnel)</label>
-        <textarea id="pf-msg" placeholder="Précisez vos besoins, votre budget, vos questions…"></textarea>
-      </div>
+      <div class="pf-group"><label for="pf-nom">Votre nom *</label><input id="pf-nom" type="text" placeholder="Prénom Nom"></div>
+      <div class="pf-group"><label for="pf-email">Votre adresse e-mail *</label><input id="pf-email" type="email" placeholder="exemple@mail.com"></div>
+      <div class="pf-group"><label for="pf-msg">Message (optionnel)</label><textarea id="pf-msg" placeholder="Précisez vos besoins, votre budget, vos questions…"></textarea></div>
       <div class="popup-error" id="popupError">Merci de remplir votre nom et votre adresse e-mail.</div>
       <button class="popup-send" id="popupSend">Envoyer ma demande →</button>
     </div>
@@ -310,6 +294,8 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 <script>
 emailjs.init('_EeHlzJZOkVpZhwDd');
 
+/* ══ DONNÉES ══ */
+var CATS_ORDER=['cpu','mb','ram','gpu','storage','psu','cooling','pccase'];
 var CATS={
   cpu:    {l:'Processeur (CPU)',      i:'⚙️', s:'Socket & fréquence',       file:'Cpu.json'},
   mb:     {l:'Carte mère',            i:'🟩', s:'Socket & chipset',          file:'Mb.json'},
@@ -318,9 +304,8 @@ var CATS={
   storage:{l:'Stockage (SSD + HDD)',  i:'💾', s:'Capacité & vitesse',        file:'Ssd.json'},
   psu:    {l:'Alimentation (PSU)',    i:'⚡', s:'Puissance & certification',  file:'Alim.json'},
   cooling:{l:'Refroidissement CPU',   i:'❄️', s:'Air ou watercooling',       file:'Cool.json'},
-  pccase: {l:'Boîtier',             i:'🖥️', s:'Format & airflow',          file:'Case.json'}
+  pccase: {l:'Boîtier',              i:'🖥️', s:'Format & airflow',          file:'Case.json'}
 };
-
 var PR={
   bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to',psu:'450w-seasonic',cooling:'air-budget',pccase:'case-core1000'},
   budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to',psu:'650w-bequiet',cooling:'air-assassin',pccase:'case-4000d'},
@@ -330,19 +315,15 @@ var PR={
   stream:{cpu:'r9-9900x',mb:'x670-gigabyte',ram:'64-ddr5-6000',gpu:'rtx5070ti',storage:'gen4-2to-wd',psu:'1000w-asus',cooling:'aio-360-arctic',pccase:'case-o11-evo'},
   silent:{cpu:'r7-9700x',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070',storage:'gen4-1to-wd',psu:'750w-bequiet',cooling:'air-noctua',pccase:'case-define7c'}
 };
-
 var D={};var S={};
 
-/* ══ OPTIONS SUPPLÉMENTAIRES ══ */
+/* ══ OPTIONS ══ */
 var OPTS={
   windows:{name:'Licence Windows',price:45,selected:false},
   office: {name:'Microsoft Office',price:60,selected:false}
 };
-
-/* Forfait montage courant (affiché, non sélectionnable) */
+var montageSelected=false;
 var currentMontage=null;
-
-/* ══ FORFAITS MONTAGE ══ */
 var FORFAITS={
   gaming:[
     {name:'Essentiel',price:69,inclus:['Montage complet','Gestion câbles','Mise à jour BIOS','Test stabilité 30min','Vérif. températures'],tag:'GAMING'},
@@ -356,146 +337,42 @@ var FORFAITS={
   ]
 };
 
-function upMontage(pc,has){
-  var card=document.getElementById('opt-montage-card');
-  var empty=document.getElementById('montage-empty');
-  var tag=document.getElementById('montage-tag');
-  var name=document.getElementById('montage-name');
-  var price=document.getElementById('montage-price');
-  var list=document.getElementById('montage-list');
-  var badges=document.getElementById('montage-badges');
-
-  if(!has||pc===0){
-    empty.style.display='block';
-    tag.style.display='none';name.style.display='none';
-    price.style.display='none';list.style.display='none';badges.style.display='none';
-    card.classList.add('disabled');
-    montageSelected=false;updateMontageCard();
-    currentMontage=null;
-    return;
-  }
-
-  card.classList.remove('disabled');
-  empty.style.display='none';
-  tag.style.display='block';name.style.display='block';
-  price.style.display='block';list.style.display='block';badges.style.display='block';
-
-  var gpu=gi('gpu');
-  var hasGPU=gpu&&gpu.id!=='none'&&gpu.p>0;
-  var type=hasGPU?'gaming':'bureau';
-  var forfaits=FORFAITS[type];
-  var niveau;
-  if(type==='gaming'){if(pc>=75)niveau=2;else if(pc>=35)niveau=1;else niveau=0;}
-  else{if(pc>=40)niveau=2;else if(pc>=15)niveau=1;else niveau=0;}
-
-  var f=forfaits[niveau];
-  if(currentMontage&&currentMontage.name!==f.name){montageSelected=false;}
-  currentMontage=f;
-
-  tag.textContent=f.tag;
-  name.textContent=f.name;
-  price.textContent=f.price+'€';
-  list.innerHTML=f.inclus.map(function(x){return '<li>✔ '+x+'</li>';}).join('');
-  badges.innerHTML='<span class="opt-montage-badge">'+f.price+'€ · Forfait MLTeC</span>'
-    +(niveau>=1?'<span class="opt-montage-reco">★ Recommandé</span>':'');
-  updateMontageCard();
-}
-
-var montageSelected=false;
-
-function initOpts(){
-  document.querySelectorAll('.opt-card:not(.opt-montage)').forEach(function(card){
-    var id=card.id.replace('opt-','');
-    updateOptCard(id);
-    card.addEventListener('click',function(){
-      OPTS[id].selected=!OPTS[id].selected;
-      updateOptCard(id);
-      upSum();
-    });
-  });
-  // Carte montage
-  document.getElementById('opt-montage-card').addEventListener('click',function(){
-    if(this.classList.contains('disabled'))return;
-    montageSelected=!montageSelected;
-    updateMontageCard();
-    upSum();
-  });
-  // Init visuel coche montage
-  updateMontageCard();
-}
-
-function updateMontageCard(){
-  var card=document.getElementById('opt-montage-card');
-  var chk=document.getElementById('chk-montage');
-  if(!chk)return;
-  if(montageSelected&&!card.classList.contains('disabled')){
-    card.classList.add('selected');
-    chk.style.background='#4ade80';chk.style.borderColor='#4ade80';chk.style.color='#0f172a';
-  } else {
-    card.classList.remove('selected');
-    chk.style.background='transparent';chk.style.borderColor='rgba(255,255,255,.3)';chk.style.color='transparent';
-    if(card.classList.contains('disabled'))montageSelected=false;
-  }
-}
-
-function updateOptCard(id){
-  var card=document.getElementById('opt-'+id);
-  var chk=document.getElementById('chk-'+id);
-  if(!card||!chk)return;
-  if(OPTS[id].selected){
-    card.classList.add('selected');
-    chk.style.background='#4ade80';chk.style.borderColor='#4ade80';chk.style.color='#0f172a';
-  } else {
-    card.classList.remove('selected');
-    chk.style.background='transparent';chk.style.borderColor='rgba(255,255,255,.3)';chk.style.color='transparent';
-  }
-}
-
-/* ══ CHARGEMENT JSON ══ */
-function loadAllJSON(){
-  var keys=Object.keys(CATS);
-  var promises=keys.map(function(k){
-    return fetch(CATS[k].file)
-      .then(function(r){return r.json();})
-      .then(function(data){D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:data};S[k]='none';})
-      .catch(function(err){
-        console.error('Erreur chargement '+CATS[k].file,err);
-        D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:[{id:'none',n:'-- Erreur chargement --',p:0,inf:''}]};S[k]='none';
-      });
-  });
-  Promise.all(promises).then(function(){
-    build();
-    var saved=loadConfig();
-    if(saved)applyConfig(saved); else upSum();
-    initOpts();
-    document.querySelectorAll('.pb').forEach(function(b){b.addEventListener('click',function(){preset(this.getAttribute('data-p'));});});
-    document.getElementById('RST').addEventListener('click',reset);
-    document.getElementById('CTA').addEventListener('click',openPopup);
-    document.getElementById('popupClose').addEventListener('click',closePopup);
-    document.getElementById('popupSend').addEventListener('click',sendEmail);
-    document.getElementById('popupOverlay').addEventListener('click',function(e){if(e.target===this)closePopup();});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
-  });
-}
-
-function gi(k){var a=D[k].d;for(var i=0;i<a.length;i++){if(a[i].id===S[k])return a[i];}return null;}
-
+/* ══ SAUVEGARDE ══ */
 var LS_KEY='mltec_config';
-function saveConfig(){try{localStorage.setItem(LS_KEY,JSON.stringify(S));}catch(e){}}
-function loadConfig(){try{var s=localStorage.getItem(LS_KEY);return s?JSON.parse(s):null;}catch(e){return null;}}
+function saveConfig(){
+  try{
+    localStorage.setItem(LS_KEY,JSON.stringify({
+      S:S,
+      opts:{windows:OPTS.windows.selected,office:OPTS.office.selected},
+      montage:montageSelected
+    }));
+  }catch(e){}
+}function loadConfig(){try{var s=localStorage.getItem(LS_KEY);return s?JSON.parse(s):null;}catch(e){return null;}}
 function applyConfig(cfg){
-  Object.keys(cfg).forEach(function(k){
-    if(!D[k]||cfg[k]==='none')return;
-    var item=D[k].d.filter(function(x){return x.id===cfg[k];})[0];
+  // support ancien format (juste S)
+  var savedS=cfg.S||cfg;
+  Object.keys(savedS).forEach(function(k){
+    if(!D[k]||savedS[k]==='none')return;
+    var item=D[k].d.filter(function(x){return x.id===savedS[k];})[0];
     if(!item)return;
-    S[k]=cfg[k];
+    S[k]=savedS[k];
     var dd=document.querySelector('.cdd[data-k="'+k+'"]');
     if(dd){var tr=dd.querySelector('.cdd-trigger');if(tr)tr.textContent=item.n;}
     upInf(k);
   });
+  // restaure les options
+  if(cfg.opts){
+    if(cfg.opts.windows){OPTS.windows.selected=true;updateOptCard('windows');}
+    if(cfg.opts.office){OPTS.office.selected=true;updateOptCard('office');}
+  }
   upSum();
+  // restaure le montage après upSum (qui calcule currentMontage)
+  if(cfg.montage&&currentMontage){
+    montageSelected=true;updateMontageCard();upSum();
+  }
 }
 
+/* ══ CUSTOM DROPDOWN ══ */
 var _openDD=null;
 function closeAllDD(){
   if(_openDD){_openDD.classList.remove('open');_openDD=null;}
@@ -507,9 +384,40 @@ function positionList(dd,list){
   var spaceBelow=window.innerHeight-rect.bottom-8;
   var spaceAbove=rect.top-8;
   var maxH=Math.min(440,spaceBelow>120?spaceBelow:Math.max(spaceAbove,120));
-  list.style.maxHeight=maxH+'px';list.style.width=rect.width+'px';list.style.left=rect.left+'px';
-  list.style.top=(spaceBelow>=120||spaceBelow>=spaceAbove?(rect.bottom+4):(rect.top-Math.min(maxH,440)-4))+'px';
-  list.style.bottom='';
+  list.style.width=rect.width+'px';
+  list.style.left=rect.left+'px';
+  if(spaceBelow>=120||spaceBelow>=spaceAbove){
+    list.style.top=(rect.bottom+4)+'px';
+  } else {
+    list.style.top=(rect.top-Math.min(maxH,440)-4)+'px';
+  }
+}
+function renderItems(wrap,items,k,trigger,sel,ft){
+  wrap.innerHTML='';
+  ft=ft.toLowerCase().trim();
+  var lastGrp=null;var shown=0;
+  items.forEach(function(x){
+    if(x.g){lastGrp=x;return;}
+    var label=x.n+(x.p>0?' — '+x.p+' €':'');
+    if(ft&&label.toLowerCase().indexOf(ft)===-1)return;
+    if(lastGrp){
+      var grp=document.createElement('div');
+      grp.setAttribute('style','color:#fff;opacity:.9;font-size:10px;padding:8px 10px 4px;text-transform:uppercase;font-family:Arial,sans-serif;border-top:1px solid rgba(255,255,255,.15);margin-top:3px;cursor:default;background:rgba(59,130,246,.08);font-weight:700;');
+      grp.textContent='- '+lastGrp.n;wrap.appendChild(grp);lastGrp=null;
+    }
+    var item=document.createElement('div');item.className='cdd-item';
+    if(S[k]===x.id)item.classList.add('selected');
+    item.textContent=label;
+    item.addEventListener('click',function(){
+      S[k]=x.id;trigger.textContent=x.n;sel.value=x.id;
+      upInf(k);upSum();saveConfig();closeAllDD();
+    });
+    wrap.appendChild(item);shown++;
+  });
+  if(shown===0&&ft){
+    var nr=document.createElement('div');nr.className='cdd-noresult';
+    nr.textContent='Aucun résultat pour "'+ft+'"';wrap.appendChild(nr);
+  }
 }
 function makeDD(k,items){
   var dd=document.createElement('div');dd.className='cdd';dd.setAttribute('data-k',k);
@@ -517,46 +425,45 @@ function makeDD(k,items){
   items.forEach(function(x){var o=document.createElement('option');o.value=x.id||'';o.textContent=x.n;sel.appendChild(o);});
   dd.appendChild(sel);
   var trigger=document.createElement('button');trigger.type='button';trigger.className='cdd-trigger';
-  trigger.textContent=items[0]?items[0].n:'—';dd.appendChild(trigger);
+  trigger.textContent=items[0]?items[0].n:'—';
+  dd.appendChild(trigger);
   trigger.addEventListener('click',function(e){
     e.stopPropagation();
     if(_openDD===dd){closeAllDD();return;}
     closeAllDD();
     var list=document.createElement('div');list.className='cdd-list';
     list.addEventListener('click',function(e){e.stopPropagation();});
+    var search=document.createElement('input');search.type='text';search.className='cdd-search';
+    search.placeholder='🔍 Rechercher…';
+    search.addEventListener('click',function(e){e.stopPropagation();});
+    var wrap=document.createElement('div');wrap.className='cdd-items';
+    search.addEventListener('input',function(){renderItems(wrap,items,k,trigger,sel,this.value);});
+    list.appendChild(search);list.appendChild(wrap);
+    renderItems(wrap,items,k,trigger,sel,'');
     document.body.appendChild(list);
-    items.forEach(function(x){
-      if(x.g){
-        var grp=document.createElement('div');
-        grp.setAttribute('style','color:#fff;opacity:.9;font-size:10px;padding:8px 10px 4px;text-transform:uppercase;font-family:Arial,sans-serif;border-top:1px solid rgba(255,255,255,.15);margin-top:3px;cursor:default;background:rgba(59,130,246,.08);text-align:left;font-weight:700;');
-        grp.textContent='- '+x.n;list.appendChild(grp);return;
-      }
-      var item=document.createElement('div');item.className='cdd-item';
-      if(S[k]===x.id)item.classList.add('selected');
-      item.textContent=x.n+(x.p>0?' — '+x.p+' €':'');
-      item.addEventListener('click',function(){
-        S[k]=x.id;trigger.textContent=x.n;sel.value=x.id;
-        upInf(k);upSum();saveConfig();closeAllDD();
-      });
-      list.appendChild(item);
-    });
-    positionList(dd,list);dd.classList.add('open');_openDD=dd;
+    positionList(dd,list);
+    dd.classList.add('open');_openDD=dd;
+    setTimeout(function(){search.focus();},50);
   });
   return dd;
 }
 document.addEventListener('click',closeAllDD);
-window.addEventListener('scroll',function(){if(_openDD){var list=document.querySelector('.cdd-list');if(list)positionList(_openDD,list);}},true);
+window.addEventListener('scroll',function(){if(_openDD){var l=document.querySelector('.cdd-list');if(l)positionList(_openDD,l);}},true);
 window.addEventListener('resize',closeAllDD);
 
+/* ══ BUILD ══ */
 function build(){
   var g=document.getElementById('G');if(!g)return;g.innerHTML='';
-  Object.keys(D).forEach(function(k){
+  CATS_ORDER.forEach(function(k){
+    if(!D[k])return;
     var c=D[k];
     var el=document.createElement('div');el.className='card';
     el.innerHTML='<div class="ch"><div class="ico">'+c.i+'</div><div><div class="clbl">'+c.s+'</div><div class="ctit">'+c.l+'</div></div></div><div id="I'+k+'" class="inf e">Aucun composant sélectionné</div>';
     var dd=makeDD(k,c.d);el.insertBefore(dd,el.querySelector('#I'+k));g.appendChild(el);
   });
 }
+
+function gi(k){var a=D[k].d;for(var i=0;i<a.length;i++){if(a[i].id===S[k])return a[i];}return null;}
 
 function upInf(k){
   var it=gi(k),el=document.getElementById('I'+k);if(!el)return;
@@ -565,6 +472,75 @@ function upInf(k){
   el.className='inf'+(it.id&&(it.id.indexOf('ddr5')>-1||it.id.indexOf('gen5')>-1)?' w':'');
 }
 
+/* ══ OPTIONS ══ */
+function updateOptCard(id){
+  var card=document.getElementById('opt-'+id);
+  var chk=document.getElementById('chk-'+id);
+  if(!card||!chk)return;
+  if(OPTS[id].selected){
+    card.classList.add('selected');
+    chk.style.cssText='background:#4ade80;border-color:#4ade80;color:#0f172a;font-weight:700';
+  } else {
+    card.classList.remove('selected');
+    chk.style.cssText='background:transparent;border-color:rgba(255,255,255,.3);color:transparent';
+  }
+}
+function updateMontageCard(){
+  var card=document.getElementById('opt-montage-card');
+  var chk=document.getElementById('chk-montage');
+  if(!card||!chk)return;
+  if(montageSelected&&!card.classList.contains('disabled')){
+    card.classList.add('selected');
+    chk.style.cssText='background:#4ade80;border-color:#4ade80;color:#0f172a;font-weight:700';
+  } else {
+    card.classList.remove('selected');
+    chk.style.cssText='background:transparent;border-color:rgba(255,255,255,.3);color:transparent';
+    if(card.classList.contains('disabled'))montageSelected=false;
+  }
+}
+function upMontage(pc,has){
+  var card=document.getElementById('opt-montage-card');
+  var empty=document.getElementById('montage-empty');
+  var tag=document.getElementById('montage-tag');
+  var name=document.getElementById('montage-name');
+  var price=document.getElementById('montage-price');
+  var list=document.getElementById('montage-list');
+  var badges=document.getElementById('montage-badges');
+  if(!has||pc===0){
+    empty.style.display='block';
+    [tag,name,price,list,badges].forEach(function(e){if(e)e.style.display='none';});
+    card.classList.add('disabled');montageSelected=false;updateMontageCard();currentMontage=null;return;
+  }
+  card.classList.remove('disabled');
+  empty.style.display='none';
+  [tag,name,price,list,badges].forEach(function(e){if(e)e.style.display='block';});
+  var gpu=gi('gpu');
+  var type=(gpu&&gpu.id!=='none'&&gpu.p>0)?'gaming':'bureau';
+  var forfaits=FORFAITS[type];
+  var niveau;
+  if(type==='gaming'){niveau=pc>=75?2:pc>=35?1:0;}
+  else{niveau=pc>=40?2:pc>=15?1:0;}
+  var f=forfaits[niveau];
+  if(currentMontage&&currentMontage.name!==f.name)montageSelected=false;
+  currentMontage=f;
+  tag.textContent=f.tag;name.textContent=f.name;price.textContent=f.price+'€';
+  list.innerHTML=f.inclus.map(function(x){return'<li>✔ '+x+'</li>';}).join('');
+  badges.innerHTML='<span class="opt-montage-badge">'+f.price+'€ · Forfait MLTeC</span>'+(niveau>=1?'<span class="opt-montage-reco">★ Recommandé</span>':'');
+  updateMontageCard();
+}
+function initOpts(){
+  document.querySelectorAll('.opt-card:not(.opt-montage)').forEach(function(card){
+    var id=card.id.replace('opt-','');
+    updateOptCard(id);
+    card.addEventListener('click',function(){OPTS[id].selected=!OPTS[id].selected;updateOptCard(id);upSum();saveConfig();});
+  });
+  document.getElementById('opt-montage-card').addEventListener('click',function(){
+    if(this.classList.contains('disabled'))return;
+    montageSelected=!montageSelected;updateMontageCard();upSum();saveConfig();
+  });
+}
+
+/* ══ RÉCAP ══ */
 function upSum(){
   var tot=0,pf=0,has=false,rows=document.getElementById('ROWS');
   rows.innerHTML='';
@@ -609,12 +585,10 @@ function upSum(){
 function compat(){
   var bd=document.getElementById('BD');bd.innerHTML='';
   var cpu=gi('cpu'),mb=gi('mb'),psu=gi('psu'),gpu=gi('gpu'),cool=gi('cooling'),ram=gi('ram');
-  if(cpu&&mb&&cpu.id!=='none'&&mb.id!=='none'&&mb.sk){
+  if(cpu&&mb&&cpu.id!=='none'&&mb.id!=='none'&&mb.sk)
     cpu.sk===mb.sk?badg(bd,'✔ CPU + Carte mère compatibles','ok'):badg(bd,'✘ Incompatibilité socket CPU / Carte mère','er');
-  }
-  if(mb&&ram&&ram.id!=='none'&&mb.sk&&mb.sk!=='AM4'){
+  if(mb&&ram&&ram.id!=='none'&&mb.sk&&mb.sk!=='AM4')
     if(ram.id&&ram.id.indexOf('ddr4')>-1)badg(bd,'⚠ Cette carte mère requiert de la DDR5','wn');
-  }
   if(psu&&cpu&&gpu&&psu.w>0&&cpu.id!=='none'&&gpu.id!=='none'){
     var t=(cpu.tdp||0)+(gpu.tdp||0)+100;
     if(t<psu.w*0.75)badg(bd,'✔ Alimentation suffisante','ok');
@@ -627,11 +601,11 @@ function compat(){
     else if(cool.id!=='none')badg(bd,'✔ Refroidissement adapté','ok');
   }
   var n=Object.keys(S).filter(function(k){return S[k]!=='none';}).length;
-  if(n>=7)badg(bd,'✔ Configuration complète','ok');
+  if(n>=8)badg(bd,'✔ Configuration complète','ok');
 }
-
 function badg(c,t,cl){var b=document.createElement('span');b.className='badge '+cl;b.textContent=t;c.appendChild(b);}
 
+/* ══ PRESETS ══ */
 function preset(p){
   document.querySelectorAll('.pb').forEach(function(b){b.classList.remove('on');});
   var btn=document.querySelector('.pb[data-p="'+p+'"]');if(btn)btn.classList.add('on');
@@ -646,7 +620,6 @@ function preset(p){
   });
   upSum();
 }
-
 function reset(){
   Object.keys(S).forEach(function(k){
     S[k]='none';
@@ -661,17 +634,25 @@ function reset(){
   try{localStorage.removeItem(LS_KEY);}catch(e){}
 }
 
+/* ══ POPUP ══ */
+function calcTotal(){
+  var tot=0;
+  Object.keys(D).forEach(function(k){var it=gi(k);if(it&&it.p>0)tot+=it.p;});
+  Object.keys(OPTS).forEach(function(k){if(OPTS[k].selected)tot+=OPTS[k].price;});
+  if(montageSelected&&currentMontage)tot+=currentMontage.price;
+  return tot;
+}
 function getConfigText(){
   var lines=[];
   Object.keys(D).forEach(function(k){var it=gi(k);if(it&&it.p>0)lines.push(D[k].l+' : '+it.n.replace(' ⭐','')+' ('+it.p+' €)');});
   Object.keys(OPTS).forEach(function(k){if(OPTS[k].selected)lines.push('Option : '+OPTS[k].name+' ('+OPTS[k].price+' €)');});
   if(montageSelected&&currentMontage)lines.push('Forfait montage : '+currentMontage.name+' ('+currentMontage.price+' €)');
+  lines.push('---');
+  lines.push('TOTAL : '+calcTotal()+' €');
   return lines.join('\n');
 }
-
 function openPopup(){
-  var recap=document.getElementById('popupRecap');
-  recap.innerHTML='';var hasAny=false;
+  var recap=document.getElementById('popupRecap');recap.innerHTML='';var hasAny=false;
   Object.keys(D).forEach(function(k){
     var it=gi(k);
     if(it&&it.p>0){
@@ -689,20 +670,14 @@ function openPopup(){
       recap.appendChild(r);
     }
   });
-  if(currentMontage){
+  if(montageSelected&&currentMontage){
     hasAny=true;
     var r=document.createElement('div');r.className='popup-recap-row montage-row';
     r.innerHTML='<span class="prl">🛠️ Forfait '+currentMontage.name+'</span><span class="prp">'+currentMontage.price+' €</span>';
     recap.appendChild(r);
   }
-  if(montageSelected&&currentMontage){
-    hasAny=true;
-    var r=document.createElement('div');r.className='popup-recap-row montage-row';
-    r.innerHTML='<span class="prl">🛠️ Montage '+currentMontage.name+'</span><span class="prp">'+currentMontage.price+' €</span>';
-    recap.appendChild(r);
-  }
   if(!hasAny)recap.innerHTML='<p style="color:#64748b;font-size:13px;text-align:center;padding:8px 0">Aucun composant sélectionné</p>';
-  document.getElementById('popupTotalVal').textContent=document.getElementById('TOT').textContent;
+  document.getElementById('popupTotalVal').textContent=calcTotal()+' €';
   document.getElementById('popupForm').style.display='block';
   document.getElementById('popupSuccess').style.display='none';
   document.getElementById('popupError').style.display='none';
@@ -712,9 +687,7 @@ function openPopup(){
   document.getElementById('popupOverlay').classList.add('show');
   document.body.style.overflow='hidden';
 }
-
 function closePopup(){document.getElementById('popupOverlay').classList.remove('show');document.body.style.overflow='';}
-
 function sendEmail(){
   var nom=document.getElementById('pf-nom').value.trim();
   var email=document.getElementById('pf-email').value.trim();
@@ -725,10 +698,9 @@ function sendEmail(){
   var sendBtn=document.getElementById('popupSend');
   sendBtn.disabled=true;sendBtn.textContent='Envoi en cours…';
   emailjs.send('service_ubovst8','template_g0ceasb',{
-    from_name:nom,from_email:email,
-    message:msg||'Aucun message',
+    from_name:nom,from_email:email,message:msg||'Aucun message',
     config:getConfigText()||'Aucun composant sélectionné',
-    total:document.getElementById('TOT').textContent
+    total:calcTotal()+' €'
   }).then(function(){
     document.getElementById('popupForm').style.display='none';
     document.getElementById('popupSuccess').style.display='block';
@@ -738,6 +710,33 @@ function sendEmail(){
     errEl.textContent='Erreur lors de l\'envoi. Réessaie ou contacte-nous directement.';
     errEl.style.display='block';
     console.error('EmailJS error:',err);
+  });
+}
+
+/* ══ CHARGEMENT JSON ══ */
+function loadAllJSON(){
+  var keys=Object.keys(CATS);
+  var promises=keys.map(function(k){
+    return fetch(CATS[k].file)
+      .then(function(r){return r.json();})
+      .then(function(data){D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:data};S[k]='none';})
+      .catch(function(err){
+        console.error('Erreur chargement '+CATS[k].file,err);
+        D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:[{id:'none',n:'-- Erreur chargement --',p:0,inf:''}]};S[k]='none';
+      });
+  });
+  Promise.all(promises).then(function(){
+    build();
+    var saved=loadConfig();
+    if(saved)applyConfig(saved);else upSum();
+    initOpts();
+    document.querySelectorAll('.pb').forEach(function(b){b.addEventListener('click',function(){preset(this.getAttribute('data-p'));});});
+    document.getElementById('RST').addEventListener('click',reset);
+    document.getElementById('CTA').addEventListener('click',openPopup);
+    document.getElementById('popupClose').addEventListener('click',closePopup);
+    document.getElementById('popupSend').addEventListener('click',sendEmail);
+    document.getElementById('popupOverlay').addEventListener('click',function(e){if(e.target===this)closePopup();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
   });
 }
 
