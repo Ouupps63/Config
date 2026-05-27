@@ -124,6 +124,8 @@ function mlFilter(cat, btn) {
 function mlOpen(i) {
   mlIndex = i;
   mlShow();
+  var wrap = document.querySelector('.ml-wrap');
+  wrap.scrollIntoView({behavior: 'smooth', block: 'start'});
 }
 
 function mlShow() {
