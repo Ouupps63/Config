@@ -45,34 +45,53 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .cdd-item{padding:6px 12px;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;color:#cbd5e1;cursor:pointer;transition:.15s;white-space:nowrap}
 .cdd-item:hover{background:rgba(59,130,246,.18);color:#fff}
 .cdd-item.selected{color:#60a5fa;background:rgba(59,130,246,.1)}
-.cdd-item.cdd-sep{font-size:7px;color:#ffffff !important;opacity:.7;cursor:default;padding:3px 12px;letter-spacing:.3px;pointer-events:none;background:none !important}
+.cdd-item.cdd-sep{font-size:7px;color:#ffffff !important;opacity:.7;cursor:default;padding:3px 12px;pointer-events:none;background:none !important}
 .inf{margin-top:8px;padding:7px 10px;background:rgba(59,130,246,.08);border-left:2px solid rgba(96,165,250,.4);border-radius:0 7px 7px 0;font-size:15px;color:#93c5fd;min-height:32px;line-height:1.5}
 .inf.e{color:#475569;border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.02)}
 .inf.w{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.4);color:#fbbf24}
 
-/* ── ENCADRÉ OPTIONS SUPPLÉMENTAIRES ── */
-.opts-wrap{background:rgba(17,25,40,.82);border-radius:18px;border:1px solid rgba(96,165,250,.18);padding:22px;margin-bottom:22px}
-.opts-header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
-.opts-icon{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
-.opts-title{font-family:'Orbitron',Arial,sans-serif;font-size:13px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
-.opts-sub{font-size:12px;color:#64748b;margin-top:2px}
-.opts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.opt-card{border-radius:16px;padding:22px;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s;border:2px solid transparent}
-.opt-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.35)}
-.opt-card.selected{border-color:rgba(255,255,255,.6);box-shadow:0 0 0 3px rgba(96,165,250,.35)}
-.opt-check{position:absolute;top:14px;right:14px;width:24px;height:24px;border-radius:50%;border:2px solid rgba(255,255,255,.3);background:transparent;display:flex;align-items:center;justify-content:center;font-size:13px;transition:.25s}
+/* ── OPTIONS SUPPLÉMENTAIRES ── */
+.opts-wrap{background:rgba(17,25,40,.82);border-radius:18px;border:1px solid rgba(96,165,250,.18);padding:18px;margin-bottom:22px}
+.opts-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.opts-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.opts-title{font-family:'Orbitron',Arial,sans-serif;font-size:11px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
+.opts-sub{font-size:11px;color:#64748b;margin-top:2px}
+.opts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+
+/* Cartes options petites */
+.opt-card{border-radius:14px;padding:14px 16px;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s;border:2px solid transparent;display:flex;flex-direction:column;gap:4px}
+.opt-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.opt-card.selected{border-color:rgba(255,255,255,.55);box-shadow:0 0 0 3px rgba(96,165,250,.3)}
+.opt-check{position:absolute;top:10px;right:10px;width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.3);background:transparent;display:flex;align-items:center;justify-content:center;font-size:11px;transition:.25s;flex-shrink:0}
 .opt-card.selected .opt-check{background:#4ade80;border-color:#4ade80;color:#0f172a;font-weight:700}
-.opt-badge{position:absolute;top:14px;left:14px;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;background:rgba(255,255,255,.18);backdrop-filter:blur(4px);color:#fff}
-.opt-name{font-size:18px;font-weight:700;color:#fff !important;-webkit-text-fill-color:#fff !important;margin:28px 0 4px}
-.opt-price{font-size:32px;font-weight:900;color:#fff !important;-webkit-text-fill-color:#fff !important;margin-bottom:14px}
-.opt-list{list-style:none;margin-bottom:12px}
-.opt-list li{font-size:13px;color:rgba(255,255,255,.85);padding:4px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.opt-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(255,255,255,.18);color:#fff;width:fit-content;margin-bottom:2px}
+.opt-name{font-size:14px;font-weight:700;color:#fff !important;-webkit-text-fill-color:#fff !important;margin-top:14px}
+.opt-price{font-size:22px;font-weight:900;color:#fff !important;-webkit-text-fill-color:#fff !important;margin-bottom:6px}
+.opt-list{list-style:none}
+.opt-list li{font-size:11px;color:rgba(255,255,255,.8);padding:2px 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .opt-list li:last-child{border:none}
-.opt-win{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:#fff;background:rgba(255,255,255,.12);padding:9px 11px;border-radius:9px;margin-top:8px}
-.opt-win i{font-size:17px}
+.opt-win{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.1);padding:7px 9px;border-radius:8px;margin-top:6px}
+.opt-win i{font-size:14px}
 .opt-win-blue{background:linear-gradient(160deg,#1d4ed8,#6d28d9)}
 .opt-win-purple{background:linear-gradient(160deg,#7c3aed,#a855f7)}
 
+/* Carte forfait montage dynamique */
+.opt-montage{background:linear-gradient(135deg,#0f172a,#1e3a5f);border:2px solid transparent !important;cursor:pointer}
+.opt-montage:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.opt-montage.selected{border-color:rgba(255,255,255,.55) !important;box-shadow:0 0 0 3px rgba(96,165,250,.3) !important}
+.opt-montage.disabled{cursor:default;opacity:.6}
+.opt-montage.disabled:hover{transform:none;box-shadow:none}
+.opt-montage-empty{color:#475569;font-size:12px;text-align:center;padding:10px 0;line-height:1.6}
+.opt-montage-tag{font-size:9px;font-weight:700;letter-spacing:2px;color:#60a5fa;text-transform:uppercase;margin-bottom:4px}
+.opt-montage-name{font-size:14px;font-weight:700;color:#fff !important;-webkit-text-fill-color:#fff !important;margin-top:12px}
+.opt-montage-price{font-size:22px;font-weight:900;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;transition:all .4s}
+.opt-montage-list{list-style:none}
+.opt-montage-list li{font-size:11px;color:rgba(255,255,255,.8);padding:2px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.opt-montage-list li:last-child{border:none}
+.opt-montage-badge{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(96,165,250,.2);border:1px solid rgba(96,165,250,.3);color:#60a5fa;margin-top:8px}
+.opt-montage-reco{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80;margin-top:4px;margin-left:4px}
+
+/* RÉCAP */
 .sum{background:rgba(17,25,40,.9);border-radius:18px;border:1px solid rgba(96,165,250,.2);padding:24px}
 .sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
 .stit{font-family:'Orbitron',Arial,sans-serif;font-size:14px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
@@ -82,8 +101,8 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;font-weight:600}
 .row:last-child{border:none}
 .rn{color:#d1d1d1}.rp{color:#60a5fa;font-weight:700}
-.row-opt .rn{color:#c084fc}
-.row-opt .rp{color:#c084fc}
+.row-opt .rn{color:#c084fc}.row-opt .rp{color:#c084fc}
+.row-montage .rn{color:#4ade80}.row-montage .rp{color:#4ade80}
 .emp{color:#475569;font-size:13px;padding:6px 0}
 .tot{display:flex;justify-content:space-between;align-items:center;padding-top:13px;border-top:1px solid rgba(96,165,250,.22);margin-bottom:6px}
 .tl{font-family:'Orbitron',Arial,sans-serif;font-size:12px;font-weight:700;color:#fff;letter-spacing:2px}
@@ -122,6 +141,8 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .popup-recap-row .prp{color:#60a5fa;font-weight:700}
 .popup-recap-row.opt-row .prl{color:#c084fc}
 .popup-recap-row.opt-row .prp{color:#c084fc}
+.popup-recap-row.montage-row .prl{color:#4ade80}
+.popup-recap-row.montage-row .prp{color:#4ade80}
 .popup-total{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(59,130,246,.1);border:1px solid rgba(96,165,250,.2);border-radius:10px;margin-bottom:18px}
 .popup-total-lbl{font-size:12px;font-weight:700;color:#94a3b8;letter-spacing:1px;text-transform:uppercase}
 .popup-total-val{font-family:'Orbitron',Arial,sans-serif;font-size:18px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -206,6 +227,20 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
         <li>✔ Activation licence</li>
       </ul>
       <div class="opt-win"><i class="fa-solid fa-file-word"></i>Suite bureautique</div>
+    </div>
+
+    <!-- Forfait montage dynamique -->
+    <div class="opt-card opt-montage disabled" id="opt-montage-card">
+      <div class="opt-badge">MONTAGE</div>
+      <div class="opt-check" id="chk-montage">✓</div>
+      <div class="opt-montage-tag" id="montage-tag">FORFAIT RECOMMANDÉ</div>
+      <div class="opt-montage-name" id="montage-name">—</div>
+      <div class="opt-montage-price" id="montage-price">—</div>
+      <ul class="opt-montage-list" id="montage-list"></ul>
+      <div id="montage-badges"></div>
+      <div class="opt-montage-empty" id="montage-empty">
+        🖥️ Sélectionne tes composants<br>pour voir le forfait adapté
+      </div>
     </div>
 
   </div>
@@ -296,8 +331,7 @@ var PR={
   silent:{cpu:'r7-9700x',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070',storage:'gen4-1to-wd',psu:'750w-bequiet',cooling:'air-noctua',pccase:'case-define7c'}
 };
 
-var D={};
-var S={};
+var D={};var S={};
 
 /* ══ OPTIONS SUPPLÉMENTAIRES ══ */
 var OPTS={
@@ -305,14 +339,72 @@ var OPTS={
   office: {name:'Microsoft Office',price:60,selected:false}
 };
 
-function getOptsTotal(){
-  var t=0;
-  Object.keys(OPTS).forEach(function(k){if(OPTS[k].selected)t+=OPTS[k].price;});
-  return t;
+/* Forfait montage courant (affiché, non sélectionnable) */
+var currentMontage=null;
+
+/* ══ FORFAITS MONTAGE ══ */
+var FORFAITS={
+  gaming:[
+    {name:'Essentiel',price:69,inclus:['Montage complet','Gestion câbles','Mise à jour BIOS','Test stabilité 30min','Vérif. températures'],tag:'GAMING'},
+    {name:'Prêt à l\'emploi',price:99,inclus:['Tout du forfait Essentiel','Installation Windows','Pilotes complets','Logiciels essentiels','Optimisation gaming','RGB basique'],tag:'GAMING · POPULAIRE'},
+    {name:'Premium',price:149,inclus:['Tout du Prêt à l\'emploi','XMP / EXPO RAM','Optimisation avancée','RGB complet','Benchmarks','Suivi 7 jours'],tag:'GAMING · ULTIMATE'}
+  ],
+  bureau:[
+    {name:'Lite Essentiel',price:59,inclus:['Montage PC bureautique','Gestion câbles','Mise à jour BIOS','Vérif. fonctionnement'],tag:'BUREAUTIQUE'},
+    {name:'Confort',price:89,inclus:['Tout du forfait Lite','Installation Windows','Logiciels essentiels','Optimisation système'],tag:'BUREAUTIQUE · RECOMMANDÉ'},
+    {name:'Pro',price:149,inclus:['Tout du forfait Confort','Optimisation avancée','Sauvegarde & sécurité','Suite bureautique'],tag:'BUREAUTIQUE · PRO'}
+  ]
+};
+
+function upMontage(pc,has){
+  var card=document.getElementById('opt-montage-card');
+  var empty=document.getElementById('montage-empty');
+  var tag=document.getElementById('montage-tag');
+  var name=document.getElementById('montage-name');
+  var price=document.getElementById('montage-price');
+  var list=document.getElementById('montage-list');
+  var badges=document.getElementById('montage-badges');
+
+  if(!has||pc===0){
+    empty.style.display='block';
+    tag.style.display='none';name.style.display='none';
+    price.style.display='none';list.style.display='none';badges.style.display='none';
+    card.classList.add('disabled');
+    montageSelected=false;updateMontageCard();
+    currentMontage=null;
+    return;
+  }
+
+  card.classList.remove('disabled');
+  empty.style.display='none';
+  tag.style.display='block';name.style.display='block';
+  price.style.display='block';list.style.display='block';badges.style.display='block';
+
+  var gpu=gi('gpu');
+  var hasGPU=gpu&&gpu.id!=='none'&&gpu.p>0;
+  var type=hasGPU?'gaming':'bureau';
+  var forfaits=FORFAITS[type];
+  var niveau;
+  if(type==='gaming'){if(pc>=75)niveau=2;else if(pc>=35)niveau=1;else niveau=0;}
+  else{if(pc>=40)niveau=2;else if(pc>=15)niveau=1;else niveau=0;}
+
+  var f=forfaits[niveau];
+  if(currentMontage&&currentMontage.name!==f.name){montageSelected=false;}
+  currentMontage=f;
+
+  tag.textContent=f.tag;
+  name.textContent=f.name;
+  price.textContent=f.price+'€';
+  list.innerHTML=f.inclus.map(function(x){return '<li>✔ '+x+'</li>';}).join('');
+  badges.innerHTML='<span class="opt-montage-badge">'+f.price+'€ · Forfait MLTeC</span>'
+    +(niveau>=1?'<span class="opt-montage-reco">★ Recommandé</span>':'');
+  updateMontageCard();
 }
 
+var montageSelected=false;
+
 function initOpts(){
-  document.querySelectorAll('.opt-card').forEach(function(card){
+  document.querySelectorAll('.opt-card:not(.opt-montage)').forEach(function(card){
     var id=card.id.replace('opt-','');
     updateOptCard(id);
     card.addEventListener('click',function(){
@@ -321,6 +413,29 @@ function initOpts(){
       upSum();
     });
   });
+  // Carte montage
+  document.getElementById('opt-montage-card').addEventListener('click',function(){
+    if(this.classList.contains('disabled'))return;
+    montageSelected=!montageSelected;
+    updateMontageCard();
+    upSum();
+  });
+  // Init visuel coche montage
+  updateMontageCard();
+}
+
+function updateMontageCard(){
+  var card=document.getElementById('opt-montage-card');
+  var chk=document.getElementById('chk-montage');
+  if(!chk)return;
+  if(montageSelected&&!card.classList.contains('disabled')){
+    card.classList.add('selected');
+    chk.style.background='#4ade80';chk.style.borderColor='#4ade80';chk.style.color='#0f172a';
+  } else {
+    card.classList.remove('selected');
+    chk.style.background='transparent';chk.style.borderColor='rgba(255,255,255,.3)';chk.style.color='transparent';
+    if(card.classList.contains('disabled'))montageSelected=false;
+  }
 }
 
 function updateOptCard(id){
@@ -329,14 +444,10 @@ function updateOptCard(id){
   if(!card||!chk)return;
   if(OPTS[id].selected){
     card.classList.add('selected');
-    chk.style.background='#4ade80';
-    chk.style.borderColor='#4ade80';
-    chk.style.color='#0f172a';
+    chk.style.background='#4ade80';chk.style.borderColor='#4ade80';chk.style.color='#0f172a';
   } else {
     card.classList.remove('selected');
-    chk.style.background='transparent';
-    chk.style.borderColor='rgba(255,255,255,.3)';
-    chk.style.color='transparent';
+    chk.style.background='transparent';chk.style.borderColor='rgba(255,255,255,.3)';chk.style.color='transparent';
   }
 }
 
@@ -346,14 +457,10 @@ function loadAllJSON(){
   var promises=keys.map(function(k){
     return fetch(CATS[k].file)
       .then(function(r){return r.json();})
-      .then(function(data){
-        D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:data};
-        S[k]='none';
-      })
+      .then(function(data){D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:data};S[k]='none';})
       .catch(function(err){
         console.error('Erreur chargement '+CATS[k].file,err);
-        D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:[{id:'none',n:'-- Erreur chargement --',p:0,inf:''}]};
-        S[k]='none';
+        D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:[{id:'none',n:'-- Erreur chargement --',p:0,inf:''}]};S[k]='none';
       });
   });
   Promise.all(promises).then(function(){
@@ -373,7 +480,6 @@ function loadAllJSON(){
 
 function gi(k){var a=D[k].d;for(var i=0;i<a.length;i++){if(a[i].id===S[k])return a[i];}return null;}
 
-/* ══ SAUVEGARDE LOCALE ══ */
 var LS_KEY='mltec_config';
 function saveConfig(){try{localStorage.setItem(LS_KEY,JSON.stringify(S));}catch(e){}}
 function loadConfig(){try{var s=localStorage.getItem(LS_KEY);return s?JSON.parse(s):null;}catch(e){return null;}}
@@ -390,40 +496,28 @@ function applyConfig(cfg){
   upSum();
 }
 
-/* ══ CUSTOM DROPDOWN ══ */
 var _openDD=null;
-
 function closeAllDD(){
   if(_openDD){_openDD.classList.remove('open');_openDD=null;}
   var l=document.querySelector('.cdd-list');if(l)l.remove();
 }
-
 function positionList(dd,list){
   var tr=dd.querySelector('.cdd-trigger');
   var rect=tr.getBoundingClientRect();
   var spaceBelow=window.innerHeight-rect.bottom-8;
   var spaceAbove=rect.top-8;
   var maxH=Math.min(440,spaceBelow>120?spaceBelow:Math.max(spaceAbove,120));
-  list.style.maxHeight=maxH+'px';
-  list.style.width=rect.width+'px';
-  list.style.left=rect.left+'px';
-  if(spaceBelow>=120||spaceBelow>=spaceAbove){
-    list.style.top=(rect.bottom+4)+'px';
-    list.style.bottom='';
-  } else {
-    list.style.top=(rect.top-Math.min(maxH,440)-4)+'px';
-    list.style.bottom='';
-  }
+  list.style.maxHeight=maxH+'px';list.style.width=rect.width+'px';list.style.left=rect.left+'px';
+  list.style.top=(spaceBelow>=120||spaceBelow>=spaceAbove?(rect.bottom+4):(rect.top-Math.min(maxH,440)-4))+'px';
+  list.style.bottom='';
 }
-
 function makeDD(k,items){
   var dd=document.createElement('div');dd.className='cdd';dd.setAttribute('data-k',k);
   var sel=document.createElement('select');sel.className='sel';sel.setAttribute('data-k',k);
   items.forEach(function(x){var o=document.createElement('option');o.value=x.id||'';o.textContent=x.n;sel.appendChild(o);});
   dd.appendChild(sel);
   var trigger=document.createElement('button');trigger.type='button';trigger.className='cdd-trigger';
-  trigger.textContent=items[0]?items[0].n:'—';
-  dd.appendChild(trigger);
+  trigger.textContent=items[0]?items[0].n:'—';dd.appendChild(trigger);
   trigger.addEventListener('click',function(e){
     e.stopPropagation();
     if(_openDD===dd){closeAllDD();return;}
@@ -435,8 +529,7 @@ function makeDD(k,items){
       if(x.g){
         var grp=document.createElement('div');
         grp.setAttribute('style','color:#fff;opacity:.9;font-size:10px;padding:8px 10px 4px;text-transform:uppercase;font-family:Arial,sans-serif;border-top:1px solid rgba(255,255,255,.15);margin-top:3px;cursor:default;background:rgba(59,130,246,.08);text-align:left;font-weight:700;');
-        grp.textContent='- '+x.n;
-        list.appendChild(grp);return;
+        grp.textContent='- '+x.n;list.appendChild(grp);return;
       }
       var item=document.createElement('div');item.className='cdd-item';
       if(S[k]===x.id)item.classList.add('selected');
@@ -447,12 +540,10 @@ function makeDD(k,items){
       });
       list.appendChild(item);
     });
-    positionList(dd,list);
-    dd.classList.add('open');_openDD=dd;
+    positionList(dd,list);dd.classList.add('open');_openDD=dd;
   });
   return dd;
 }
-
 document.addEventListener('click',closeAllDD);
 window.addEventListener('scroll',function(){if(_openDD){var list=document.querySelector('.cdd-list');if(list)positionList(_openDD,list);}},true);
 window.addEventListener('resize',closeAllDD);
@@ -463,9 +554,7 @@ function build(){
     var c=D[k];
     var el=document.createElement('div');el.className='card';
     el.innerHTML='<div class="ch"><div class="ico">'+c.i+'</div><div><div class="clbl">'+c.s+'</div><div class="ctit">'+c.l+'</div></div></div><div id="I'+k+'" class="inf e">Aucun composant sélectionné</div>';
-    var dd=makeDD(k,c.d);
-    el.insertBefore(dd,el.querySelector('#I'+k));
-    g.appendChild(el);
+    var dd=makeDD(k,c.d);el.insertBefore(dd,el.querySelector('#I'+k));g.appendChild(el);
   });
 }
 
@@ -479,8 +568,6 @@ function upInf(k){
 function upSum(){
   var tot=0,pf=0,has=false,rows=document.getElementById('ROWS');
   rows.innerHTML='';
-
-  /* composants */
   Object.keys(D).forEach(function(k){
     var it=gi(k);
     if(it&&it.p>0){
@@ -490,8 +577,6 @@ function upSum(){
       rows.appendChild(r);
     }
   });
-
-  /* options supplémentaires */
   Object.keys(OPTS).forEach(function(k){
     if(OPTS[k].selected){
       has=true;tot+=OPTS[k].price;
@@ -500,23 +585,25 @@ function upSum(){
       rows.appendChild(r);
     }
   });
-
+  if(montageSelected&&currentMontage){
+    has=true;tot+=currentMontage.price;
+    var rm=document.createElement('div');rm.className='row row-montage';
+    rm.innerHTML='<span class="rn">🛠️ Montage '+currentMontage.name+'</span><span class="rp">'+currentMontage.price+' €</span>';
+    rows.appendChild(rm);
+  }
   if(!has)rows.innerHTML='<p class="emp">Aucun composant sélectionné</p>';
   document.getElementById('TOT').textContent=tot>0?tot+' €':'0 €';
   var mx=320,pc=Math.min(100,Math.round(pf/mx*100));
   document.getElementById('PB').style.width=pc+'%';
   document.getElementById('PS').textContent=pc>0?pc+' / 100':'—';
   var lb=pc===0?'Sélectionne des composants pour commencer'
-    :pc<20?'Config bureautique basique'
-    :pc<35?'Gaming 1080p entrée de gamme'
-    :pc<50?'Gaming 1080p solide'
-    :pc<62?'Gaming 1440p équilibré'
-    :pc<75?'Gaming 1440p haut de gamme'
-    :pc<85?'4K gaming'
-    :pc<95?'4K ultra — config enthusiaste'
-    :'Config ultime — sans limite';
+    :pc<20?'Config bureautique basique':pc<35?'Gaming 1080p entrée de gamme'
+    :pc<50?'Gaming 1080p solide':pc<62?'Gaming 1440p équilibré'
+    :pc<75?'Gaming 1440p haut de gamme':pc<85?'4K gaming'
+    :pc<95?'4K ultra — config enthusiaste':'Config ultime — sans limite';
   document.getElementById('PD').textContent=lb;
   compat();
+  upMontage(pc,has);
 }
 
 function compat(){
@@ -554,10 +641,7 @@ function preset(p){
     S[k]=pr[k];
     var el=document.querySelector('.sel[data-k="'+k+'"]');if(el)el.value=pr[k];
     var dd=document.querySelector('.cdd[data-k="'+k+'"]');
-    if(dd){
-      var item=D[k].d.filter(function(x){return x.id===pr[k];})[0];
-      if(item){var tr=dd.querySelector('.cdd-trigger');if(tr)tr.textContent=item.n;}
-    }
+    if(dd){var item=D[k].d.filter(function(x){return x.id===pr[k];})[0];if(item){var tr=dd.querySelector('.cdd-trigger');if(tr)tr.textContent=item.n;}}
     upInf(k);
   });
   upSum();
@@ -571,25 +655,23 @@ function reset(){
     if(dd){var item=D[k].d[0];if(item){var tr=dd.querySelector('.cdd-trigger');if(tr)tr.textContent=item.n;}}
     upInf(k);
   });
-  /* reset options */
   Object.keys(OPTS).forEach(function(k){OPTS[k].selected=false;updateOptCard(k);});
+  montageSelected=false;updateMontageCard();
   upSum();
   try{localStorage.removeItem(LS_KEY);}catch(e){}
 }
 
-/* ══ POPUP ══ */
 function getConfigText(){
   var lines=[];
   Object.keys(D).forEach(function(k){var it=gi(k);if(it&&it.p>0)lines.push(D[k].l+' : '+it.n.replace(' ⭐','')+' ('+it.p+' €)');});
   Object.keys(OPTS).forEach(function(k){if(OPTS[k].selected)lines.push('Option : '+OPTS[k].name+' ('+OPTS[k].price+' €)');});
+  if(montageSelected&&currentMontage)lines.push('Forfait montage : '+currentMontage.name+' ('+currentMontage.price+' €)');
   return lines.join('\n');
 }
 
 function openPopup(){
   var recap=document.getElementById('popupRecap');
-  recap.innerHTML='';
-  var hasAny=false;
-
+  recap.innerHTML='';var hasAny=false;
   Object.keys(D).forEach(function(k){
     var it=gi(k);
     if(it&&it.p>0){
@@ -599,7 +681,6 @@ function openPopup(){
       recap.appendChild(r);
     }
   });
-
   Object.keys(OPTS).forEach(function(k){
     if(OPTS[k].selected){
       hasAny=true;
@@ -608,11 +689,19 @@ function openPopup(){
       recap.appendChild(r);
     }
   });
-
-  if(!hasAny){
-    recap.innerHTML='<p style="color:#64748b;font-size:13px;text-align:center;padding:8px 0">Aucun composant sélectionné</p>';
+  if(currentMontage){
+    hasAny=true;
+    var r=document.createElement('div');r.className='popup-recap-row montage-row';
+    r.innerHTML='<span class="prl">🛠️ Forfait '+currentMontage.name+'</span><span class="prp">'+currentMontage.price+' €</span>';
+    recap.appendChild(r);
   }
-
+  if(montageSelected&&currentMontage){
+    hasAny=true;
+    var r=document.createElement('div');r.className='popup-recap-row montage-row';
+    r.innerHTML='<span class="prl">🛠️ Montage '+currentMontage.name+'</span><span class="prp">'+currentMontage.price+' €</span>';
+    recap.appendChild(r);
+  }
+  if(!hasAny)recap.innerHTML='<p style="color:#64748b;font-size:13px;text-align:center;padding:8px 0">Aucun composant sélectionné</p>';
   document.getElementById('popupTotalVal').textContent=document.getElementById('TOT').textContent;
   document.getElementById('popupForm').style.display='block';
   document.getElementById('popupSuccess').style.display='none';
@@ -624,10 +713,7 @@ function openPopup(){
   document.body.style.overflow='hidden';
 }
 
-function closePopup(){
-  document.getElementById('popupOverlay').classList.remove('show');
-  document.body.style.overflow='';
-}
+function closePopup(){document.getElementById('popupOverlay').classList.remove('show');document.body.style.overflow='';}
 
 function sendEmail(){
   var nom=document.getElementById('pf-nom').value.trim();
