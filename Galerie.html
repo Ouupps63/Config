@@ -1,4 +1,5 @@
 <style>
+.ml-wrap{position:relative;min-height:600px}
 .ml-section{padding:60px 6%;background:#111}
 .ml-label{text-align:center;font-size:11px;letter-spacing:4px;color:#4d7cff;text-transform:uppercase;font-family:Arial,sans-serif;margin-bottom:10px}
 .ml-title{text-align:center;font-size:32px;font-weight:700;color:#fff;font-family:Arial,sans-serif;margin-bottom:8px}
@@ -16,18 +17,18 @@
 .ml-card-desc{font-size:13px;color:#94a3b8;font-family:Arial,sans-serif;line-height:1.5}
 .ml-count{text-align:center;margin-top:28px;font-size:13px;color:#475569;font-family:Arial,sans-serif}
 
-/* LIGHTBOX */
-.ml-lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;padding:20px}
+/* LIGHTBOX — position absolute pour iframe */
+.ml-lb{display:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:100%;background:rgba(0,0,0,0.93);z-index:9999;align-items:flex-start;justify-content:center;padding:40px 20px}
 .ml-lb.open{display:flex}
-.ml-lb-inner{position:relative;max-width:900px;width:100%;text-align:center}
-.ml-lb img{max-width:100%;max-height:80vh;border-radius:12px;object-fit:contain;display:block;margin:0 auto}
+.ml-lb-inner{position:relative;max-width:860px;width:100%;text-align:center;margin-top:40px}
+.ml-lb img{max-width:100%;max-height:70vh;border-radius:12px;object-fit:contain;display:block;margin:0 auto}
 .ml-lb-title{color:#fff;font-size:18px;font-weight:700;font-family:Arial,sans-serif;margin-top:16px}
 .ml-lb-desc{color:#94a3b8;font-size:14px;font-family:Arial,sans-serif;margin-top:6px}
 .ml-lb-tag{display:inline-block;font-size:11px;padding:3px 12px;border-radius:20px;background:rgba(77,124,255,0.2);border:1px solid rgba(77,124,255,0.4);color:#7aa2ff;font-family:Arial,sans-serif;margin-top:10px}
-.ml-lb-close{position:absolute;top:-40px;right:0;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;font-family:Arial,sans-serif;line-height:1}
-.ml-lb-prev,.ml-lb-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(77,124,255,0.2);border:1px solid rgba(77,124,255,0.4);color:#fff;font-size:22px;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif}
-.ml-lb-prev{left:-60px}
-.ml-lb-next{right:-60px}
+.ml-lb-close{position:absolute;top:-36px;right:0;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;font-family:Arial,sans-serif;line-height:1}
+.ml-lb-prev,.ml-lb-next{position:absolute;top:38%;transform:translateY(-50%);background:rgba(77,124,255,0.2);border:1px solid rgba(77,124,255,0.4);color:#fff;font-size:22px;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif}
+.ml-lb-prev{left:-56px}
+.ml-lb-next{right:-56px}
 .ml-lb-prev:hover,.ml-lb-next:hover{background:rgba(77,124,255,0.5)}
 .ml-lb-counter{color:#64748b;font-size:13px;font-family:Arial,sans-serif;margin-top:12px}
 
@@ -35,35 +36,39 @@
 @media(max-width:560px){.ml-grid{grid-template-columns:1fr}.ml-section{padding:40px 4%}.ml-lb-prev{left:4px}.ml-lb-next{right:4px}}
 </style>
 
-<div class="ml-section">
-  <div class="ml-label">MLTeC · Portfolio</div>
-  <div class="ml-title">Nos réalisations</div>
-  <div class="ml-sub">Cliquez sur une photo pour l'agrandir</div>
+<div class="ml-wrap">
 
-  <div class="ml-filters">
-    <button class="ml-btn on" onclick="mlFilter('all',this)">Tous</button>
-    <button class="ml-btn" onclick="mlFilter('rgb',this)">RGB</button>
-    <button class="ml-btn" onclick="mlFilter('white',this)">White build</button>
-    <button class="ml-btn" onclick="mlFilter('gaming',this)">Gaming</button>
-    <button class="ml-btn" onclick="mlFilter('dark',this)">Dark</button>
+  <div class="ml-section">
+    <div class="ml-label">MLTeC · Portfolio</div>
+    <div class="ml-title">Nos réalisations</div>
+    <div class="ml-sub">Cliquez sur une photo pour l'agrandir</div>
+
+    <div class="ml-filters">
+      <button class="ml-btn on" onclick="mlFilter('all',this)">Tous</button>
+      <button class="ml-btn" onclick="mlFilter('rgb',this)">RGB</button>
+      <button class="ml-btn" onclick="mlFilter('white',this)">White build</button>
+      <button class="ml-btn" onclick="mlFilter('gaming',this)">Gaming</button>
+      <button class="ml-btn" onclick="mlFilter('dark',this)">Dark</button>
+    </div>
+
+    <div class="ml-grid" id="ml-grid"></div>
+    <div class="ml-count" id="ml-count"></div>
   </div>
 
-  <div class="ml-grid" id="ml-grid"></div>
-  <div class="ml-count" id="ml-count"></div>
-</div>
-
-<!-- LIGHTBOX -->
-<div class="ml-lb" id="ml-lb" onclick="mlLbBg(event)">
-  <div class="ml-lb-inner">
-    <button class="ml-lb-close" onclick="mlClose()">✕</button>
-    <button class="ml-lb-prev" onclick="mlNav(-1)">‹</button>
-    <button class="ml-lb-next" onclick="mlNav(1)">›</button>
-    <img id="ml-lb-img" src="" alt="">
-    <div class="ml-lb-tag" id="ml-lb-tag"></div>
-    <div class="ml-lb-title" id="ml-lb-title"></div>
-    <div class="ml-lb-desc" id="ml-lb-desc"></div>
-    <div class="ml-lb-counter" id="ml-lb-counter"></div>
+  <!-- LIGHTBOX -->
+  <div class="ml-lb" id="ml-lb" onclick="mlLbBg(event)">
+    <div class="ml-lb-inner">
+      <button class="ml-lb-close" onclick="mlClose()">✕</button>
+      <button class="ml-lb-prev" onclick="mlNav(-1)">‹</button>
+      <button class="ml-lb-next" onclick="mlNav(1)">›</button>
+      <img id="ml-lb-img" src="" alt="">
+      <div class="ml-lb-tag" id="ml-lb-tag"></div>
+      <div class="ml-lb-title" id="ml-lb-title"></div>
+      <div class="ml-lb-desc" id="ml-lb-desc"></div>
+      <div class="ml-lb-counter" id="ml-lb-counter"></div>
+    </div>
   </div>
+
 </div>
 
 <script>
@@ -113,6 +118,9 @@ function mlFilter(cat, btn) {
 function mlOpen(i) {
   mlIndex = i;
   mlShow();
+  // Scroll vers le haut du conteneur
+  var wrap = document.querySelector('.ml-wrap');
+  wrap.scrollIntoView({behavior: 'smooth', block: 'start'});
 }
 
 function mlShow() {
@@ -124,12 +132,10 @@ function mlShow() {
   document.getElementById('ml-lb-tag').textContent = p.tag;
   document.getElementById('ml-lb-counter').textContent = (mlIndex + 1) + ' / ' + mlFiltered.length;
   document.getElementById('ml-lb').classList.add('open');
-  document.body.style.overflow = 'hidden';
 }
 
 function mlClose() {
   document.getElementById('ml-lb').classList.remove('open');
-  document.body.style.overflow = '';
 }
 
 function mlNav(dir) {
