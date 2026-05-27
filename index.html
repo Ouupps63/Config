@@ -140,34 +140,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .popup-success-text{font-size:14px;color:#94a3b8;line-height:1.6}
 .popup-error{display:none;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:9px;padding:10px 13px;font-size:13px;color:#f87171;margin-bottom:12px}
 @media(max-width:500px){.logo{font-size:28px}.grid{grid-template-columns:1fr}body{padding:20px 3% 34px}.popup{padding:20px}.opts-grid{grid-template-columns:1fr}}
-
-/* ── ENCADRÉ FORFAIT RECOMMANDÉ ── */
-.forfait-wrap{background:rgba(17,25,40,.82);border-radius:18px;border:1px solid rgba(96,165,250,.18);padding:22px;margin-bottom:22px}
-.forfait-header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
-.forfait-icon{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
-.forfait-title{font-family:'Orbitron',Arial,sans-serif;font-size:13px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
-.forfait-sub{font-size:12px;color:#64748b;margin-top:2px}
-.forfait-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.forfait-card{border-radius:14px;padding:18px;cursor:pointer;transition:transform .25s,box-shadow .25s;border:2px solid transparent;position:relative;overflow:hidden}
-.forfait-card::before{content:"";position:absolute;top:-120%;left:-120%;width:240%;height:240%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.1),transparent);transform:rotate(25deg);transition:.7s}
-.forfait-card:hover::before{top:-30%;left:-30%}
-.forfait-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
-.forfait-card.recommande{border-color:rgba(255,255,255,.5);box-shadow:0 0 0 3px rgba(96,165,250,.25)}
-.forfait-card.recommande::after{content:"★ RECOMMANDÉ";position:absolute;top:10px;right:10px;font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(255,255,255,.2);backdrop-filter:blur(4px);color:#fff;letter-spacing:.5px}
-.forfait-card-name{font-size:15px;font-weight:700;color:#fff !important;-webkit-text-fill-color:#fff !important;margin-bottom:4px;position:relative;z-index:1}
-.forfait-card-price{font-size:28px;font-weight:900;color:#fff !important;-webkit-text-fill-color:#fff !important;margin-bottom:10px;position:relative;z-index:1}
-.forfait-card-list{list-style:none;margin-bottom:10px;position:relative;z-index:1}
-.forfait-card-list li{font-size:12px;color:rgba(255,255,255,.8);padding:3px 0;border-bottom:1px solid rgba(255,255,255,.1)}
-.forfait-card-list li:last-child{border:none}
-.forfait-card-btn{width:100%;padding:9px;border:none;border-radius:9px;background:rgba(255,255,255,.9);color:#0f172a;font-weight:700;font-size:12px;cursor:pointer;transition:.25s;position:relative;z-index:1;margin-top:6px}
-.forfait-card-btn:hover{background:#fff;transform:scale(1.02)}
-.forfait-empty{text-align:center;color:#475569;font-size:13px;padding:16px 0}
-.fc-blue{background:linear-gradient(135deg,#2563eb,#1e3a8a)}
-.fc-purple{background:linear-gradient(135deg,#7c3aed,#4c1d95)}
-.fc-teal{background:linear-gradient(135deg,#06b6d4,#0f766e)}
-.fc-slate{background:linear-gradient(135deg,#475569,#1e293b)}
-.fc-amber{background:linear-gradient(135deg,#f59e0b,#b45309)}
-.fc-red{background:linear-gradient(135deg,#ef4444,#7f1d1d)}
 </style>
 </head>
 <body>
@@ -236,20 +208,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
       <div class="opt-win"><i class="fa-solid fa-file-word"></i>Suite bureautique</div>
     </div>
 
-  </div>
-</div>
-
-<!-- ══ FORFAIT RECOMMANDÉ ══ -->
-<div class="forfait-wrap">
-  <div class="forfait-header">
-    <div class="forfait-icon">🛠️</div>
-    <div>
-      <div class="forfait-title">FORFAIT DE MONTAGE RECOMMANDÉ</div>
-      <div class="forfait-sub" id="forfaitSub">Sélectionne des composants pour voir le forfait adapté à ta config</div>
-    </div>
-  </div>
-  <div class="forfait-grid" id="forfaitGrid">
-    <div class="forfait-empty">Aucun composant sélectionné — choisis tes pièces pour voir la recommandation</div>
   </div>
 </div>
 
@@ -559,107 +517,9 @@ function upSum(){
     :'Config ultime — sans limite';
   document.getElementById('PD').textContent=lb;
   compat();
-  upForfaitReco(pc, has);
 }
 
-/* ══ FORFAIT RECOMMANDÉ EN TEMPS RÉEL ══ */
-var FORFAITS_DATA = {
-  gaming: [
-    {
-      id:'g1', name:'Essentiel', price:69, color:'fc-blue',
-      desc:'Montage seul · PC prêt à allumer',
-      inclus:['Montage complet','Gestion câbles','Mise à jour BIOS','Test stabilité 30min','Vérif. températures'],
-      forfait:'Gaming — Essentiel (69€)'
-    },
-    {
-      id:'g2', name:'Prêt à l\'emploi', price:99, color:'fc-purple',
-      desc:'Montage + Windows + optimisation gaming',
-      inclus:['Tout du forfait Essentiel','Installation Windows','Pilotes complets','Logiciels essentiels','Optimisation gaming','RGB basique'],
-      forfait:'Gaming — Prêt à l\'emploi (99€)'
-    },
-    {
-      id:'g3', name:'Premium', price:149, color:'fc-teal',
-      desc:'Config haut de gamme · tout optimisé',
-      inclus:['Tout du Prêt à l\'emploi','XMP / EXPO RAM','Optimisation avancée','RGB complet','Benchmarks','Suivi 7 jours'],
-      forfait:'Gaming — Premium (149€)'
-    }
-  ],
-  bureau: [
-    {
-      id:'b1', name:'Lite Essentiel', price:59, color:'fc-slate',
-      desc:'Montage seul · PC bureautique',
-      inclus:['Montage PC bureautique','Gestion câbles','Mise à jour BIOS','Vérif. fonctionnement'],
-      forfait:'Bureautique — Lite Essentiel (59€)'
-    },
-    {
-      id:'b2', name:'Confort', price:89, color:'fc-amber',
-      desc:'Montage + Windows + logiciels essentiels',
-      inclus:['Tout du forfait Lite','Installation Windows','Logiciels essentiels','Optimisation système'],
-      forfait:'Bureautique — Confort (89€)'
-    },
-    {
-      id:'b3', name:'Pro', price:149, color:'fc-red',
-      desc:'Solution complète professionnelle',
-      inclus:['Tout du forfait Confort','Optimisation avancée','Sauvegarde & sécurité','Suite bureautique'],
-      forfait:'Bureautique — Pro (149€)'
-    }
-  ]
-};
-
-function upForfaitReco(pc, has){
-  var grid=document.getElementById('forfaitGrid');
-  var sub=document.getElementById('forfaitSub');
-  if(!has||pc===0){
-    grid.innerHTML='<div class="forfait-empty">Aucun composant sélectionné — choisis tes pièces pour voir la recommandation</div>';
-    sub.textContent='Sélectionne des composants pour voir le forfait adapté à ta config';
-    return;
-  }
-
-  // Déterminer si gaming ou bureautique selon le GPU
-  var gpu=gi('gpu');
-  var hasGPU=gpu&&gpu.id!=='none'&&gpu.p>0;
-  var type=hasGPU?'gaming':'bureau';
-
-  // Choisir le niveau selon score
-  var niveau=0;
-  if(type==='gaming'){
-    if(pc>=75)niveau=2;       // Premium
-    else if(pc>=35)niveau=1;  // Prêt à l'emploi
-    else niveau=0;             // Essentiel
-  } else {
-    if(pc>=40)niveau=2;        // Pro
-    else if(pc>=15)niveau=1;   // Confort
-    else niveau=0;              // Lite
-  }
-
-  var forfaits=FORFAITS_DATA[type];
-  sub.textContent=type==='gaming'
-    ?'Config gaming détectée — score '+pc+'/100'
-    :'Config bureautique détectée — score '+pc+'/100';
-
-  grid.innerHTML='';
-  forfaits.forEach(function(f,i){
-    var isReco=(i===niveau);
-    var card=document.createElement('div');
-    card.className='forfait-card '+f.color+(isReco?' recommande':'');
-    var li=f.inclus.map(function(x){return '<li>✔ '+x+'</li>';}).join('');
-    card.innerHTML=
-      '<div class="forfait-card-name">'+f.name+'</div>'
-      +'<div class="forfait-card-price">'+f.price+'€</div>'
-      +'<ul class="forfait-card-list">'+li+'</ul>'
-      +'<button class="forfait-card-btn" data-forfait="'+f.forfait+'">Choisir ce forfait →</button>';
-    card.querySelector('.forfait-card-btn').addEventListener('click',function(e){
-      e.stopPropagation();
-      openPopup();
-      // Pré-remplir le nom du forfait dans la popup
-      setTimeout(function(){
-        var logo=document.getElementById('popupTitleForfait');
-        if(logo)logo.textContent=f.forfait;
-      },50);
-    });
-    grid.appendChild(card);
-  });
-}
+function compat(){
   var bd=document.getElementById('BD');bd.innerHTML='';
   var cpu=gi('cpu'),mb=gi('mb'),psu=gi('psu'),gpu=gi('gpu'),cool=gi('cooling'),ram=gi('ram');
   if(cpu&&mb&&cpu.id!=='none'&&mb.id!=='none'&&mb.sk){
