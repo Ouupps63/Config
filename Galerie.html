@@ -1,7 +1,13 @@
 <style>
-.ml-wrap{position:relative}
+.ml-wrap{position:relative;min-height:600px}
 .ml-section{padding:60px 6%;background:#111}
-.ml-label{text-align:center;font-size:11px;letter-spacing:4px;color:#4d7cff;text-transform:uppercase;font-family:Arial,sans-serif;margin-bottom:10px}
+.ml-lb{
+  position: fixed; /* au lieu de absolute */
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
 .ml-title{text-align:center;font-size:32px;font-weight:700;color:#fff;font-family:Arial,sans-serif;margin-bottom:8px}
 .ml-sub{text-align:center;font-size:14px;color:#64748b;font-family:Arial,sans-serif;margin-bottom:36px}
 .ml-filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:36px}
@@ -17,48 +23,32 @@
 .ml-card-desc{font-size:13px;color:#94a3b8;font-family:Arial,sans-serif;line-height:1.5}
 .ml-count{text-align:center;margin-top:28px;font-size:13px;color:#475569;font-family:Arial,sans-serif}
 
-/* LIGHTBOX */
-.ml-lb{display:none;position:absolute;top:0;left:0;width:100%;background:rgba(0,0,0,0.95);z-index:9999;padding:16px}
-.ml-lb.open{display:block}
-.ml-lb-box{max-width:700px;margin:0 auto;text-align:center}
-.ml-lb-close{display:block;width:100%;text-align:right;margin-bottom:10px}
-.ml-lb-close button{background:rgba(77,124,255,0.2);border:1px solid rgba(77,124,255,0.4);color:#fff;font-size:16px;padding:6px 16px;border-radius:20px;cursor:pointer;font-family:Arial,sans-serif}
-.ml-lb-close button:hover{background:rgba(77,124,255,0.5)}
-.ml-lb img{max-width:100%;max-height:50vh;border-radius:12px;object-fit:contain;display:block;margin:0 auto}
-.ml-lb-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:14px}
-.ml-lb-nav button{background:rgba(77,124,255,0.2);border:1px solid rgba(77,124,255,0.4);color:#fff;font-size:20px;width:40px;height:40px;border-radius:50%;cursor:pointer;font-family:Arial,sans-serif}
-.ml-lb-nav button:hover{background:rgba(77,124,255,0.5)}
-.ml-lb-counter{font-size:13px;color:#64748b;font-family:Arial,sans-serif}
-.ml-lb-tag{display:inline-block;font-size:11px;padding:3px 12px;border-radius:20px;background:rgba(77,124,255,0.2);border:1px solid rgba(77,124,255,0.4);color:#7aa2ff;font-family:Arial,sans-serif;margin-top:12px}
-.ml-lb-title{color:#fff;font-size:17px;font-weight:700;font-family:Arial,sans-serif;margin-top:8px}
-.ml-lb-desc{color:#94a3b8;font-size:13px;font-family:Arial,sans-serif;margin-top:4px;margin-bottom:16px}
+/* LIGHTBOX — position absolute pour iframe */
+.ml-lb{display:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:100%;background:rgba(0,0,0,0.93);z-index:9999;align-items:flex-start;justify-content:center;padding:40px 20px}
+.ml-lb.open{display:flex}
+.ml-lb-inner{position:relative;max-width:860px;width:100%;text-align:center;margin-top:40px}
+.ml-lb img{max-width:100%;max-height:70vh;border-radius:12px;object-fit:contain;display:block;margin:0 auto}
+.ml-lb-title{color:#fff;font-size:18px;font-weight:700;font-family:Arial,sans-serif;margin-top:16px}
+.ml-lb-desc{color:#94a3b8;font-size:14px;font-family:Arial,sans-serif;margin-top:6px}
+.ml-lb-tag{display:inline-block;font-size:11px;padding:3px 12px;border-radius:20px;background:rgba(77,124,255,0.2);border:1px solid rgba(77,124,255,0.4);color:#7aa2ff;font-family:Arial,sans-serif;margin-top:10px}
+.ml-lb-close{position:absolute;top:-36px;right:0;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;font-family:Arial,sans-serif;line-height:1}
+.ml-lb-prev,.ml-lb-next{position:absolute;top:38%;transform:translateY(-50%);background:rgba(77,124,255,0.2);border:1px solid rgba(77,124,255,0.4);color:#fff;font-size:22px;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif}
+.ml-lb-prev{left:-56px}
+.ml-lb-next{right:-56px}
+.ml-lb-prev:hover,.ml-lb-next:hover{background:rgba(77,124,255,0.5)}
+.ml-lb-counter{color:#64748b;font-size:13px;font-family:Arial,sans-serif;margin-top:12px}
 
-@media(max-width:900px){.ml-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.ml-grid{grid-template-columns:1fr}.ml-section{padding:40px 4%}}
+@media(max-width:900px){.ml-grid{grid-template-columns:repeat(2,1fr)}.ml-lb-prev{left:-10px}.ml-lb-next{right:-10px}}
+@media(max-width:560px){.ml-grid{grid-template-columns:1fr}.ml-section{padding:40px 4%}.ml-lb-prev{left:4px}.ml-lb-next{right:4px}}
 </style>
 
-<div class="ml-wrap" id="ml-wrap">
-
-  <!-- LIGHTBOX en haut pour être visible sans scroll -->
-  <div class="ml-lb" id="ml-lb">
-    <div class="ml-lb-box">
-      <div class="ml-lb-close"><button onclick="mlClose()">✕ Fermer</button></div>
-      <img id="ml-lb-img" src="" alt="">
-      <div class="ml-lb-nav">
-        <button onclick="mlNav(-1)">‹</button>
-        <span class="ml-lb-counter" id="ml-lb-counter"></span>
-        <button onclick="mlNav(1)">›</button>
-      </div>
-      <div class="ml-lb-tag" id="ml-lb-tag"></div>
-      <div class="ml-lb-title" id="ml-lb-title"></div>
-      <div class="ml-lb-desc" id="ml-lb-desc"></div>
-    </div>
-  </div>
+<div class="ml-wrap">
 
   <div class="ml-section">
     <div class="ml-label">MLTeC · Portfolio</div>
     <div class="ml-title">Nos réalisations</div>
     <div class="ml-sub">Cliquez sur une photo pour l'agrandir</div>
+
     <div class="ml-filters">
       <button class="ml-btn on" onclick="mlFilter('all',this)">Tous</button>
       <button class="ml-btn" onclick="mlFilter('rgb',this)">RGB</button>
@@ -66,8 +56,23 @@
       <button class="ml-btn" onclick="mlFilter('gaming',this)">Gaming</button>
       <button class="ml-btn" onclick="mlFilter('dark',this)">Dark</button>
     </div>
+
     <div class="ml-grid" id="ml-grid"></div>
     <div class="ml-count" id="ml-count"></div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="ml-lb" id="ml-lb" onclick="mlLbBg(event)">
+    <div class="ml-lb-inner">
+      <button class="ml-lb-close" onclick="mlClose()">✕</button>
+      <button class="ml-lb-prev" onclick="mlNav(-1)">‹</button>
+      <button class="ml-lb-next" onclick="mlNav(1)">›</button>
+      <img id="ml-lb-img" src="" alt="">
+      <div class="ml-lb-tag" id="ml-lb-tag"></div>
+      <div class="ml-lb-title" id="ml-lb-title"></div>
+      <div class="ml-lb-desc" id="ml-lb-desc"></div>
+      <div class="ml-lb-counter" id="ml-lb-counter"></div>
+    </div>
   </div>
 
 </div>
@@ -86,67 +91,74 @@ var ML = [
   {title:'Ultimate RGB',desc:'Configuration ultra esthétique avec synchronisation RGB avancée.',tag:'RGB',cat:'rgb',img:'https://primary.jwwb.nl/public/z/q/b/temp-lwmygsaswtefifeugyrb/img_20251127_101015-high.jpg?enable-io=true&width=532'}
 ];
 
-var mlCurrent='all',mlFiltered=ML.slice(),mlIndex=0;
+var mlCurrent = 'all';
+var mlFiltered = ML.slice();
+var mlIndex = 0;
 
-function mlRender(){
-  mlFiltered=mlCurrent==='all'?ML.slice():ML.filter(function(p){return p.cat===mlCurrent;});
-  var html='';
-  for(var i=0;i<mlFiltered.length;i++){
-    var p=mlFiltered[i];
-    html+='<div class="ml-card" onclick="mlOpen('+i+')">';
-    html+='<img src="'+p.img+'" alt="'+p.title+'" loading="lazy">';
-    html+='<div class="ml-card-body">';
-    html+='<span class="ml-card-tag">'+p.tag+'</span>';
-    html+='<div class="ml-card-title">'+p.title+'</div>';
-    html+='<div class="ml-card-desc">'+p.desc+'</div>';
-    html+='</div></div>';
+function mlRender() {
+  mlFiltered = mlCurrent === 'all' ? ML.slice() : ML.filter(function(p){ return p.cat === mlCurrent; });
+  var html = '';
+  for (var i = 0; i < mlFiltered.length; i++) {
+    var p = mlFiltered[i];
+    html += '<div class="ml-card" onclick="mlOpen(' + i + ')">';
+    html += '<img src="' + p.img + '" alt="' + p.title + '" loading="lazy">';
+    html += '<div class="ml-card-body">';
+    html += '<span class="ml-card-tag">' + p.tag + '</span>';
+    html += '<div class="ml-card-title">' + p.title + '</div>';
+    html += '<div class="ml-card-desc">' + p.desc + '</div>';
+    html += '</div></div>';
   }
-  document.getElementById('ml-grid').innerHTML=html;
-  var n=mlFiltered.length;
-  document.getElementById('ml-count').textContent=n+' projet'+(n>1?'s':'')+' affiché'+(n>1?'s':'');
+  document.getElementById('ml-grid').innerHTML = html;
+  var n = mlFiltered.length;
+  document.getElementById('ml-count').textContent = n + ' projet' + (n > 1 ? 's' : '') + ' affiché' + (n > 1 ? 's' : '');
 }
 
-function mlFilter(cat,btn){
-  mlCurrent=cat;
-  document.querySelectorAll('.ml-btn').forEach(function(b){b.classList.remove('on');});
+function mlFilter(cat, btn) {
+  mlCurrent = cat;
+  var btns = document.querySelectorAll('.ml-btn');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('on');
   btn.classList.add('on');
   mlRender();
 }
 
-function mlOpen(i){
-  mlIndex=i;
+function mlOpen(i) {
+  mlIndex = i;
   mlShow();
-  // Scroll en haut de la page parent (Webador)
-  try{ window.parent.scrollTo({top:0,behavior:'smooth'}); }catch(e){}
-  // Scroll en haut de l'iframe
-  document.getElementById('ml-wrap').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-function mlShow(){
-  var p=mlFiltered[mlIndex];
-  document.getElementById('ml-lb-img').src=p.img;
-  document.getElementById('ml-lb-img').alt=p.title;
-  document.getElementById('ml-lb-title').textContent=p.title;
-  document.getElementById('ml-lb-desc').textContent=p.desc;
-  document.getElementById('ml-lb-tag').textContent=p.tag;
-  document.getElementById('ml-lb-counter').textContent=(mlIndex+1)+' / '+mlFiltered.length;
+function mlShow() {
+  var p = mlFiltered[mlIndex];
+  document.getElementById('ml-lb').classList.add('open');
+  document.body.style.overflow = 'hidden'; // bloque scroll
+  document.getElementById('ml-lb-img').src = p.img;
+  document.getElementById('ml-lb-img').alt = p.title;
+  document.getElementById('ml-lb-title').textContent = p.title;
+  document.getElementById('ml-lb-desc').textContent = p.desc;
+  document.getElementById('ml-lb-tag').textContent = p.tag;
+  document.getElementById('ml-lb-counter').textContent = (mlIndex + 1) + ' / ' + mlFiltered.length;
   document.getElementById('ml-lb').classList.add('open');
 }
 
-function mlClose(){
+function mlClose() {
   document.getElementById('ml-lb').classList.remove('open');
+  document.body.style.overflow = ''; // restore
 }
 
-function mlNav(dir){
-  mlIndex=(mlIndex+dir+mlFiltered.length)%mlFiltered.length;
+function mlNav(dir) {
+  mlIndex = (mlIndex + dir + mlFiltered.length) % mlFiltered.length;
   mlShow();
 }
 
-document.addEventListener('keydown',function(e){
-  if(!document.getElementById('ml-lb').classList.contains('open'))return;
-  if(e.key==='Escape')mlClose();
-  if(e.key==='ArrowLeft')mlNav(-1);
-  if(e.key==='ArrowRight')mlNav(1);
+function mlLbBg(e) {
+  if (e.target === document.getElementById('ml-lb')) mlClose();
+}
+
+document.addEventListener('keydown', function(e) {
+  var lb = document.getElementById('ml-lb');
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') mlClose();
+  if (e.key === 'ArrowLeft') mlNav(-1);
+  if (e.key === 'ArrowRight') mlNav(1);
 });
 
 mlRender();
