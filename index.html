@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MLTeC — Configurateur PC 2024-2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -31,10 +32,7 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .ico{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
 .clbl{font-family:'Orbitron',Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:#60a5fa;text-transform:uppercase}
 .ctit{font-size:14px;font-weight:700;color:#fff}
-/* native select caché — remplacé par custom dropdown */
 .sel{display:none}
-
-/* ── CUSTOM DROPDOWN ── */
 .cdd{position:relative;width:100%;user-select:none}
 .cdd-trigger{width:100%;background:#0f172a;border:1px solid rgba(96,165,250,.25);border-radius:9px;color:#fff;padding:9px 36px 9px 11px;font-family:'Rajdhani',Arial,sans-serif;font-size:15px;font-weight:600;cursor:pointer;outline:none;transition:.25s;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;box-sizing:border-box}
 .cdd-trigger:after{content:'▾';position:absolute;right:11px;top:50%;transform:translateY(-50%);color:#60a5fa;font-size:12px;pointer-events:none;transition:transform .2s}
@@ -48,10 +46,33 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .cdd-item:hover{background:rgba(59,130,246,.18);color:#fff}
 .cdd-item.selected{color:#60a5fa;background:rgba(59,130,246,.1)}
 .cdd-item.cdd-sep{font-size:7px;color:#ffffff !important;opacity:.7;cursor:default;padding:3px 12px;letter-spacing:.3px;pointer-events:none;background:none !important}
-.cdd-group{}
 .inf{margin-top:8px;padding:7px 10px;background:rgba(59,130,246,.08);border-left:2px solid rgba(96,165,250,.4);border-radius:0 7px 7px 0;font-size:15px;color:#93c5fd;min-height:32px;line-height:1.5}
 .inf.e{color:#475569;border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.02)}
 .inf.w{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.4);color:#fbbf24}
+
+/* ── ENCADRÉ OPTIONS SUPPLÉMENTAIRES ── */
+.opts-wrap{background:rgba(17,25,40,.82);border-radius:18px;border:1px solid rgba(96,165,250,.18);padding:22px;margin-bottom:22px}
+.opts-header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.opts-icon{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.opts-title{font-family:'Orbitron',Arial,sans-serif;font-size:13px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
+.opts-sub{font-size:12px;color:#64748b;margin-top:2px}
+.opts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.opt-card{border-radius:16px;padding:22px;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s;border:2px solid transparent}
+.opt-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.35)}
+.opt-card.selected{border-color:rgba(255,255,255,.6);box-shadow:0 0 0 3px rgba(96,165,250,.35)}
+.opt-check{position:absolute;top:14px;right:14px;width:24px;height:24px;border-radius:50%;border:2px solid rgba(255,255,255,.3);background:transparent;display:flex;align-items:center;justify-content:center;font-size:13px;transition:.25s}
+.opt-card.selected .opt-check{background:#4ade80;border-color:#4ade80;color:#0f172a;font-weight:700}
+.opt-badge{position:absolute;top:14px;left:14px;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;background:rgba(255,255,255,.18);backdrop-filter:blur(4px);color:#fff}
+.opt-name{font-size:18px;font-weight:700;color:#fff !important;-webkit-text-fill-color:#fff !important;margin:28px 0 4px}
+.opt-price{font-size:32px;font-weight:900;color:#fff !important;-webkit-text-fill-color:#fff !important;margin-bottom:14px}
+.opt-list{list-style:none;margin-bottom:12px}
+.opt-list li{font-size:13px;color:rgba(255,255,255,.85);padding:4px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.opt-list li:last-child{border:none}
+.opt-win{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:#fff;background:rgba(255,255,255,.12);padding:9px 11px;border-radius:9px;margin-top:8px}
+.opt-win i{font-size:17px}
+.opt-win-blue{background:linear-gradient(160deg,#1d4ed8,#6d28d9)}
+.opt-win-purple{background:linear-gradient(160deg,#7c3aed,#a855f7)}
+
 .sum{background:rgba(17,25,40,.9);border-radius:18px;border:1px solid rgba(96,165,250,.2);padding:24px}
 .sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
 .stit{font-family:'Orbitron',Arial,sans-serif;font-size:14px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
@@ -61,6 +82,8 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;font-weight:600}
 .row:last-child{border:none}
 .rn{color:#d1d1d1}.rp{color:#60a5fa;font-weight:700}
+.row-opt .rn{color:#c084fc}
+.row-opt .rp{color:#c084fc}
 .emp{color:#475569;font-size:13px;padding:6px 0}
 .tot{display:flex;justify-content:space-between;align-items:center;padding-top:13px;border-top:1px solid rgba(96,165,250,.22);margin-bottom:6px}
 .tl{font-family:'Orbitron',Arial,sans-serif;font-size:12px;font-weight:700;color:#fff;letter-spacing:2px}
@@ -85,8 +108,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .disc b{color:#fbbf24}
 .foot{text-align:center;margin-top:20px;font-size:11px;color:#334155;letter-spacing:1px}
 .foot b{color:#60a5fa}
-
-/* ── POPUP ── */
 .popup-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:9999;align-items:center;justify-content:center;padding:16px}
 .popup-overlay.show{display:flex}
 .popup{background:linear-gradient(135deg,#0f172a,#1e1b4b);border:1px solid rgba(96,165,250,.3);border-radius:20px;padding:28px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.6),0 0 40px rgba(59,130,246,.15)}
@@ -94,11 +115,13 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .popup-close:hover{color:#fff}
 .popup-logo{font-family:'Orbitron',Arial,sans-serif;font-size:10px;letter-spacing:3px;color:#475569;text-transform:uppercase;margin-bottom:6px}
 .popup-title{font-family:'Orbitron',Arial,sans-serif;font-size:16px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px;margin-bottom:16px}
-.popup-recap{background:rgba(17,25,40,.8);border:1px solid rgba(96,165,250,.18);border-radius:12px;padding:14px;margin-bottom:18px;max-height:160px;overflow-y:auto}
+.popup-recap{background:rgba(17,25,40,.8);border:1px solid rgba(96,165,250,.18);border-radius:12px;padding:14px;margin-bottom:18px;max-height:200px;overflow-y:auto}
 .popup-recap-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:12px}
 .popup-recap-row:last-child{border:none}
 .popup-recap-row .prl{color:#94a3b8}
 .popup-recap-row .prp{color:#60a5fa;font-weight:700}
+.popup-recap-row.opt-row .prl{color:#c084fc}
+.popup-recap-row.opt-row .prp{color:#c084fc}
 .popup-total{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(59,130,246,.1);border:1px solid rgba(96,165,250,.2);border-radius:10px;margin-bottom:18px}
 .popup-total-lbl{font-size:12px;font-weight:700;color:#94a3b8;letter-spacing:1px;text-transform:uppercase}
 .popup-total-val{font-family:'Orbitron',Arial,sans-serif;font-size:18px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -116,8 +139,7 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .popup-success-title{font-family:'Orbitron',Arial,sans-serif;font-size:16px;font-weight:700;color:#4ade80;margin-bottom:8px;letter-spacing:1px}
 .popup-success-text{font-size:14px;color:#94a3b8;line-height:1.6}
 .popup-error{display:none;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:9px;padding:10px 13px;font-size:13px;color:#f87171;margin-bottom:12px}
-
-@media(max-width:500px){.logo{font-size:28px}.grid{grid-template-columns:1fr}body{padding:20px 3% 34px}.popup{padding:20px}}
+@media(max-width:500px){.logo{font-size:28px}.grid{grid-template-columns:1fr}body{padding:20px 3% 34px}.popup{padding:20px}.opts-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -143,6 +165,52 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
   <button class="pb" data-p="silent">🔇 Silent Build</button>
 </div>
 <div class="grid" id="G"></div>
+
+<!-- ══ OPTIONS SUPPLÉMENTAIRES ══ -->
+<div class="opts-wrap">
+  <div class="opts-header">
+    <div class="opts-icon">⚙️</div>
+    <div>
+      <div class="opts-title">OPTIONS SUPPLÉMENTAIRES</div>
+      <div class="opts-sub">Sélectionne une ou plusieurs options — le prix s'ajoute au récapitulatif</div>
+    </div>
+  </div>
+  <div class="opts-grid">
+
+    <!-- Windows -->
+    <div class="opt-card opt-win-blue" id="opt-windows" data-name="Licence Windows" data-price="45">
+      <div class="opt-badge">WINDOWS</div>
+      <div class="opt-check" id="chk-windows">✓</div>
+      <div class="opt-name">Licence Windows</div>
+      <div class="opt-price">45€</div>
+      <ul class="opt-list">
+        <li>✔ Activation officielle</li>
+        <li>✔ Installation Windows 10 / 11</li>
+        <li>✔ Configuration système</li>
+        <li>✔ Installation pilotes</li>
+        <li>✔ PC prêt à l'emploi</li>
+      </ul>
+      <div class="opt-win"><i class="fa-brands fa-windows"></i>Licence officielle</div>
+    </div>
+
+    <!-- Office -->
+    <div class="opt-card opt-win-purple" id="opt-office" data-name="Microsoft Office" data-price="60">
+      <div class="opt-badge">OFFICE</div>
+      <div class="opt-check" id="chk-office">✓</div>
+      <div class="opt-name">Microsoft Office</div>
+      <div class="opt-price">60€</div>
+      <ul class="opt-list">
+        <li>✔ Installation Office</li>
+        <li>✔ Word, Excel & PowerPoint</li>
+        <li>✔ Configuration complète</li>
+        <li>✔ Activation licence</li>
+      </ul>
+      <div class="opt-win"><i class="fa-solid fa-file-word"></i>Suite bureautique</div>
+    </div>
+
+  </div>
+</div>
+
 <div class="sum">
   <div class="sh">
     <div class="stit">RÉCAPITULATIF</div>
@@ -170,26 +238,17 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 </div>
 <div class="foot">Configurateur by <b>MLTeC</b> · Montage · Expertise · Technologie · 2026</div>
 
-<!-- ══════════════════════════════
-     POPUP DEMANDE DE DEVIS
-══════════════════════════════ -->
 <div class="popup-overlay" id="popupOverlay">
   <div class="popup">
     <button class="popup-close" id="popupClose">✕</button>
     <div id="popupForm">
       <div class="popup-logo">MLTeC · Demande de devis</div>
       <div class="popup-title">VOTRE CONFIGURATION</div>
-
-      <!-- Récap config -->
       <div class="popup-recap" id="popupRecap"></div>
-
-      <!-- Total -->
       <div class="popup-total">
         <span class="popup-total-lbl">Total estimé</span>
         <span class="popup-total-val" id="popupTotalVal">0 €</span>
       </div>
-
-      <!-- Formulaire -->
       <div class="pf-group">
         <label for="pf-nom">Votre nom *</label>
         <input id="pf-nom" type="text" placeholder="Prénom Nom">
@@ -202,20 +261,13 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
         <label for="pf-msg">Message (optionnel)</label>
         <textarea id="pf-msg" placeholder="Précisez vos besoins, votre budget, vos questions…"></textarea>
       </div>
-
       <div class="popup-error" id="popupError">Merci de remplir votre nom et votre adresse e-mail.</div>
-
       <button class="popup-send" id="popupSend">Envoyer ma demande →</button>
     </div>
-
-    <!-- Message succès -->
     <div class="popup-success" id="popupSuccess">
       <div class="popup-success-icon">✅</div>
       <div class="popup-success-title">Demande envoyée !</div>
-      <div class="popup-success-text">
-        MLTeC a bien reçu ta configuration.<br>
-        On te recontacte très vite par email pour ton devis personnalisé !
-      </div>
+      <div class="popup-success-text">MLTeC a bien reçu ta configuration.<br>On te recontacte très vite par email pour ton devis personnalisé !</div>
     </div>
   </div>
 </div>
@@ -223,54 +275,92 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 <script>
 emailjs.init('_EeHlzJZOkVpZhwDd');
 
-/* ══ STRUCTURE DES CATÉGORIES ══
-   L'ordre et les libellés sont définis ici.
-   Les données viennent des fichiers JSON externes.
-═══════════════════════════════════════════════ */
-var CATS = {
-  cpu:     {l:'Processeur (CPU)',       i:'⚙️',  s:'Socket & fréquence',    file:'Cpu.json'},
-  mb:      {l:'Carte mère',             i:'🟩',  s:'Socket & chipset',       file:'Mb.json'},
-  ram:     {l:'Mémoire RAM',            i:'🔵',  s:'Capacité & fréquence',   file:'Ram.json'},
-  gpu:     {l:'Carte graphique (GPU)',  i:'🎮',  s:'VRAM & résolution',      file:'Gpu.json'},
-  storage: {l:'Stockage (SSD + HDD)',   i:'💾',  s:'Capacité & vitesse',     file:'Ssd.json'},
-  psu:     {l:'Alimentation (PSU)',     i:'⚡',  s:'Puissance & certification',file:'Alim.json'},
-  cooling: {l:'Refroidissement CPU',    i:'❄️',  s:'Air ou watercooling',    file:'Cool.json'},
-  pccase:  {l:'Boîtier',               i:'🖥️', s:'Format & airflow',       file:'Case.json'}
+var CATS={
+  cpu:    {l:'Processeur (CPU)',      i:'⚙️', s:'Socket & fréquence',       file:'Cpu.json'},
+  mb:     {l:'Carte mère',            i:'🟩', s:'Socket & chipset',          file:'Mb.json'},
+  ram:    {l:'Mémoire RAM',           i:'🔵', s:'Capacité & fréquence',      file:'Ram.json'},
+  gpu:    {l:'Carte graphique (GPU)', i:'🎮', s:'VRAM & résolution',         file:'Gpu.json'},
+  storage:{l:'Stockage (SSD + HDD)',  i:'💾', s:'Capacité & vitesse',        file:'Ssd.json'},
+  psu:    {l:'Alimentation (PSU)',    i:'⚡', s:'Puissance & certification',  file:'Alim.json'},
+  cooling:{l:'Refroidissement CPU',   i:'❄️', s:'Air ou watercooling',       file:'Cool.json'},
+  pccase: {l:'Boîtier',             i:'🖥️', s:'Format & airflow',          file:'Case.json'}
 };
 
 var PR={
-bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to',psu:'450w-seasonic',cooling:'air-budget',pccase:'case-core1000'},
-budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to',psu:'650w-bequiet',cooling:'air-assassin',pccase:'case-4000d'},
-mid:{cpu:'r7-7800x3d',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240',pccase:'case-meshify2c'},
-high:{cpu:'r7-9800x3d',mb:'x670-gigabyte',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to-wd',psu:'1000w-seasonic',cooling:'aio-360-corsair',pccase:'case-o11-evo'},
-ultra:{cpu:'r9-9950x3d',mb:'x870-asus',ram:'64-ddr5-7200',gpu:'rtx5090',storage:'gen5-2to-sam',psu:'1600w-corsair',cooling:'custom-360',pccase:'case-rog'},
-stream:{cpu:'r9-9900x',mb:'x670-gigabyte',ram:'64-ddr5-6000',gpu:'rtx5070ti',storage:'gen4-2to-wd',psu:'1000w-asus',cooling:'aio-360-arctic',pccase:'case-o11-evo'},
-silent:{cpu:'r7-9700x',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070',storage:'gen4-1to-wd',psu:'750w-bequiet',cooling:'air-noctua',pccase:'case-define7c'}
+  bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to',psu:'450w-seasonic',cooling:'air-budget',pccase:'case-core1000'},
+  budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to',psu:'650w-bequiet',cooling:'air-assassin',pccase:'case-4000d'},
+  mid:{cpu:'r7-7800x3d',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240',pccase:'case-meshify2c'},
+  high:{cpu:'r7-9800x3d',mb:'x670-gigabyte',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to-wd',psu:'1000w-seasonic',cooling:'aio-360-corsair',pccase:'case-o11-evo'},
+  ultra:{cpu:'r9-9950x3d',mb:'x870-asus',ram:'64-ddr5-7200',gpu:'rtx5090',storage:'gen5-2to-sam',psu:'1600w-corsair',cooling:'custom-360',pccase:'case-rog'},
+  stream:{cpu:'r9-9900x',mb:'x670-gigabyte',ram:'64-ddr5-6000',gpu:'rtx5070ti',storage:'gen4-2to-wd',psu:'1000w-asus',cooling:'aio-360-arctic',pccase:'case-o11-evo'},
+  silent:{cpu:'r7-9700x',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070',storage:'gen4-1to-wd',psu:'750w-bequiet',cooling:'air-noctua',pccase:'case-define7c'}
 };
 
-/* ══ CHARGEMENT DES JSON ══ */
-var D = {};
-var S = {};
+var D={};
+var S={};
 
+/* ══ OPTIONS SUPPLÉMENTAIRES ══ */
+var OPTS={
+  windows:{name:'Licence Windows',price:45,selected:false},
+  office: {name:'Microsoft Office',price:60,selected:false}
+};
+
+function getOptsTotal(){
+  var t=0;
+  Object.keys(OPTS).forEach(function(k){if(OPTS[k].selected)t+=OPTS[k].price;});
+  return t;
+}
+
+function initOpts(){
+  document.querySelectorAll('.opt-card').forEach(function(card){
+    var id=card.id.replace('opt-','');
+    updateOptCard(id);
+    card.addEventListener('click',function(){
+      OPTS[id].selected=!OPTS[id].selected;
+      updateOptCard(id);
+      upSum();
+    });
+  });
+}
+
+function updateOptCard(id){
+  var card=document.getElementById('opt-'+id);
+  var chk=document.getElementById('chk-'+id);
+  if(!card||!chk)return;
+  if(OPTS[id].selected){
+    card.classList.add('selected');
+    chk.style.background='#4ade80';
+    chk.style.borderColor='#4ade80';
+    chk.style.color='#0f172a';
+  } else {
+    card.classList.remove('selected');
+    chk.style.background='transparent';
+    chk.style.borderColor='rgba(255,255,255,.3)';
+    chk.style.color='transparent';
+  }
+}
+
+/* ══ CHARGEMENT JSON ══ */
 function loadAllJSON(){
-  var keys = Object.keys(CATS);
-  var promises = keys.map(function(k){
+  var keys=Object.keys(CATS);
+  var promises=keys.map(function(k){
     return fetch(CATS[k].file)
-      .then(function(r){ return r.json(); })
+      .then(function(r){return r.json();})
       .then(function(data){
-        D[k] = { l:CATS[k].l, i:CATS[k].i, s:CATS[k].s, d:data };
-        S[k] = 'none';
+        D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:data};
+        S[k]='none';
       })
       .catch(function(err){
-        console.error('Erreur chargement '+CATS[k].file, err);
-        D[k] = { l:CATS[k].l, i:CATS[k].i, s:CATS[k].s, d:[{id:'none',n:'-- Erreur chargement --',p:0,inf:''}] };
-        S[k] = 'none';
+        console.error('Erreur chargement '+CATS[k].file,err);
+        D[k]={l:CATS[k].l,i:CATS[k].i,s:CATS[k].s,d:[{id:'none',n:'-- Erreur chargement --',p:0,inf:''}]};
+        S[k]='none';
       });
   });
   Promise.all(promises).then(function(){
     build();
     var saved=loadConfig();
     if(saved)applyConfig(saved); else upSum();
+    initOpts();
     document.querySelectorAll('.pb').forEach(function(b){b.addEventListener('click',function(){preset(this.getAttribute('data-p'));});});
     document.getElementById('RST').addEventListener('click',reset);
     document.getElementById('CTA').addEventListener('click',openPopup);
@@ -300,20 +390,20 @@ function applyConfig(cfg){
   upSum();
 }
 
-/* ══ CUSTOM DROPDOWN ENGINE ══ */
-var _openDD = null;
+/* ══ CUSTOM DROPDOWN ══ */
+var _openDD=null;
 
 function closeAllDD(){
   if(_openDD){_openDD.classList.remove('open');_openDD=null;}
   var l=document.querySelector('.cdd-list');if(l)l.remove();
 }
 
-function positionList(dd, list){
+function positionList(dd,list){
   var tr=dd.querySelector('.cdd-trigger');
   var rect=tr.getBoundingClientRect();
   var spaceBelow=window.innerHeight-rect.bottom-8;
   var spaceAbove=rect.top-8;
-  var maxH=Math.min(440, spaceBelow>120 ? spaceBelow : Math.max(spaceAbove,120));
+  var maxH=Math.min(440,spaceBelow>120?spaceBelow:Math.max(spaceAbove,120));
   list.style.maxHeight=maxH+'px';
   list.style.width=rect.width+'px';
   list.style.left=rect.left+'px';
@@ -321,76 +411,51 @@ function positionList(dd, list){
     list.style.top=(rect.bottom+4)+'px';
     list.style.bottom='';
   } else {
-    list.style.top='';
-    list.style.bottom=(window.innerHeight-rect.top+4)+'px';
     list.style.top=(rect.top-Math.min(maxH,440)-4)+'px';
+    list.style.bottom='';
   }
 }
 
-function makeDD(k, items){
+function makeDD(k,items){
   var dd=document.createElement('div');dd.className='cdd';dd.setAttribute('data-k',k);
-
-  // hidden select for compatibility
   var sel=document.createElement('select');sel.className='sel';sel.setAttribute('data-k',k);
-  items.forEach(function(x){
-    var o=document.createElement('option');o.value=x.id||'';o.textContent=x.n;sel.appendChild(o);
-  });
+  items.forEach(function(x){var o=document.createElement('option');o.value=x.id||'';o.textContent=x.n;sel.appendChild(o);});
   dd.appendChild(sel);
-
   var trigger=document.createElement('button');trigger.type='button';trigger.className='cdd-trigger';
   trigger.textContent=items[0]?items[0].n:'—';
   dd.appendChild(trigger);
-
   trigger.addEventListener('click',function(e){
     e.stopPropagation();
     if(_openDD===dd){closeAllDD();return;}
     closeAllDD();
-
     var list=document.createElement('div');list.className='cdd-list';
     list.addEventListener('click',function(e){e.stopPropagation();});
     document.body.appendChild(list);
-
     items.forEach(function(x){
       if(x.g){
-        var grp=document.createElement('div');grp.className='cdd-group';grp.textContent=x.n;
-        grp.setAttribute('style','color:#ffffff;opacity:0.9;font-size:10px;padding:8px 10px 4px;text-transform:uppercase;font-family:Arial,sans-serif;border-top:1px solid rgba(255,255,255,.15);margin-top:3px;cursor:default;background:rgba(59,130,246,.08);text-align:left;font-weight:700;');
+        var grp=document.createElement('div');
+        grp.setAttribute('style','color:#fff;opacity:.9;font-size:10px;padding:8px 10px 4px;text-transform:uppercase;font-family:Arial,sans-serif;border-top:1px solid rgba(255,255,255,.15);margin-top:3px;cursor:default;background:rgba(59,130,246,.08);text-align:left;font-weight:700;');
         grp.textContent='- '+x.n;
-        list.appendChild(grp);
-        return;
+        list.appendChild(grp);return;
       }
       var item=document.createElement('div');item.className='cdd-item';
       if(S[k]===x.id)item.classList.add('selected');
-      if(x.n && x.n.indexOf('---')===0){
-        item.classList.add('cdd-sep');
-        item.style.color='#ffffff';
-        item.style.opacity='0.7';
-        item.style.fontSize='7px';
-        item.style.pointerEvents='none';
-        item.style.cursor='default';
-        item.style.padding='3px 12px';
-      }
       item.textContent=x.n+(x.p>0?' — '+x.p+' €':'');
       item.addEventListener('click',function(){
-        S[k]=x.id;
-        trigger.textContent=x.n;
-        sel.value=x.id;
-        upInf(k);upSum();saveConfig();
-        closeAllDD();
+        S[k]=x.id;trigger.textContent=x.n;sel.value=x.id;
+        upInf(k);upSum();saveConfig();closeAllDD();
       });
       list.appendChild(item);
     });
-
-    positionList(dd, list);
-    dd.classList.add('open');
-    _openDD=dd;
+    positionList(dd,list);
+    dd.classList.add('open');_openDD=dd;
   });
-
   return dd;
 }
 
-document.addEventListener('click', closeAllDD);
-window.addEventListener('scroll', function(){if(_openDD){var list=document.querySelector('.cdd-list');if(list)positionList(_openDD,list);}}, true);
-window.addEventListener('resize', closeAllDD);
+document.addEventListener('click',closeAllDD);
+window.addEventListener('scroll',function(){if(_openDD){var list=document.querySelector('.cdd-list');if(list)positionList(_openDD,list);}},true);
+window.addEventListener('resize',closeAllDD);
 
 function build(){
   var g=document.getElementById('G');if(!g)return;g.innerHTML='';
@@ -398,9 +463,8 @@ function build(){
     var c=D[k];
     var el=document.createElement('div');el.className='card';
     el.innerHTML='<div class="ch"><div class="ico">'+c.i+'</div><div><div class="clbl">'+c.s+'</div><div class="ctit">'+c.l+'</div></div></div><div id="I'+k+'" class="inf e">Aucun composant sélectionné</div>';
-    // insert dropdown before info div
-    var dd=makeDD(k, c.d);
-    el.insertBefore(dd, el.querySelector('#I'+k));
+    var dd=makeDD(k,c.d);
+    el.insertBefore(dd,el.querySelector('#I'+k));
     g.appendChild(el);
   });
 }
@@ -415,6 +479,8 @@ function upInf(k){
 function upSum(){
   var tot=0,pf=0,has=false,rows=document.getElementById('ROWS');
   rows.innerHTML='';
+
+  /* composants */
   Object.keys(D).forEach(function(k){
     var it=gi(k);
     if(it&&it.p>0){
@@ -424,6 +490,17 @@ function upSum(){
       rows.appendChild(r);
     }
   });
+
+  /* options supplémentaires */
+  Object.keys(OPTS).forEach(function(k){
+    if(OPTS[k].selected){
+      has=true;tot+=OPTS[k].price;
+      var r=document.createElement('div');r.className='row row-opt';
+      r.innerHTML='<span class="rn">⚙️ '+OPTS[k].name+'</span><span class="rp">'+OPTS[k].price+' €</span>';
+      rows.appendChild(r);
+    }
+  });
+
   if(!has)rows.innerHTML='<p class="emp">Aucun composant sélectionné</p>';
   document.getElementById('TOT').textContent=tot>0?tot+' €':'0 €';
   var mx=320,pc=Math.min(100,Math.round(pf/mx*100));
@@ -491,12 +568,11 @@ function reset(){
     S[k]='none';
     var el=document.querySelector('.sel[data-k="'+k+'"]');if(el)el.value='none';
     var dd=document.querySelector('.cdd[data-k="'+k+'"]');
-    if(dd){
-      var item=D[k].d[0];
-      if(item){var tr=dd.querySelector('.cdd-trigger');if(tr)tr.textContent=item.n;}
-    }
+    if(dd){var item=D[k].d[0];if(item){var tr=dd.querySelector('.cdd-trigger');if(tr)tr.textContent=item.n;}}
     upInf(k);
   });
+  /* reset options */
+  Object.keys(OPTS).forEach(function(k){OPTS[k].selected=false;updateOptCard(k);});
   upSum();
   try{localStorage.removeItem(LS_KEY);}catch(e){}
 }
@@ -504,32 +580,40 @@ function reset(){
 /* ══ POPUP ══ */
 function getConfigText(){
   var lines=[];
-  Object.keys(D).forEach(function(k){
-    var it=gi(k);
-    if(it&&it.p>0)lines.push(D[k].l+' : '+it.n.replace(' ⭐','')+' ('+it.p+' €)');
-  });
+  Object.keys(D).forEach(function(k){var it=gi(k);if(it&&it.p>0)lines.push(D[k].l+' : '+it.n.replace(' ⭐','')+' ('+it.p+' €)');});
+  Object.keys(OPTS).forEach(function(k){if(OPTS[k].selected)lines.push('Option : '+OPTS[k].name+' ('+OPTS[k].price+' €)');});
   return lines.join('\n');
 }
 
 function openPopup(){
   var recap=document.getElementById('popupRecap');
-  var totalVal=document.getElementById('popupTotalVal');
   recap.innerHTML='';
   var hasAny=false;
+
   Object.keys(D).forEach(function(k){
     var it=gi(k);
     if(it&&it.p>0){
       hasAny=true;
-      var r=document.createElement('div');
-      r.className='popup-recap-row';
+      var r=document.createElement('div');r.className='popup-recap-row';
       r.innerHTML='<span class="prl">'+D[k].i+' '+D[k].l+'</span><span class="prp">'+it.n.replace(' ⭐','')+'</span>';
       recap.appendChild(r);
     }
   });
+
+  Object.keys(OPTS).forEach(function(k){
+    if(OPTS[k].selected){
+      hasAny=true;
+      var r=document.createElement('div');r.className='popup-recap-row opt-row';
+      r.innerHTML='<span class="prl">⚙️ '+OPTS[k].name+'</span><span class="prp">'+OPTS[k].price+' €</span>';
+      recap.appendChild(r);
+    }
+  });
+
   if(!hasAny){
-    recap.innerHTML='<p style="color:#64748b;font-size:13px;text-align:center;padding:8px 0">Aucun composant sélectionné<br><span style="font-size:12px">Choisis tes composants avant de demander un devis</span></p>';
+    recap.innerHTML='<p style="color:#64748b;font-size:13px;text-align:center;padding:8px 0">Aucun composant sélectionné</p>';
   }
-  totalVal.textContent=document.getElementById('TOT').textContent;
+
+  document.getElementById('popupTotalVal').textContent=document.getElementById('TOT').textContent;
   document.getElementById('popupForm').style.display='block';
   document.getElementById('popupSuccess').style.display='none';
   document.getElementById('popupError').style.display='none';
@@ -550,41 +634,27 @@ function sendEmail(){
   var email=document.getElementById('pf-email').value.trim();
   var msg=document.getElementById('pf-msg').value.trim();
   var errEl=document.getElementById('popupError');
-
-  if(!nom||!email){
-    errEl.style.display='block';
-    return;
-  }
+  if(!nom||!email){errEl.style.display='block';return;}
   errEl.style.display='none';
-
   var sendBtn=document.getElementById('popupSend');
-  sendBtn.disabled=true;
-  sendBtn.textContent='Envoi en cours…';
-
-  var configText=getConfigText();
-  var total=document.getElementById('TOT').textContent;
-
+  sendBtn.disabled=true;sendBtn.textContent='Envoi en cours…';
   emailjs.send('service_ubovst8','template_g0ceasb',{
-    from_name: nom,
-    from_email: email,
-    message: msg||'Aucun message',
-    config: configText||'Aucun composant sélectionné',
-    total: total
+    from_name:nom,from_email:email,
+    message:msg||'Aucun message',
+    config:getConfigText()||'Aucun composant sélectionné',
+    total:document.getElementById('TOT').textContent
   }).then(function(){
     document.getElementById('popupForm').style.display='none';
     document.getElementById('popupSuccess').style.display='block';
-    sendBtn.disabled=false;
-    sendBtn.textContent='Envoyer ma demande →';
+    sendBtn.disabled=false;sendBtn.textContent='Envoyer ma demande →';
   },function(err){
-    sendBtn.disabled=false;
-    sendBtn.textContent='Envoyer ma demande →';
+    sendBtn.disabled=false;sendBtn.textContent='Envoyer ma demande →';
     errEl.textContent='Erreur lors de l\'envoi. Réessaie ou contacte-nous directement.';
     errEl.style.display='block';
     console.error('EmailJS error:',err);
   });
 }
 
-/* Init — charge les JSON puis démarre */
 loadAllJSON();
 </script>
 </body>
