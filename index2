@@ -45,33 +45,23 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .cdd-item{padding:6px 12px;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;color:#cbd5e1;cursor:pointer;transition:.15s;white-space:nowrap}
 .cdd-item:hover{background:rgba(59,130,246,.18);color:#fff}
 .cdd-item.selected{color:#60a5fa;background:rgba(59,130,246,.1)}
-.cdd-item.cdd-sep{font-size:7px;color:#ffffff !important;opacity:.7;cursor:default;padding:3px 12px;pointer-events:none;background:none !important}
-.inf{margin-top:8px;padding:7px 10px;background:rgba(59,130,246,.08);border-left:2px solid rgba(96,165,250,.4);border-radius:0 7px 7px 0;font-size:15px;color:#93c5fd;min-height:32px;line-height:1.5}
+.inf{margin-top:8px;padding:7px 10px;background:rgba(59,130,246,.08);border-left:2px solid rgba(96,165,250,.4);border-radius:0 7px 7px 0;font-size:13px;color:#93c5fd;min-height:32px;line-height:1.6}
 .inf.e{color:#475569;border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.02)}
 .inf.w{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.4);color:#fbbf24}
-.prix-link{
-  display:inline-block;margin-top:5px;margin-left:6px;
-  font-size:11px;font-weight:700;color:#4ade80;
-  text-decoration:none;background:rgba(34,197,94,.1);
-  border:1px solid rgba(34,197,94,.25);
-  padding:2px 8px;border-radius:20px;
-  transition:.2s;white-space:nowrap;
-}
-.prix-link:hover{background:rgba(34,197,94,.22);color:#86efac;}
+.prix-link{display:inline-block;margin-top:5px;margin-left:4px;font-size:11px;font-weight:700;color:#4ade80;text-decoration:none;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);padding:2px 8px;border-radius:20px;transition:.2s;white-space:nowrap}
+.prix-link:hover{background:rgba(34,197,94,.22);color:#86efac}
 
-/* ── OPTIONS SUPPLÉMENTAIRES ── */
+/* OPTIONS SUPPLÉMENTAIRES */
 .opts-wrap{background:rgba(17,25,40,.82);border-radius:18px;border:1px solid rgba(96,165,250,.18);padding:18px;margin-bottom:22px}
 .opts-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .opts-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
 .opts-title{font-family:'Orbitron',Arial,sans-serif;font-size:11px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
 .opts-sub{font-size:11px;color:#64748b;margin-top:2px}
 .opts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-
-/* Cartes options petites */
 .opt-card{border-radius:14px;padding:14px 16px;position:relative;cursor:pointer;transition:transform .25s,box-shadow .25s;border:2px solid transparent;display:flex;flex-direction:column;gap:4px}
 .opt-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.3)}
 .opt-card.selected{border-color:rgba(255,255,255,.55);box-shadow:0 0 0 3px rgba(96,165,250,.3)}
-.opt-check{position:absolute;top:10px;right:10px;width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.3);background:transparent;display:flex;align-items:center;justify-content:center;font-size:11px;transition:.25s;flex-shrink:0}
+.opt-check{position:absolute;top:10px;right:10px;width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.3);background:transparent;display:flex;align-items:center;justify-content:center;font-size:11px;transition:.25s}
 .opt-card.selected .opt-check{background:#4ade80;border-color:#4ade80;color:#0f172a;font-weight:700}
 .opt-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(255,255,255,.18);color:#fff;width:fit-content;margin-bottom:2px}
 .opt-name{font-size:14px;font-weight:700;color:#fff !important;-webkit-text-fill-color:#fff !important;margin-top:14px}
@@ -83,8 +73,7 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .opt-win i{font-size:14px}
 .opt-win-blue{background:linear-gradient(160deg,#1d4ed8,#6d28d9)}
 .opt-win-purple{background:linear-gradient(160deg,#7c3aed,#a855f7)}
-
-/* Carte forfait montage dynamique */
+/* Carte montage dynamique */
 .opt-montage{background:linear-gradient(135deg,#0f172a,#1e3a5f);border:2px solid transparent !important;cursor:pointer}
 .opt-montage:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.3)}
 .opt-montage.selected{border-color:rgba(255,255,255,.55) !important;box-shadow:0 0 0 3px rgba(96,165,250,.3) !important}
@@ -100,7 +89,7 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .opt-montage-badge{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(96,165,250,.2);border:1px solid rgba(96,165,250,.3);color:#60a5fa;margin-top:8px}
 .opt-montage-reco{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80;margin-top:4px;margin-left:4px}
 
-/* RÉCAP */
+/* RÉCAPITULATIF */
 .sum{background:rgba(17,25,40,.9);border-radius:18px;border:1px solid rgba(96,165,250,.2);padding:24px}
 .sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
 .stit{font-family:'Orbitron',Arial,sans-serif;font-size:14px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
@@ -136,6 +125,8 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .disc b{color:#fbbf24}
 .foot{text-align:center;margin-top:20px;font-size:11px;color:#334155;letter-spacing:1px}
 .foot b{color:#60a5fa}
+
+/* POPUP */
 .popup-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:9999;align-items:center;justify-content:center;padding:16px}
 .popup-overlay.show{display:flex}
 .popup{background:linear-gradient(135deg,#0f172a,#1e1b4b);border:1px solid rgba(96,165,250,.3);border-radius:20px;padding:28px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.6),0 0 40px rgba(59,130,246,.15)}
@@ -178,9 +169,9 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
   <div class="logo">MLTeC</div>
   <div class="tag">Montage · Expertise · Technologie</div>
   <div class="title">Configurateur PC 2024 — 2026</div>
-  <div class="desc">250+ composants · Toutes marques · Compatibilité vérifiée en temps réel</div>
+  <div class="desc">600+ composants · Toutes marques · Compatibilité vérifiée en temps réel</div>
   <div><span class="gpill">✔ Base de données 2024–2026 · Mai 2026</span></div>
-  <div><span class="wpill">⚠ Prix indicatifs — non actualisés en temps réel</span></div>
+  <div><span class="wpill">⚠ Prix indicatifs — cliquez sur 💶 pour voir le prix actuel</span></div>
 </div>
 <div class="div"></div>
 <div class="plbl">Configurations prédéfinies MLTeC</div>
@@ -196,7 +187,7 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 </div>
 <div class="grid" id="G"></div>
 
-<!-- ══ OPTIONS SUPPLÉMENTAIRES ══ -->
+<!-- OPTIONS SUPPLÉMENTAIRES -->
 <div class="opts-wrap">
   <div class="opts-header">
     <div class="opts-icon">⚙️</div>
@@ -207,7 +198,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
   </div>
   <div class="opts-grid">
 
-    <!-- Windows -->
     <div class="opt-card opt-win-blue" id="opt-windows" data-name="Licence Windows" data-price="45">
       <div class="opt-badge">WINDOWS</div>
       <div class="opt-check" id="chk-windows">✓</div>
@@ -223,7 +213,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
       <div class="opt-win"><i class="fa-brands fa-windows"></i>Licence officielle</div>
     </div>
 
-    <!-- Office -->
     <div class="opt-card opt-win-purple" id="opt-office" data-name="Microsoft Office" data-price="60">
       <div class="opt-badge">OFFICE</div>
       <div class="opt-check" id="chk-office">✓</div>
@@ -238,23 +227,21 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
       <div class="opt-win"><i class="fa-solid fa-file-word"></i>Suite bureautique</div>
     </div>
 
-    <!-- Forfait montage dynamique -->
     <div class="opt-card opt-montage disabled" id="opt-montage-card">
       <div class="opt-badge">MONTAGE</div>
       <div class="opt-check" id="chk-montage">✓</div>
-      <div class="opt-montage-tag" id="montage-tag">FORFAIT RECOMMANDÉ</div>
-      <div class="opt-montage-name" id="montage-name">—</div>
-      <div class="opt-montage-price" id="montage-price">—</div>
-      <ul class="opt-montage-list" id="montage-list"></ul>
-      <div id="montage-badges"></div>
-      <div class="opt-montage-empty" id="montage-empty">
-        🖥️ Sélectionne tes composants<br>pour voir le forfait adapté
-      </div>
+      <div class="opt-montage-tag" id="montage-tag" style="display:none">FORFAIT RECOMMANDÉ</div>
+      <div class="opt-montage-name" id="montage-name" style="display:none">—</div>
+      <div class="opt-montage-price" id="montage-price" style="display:none">—</div>
+      <ul class="opt-montage-list" id="montage-list" style="display:none"></ul>
+      <div id="montage-badges" style="display:none"></div>
+      <div class="opt-montage-empty" id="montage-empty">🖥️ Sélectionne tes composants<br>pour voir le forfait adapté</div>
     </div>
 
   </div>
 </div>
 
+<!-- RÉCAPITULATIF -->
 <div class="sum">
   <div class="sh">
     <div class="stit">RÉCAPITULATIF</div>
@@ -265,7 +252,7 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
     <span class="tl">TOTAL ESTIMÉ</span>
     <span class="tv" id="TOT">0 €</span>
   </div>
-  <div class="pn">⚠ <b>Prix indicatifs non actualisés en temps réel.</b> Peuvent varier selon les revendeurs.</div>
+  <div class="pn">⚠ <b>Prix indicatifs.</b> Cliquez 💶 sur chaque composant pour voir le prix en temps réel.</div>
   <div class="pr">
     <div class="prh"><span class="prl">Score Performance</span><span class="prs" id="PS">—</span></div>
     <div class="bt"><div class="bf" id="PB" style="width:0%"></div></div>
@@ -275,13 +262,14 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
   <button class="cta" id="CTA">Demander un devis pour cette configuration →</button>
   <div class="disc">
     <b>⚠ Avis important sur les prix</b><br>
-    Les prix sont <b>purement indicatifs</b> — marché français 2024-2026.<br>
-    Ils <b>ne sont pas actualisés en temps réel</b> et varient selon revendeurs, promotions et stocks.<br>
+    Les prix affichés sont <b>indicatifs</b> — marché français 2024-2026.<br>
+    Clique sur <b>💶 Voir le prix actuel</b> sur chaque composant pour voir le prix en temps réel sur idealo.fr.<br>
     Contacte <b>MLTeC</b> pour un devis précis et personnalisé.
   </div>
 </div>
 <div class="foot">Configurateur by <b>MLTeC</b> · Montage · Expertise · Technologie · 2026</div>
 
+<!-- POPUP -->
 <div class="popup-overlay" id="popupOverlay">
   <div class="popup">
     <button class="popup-close" id="popupClose">✕</button>
@@ -327,31 +315,27 @@ var CATS={
   storage:{l:'Stockage (SSD + HDD)',  i:'💾', s:'Capacité & vitesse',        file:'Ssd.json'},
   psu:    {l:'Alimentation (PSU)',    i:'⚡', s:'Puissance & certification',  file:'Alim.json'},
   cooling:{l:'Refroidissement CPU',   i:'❄️', s:'Air ou watercooling',       file:'Cool.json'},
-  pccase: {l:'Boîtier',             i:'🖥️', s:'Format & airflow',          file:'Case.json'}
+  pccase: {l:'Boîtier',              i:'🖥️',s:'Format & airflow',          file:'Case.json'}
 };
 
 var PR={
-  bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to',psu:'450w-seasonic',cooling:'air-budget',pccase:'case-core1000'},
-  budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to',psu:'650w-bequiet',cooling:'air-assassin',pccase:'case-4000d'},
-  mid:{cpu:'r7-7800x3d',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240',pccase:'case-meshify2c'},
+  bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to-crucial',psu:'450w-seasonic',cooling:'air-cm-212-black',pccase:'case-fractal-node'},
+  budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to-wd',psu:'650w-be',cooling:'air-thermalright-paa120',pccase:'case-4000d'},
+  mid:{cpu:'r7-7800x3d',mb:'b650-msi-tom',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240-arctic',pccase:'case-meshify2c'},
   high:{cpu:'r7-9800x3d',mb:'x670-gigabyte',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to-wd',psu:'1000w-seasonic',cooling:'aio-360-corsair',pccase:'case-o11-evo'},
-  ultra:{cpu:'r9-9950x3d',mb:'x870-asus',ram:'64-ddr5-7200',gpu:'rtx5090',storage:'gen5-2to-sam',psu:'1600w-corsair',cooling:'custom-360',pccase:'case-rog'},
+  ultra:{cpu:'r9-9950x3d',mb:'x870-asus',ram:'64-ddr5-7200',gpu:'rtx5090',storage:'gen5-2to-sam',psu:'1600w-corsair',cooling:'custom-360-ek',pccase:'case-rog'},
   stream:{cpu:'r9-9900x',mb:'x670-gigabyte',ram:'64-ddr5-6000',gpu:'rtx5070ti',storage:'gen4-2to-wd',psu:'1000w-asus',cooling:'aio-360-arctic',pccase:'case-o11-evo'},
-  silent:{cpu:'r7-9700x',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070',storage:'gen4-1to-wd',psu:'750w-bequiet',cooling:'air-noctua',pccase:'case-define7c'}
+  silent:{cpu:'r7-9700x',mb:'b650-msi-tom',ram:'32-ddr5-6000',gpu:'rx9070',storage:'gen4-1to-wd',psu:'750w-be',cooling:'air-noctua-d15',pccase:'case-define7c'}
 };
 
 var D={};var S={};
-
-/* ══ OPTIONS SUPPLÉMENTAIRES ══ */
 var OPTS={
   windows:{name:'Licence Windows',price:45,selected:false},
   office: {name:'Microsoft Office',price:60,selected:false}
 };
-
-/* Forfait montage courant (affiché, non sélectionnable) */
 var currentMontage=null;
+var montageSelected=false;
 
-/* ══ FORFAITS MONTAGE ══ */
 var FORFAITS={
   gaming:[
     {name:'Essentiel',price:69,inclus:['Montage complet','Gestion câbles','Mise à jour BIOS','Test stabilité 30min','Vérif. températures'],tag:'GAMING'},
@@ -364,101 +348,6 @@ var FORFAITS={
     {name:'Pro',price:149,inclus:['Tout du forfait Confort','Optimisation avancée','Sauvegarde & sécurité','Suite bureautique'],tag:'BUREAUTIQUE · PRO'}
   ]
 };
-
-function upMontage(pc,has){
-  var card=document.getElementById('opt-montage-card');
-  var empty=document.getElementById('montage-empty');
-  var tag=document.getElementById('montage-tag');
-  var name=document.getElementById('montage-name');
-  var price=document.getElementById('montage-price');
-  var list=document.getElementById('montage-list');
-  var badges=document.getElementById('montage-badges');
-
-  if(!has||pc===0){
-    empty.style.display='block';
-    tag.style.display='none';name.style.display='none';
-    price.style.display='none';list.style.display='none';badges.style.display='none';
-    card.classList.add('disabled');
-    montageSelected=false;updateMontageCard();
-    currentMontage=null;
-    return;
-  }
-
-  card.classList.remove('disabled');
-  empty.style.display='none';
-  tag.style.display='block';name.style.display='block';
-  price.style.display='block';list.style.display='block';badges.style.display='block';
-
-  var gpu=gi('gpu');
-  var hasGPU=gpu&&gpu.id!=='none'&&gpu.p>0;
-  var type=hasGPU?'gaming':'bureau';
-  var forfaits=FORFAITS[type];
-  var niveau;
-  if(type==='gaming'){if(pc>=75)niveau=2;else if(pc>=35)niveau=1;else niveau=0;}
-  else{if(pc>=40)niveau=2;else if(pc>=15)niveau=1;else niveau=0;}
-
-  var f=forfaits[niveau];
-  if(currentMontage&&currentMontage.name!==f.name){montageSelected=false;}
-  currentMontage=f;
-
-  tag.textContent=f.tag;
-  name.textContent=f.name;
-  price.textContent=f.price+'€';
-  list.innerHTML=f.inclus.map(function(x){return '<li>✔ '+x+'</li>';}).join('');
-  badges.innerHTML='<span class="opt-montage-badge">'+f.price+'€ · Forfait MLTeC</span>'
-    +(niveau>=1?'<span class="opt-montage-reco">★ Recommandé</span>':'');
-  updateMontageCard();
-}
-
-var montageSelected=false;
-
-function initOpts(){
-  document.querySelectorAll('.opt-card:not(.opt-montage)').forEach(function(card){
-    var id=card.id.replace('opt-','');
-    updateOptCard(id);
-    card.addEventListener('click',function(){
-      OPTS[id].selected=!OPTS[id].selected;
-      updateOptCard(id);
-      upSum();
-    });
-  });
-  // Carte montage
-  document.getElementById('opt-montage-card').addEventListener('click',function(){
-    if(this.classList.contains('disabled'))return;
-    montageSelected=!montageSelected;
-    updateMontageCard();
-    upSum();
-  });
-  // Init visuel coche montage
-  updateMontageCard();
-}
-
-function updateMontageCard(){
-  var card=document.getElementById('opt-montage-card');
-  var chk=document.getElementById('chk-montage');
-  if(!chk)return;
-  if(montageSelected&&!card.classList.contains('disabled')){
-    card.classList.add('selected');
-    chk.style.background='#4ade80';chk.style.borderColor='#4ade80';chk.style.color='#0f172a';
-  } else {
-    card.classList.remove('selected');
-    chk.style.background='transparent';chk.style.borderColor='rgba(255,255,255,.3)';chk.style.color='transparent';
-    if(card.classList.contains('disabled'))montageSelected=false;
-  }
-}
-
-function updateOptCard(id){
-  var card=document.getElementById('opt-'+id);
-  var chk=document.getElementById('chk-'+id);
-  if(!card||!chk)return;
-  if(OPTS[id].selected){
-    card.classList.add('selected');
-    chk.style.background='#4ade80';chk.style.borderColor='#4ade80';chk.style.color='#0f172a';
-  } else {
-    card.classList.remove('selected');
-    chk.style.background='transparent';chk.style.borderColor='rgba(255,255,255,.3)';chk.style.color='transparent';
-  }
-}
 
 /* ══ CHARGEMENT JSON ══ */
 function loadAllJSON(){
@@ -489,6 +378,7 @@ function loadAllJSON(){
 
 function gi(k){var a=D[k].d;for(var i=0;i<a.length;i++){if(a[i].id===S[k])return a[i];}return null;}
 
+/* ══ SAUVEGARDE ══ */
 var LS_KEY='mltec_config';
 function saveConfig(){try{localStorage.setItem(LS_KEY,JSON.stringify(S));}catch(e){}}
 function loadConfig(){try{var s=localStorage.getItem(LS_KEY);return s?JSON.parse(s):null;}catch(e){return null;}}
@@ -505,6 +395,7 @@ function applyConfig(cfg){
   upSum();
 }
 
+/* ══ DROPDOWN ══ */
 var _openDD=null;
 function closeAllDD(){
   if(_openDD){_openDD.classList.remove('open');_openDD=null;}
@@ -557,6 +448,7 @@ document.addEventListener('click',closeAllDD);
 window.addEventListener('scroll',function(){if(_openDD){var list=document.querySelector('.cdd-list');if(list)positionList(_openDD,list);}},true);
 window.addEventListener('resize',closeAllDD);
 
+/* ══ BUILD ══ */
 function build(){
   var g=document.getElementById('G');if(!g)return;g.innerHTML='';
   Object.keys(D).forEach(function(k){
@@ -567,6 +459,7 @@ function build(){
   });
 }
 
+/* ══ INFO + LIEN IDEALO ══ */
 function upInf(k){
   var it=gi(k),el=document.getElementById('I'+k);if(!el)return;
   if(!it||!it.inf){el.textContent='Aucun composant sélectionné';el.className='inf e';return;}
@@ -574,10 +467,78 @@ function upInf(k){
   var query=encodeURIComponent(it.n.replace(' ⭐',''));
   var lien='https://www.idealo.fr/prix/'+query+'.html';
   el.className=cls;
-  el.innerHTML=it.inf
-    +'<a href="'+lien+'" target="_blank" rel="noopener" class="prix-link">💶 Voir le prix actuel →</a>';
+  el.innerHTML=it.inf+'<a href="'+lien+'" target="_blank" rel="noopener" class="prix-link">💶 Voir le prix actuel →</a>';
 }
 
+/* ══ OPTIONS ══ */
+function initOpts(){
+  document.querySelectorAll('.opt-card:not(.opt-montage)').forEach(function(card){
+    var id=card.id.replace('opt-','');
+    updateOptCard(id);
+    card.addEventListener('click',function(){
+      OPTS[id].selected=!OPTS[id].selected;
+      updateOptCard(id);upSum();
+    });
+  });
+  document.getElementById('opt-montage-card').addEventListener('click',function(){
+    if(this.classList.contains('disabled'))return;
+    montageSelected=!montageSelected;
+    updateMontageCard();upSum();
+  });
+  updateMontageCard();
+}
+function updateOptCard(id){
+  var card=document.getElementById('opt-'+id);
+  var chk=document.getElementById('chk-'+id);
+  if(!card||!chk)return;
+  if(OPTS[id].selected){card.classList.add('selected');chk.style.background='#4ade80';chk.style.borderColor='#4ade80';chk.style.color='#0f172a';}
+  else{card.classList.remove('selected');chk.style.background='transparent';chk.style.borderColor='rgba(255,255,255,.3)';chk.style.color='transparent';}
+}
+function updateMontageCard(){
+  var card=document.getElementById('opt-montage-card');
+  var chk=document.getElementById('chk-montage');if(!chk)return;
+  if(montageSelected&&!card.classList.contains('disabled')){
+    card.classList.add('selected');chk.style.background='#4ade80';chk.style.borderColor='#4ade80';chk.style.color='#0f172a';
+  } else {
+    card.classList.remove('selected');chk.style.background='transparent';chk.style.borderColor='rgba(255,255,255,.3)';chk.style.color='transparent';
+    if(card.classList.contains('disabled'))montageSelected=false;
+  }
+}
+
+/* ══ FORFAIT MONTAGE DYNAMIQUE ══ */
+function upMontage(pc,has){
+  var card=document.getElementById('opt-montage-card');
+  var empty=document.getElementById('montage-empty');
+  var tag=document.getElementById('montage-tag');
+  var name=document.getElementById('montage-name');
+  var price=document.getElementById('montage-price');
+  var list=document.getElementById('montage-list');
+  var badges=document.getElementById('montage-badges');
+  if(!has||pc===0){
+    empty.style.display='block';tag.style.display='none';name.style.display='none';
+    price.style.display='none';list.style.display='none';badges.style.display='none';
+    card.classList.add('disabled');montageSelected=false;updateMontageCard();currentMontage=null;return;
+  }
+  card.classList.remove('disabled');
+  empty.style.display='none';tag.style.display='block';name.style.display='block';
+  price.style.display='block';list.style.display='block';badges.style.display='block';
+  var gpu=gi('gpu');
+  var hasGPU=gpu&&gpu.id!=='none'&&gpu.p>0;
+  var type=hasGPU?'gaming':'bureau';
+  var forfaits=FORFAITS[type];
+  var niveau;
+  if(type==='gaming'){if(pc>=75)niveau=2;else if(pc>=35)niveau=1;else niveau=0;}
+  else{if(pc>=40)niveau=2;else if(pc>=15)niveau=1;else niveau=0;}
+  var f=forfaits[niveau];
+  if(currentMontage&&currentMontage.name!==f.name){montageSelected=false;}
+  currentMontage=f;
+  tag.textContent=f.tag;name.textContent=f.name;price.textContent=f.price+'€';
+  list.innerHTML=f.inclus.map(function(x){return '<li>✔ '+x+'</li>';}).join('');
+  badges.innerHTML='<span class="opt-montage-badge">'+f.price+'€ · Forfait MLTeC</span>'+(niveau>=1?'<span class="opt-montage-reco">★ Recommandé</span>':'');
+  updateMontageCard();
+}
+
+/* ══ RÉCAP ══ */
 function upSum(){
   var tot=0,pf=0,has=false,rows=document.getElementById('ROWS');
   rows.innerHTML='';
@@ -619,6 +580,7 @@ function upSum(){
   upMontage(pc,has);
 }
 
+/* ══ COMPATIBILITÉ ══ */
 function compat(){
   var bd=document.getElementById('BD');bd.innerHTML='';
   var cpu=gi('cpu'),mb=gi('mb'),psu=gi('psu'),gpu=gi('gpu'),cool=gi('cooling'),ram=gi('ram');
@@ -635,16 +597,16 @@ function compat(){
     else badg(bd,'✘ Alimentation insuffisante','er');
   }
   if(cool&&cpu&&cool.id!=='none'&&cpu.id!=='none'){
-    var ba=cool.id==='air-budget'||cool.id==='air-assassin';
+    var ba=cool.id.indexOf('budget')>-1||cool.id.indexOf('stock')>-1||cool.id.indexOf('budget')>-1;
     if(cpu.tdp>=170&&ba)badg(bd,'⚠ CPU haute conso — préférer un AIO 240mm+','wn');
     else if(cool.id!=='none')badg(bd,'✔ Refroidissement adapté','ok');
   }
   var n=Object.keys(S).filter(function(k){return S[k]!=='none';}).length;
   if(n>=7)badg(bd,'✔ Configuration complète','ok');
 }
-
 function badg(c,t,cl){var b=document.createElement('span');b.className='badge '+cl;b.textContent=t;c.appendChild(b);}
 
+/* ══ PRESETS ══ */
 function preset(p){
   document.querySelectorAll('.pb').forEach(function(b){b.classList.remove('on');});
   var btn=document.querySelector('.pb[data-p="'+p+'"]');if(btn)btn.classList.add('on');
@@ -654,12 +616,14 @@ function preset(p){
     S[k]=pr[k];
     var el=document.querySelector('.sel[data-k="'+k+'"]');if(el)el.value=pr[k];
     var dd=document.querySelector('.cdd[data-k="'+k+'"]');
-    if(dd){var item=D[k].d.filter(function(x){return x.id===pr[k];})[0];if(item){var tr=dd.querySelector('.cdd-trigger');if(tr)tr.textContent=item.n;}}
+    if(dd){
+      var item=D[k].d.filter(function(x){return x.id===pr[k];})[0];
+      if(item){var tr=dd.querySelector('.cdd-trigger');if(tr)tr.textContent=item.n;}
+    }
     upInf(k);
   });
   upSum();
 }
-
 function reset(){
   Object.keys(S).forEach(function(k){
     S[k]='none';
@@ -674,6 +638,7 @@ function reset(){
   try{localStorage.removeItem(LS_KEY);}catch(e){}
 }
 
+/* ══ POPUP ══ */
 function getConfigText(){
   var lines=[];
   Object.keys(D).forEach(function(k){var it=gi(k);if(it&&it.p>0)lines.push(D[k].l+' : '+it.n.replace(' ⭐','')+' ('+it.p+' €)');});
@@ -681,7 +646,6 @@ function getConfigText(){
   if(montageSelected&&currentMontage)lines.push('Forfait montage : '+currentMontage.name+' ('+currentMontage.price+' €)');
   return lines.join('\n');
 }
-
 function openPopup(){
   var recap=document.getElementById('popupRecap');
   recap.innerHTML='';var hasAny=false;
@@ -702,12 +666,6 @@ function openPopup(){
       recap.appendChild(r);
     }
   });
-  if(currentMontage){
-    hasAny=true;
-    var r=document.createElement('div');r.className='popup-recap-row montage-row';
-    r.innerHTML='<span class="prl">🛠️ Forfait '+currentMontage.name+'</span><span class="prp">'+currentMontage.price+' €</span>';
-    recap.appendChild(r);
-  }
   if(montageSelected&&currentMontage){
     hasAny=true;
     var r=document.createElement('div');r.className='popup-recap-row montage-row';
@@ -725,9 +683,7 @@ function openPopup(){
   document.getElementById('popupOverlay').classList.add('show');
   document.body.style.overflow='hidden';
 }
-
 function closePopup(){document.getElementById('popupOverlay').classList.remove('show');document.body.style.overflow='';}
-
 function sendEmail(){
   var nom=document.getElementById('pf-nom').value.trim();
   var email=document.getElementById('pf-email').value.trim();
