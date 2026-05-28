@@ -1,62 +1,607 @@
 [
-  {"id":"none","n":"-- Choisir un stockage --","p":0,"inf":"","pf":0},
-
-  {"id":"gs_sata","g":true,"n":"──── SSD SATA 2.5\" ────"},
-  {"id":"sata-120","n":"120 Go SSD SATA (Kingston A400)","p":19,"inf":"500 Mo/s · SATA III · 2.5\" — OS ultra budget","pf":1},
-  {"id":"sata-240","n":"240 Go SSD SATA (Kingston A400)","p":27,"inf":"500 Mo/s · SATA III · 2.5\"","pf":1},
-  {"id":"sata-480","n":"480 Go SSD SATA (Kingston A400)","p":37,"inf":"500 Mo/s · SATA III · 2.5\"","pf":2},
-  {"id":"sata-500-crucial","n":"500 Go SSD SATA (Crucial MX500)","p":42,"inf":"560 Mo/s · SATA III · 2.5\"","pf":2},
-  {"id":"sata-500-sam","n":"500 Go SSD SATA (Samsung 870 EVO)","p":49,"inf":"560 Mo/s · SATA III · 2.5\" — premium SATA","pf":2},
-  {"id":"sata-1to-crucial","n":"1 To SSD SATA (Crucial MX500)","p":65,"inf":"560 Mo/s · SATA III · 2.5\"","pf":2},
-  {"id":"sata-1to-wd","n":"1 To SSD SATA (WD Blue)","p":68,"inf":"560 Mo/s · SATA III · 2.5\"","pf":2},
-  {"id":"sata-1to-sam","n":"1 To SSD SATA (Samsung 870 EVO)","p":79,"inf":"560 Mo/s · SATA III · 2.5\"","pf":2},
-  {"id":"sata-2to-crucial","n":"2 To SSD SATA (Crucial MX500)","p":99,"inf":"560 Mo/s · SATA III · 2.5\"","pf":2},
-  {"id":"sata-2to-sam","n":"2 To SSD SATA (Samsung 870 QVO)","p":99,"inf":"560 Mo/s · SATA III · grande capacité","pf":2},
-  {"id":"sata-4to","n":"4 To SSD SATA (Crucial MX500)","p":189,"inf":"560 Mo/s · SATA III · archivage SSD","pf":2},
-
-  {"id":"gs_nvme3","g":true,"n":"──── NVMe Gen3 PCIe 3.0 ────"},
-  {"id":"nvme3-250","n":"250 Go NVMe Gen3 (Samsung 970 EVO+)","p":38,"inf":"3500 Mo/s · PCIe 3.0 · M.2 2280","pf":3},
-  {"id":"nvme3-500-wd","n":"500 Go NVMe Gen3 (WD Blue SN570)","p":49,"inf":"3500 Mo/s · PCIe 3.0 · M.2 2280","pf":4},
-  {"id":"nvme3-500-sam","n":"500 Go NVMe Gen3 (Samsung 970 EVO+)","p":55,"inf":"3500 Mo/s · PCIe 3.0 · M.2 2280","pf":4},
-  {"id":"nvme3-1to-wd","n":"1 To NVMe Gen3 (WD Blue SN570)","p":65,"inf":"3500 Mo/s · PCIe 3.0 · M.2 2280 — bon Q/P","pf":4},
-  {"id":"nvme3-1to-sam","n":"1 To NVMe Gen3 (Samsung 970 EVO+)","p":75,"inf":"3500 Mo/s · PCIe 3.0 · M.2 2280","pf":4},
-  {"id":"nvme3-2to","n":"2 To NVMe Gen3 (WD Blue SN570)","p":99,"inf":"3500 Mo/s · PCIe 3.0 · M.2 2280","pf":4},
-
-  {"id":"gs_nvme4","g":true,"n":"──── NVMe Gen4 PCIe 4.0 ⚠ prix hausse 2025-2026 ────"},
-  {"id":"gen4-512-wd","n":"512 Go NVMe Gen4 (WD Black SN770)","p":65,"inf":"5150 Mo/s · PCIe 4.0 · M.2 2280 — budget Gen4","pf":4},
-  {"id":"gen4-512-sam","n":"512 Go NVMe Gen4 (Samsung 980 Pro)","p":85,"inf":"7000 Mo/s · PCIe 4.0 · M.2 2280","pf":5},
-  {"id":"gen4-1to-crucial","n":"1 To NVMe Gen4 (Crucial P5 Plus)","p":99,"inf":"6600 Mo/s · PCIe 4.0 · M.2 2280 — bon Q/P","pf":7},
-  {"id":"gen4-1to-kf","n":"1 To NVMe Gen4 (Kingston Fury Renegade)","p":129,"inf":"7300 Mo/s · PCIe 4.0 · M.2 2280","pf":8},
-  {"id":"gen4-1to-sea","n":"1 To NVMe Gen4 (Seagate FireCuda 530)","p":139,"inf":"7300 Mo/s · PCIe 4.0 · M.2 2280","pf":8},
-  {"id":"gen4-1to-wd","n":"1 To NVMe Gen4 (WD Black SN850X) ⭐","p":145,"inf":"7300 Mo/s · PCIe 4.0 · M.2 2280 — recommandé gaming","pf":8},
-  {"id":"gen4-1to-sam","n":"1 To NVMe Gen4 (Samsung 990 Pro)","p":155,"inf":"7450 Mo/s · PCIe 4.0 · M.2 2280","pf":8},
-  {"id":"gen4-2to-crucial","n":"2 To NVMe Gen4 (Crucial P5 Plus)","p":179,"inf":"6600 Mo/s · PCIe 4.0 · M.2 2280","pf":7},
-  {"id":"gen4-2to-kf","n":"2 To NVMe Gen4 (Kingston Fury Renegade)","p":229,"inf":"7300 Mo/s · PCIe 4.0 · M.2 2280","pf":8},
-  {"id":"gen4-2to-sea","n":"2 To NVMe Gen4 (Seagate FireCuda 530)","p":239,"inf":"7300 Mo/s · PCIe 4.0 · M.2 2280","pf":8},
-  {"id":"gen4-2to-wd","n":"2 To NVMe Gen4 (WD Black SN850X)","p":249,"inf":"7300 Mo/s · PCIe 4.0 · M.2 2280","pf":8},
-  {"id":"gen4-2to-sam","n":"2 To NVMe Gen4 (Samsung 990 Pro)","p":269,"inf":"7450 Mo/s · PCIe 4.0 · M.2 2280","pf":8},
-  {"id":"gen4-4to-wd","n":"4 To NVMe Gen4 (WD Black SN850X)","p":469,"inf":"7300 Mo/s · PCIe 4.0 · 4 To","pf":8},
-  {"id":"gen4-4to-sam","n":"4 To NVMe Gen4 (Samsung 990 Pro)","p":489,"inf":"7450 Mo/s · PCIe 4.0 · 4 To","pf":8},
-
-  {"id":"gs_nvme5","g":true,"n":"──── NVMe Gen5 PCIe 5.0 ultra rapide 2024-2026 ────"},
-  {"id":"gen5-1to-wd","n":"1 To NVMe Gen5 (WD Black SN850X G2)","p":189,"inf":"14000 Mo/s · PCIe 5.0 · M.2 2280","pf":12},
-  {"id":"gen5-1to-crucial","n":"1 To NVMe Gen5 (Crucial T705)","p":185,"inf":"14500 Mo/s · PCIe 5.0 · M.2 2280","pf":12},
-  {"id":"gen5-1to-sam","n":"1 To NVMe Gen5 (Samsung 9100 Pro)","p":199,"inf":"14900 Mo/s · PCIe 5.0 · M.2 2280 [2025]","pf":13},
-  {"id":"gen5-2to-crucial","n":"2 To NVMe Gen5 (Crucial T705)","p":349,"inf":"14500 Mo/s · PCIe 5.0 · M.2 2280","pf":12},
-  {"id":"gen5-2to-wd","n":"2 To NVMe Gen5 (WD Black SN850X G2)","p":339,"inf":"14000 Mo/s · PCIe 5.0 · M.2 2280","pf":12},
-  {"id":"gen5-2to-sam","n":"2 To NVMe Gen5 (Samsung 9100 Pro)","p":359,"inf":"14800 Mo/s · PCIe 5.0 · M.2 2280","pf":13},
-  {"id":"gen5-4to","n":"4 To NVMe Gen5 (Crucial T705)","p":629,"inf":"14500 Mo/s · PCIe 5.0 · 4 To [2026]","pf":13},
-
-  {"id":"gs_hdd","g":true,"n":"──── HDD stockage secondaire ────"},
-  {"id":"hdd-1to-sg","n":"1 To HDD (Seagate Barracuda)","p":29,"inf":"1 To · 7200 RPM · SATA III","pf":1},
-  {"id":"hdd-1to-wd","n":"1 To HDD (WD Blue)","p":32,"inf":"1 To · 7200 RPM · SATA III","pf":1},
-  {"id":"hdd-2to-sg","n":"2 To HDD (Seagate Barracuda)","p":45,"inf":"2 To · 7200 RPM · SATA III","pf":1},
-  {"id":"hdd-2to-wd","n":"2 To HDD (WD Blue)","p":48,"inf":"2 To · 5400 RPM · SATA III","pf":1},
-  {"id":"hdd-4to-sg","n":"4 To HDD (Seagate Barracuda)","p":75,"inf":"4 To · 5400 RPM · SATA III","pf":1},
-  {"id":"hdd-4to-wd","n":"4 To HDD (WD Blue)","p":79,"inf":"4 To · 5400 RPM · SATA III","pf":1},
-  {"id":"hdd-6to","n":"6 To HDD (Seagate Barracuda)","p":99,"inf":"6 To · 5400 RPM · SATA III","pf":1},
-  {"id":"hdd-8to-sg","n":"8 To HDD (Seagate IronWolf)","p":145,"inf":"8 To · 7200 RPM · SATA III — NAS","pf":1},
-  {"id":"hdd-8to-wd","n":"8 To HDD (WD Red Plus)","p":149,"inf":"8 To · 7200 RPM · SATA III — NAS","pf":1},
-  {"id":"hdd-12to","n":"12 To HDD (WD Red Plus)","p":229,"inf":"12 To · 7200 RPM · SATA III — serveur/NAS","pf":1},
-  {"id":"hdd-16to","n":"16 To HDD (Seagate IronWolf Pro)","p":329,"inf":"16 To · 7200 RPM · SATA III — datacenter","pf":1}
+  {
+    "id": "none",
+    "n": "-- Choisir un stockage --",
+    "p": 0,
+    "inf": "",
+    "pf": 0
+  },
+  {
+    "id": "g_sata",
+    "g": true,
+    "n": "──── SSD SATA 2.5\" — bon rapport Q/P ────"
+  },
+  {
+    "id": "sata-120-kf",
+    "n": "120 Go SSD SATA (Kingston A400)",
+    "p": 18,
+    "inf": "500 Mo/s · SATA III · 2.5\" — OS ultra budget",
+    "pf": 1
+  },
+  {
+    "id": "sata-240-kf",
+    "n": "240 Go SSD SATA (Kingston A400)",
+    "p": 26,
+    "inf": "500 Mo/s · SATA III · 2.5\"",
+    "pf": 1
+  },
+  {
+    "id": "sata-240-crucial",
+    "n": "240 Go SSD SATA (Crucial BX500)",
+    "p": 27,
+    "inf": "540 Mo/s · SATA III · 2.5\"",
+    "pf": 1
+  },
+  {
+    "id": "sata-480-kf",
+    "n": "480 Go SSD SATA (Kingston A400)",
+    "p": 36,
+    "inf": "500 Mo/s · SATA III · 2.5\"",
+    "pf": 2
+  },
+  {
+    "id": "sata-480-crucial",
+    "n": "480 Go SSD SATA (Crucial BX500)",
+    "p": 37,
+    "inf": "540 Mo/s · SATA III · 2.5\"",
+    "pf": 2
+  },
+  {
+    "id": "sata-500-sam",
+    "n": "500 Go SSD SATA (Samsung 870 EVO)",
+    "p": 47,
+    "inf": "560 Mo/s · SATA III · 2.5\" — premium SATA",
+    "pf": 2
+  },
+  {
+    "id": "sata-500-wd",
+    "n": "500 Go SSD SATA (WD Blue)",
+    "p": 42,
+    "inf": "560 Mo/s · SATA III · 2.5\"",
+    "pf": 2
+  },
+  {
+    "id": "sata-500-crucial",
+    "n": "500 Go SSD SATA (Crucial MX500)",
+    "p": 44,
+    "inf": "560 Mo/s · SATA III · 2.5\"",
+    "pf": 2
+  },
+  {
+    "id": "sata-1to-sam",
+    "n": "1 To SSD SATA (Samsung 870 EVO)",
+    "p": 75,
+    "inf": "560 Mo/s · SATA III · 2.5\"",
+    "pf": 2
+  },
+  {
+    "id": "sata-1to-crucial",
+    "n": "1 To SSD SATA (Crucial MX500)",
+    "p": 63,
+    "inf": "560 Mo/s · SATA III · 2.5\"",
+    "pf": 2
+  },
+  {
+    "id": "sata-1to-wd",
+    "n": "1 To SSD SATA (WD Blue)",
+    "p": 65,
+    "inf": "560 Mo/s · SATA III · 2.5\"",
+    "pf": 2
+  },
+  {
+    "id": "sata-1to-kf",
+    "n": "1 To SSD SATA (Kingston A400)",
+    "p": 59,
+    "inf": "500 Mo/s · SATA III · 2.5\"",
+    "pf": 2
+  },
+  {
+    "id": "sata-2to-sam",
+    "n": "2 To SSD SATA (Samsung 870 QVO)",
+    "p": 95,
+    "inf": "560 Mo/s · SATA III · grande capacité",
+    "pf": 2
+  },
+  {
+    "id": "sata-2to-crucial",
+    "n": "2 To SSD SATA (Crucial MX500)",
+    "p": 95,
+    "inf": "560 Mo/s · SATA III · 2.5\"",
+    "pf": 2
+  },
+  {
+    "id": "sata-2to-wd",
+    "n": "2 To SSD SATA (WD Blue)",
+    "p": 92,
+    "inf": "560 Mo/s · SATA III · 2.5\"",
+    "pf": 2
+  },
+  {
+    "id": "sata-4to-crucial",
+    "n": "4 To SSD SATA (Crucial MX500)",
+    "p": 179,
+    "inf": "560 Mo/s · SATA III · archivage SSD",
+    "pf": 2
+  },
+  {
+    "id": "g_nvme3",
+    "g": true,
+    "n": "──── NVMe Gen3 PCIe 3.0 ────"
+  },
+  {
+    "id": "nvme3-250-sam",
+    "n": "250 Go NVMe Gen3 (Samsung 970 EVO+)",
+    "p": 37,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 3
+  },
+  {
+    "id": "nvme3-500-wd",
+    "n": "500 Go NVMe Gen3 (WD Blue SN570)",
+    "p": 47,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 4
+  },
+  {
+    "id": "nvme3-500-sam",
+    "n": "500 Go NVMe Gen3 (Samsung 970 EVO+)",
+    "p": 52,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 4
+  },
+  {
+    "id": "nvme3-500-crucial",
+    "n": "500 Go NVMe Gen3 (Crucial P3)",
+    "p": 45,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 3
+  },
+  {
+    "id": "nvme3-1to-wd",
+    "n": "1 To NVMe Gen3 (WD Blue SN570)",
+    "p": 62,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280 — bon Q/P",
+    "pf": 4
+  },
+  {
+    "id": "nvme3-1to-sam",
+    "n": "1 To NVMe Gen3 (Samsung 970 EVO+)",
+    "p": 72,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 4
+  },
+  {
+    "id": "nvme3-1to-crucial",
+    "n": "1 To NVMe Gen3 (Crucial P3)",
+    "p": 58,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 3
+  },
+  {
+    "id": "nvme3-2to-wd",
+    "n": "2 To NVMe Gen3 (WD Blue SN570)",
+    "p": 95,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 4
+  },
+  {
+    "id": "nvme3-2to-crucial",
+    "n": "2 To NVMe Gen3 (Crucial P3)",
+    "p": 89,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 3
+  },
+  {
+    "id": "g_nvme4",
+    "g": true,
+    "n": "──── NVMe Gen4 PCIe 4.0 ⚠ prix hausse 2025-2026 ────"
+  },
+  {
+    "id": "gen4-512-wd",
+    "n": "512 Go NVMe Gen4 (WD Black SN770)",
+    "p": 62,
+    "inf": "5150 Mo/s · PCIe 4.0 · M.2 2280 — budget Gen4",
+    "pf": 4
+  },
+  {
+    "id": "gen4-512-sam",
+    "n": "512 Go NVMe Gen4 (Samsung 980 Pro)",
+    "p": 79,
+    "inf": "7000 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 5
+  },
+  {
+    "id": "gen4-1to-crucial",
+    "n": "1 To NVMe Gen4 (Crucial P5 Plus)",
+    "p": 95,
+    "inf": "6600 Mo/s · PCIe 4.0 · M.2 2280 — bon Q/P",
+    "pf": 6
+  },
+  {
+    "id": "gen4-1to-kf",
+    "n": "1 To NVMe Gen4 (Kingston Fury Renegade)",
+    "p": 125,
+    "inf": "7300 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 7
+  },
+  {
+    "id": "gen4-1to-sea",
+    "n": "1 To NVMe Gen4 (Seagate FireCuda 530)",
+    "p": 129,
+    "inf": "7300 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 7
+  },
+  {
+    "id": "gen4-1to-wd",
+    "n": "1 To NVMe Gen4 (WD Black SN850X) ⭐",
+    "p": 139,
+    "inf": "7300 Mo/s · PCIe 4.0 · M.2 2280 — recommandé gaming",
+    "pf": 8
+  },
+  {
+    "id": "gen4-1to-sam",
+    "n": "1 To NVMe Gen4 (Samsung 990 Pro)",
+    "p": 149,
+    "inf": "7450 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 8
+  },
+  {
+    "id": "gen4-1to-sam990evo",
+    "n": "1 To NVMe Gen4 (Samsung 990 EVO)",
+    "p": 99,
+    "inf": "5000 Mo/s · PCIe 4.0 · M.2 2280 — budget Gen4",
+    "pf": 5
+  },
+  {
+    "id": "gen4-2to-crucial",
+    "n": "2 To NVMe Gen4 (Crucial P5 Plus)",
+    "p": 169,
+    "inf": "6600 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 6
+  },
+  {
+    "id": "gen4-2to-kf",
+    "n": "2 To NVMe Gen4 (Kingston Fury Renegade)",
+    "p": 219,
+    "inf": "7300 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 7
+  },
+  {
+    "id": "gen4-2to-sea",
+    "n": "2 To NVMe Gen4 (Seagate FireCuda 530)",
+    "p": 229,
+    "inf": "7300 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 7
+  },
+  {
+    "id": "gen4-2to-wd",
+    "n": "2 To NVMe Gen4 (WD Black SN850X)",
+    "p": 239,
+    "inf": "7300 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 8
+  },
+  {
+    "id": "gen4-2to-sam",
+    "n": "2 To NVMe Gen4 (Samsung 990 Pro)",
+    "p": 255,
+    "inf": "7450 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 8
+  },
+  {
+    "id": "gen4-4to-wd",
+    "n": "4 To NVMe Gen4 (WD Black SN850X)",
+    "p": 459,
+    "inf": "7300 Mo/s · PCIe 4.0 · 4 To",
+    "pf": 8
+  },
+  {
+    "id": "gen4-4to-sam",
+    "n": "4 To NVMe Gen4 (Samsung 990 Pro)",
+    "p": 475,
+    "inf": "7450 Mo/s · PCIe 4.0 · 4 To",
+    "pf": 8
+  },
+  {
+    "id": "g_nvme5",
+    "g": true,
+    "n": "──── NVMe Gen5 PCIe 5.0 ultra rapide 2024-2026 ────"
+  },
+  {
+    "id": "gen5-1to-crucial",
+    "n": "1 To NVMe Gen5 (Crucial T705)",
+    "p": 179,
+    "inf": "14500 Mo/s · PCIe 5.0 · M.2 2280",
+    "pf": 11
+  },
+  {
+    "id": "gen5-1to-wd",
+    "n": "1 To NVMe Gen5 (WD Black SN850X G2)",
+    "p": 185,
+    "inf": "14000 Mo/s · PCIe 5.0 · M.2 2280",
+    "pf": 11
+  },
+  {
+    "id": "gen5-1to-sam",
+    "n": "1 To NVMe Gen5 (Samsung 9100 Pro)",
+    "p": 195,
+    "inf": "14900 Mo/s · PCIe 5.0 · M.2 2280 [2025]",
+    "pf": 12
+  },
+  {
+    "id": "gen5-1to-kf",
+    "n": "1 To NVMe Gen5 (Kingston Fury Renegade G2)",
+    "p": 189,
+    "inf": "14000 Mo/s · PCIe 5.0 · M.2 2280 [2025]",
+    "pf": 11
+  },
+  {
+    "id": "gen5-2to-crucial",
+    "n": "2 To NVMe Gen5 (Crucial T705)",
+    "p": 339,
+    "inf": "14500 Mo/s · PCIe 5.0 · M.2 2280",
+    "pf": 11
+  },
+  {
+    "id": "gen5-2to-wd",
+    "n": "2 To NVMe Gen5 (WD Black SN850X G2)",
+    "p": 329,
+    "inf": "14000 Mo/s · PCIe 5.0 · M.2 2280",
+    "pf": 11
+  },
+  {
+    "id": "gen5-2to-sam",
+    "n": "2 To NVMe Gen5 (Samsung 9100 Pro)",
+    "p": 349,
+    "inf": "14800 Mo/s · PCIe 5.0 · M.2 2280",
+    "pf": 12
+  },
+  {
+    "id": "gen5-4to-crucial",
+    "n": "4 To NVMe Gen5 (Crucial T705)",
+    "p": 619,
+    "inf": "14500 Mo/s · PCIe 5.0 · 4 To [2026]",
+    "pf": 12
+  },
+  {
+    "id": "g_hdd",
+    "g": true,
+    "n": "──── HDD stockage secondaire ────"
+  },
+  {
+    "id": "hdd-1to-sg",
+    "n": "1 To HDD (Seagate Barracuda)",
+    "p": 27,
+    "inf": "1 To · 7200 RPM · SATA III",
+    "pf": 1
+  },
+  {
+    "id": "hdd-1to-wd",
+    "n": "1 To HDD (WD Blue)",
+    "p": 29,
+    "inf": "1 To · 7200 RPM · SATA III",
+    "pf": 1
+  },
+  {
+    "id": "hdd-2to-sg",
+    "n": "2 To HDD (Seagate Barracuda)",
+    "p": 42,
+    "inf": "2 To · 7200 RPM · SATA III",
+    "pf": 1
+  },
+  {
+    "id": "hdd-2to-wd",
+    "n": "2 To HDD (WD Blue)",
+    "p": 44,
+    "inf": "2 To · 5400 RPM · SATA III",
+    "pf": 1
+  },
+  {
+    "id": "hdd-4to-sg",
+    "n": "4 To HDD (Seagate Barracuda)",
+    "p": 72,
+    "inf": "4 To · 5400 RPM · SATA III",
+    "pf": 1
+  },
+  {
+    "id": "hdd-4to-wd",
+    "n": "4 To HDD (WD Blue)",
+    "p": 75,
+    "inf": "4 To · 5400 RPM · SATA III",
+    "pf": 1
+  },
+  {
+    "id": "hdd-6to-sg",
+    "n": "6 To HDD (Seagate Barracuda)",
+    "p": 95,
+    "inf": "6 To · 5400 RPM · SATA III",
+    "pf": 1
+  },
+  {
+    "id": "hdd-8to-sg",
+    "n": "8 To HDD (Seagate IronWolf)",
+    "p": 139,
+    "inf": "8 To · 7200 RPM · SATA III — NAS",
+    "pf": 1
+  },
+  {
+    "id": "hdd-8to-wd",
+    "n": "8 To HDD (WD Red Plus)",
+    "p": 145,
+    "inf": "8 To · 7200 RPM · SATA III — NAS",
+    "pf": 1
+  },
+  {
+    "id": "hdd-12to",
+    "n": "12 To HDD (WD Red Plus)",
+    "p": 219,
+    "inf": "12 To · 7200 RPM · SATA III",
+    "pf": 1
+  },
+  {
+    "id": "hdd-16to",
+    "n": "16 To HDD (Seagate IronWolf Pro)",
+    "p": 319,
+    "inf": "16 To · 7200 RPM · SATA III",
+    "pf": 1
+  },
+  {
+    "id": "hdd-20to",
+    "n": "20 To HDD (Seagate IronWolf Pro)",
+    "p": 419,
+    "inf": "20 To · 7200 RPM · SATA III — datacenter",
+    "pf": 1
+  },
+  {
+    "id": "g_m2_sata",
+    "g": true,
+    "n": "──── SSD M.2 SATA ────"
+  },
+  {
+    "id": "m2-sata-500-crucial",
+    "n": "500 Go M.2 SATA (Crucial MX500)",
+    "p": 46,
+    "inf": "560 Mo/s · M.2 2280 SATA — compact SATA",
+    "pf": 2
+  },
+  {
+    "id": "m2-sata-1to-sam",
+    "n": "1 To M.2 SATA (Samsung 860 EVO)",
+    "p": 78,
+    "inf": "550 Mo/s · M.2 2280 SATA",
+    "pf": 2
+  },
+  {
+    "id": "m2-sata-1to-wd",
+    "n": "1 To M.2 SATA (WD Blue SATA)",
+    "p": 69,
+    "inf": "560 Mo/s · M.2 2280 SATA",
+    "pf": 2
+  },
+  {
+    "id": "g_nvme3_extra",
+    "g": true,
+    "n": "──── NVMe Gen3 — Marques supplémentaires ────"
+  },
+  {
+    "id": "nvme3-500-kf",
+    "n": "500 Go NVMe Gen3 (Kingston NV3)",
+    "p": 41,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280 — ultra budget",
+    "pf": 3
+  },
+  {
+    "id": "nvme3-1to-kf",
+    "n": "1 To NVMe Gen3 (Kingston NV3)",
+    "p": 57,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280 — meilleur Q/P budget",
+    "pf": 3
+  },
+  {
+    "id": "nvme3-2to-kf",
+    "n": "2 To NVMe Gen3 (Kingston NV3)",
+    "p": 89,
+    "inf": "3500 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 3
+  },
+  {
+    "id": "nvme3-1to-corsair",
+    "n": "1 To NVMe Gen3 (Corsair MP400)",
+    "p": 65,
+    "inf": "3480 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 4
+  },
+  {
+    "id": "nvme3-2to-corsair",
+    "n": "2 To NVMe Gen3 (Corsair MP400)",
+    "p": 98,
+    "inf": "3480 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 4
+  },
+  {
+    "id": "nvme3-1to-sea",
+    "n": "1 To NVMe Gen3 (Seagate Barracuda Q5)",
+    "p": 59,
+    "inf": "2400 Mo/s · PCIe 3.0 · M.2 2280",
+    "pf": 3
+  },
+  {
+    "id": "g_nvme4_extra",
+    "g": true,
+    "n": "──── NVMe Gen4 — Marques supplémentaires ────"
+  },
+  {
+    "id": "gen4-1to-gigabyte",
+    "n": "1 To NVMe Gen4 (Gigabyte AORUS Gen4 7300)",
+    "p": 109,
+    "inf": "7300 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 7
+  },
+  {
+    "id": "gen4-1to-msi",
+    "n": "1 To NVMe Gen4 (MSI SPATIUM M480 PRO)",
+    "p": 115,
+    "inf": "7400 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 7
+  },
+  {
+    "id": "gen4-1to-corsair",
+    "n": "1 To NVMe Gen4 (Corsair MP600 Pro XT)",
+    "p": 119,
+    "inf": "7100 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 7
+  },
+  {
+    "id": "gen4-1to-asus",
+    "n": "1 To NVMe Gen4 (ASUS ROG Strix SQ7)",
+    "p": 125,
+    "inf": "7200 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 7
+  },
+  {
+    "id": "gen4-2to-corsair",
+    "n": "2 To NVMe Gen4 (Corsair MP600 Pro XT)",
+    "p": 209,
+    "inf": "7100 Mo/s · PCIe 4.0 · M.2 2280",
+    "pf": 7
+  },
+  {
+    "id": "gen4-4to-sea",
+    "n": "4 To NVMe Gen4 (Seagate FireCuda 530)",
+    "p": 429,
+    "inf": "7300 Mo/s · PCIe 4.0 · 4 To",
+    "pf": 8
+  },
+  {
+    "id": "g_nvme5_extra",
+    "g": true,
+    "n": "──── NVMe Gen5 — Marques supplémentaires ────"
+  },
+  {
+    "id": "gen5-1to-sea",
+    "n": "1 To NVMe Gen5 (Seagate FireCuda 540)",
+    "p": 179,
+    "inf": "10000 Mo/s · PCIe 5.0 · M.2 2280 [2024]",
+    "pf": 10
+  },
+  {
+    "id": "gen5-2to-sea",
+    "n": "2 To NVMe Gen5 (Seagate FireCuda 540)",
+    "p": 329,
+    "inf": "10000 Mo/s · PCIe 5.0 · M.2 2280",
+    "pf": 10
+  },
+  {
+    "id": "gen5-1to-corsair",
+    "n": "1 To NVMe Gen5 (Corsair MP700 Pro)",
+    "p": 169,
+    "inf": "12400 Mo/s · PCIe 5.0 · M.2 2280",
+    "pf": 11
+  },
+  {
+    "id": "gen5-2to-corsair",
+    "n": "2 To NVMe Gen5 (Corsair MP700 Pro)",
+    "p": 309,
+    "inf": "12400 Mo/s · PCIe 5.0 · M.2 2280",
+    "pf": 11
+  }
 ]

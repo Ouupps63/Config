@@ -1,109 +1,989 @@
 [
-  {"id":"none","n":"-- Choisir un CPU --","p":0,"inf":"","sk":"","tdp":0,"pf":0},
-
-  {"id":"g_am4_entry","g":true,"n":"──── AMD AM4 — Entrée de gamme (2020-2023) ────"},
-  {"id":"r3-4100","n":"AMD Ryzen 3 4100","p":55,"inf":"4c/8t · 3.8GHz boost 4.0GHz · AM4 · 65W · DDR4 [2021]","sk":"AM4","tdp":65,"pf":20},
-  {"id":"r3-5300g","n":"AMD Ryzen 3 5300G","p":75,"inf":"4c/8t · 4.2GHz · AM4 · iGPU Vega 6 · 65W [2021]","sk":"AM4","tdp":65,"pf":26},
-  {"id":"r5-5500","n":"AMD Ryzen 5 5500","p":72,"inf":"6c/12t · 4.2GHz · AM4 · 65W [2022]","sk":"AM4","tdp":65,"pf":36},
-  {"id":"r5-5500gt","n":"AMD Ryzen 5 5500GT","p":85,"inf":"6c/12t · 4.4GHz · AM4 · iGPU Vega 7 · 65W [2023]","sk":"AM4","tdp":65,"pf":38},
-  {"id":"r5-5600g","n":"AMD Ryzen 5 5600G","p":95,"inf":"6c/12t · 4.4GHz · AM4 · iGPU Vega 7 · 65W [2021]","sk":"AM4","tdp":65,"pf":40},
-  {"id":"r5-5600","n":"AMD Ryzen 5 5600","p":85,"inf":"6c/12t · 4.4GHz · AM4 · 65W — excellent Q/P [2021]","sk":"AM4","tdp":65,"pf":42},
-  {"id":"r5-5600x","n":"AMD Ryzen 5 5600X","p":99,"inf":"6c/12t · 4.6GHz · AM4 · 65W [2020]","sk":"AM4","tdp":65,"pf":44},
-
-  {"id":"g_am4_mid","g":true,"n":"──── AMD AM4 — Milieu & haut (2020-2023) ────"},
-  {"id":"r7-5700","n":"AMD Ryzen 7 5700","p":109,"inf":"8c/16t · 4.6GHz · AM4 · 65W [2022]","sk":"AM4","tdp":65,"pf":48},
-  {"id":"r7-5700g","n":"AMD Ryzen 7 5700G","p":129,"inf":"8c/16t · 4.6GHz · AM4 · iGPU Vega 8 · 65W [2021]","sk":"AM4","tdp":65,"pf":50},
-  {"id":"r7-5700x","n":"AMD Ryzen 7 5700X","p":129,"inf":"8c/16t · 4.6GHz · AM4 · 65W [2022]","sk":"AM4","tdp":65,"pf":52},
-  {"id":"r7-5700x3d","n":"AMD Ryzen 7 5700X3D","p":149,"inf":"8c/16t · 4.1GHz · AM4 · 65W · 3D V-Cache [2023]","sk":"AM4","tdp":65,"pf":64},
-  {"id":"r7-5800","n":"AMD Ryzen 7 5800","p":135,"inf":"8c/16t · 4.6GHz · AM4 · 65W [2021]","sk":"AM4","tdp":65,"pf":50},
-  {"id":"r7-5800x","n":"AMD Ryzen 7 5800X","p":145,"inf":"8c/16t · 4.7GHz · AM4 · 105W [2020]","sk":"AM4","tdp":105,"pf":54},
-  {"id":"r7-5800x3d","n":"AMD Ryzen 7 5800X3D","p":169,"inf":"8c/16t · 4.5GHz · AM4 · 105W · 3D V-Cache [2022]","sk":"AM4","tdp":105,"pf":70},
-  {"id":"r9-5900","n":"AMD Ryzen 9 5900","p":169,"inf":"12c/24t · 4.7GHz · AM4 · 65W [2021]","sk":"AM4","tdp":65,"pf":58},
-  {"id":"r9-5900x","n":"AMD Ryzen 9 5900X","p":189,"inf":"12c/24t · 4.8GHz · AM4 · 105W [2020]","sk":"AM4","tdp":105,"pf":60},
-  {"id":"r9-5950x","n":"AMD Ryzen 9 5950X","p":249,"inf":"16c/32t · 4.9GHz · AM4 · 105W [2020]","sk":"AM4","tdp":105,"pf":66},
-
-  {"id":"g_am5_7000","g":true,"n":"──── AMD AM5 — Ryzen 7000 (2022-2023) ────"},
-  {"id":"r5-7500f","n":"AMD Ryzen 5 7500F","p":139,"inf":"6c/12t · 5.0GHz · AM5 · 65W · sans iGPU [2023]","sk":"AM5","tdp":65,"pf":48},
-  {"id":"r5-7600","n":"AMD Ryzen 5 7600","p":149,"inf":"6c/12t · 5.1GHz · AM5 · 65W [2022]","sk":"AM5","tdp":65,"pf":50},
-  {"id":"r5-7600x","n":"AMD Ryzen 5 7600X","p":159,"inf":"6c/12t · 5.3GHz · AM5 · 105W [2022]","sk":"AM5","tdp":105,"pf":53},
-  {"id":"r7-7700","n":"AMD Ryzen 7 7700","p":189,"inf":"8c/16t · 5.3GHz · AM5 · 65W [2023]","sk":"AM5","tdp":65,"pf":62},
-  {"id":"r7-7700x","n":"AMD Ryzen 7 7700X","p":209,"inf":"8c/16t · 5.4GHz · AM5 · 105W [2022]","sk":"AM5","tdp":105,"pf":65},
-  {"id":"r7-7800x3d","n":"AMD Ryzen 7 7800X3D ⭐","p":299,"inf":"8c/16t · 5.0GHz · AM5 · 120W · 3D V-Cache — roi gaming [2023]","sk":"AM5","tdp":120,"pf":83},
-  {"id":"r9-7900","n":"AMD Ryzen 9 7900","p":239,"inf":"12c/24t · 5.4GHz · AM5 · 65W [2023]","sk":"AM5","tdp":65,"pf":68},
-  {"id":"r9-7900x","n":"AMD Ryzen 9 7900X","p":279,"inf":"12c/24t · 5.6GHz · AM5 · 170W [2022]","sk":"AM5","tdp":170,"pf":72},
-  {"id":"r9-7900x3d","n":"AMD Ryzen 9 7900X3D","p":349,"inf":"12c/24t · 5.6GHz · AM5 · 120W · 3D V-Cache [2023]","sk":"AM5","tdp":120,"pf":80},
-  {"id":"r9-7950x","n":"AMD Ryzen 9 7950X","p":419,"inf":"16c/32t · 5.7GHz · AM5 · 170W [2022]","sk":"AM5","tdp":170,"pf":80},
-  {"id":"r9-7950x3d","n":"AMD Ryzen 9 7950X3D","p":489,"inf":"16c/32t · 5.7GHz · AM5 · 170W · 3D V-Cache [2023]","sk":"AM5","tdp":170,"pf":88},
-
-  {"id":"g_am5_9000","g":true,"n":"──── AMD AM5 — Ryzen 9000 Zen 5 (2024-2025) ────"},
-  {"id":"r5-9600","n":"AMD Ryzen 5 9600","p":189,"inf":"6c/12t · 5.3GHz · AM5 · 65W · Zen 5 [2024]","sk":"AM5","tdp":65,"pf":56},
-  {"id":"r5-9600x","n":"AMD Ryzen 5 9600X","p":219,"inf":"6c/12t · 5.4GHz · AM5 · 65W · Zen 5 [2024]","sk":"AM5","tdp":65,"pf":60},
-  {"id":"r7-9700","n":"AMD Ryzen 7 9700","p":269,"inf":"8c/16t · 5.4GHz · AM5 · 65W · Zen 5 [2024]","sk":"AM5","tdp":65,"pf":66},
-  {"id":"r7-9700x","n":"AMD Ryzen 7 9700X","p":299,"inf":"8c/16t · 5.5GHz · AM5 · 65W · Zen 5 [2024]","sk":"AM5","tdp":65,"pf":70},
-  {"id":"r7-9800x3d","n":"AMD Ryzen 7 9800X3D ⭐","p":449,"inf":"8c/16t · 5.2GHz · AM5 · 120W · Zen 5 3D V-Cache — meilleur gaming 2026 [2024]","sk":"AM5","tdp":120,"pf":93},
-  {"id":"r9-9900","n":"AMD Ryzen 9 9900","p":329,"inf":"12c/24t · 5.4GHz · AM5 · 65W · Zen 5 [2024]","sk":"AM5","tdp":65,"pf":76},
-  {"id":"r9-9900x","n":"AMD Ryzen 9 9900X","p":379,"inf":"12c/24t · 5.6GHz · AM5 · 120W · Zen 5 [2024]","sk":"AM5","tdp":120,"pf":80},
-  {"id":"r9-9950x","n":"AMD Ryzen 9 9950X","p":589,"inf":"16c/32t · 5.7GHz · AM5 · 170W · Zen 5 [2024]","sk":"AM5","tdp":170,"pf":88},
-  {"id":"r9-9950x3d","n":"AMD Ryzen 9 9950X3D","p":799,"inf":"16c/32t · AM5 · 170W · V-Cache gen2 — ultime 2026 [2025]","sk":"AM5","tdp":170,"pf":97},
-
-  {"id":"g_i12","g":true,"n":"──── Intel LGA1700 — 12e gen Alder Lake (2021-2022) ────"},
-  {"id":"i3-12100","n":"Intel Core i3-12100","p":75,"inf":"4c/8t · 4.3GHz · LGA1700 · 60W · iGPU UHD 730 [2022]","sk":"LGA1700","tdp":60,"pf":26},
-  {"id":"i3-12100f","n":"Intel Core i3-12100F","p":65,"inf":"4c/8t · 4.3GHz · LGA1700 · 58W · sans iGPU [2022]","sk":"LGA1700","tdp":58,"pf":28},
-  {"id":"i5-12400","n":"Intel Core i5-12400","p":119,"inf":"6c/12t · 4.4GHz · LGA1700 · 65W · iGPU [2022]","sk":"LGA1700","tdp":65,"pf":46},
-  {"id":"i5-12400f","n":"Intel Core i5-12400F","p":99,"inf":"6c/12t · 4.4GHz · LGA1700 · 65W · sans iGPU [2022]","sk":"LGA1700","tdp":65,"pf":48},
-  {"id":"i5-12600k","n":"Intel Core i5-12600K","p":139,"inf":"10c(6P+4E) · 4.9GHz · LGA1700 · 125W [2021]","sk":"LGA1700","tdp":125,"pf":56},
-  {"id":"i5-12600kf","n":"Intel Core i5-12600KF","p":129,"inf":"10c(6P+4E) · 4.9GHz · LGA1700 · 125W · sans iGPU [2021]","sk":"LGA1700","tdp":125,"pf":56},
-  {"id":"i7-12700","n":"Intel Core i7-12700","p":159,"inf":"12c(8P+4E) · 4.9GHz · LGA1700 · 65W · iGPU [2021]","sk":"LGA1700","tdp":65,"pf":63},
-  {"id":"i7-12700f","n":"Intel Core i7-12700F","p":149,"inf":"12c(8P+4E) · 4.9GHz · LGA1700 · 65W · sans iGPU [2021]","sk":"LGA1700","tdp":65,"pf":63},
-  {"id":"i7-12700k","n":"Intel Core i7-12700K","p":179,"inf":"12c(8P+4E) · 5.0GHz · LGA1700 · 125W [2021]","sk":"LGA1700","tdp":125,"pf":66},
-  {"id":"i7-12700kf","n":"Intel Core i7-12700KF","p":169,"inf":"12c(8P+4E) · 5.0GHz · LGA1700 · 125W · sans iGPU [2021]","sk":"LGA1700","tdp":125,"pf":66},
-  {"id":"i9-12900k","n":"Intel Core i9-12900K","p":249,"inf":"16c(8P+8E) · 5.2GHz · LGA1700 · 241W [2021]","sk":"LGA1700","tdp":241,"pf":74},
-  {"id":"i9-12900kf","n":"Intel Core i9-12900KF","p":239,"inf":"16c(8P+8E) · 5.2GHz · LGA1700 · 241W · sans iGPU [2021]","sk":"LGA1700","tdp":241,"pf":74},
-  {"id":"i9-12900ks","n":"Intel Core i9-12900KS","p":279,"inf":"16c(8P+8E) · 5.5GHz · LGA1700 · 150W — boost max [2022]","sk":"LGA1700","tdp":150,"pf":76},
-
-  {"id":"g_i13","g":true,"n":"──── Intel LGA1700 — 13e gen Raptor Lake (2022-2023) ────"},
-  {"id":"i3-13100","n":"Intel Core i3-13100","p":85,"inf":"4c/8t · 4.5GHz · LGA1700 · 60W · iGPU [2022]","sk":"LGA1700","tdp":60,"pf":29},
-  {"id":"i3-13100f","n":"Intel Core i3-13100F","p":75,"inf":"4c/8t · 4.5GHz · LGA1700 · 58W · sans iGPU [2022]","sk":"LGA1700","tdp":58,"pf":31},
-  {"id":"i5-13400","n":"Intel Core i5-13400","p":149,"inf":"10c(6P+4E) · 4.6GHz · LGA1700 · 65W · iGPU [2023]","sk":"LGA1700","tdp":65,"pf":54},
-  {"id":"i5-13400f","n":"Intel Core i5-13400F","p":129,"inf":"10c(6P+4E) · 4.6GHz · LGA1700 · 65W · sans iGPU [2023]","sk":"LGA1700","tdp":65,"pf":56},
-  {"id":"i5-13500","n":"Intel Core i5-13500","p":159,"inf":"14c(6P+8E) · 4.8GHz · LGA1700 · 65W · iGPU [2022]","sk":"LGA1700","tdp":65,"pf":60},
-  {"id":"i5-13600k","n":"Intel Core i5-13600K","p":199,"inf":"14c(6P+8E) · 5.1GHz · LGA1700 · 125W [2022]","sk":"LGA1700","tdp":125,"pf":66},
-  {"id":"i5-13600kf","n":"Intel Core i5-13600KF","p":189,"inf":"14c(6P+8E) · 5.1GHz · LGA1700 · 125W · sans iGPU [2022]","sk":"LGA1700","tdp":125,"pf":66},
-  {"id":"i7-13700","n":"Intel Core i7-13700","p":239,"inf":"16c(8P+8E) · 5.2GHz · LGA1700 · 65W · iGPU [2022]","sk":"LGA1700","tdp":65,"pf":70},
-  {"id":"i7-13700f","n":"Intel Core i7-13700F","p":229,"inf":"16c(8P+8E) · 5.2GHz · LGA1700 · 65W · sans iGPU [2022]","sk":"LGA1700","tdp":65,"pf":70},
-  {"id":"i7-13700k","n":"Intel Core i7-13700K","p":269,"inf":"16c(8P+8E) · 5.4GHz · LGA1700 · 125W [2022]","sk":"LGA1700","tdp":125,"pf":74},
-  {"id":"i7-13700kf","n":"Intel Core i7-13700KF","p":259,"inf":"16c(8P+8E) · 5.4GHz · LGA1700 · 125W · sans iGPU [2022]","sk":"LGA1700","tdp":125,"pf":74},
-  {"id":"i9-13900","n":"Intel Core i9-13900","p":319,"inf":"24c(8P+16E) · 5.6GHz · LGA1700 · 65W · iGPU [2022]","sk":"LGA1700","tdp":65,"pf":80},
-  {"id":"i9-13900f","n":"Intel Core i9-13900F","p":309,"inf":"24c(8P+16E) · 5.6GHz · LGA1700 · 65W · sans iGPU [2022]","sk":"LGA1700","tdp":65,"pf":80},
-  {"id":"i9-13900k","n":"Intel Core i9-13900K","p":359,"inf":"24c(8P+16E) · 5.8GHz · LGA1700 · 253W [2022]","sk":"LGA1700","tdp":253,"pf":84},
-  {"id":"i9-13900kf","n":"Intel Core i9-13900KF","p":349,"inf":"24c(8P+16E) · 5.8GHz · LGA1700 · 253W · sans iGPU [2022]","sk":"LGA1700","tdp":253,"pf":84},
-  {"id":"i9-13900ks","n":"Intel Core i9-13900KS","p":409,"inf":"24c(8P+16E) · 6.0GHz · LGA1700 · 253W — boost max [2023]","sk":"LGA1700","tdp":253,"pf":86},
-
-  {"id":"g_i14","g":true,"n":"──── Intel LGA1700 — 14e gen Raptor Lake Refresh (2023-2024) ────"},
-  {"id":"i3-14100","n":"Intel Core i3-14100","p":95,"inf":"4c/8t · 4.7GHz · LGA1700 · 60W · iGPU [2024]","sk":"LGA1700","tdp":60,"pf":31},
-  {"id":"i3-14100f","n":"Intel Core i3-14100F","p":85,"inf":"4c/8t · 4.7GHz · LGA1700 · 58W · sans iGPU [2024]","sk":"LGA1700","tdp":58,"pf":33},
-  {"id":"i5-14400","n":"Intel Core i5-14400","p":159,"inf":"10c(6P+4E) · 4.7GHz · LGA1700 · 65W · iGPU [2024]","sk":"LGA1700","tdp":65,"pf":56},
-  {"id":"i5-14400f","n":"Intel Core i5-14400F","p":139,"inf":"10c(6P+4E) · 4.7GHz · LGA1700 · 65W · sans iGPU [2024]","sk":"LGA1700","tdp":65,"pf":58},
-  {"id":"i5-14500","n":"Intel Core i5-14500","p":169,"inf":"14c(6P+8E) · 5.0GHz · LGA1700 · 65W · iGPU [2024]","sk":"LGA1700","tdp":65,"pf":60},
-  {"id":"i5-14600k","n":"Intel Core i5-14600K","p":209,"inf":"14c(6P+8E) · 5.3GHz · LGA1700 · 125W [2023]","sk":"LGA1700","tdp":125,"pf":63},
-  {"id":"i5-14600kf","n":"Intel Core i5-14600KF","p":199,"inf":"14c(6P+8E) · 5.3GHz · LGA1700 · 125W · sans iGPU [2023]","sk":"LGA1700","tdp":125,"pf":63},
-  {"id":"i7-14700","n":"Intel Core i7-14700","p":279,"inf":"20c(8P+12E) · 5.4GHz · LGA1700 · 65W · iGPU [2023]","sk":"LGA1700","tdp":65,"pf":72},
-  {"id":"i7-14700f","n":"Intel Core i7-14700F","p":269,"inf":"20c(8P+12E) · 5.4GHz · LGA1700 · 65W · sans iGPU [2023]","sk":"LGA1700","tdp":65,"pf":72},
-  {"id":"i7-14700k","n":"Intel Core i7-14700K","p":319,"inf":"20c(8P+12E) · 5.6GHz · LGA1700 · 125W [2023]","sk":"LGA1700","tdp":125,"pf":76},
-  {"id":"i7-14700kf","n":"Intel Core i7-14700KF","p":309,"inf":"20c(8P+12E) · 5.6GHz · LGA1700 · 125W · sans iGPU [2023]","sk":"LGA1700","tdp":125,"pf":76},
-  {"id":"i9-14900","n":"Intel Core i9-14900","p":379,"inf":"24c(8P+16E) · 5.8GHz · LGA1700 · 65W · iGPU [2023]","sk":"LGA1700","tdp":65,"pf":81},
-  {"id":"i9-14900f","n":"Intel Core i9-14900F","p":369,"inf":"24c(8P+16E) · 5.8GHz · LGA1700 · 65W · sans iGPU [2023]","sk":"LGA1700","tdp":65,"pf":81},
-  {"id":"i9-14900k","n":"Intel Core i9-14900K","p":449,"inf":"24c(8P+16E) · 6.0GHz · LGA1700 · 253W [2023]","sk":"LGA1700","tdp":253,"pf":85},
-  {"id":"i9-14900kf","n":"Intel Core i9-14900KF","p":439,"inf":"24c(8P+16E) · 6.0GHz · LGA1700 · 253W · sans iGPU [2023]","sk":"LGA1700","tdp":253,"pf":85},
-  {"id":"i9-14900ks","n":"Intel Core i9-14900KS","p":499,"inf":"24c(8P+16E) · 6.2GHz · LGA1700 · 253W — boost absolu [2024]","sk":"LGA1700","tdp":253,"pf":87},
-
-  {"id":"g_arrow","g":true,"n":"──── Intel LGA1851 — Arrow Lake Core Ultra 200S (2024-2025) ────"},
-  {"id":"i5-245","n":"Intel Core Ultra 5 245","p":209,"inf":"14c(6P+8E) · 5.1GHz · LGA1851 · 65W · iGPU [2025]","sk":"LGA1851","tdp":65,"pf":55},
-  {"id":"i5-245k","n":"Intel Core Ultra 5 245K","p":269,"inf":"14c(6P+8E) · 5.2GHz · LGA1851 · 125W · iGPU [2024]","sk":"LGA1851","tdp":125,"pf":58},
-  {"id":"i5-245kf","n":"Intel Core Ultra 5 245KF","p":249,"inf":"14c(6P+8E) · 5.2GHz · LGA1851 · 125W · sans iGPU [2024]","sk":"LGA1851","tdp":125,"pf":58},
-  {"id":"i7-265","n":"Intel Core Ultra 7 265","p":289,"inf":"20c(8P+12E) · 5.3GHz · LGA1851 · 65W · iGPU [2025]","sk":"LGA1851","tdp":65,"pf":68},
-  {"id":"i7-265k","n":"Intel Core Ultra 7 265K","p":379,"inf":"20c(8P+12E) · 5.5GHz · LGA1851 · 125W · iGPU [2024]","sk":"LGA1851","tdp":125,"pf":73},
-  {"id":"i7-265kf","n":"Intel Core Ultra 7 265KF","p":359,"inf":"20c(8P+12E) · 5.5GHz · LGA1851 · 125W · sans iGPU [2024]","sk":"LGA1851","tdp":125,"pf":73},
-  {"id":"i9-285","n":"Intel Core Ultra 9 285","p":409,"inf":"24c(8P+16E) · 5.6GHz · LGA1851 · 65W · iGPU [2025]","sk":"LGA1851","tdp":65,"pf":81},
-  {"id":"i9-285k","n":"Intel Core Ultra 9 285K","p":499,"inf":"24c(8P+16E) · 5.7GHz · LGA1851 · 253W · iGPU [2024]","sk":"LGA1851","tdp":253,"pf":86}
+  {
+    "id": "none",
+    "n": "-- Choisir un CPU --",
+    "p": 0,
+    "inf": "",
+    "sk": "",
+    "tdp": 0,
+    "pf": 0
+  },
+  {
+    "id": "g_am4_entry",
+    "g": true,
+    "n": "──── AMD AM4 — Entrée de gamme (2020-2023) ────"
+  },
+  {
+    "id": "r3-4100",
+    "n": "AMD Ryzen 3 4100",
+    "p": 55,
+    "inf": "4c/8t · 3.8GHz boost 4.0GHz · AM4 · 65W · DDR4 [2021]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 20
+  },
+  {
+    "id": "r3-5300g",
+    "n": "AMD Ryzen 3 5300G",
+    "p": 75,
+    "inf": "4c/8t · 4.2GHz · AM4 · iGPU Vega 6 · 65W [2021]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 26
+  },
+  {
+    "id": "r5-5500",
+    "n": "AMD Ryzen 5 5500",
+    "p": 72,
+    "inf": "6c/12t · 4.2GHz · AM4 · 65W [2022]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 36
+  },
+  {
+    "id": "r5-5500gt",
+    "n": "AMD Ryzen 5 5500GT",
+    "p": 85,
+    "inf": "6c/12t · 4.4GHz · AM4 · iGPU Vega 7 · 65W [2023]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 38
+  },
+  {
+    "id": "r5-5600g",
+    "n": "AMD Ryzen 5 5600G",
+    "p": 95,
+    "inf": "6c/12t · 4.4GHz · AM4 · iGPU Vega 7 · 65W [2021]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 40
+  },
+  {
+    "id": "r5-5600",
+    "n": "AMD Ryzen 5 5600",
+    "p": 85,
+    "inf": "6c/12t · 4.4GHz · AM4 · 65W — excellent Q/P [2021]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 42
+  },
+  {
+    "id": "r5-5600x",
+    "n": "AMD Ryzen 5 5600X",
+    "p": 99,
+    "inf": "6c/12t · 4.6GHz · AM4 · 65W [2020]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 44
+  },
+  {
+    "id": "g_am4_mid",
+    "g": true,
+    "n": "──── AMD AM4 — Milieu & haut (2020-2023) ────"
+  },
+  {
+    "id": "r7-5700",
+    "n": "AMD Ryzen 7 5700",
+    "p": 109,
+    "inf": "8c/16t · 4.6GHz · AM4 · 65W [2022]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 48
+  },
+  {
+    "id": "r7-5700g",
+    "n": "AMD Ryzen 7 5700G",
+    "p": 129,
+    "inf": "8c/16t · 4.6GHz · AM4 · iGPU Vega 8 · 65W [2021]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 50
+  },
+  {
+    "id": "r7-5700x",
+    "n": "AMD Ryzen 7 5700X",
+    "p": 129,
+    "inf": "8c/16t · 4.6GHz · AM4 · 65W [2022]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 52
+  },
+  {
+    "id": "r7-5700x3d",
+    "n": "AMD Ryzen 7 5700X3D",
+    "p": 149,
+    "inf": "8c/16t · 4.1GHz · AM4 · 65W · 3D V-Cache [2023]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 64
+  },
+  {
+    "id": "r7-5800",
+    "n": "AMD Ryzen 7 5800",
+    "p": 135,
+    "inf": "8c/16t · 4.6GHz · AM4 · 65W [2021]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 50
+  },
+  {
+    "id": "r7-5800x",
+    "n": "AMD Ryzen 7 5800X",
+    "p": 145,
+    "inf": "8c/16t · 4.7GHz · AM4 · 105W [2020]",
+    "sk": "AM4",
+    "tdp": 105,
+    "pf": 54
+  },
+  {
+    "id": "r7-5800x3d",
+    "n": "AMD Ryzen 7 5800X3D",
+    "p": 169,
+    "inf": "8c/16t · 4.5GHz · AM4 · 105W · 3D V-Cache [2022]",
+    "sk": "AM4",
+    "tdp": 105,
+    "pf": 70
+  },
+  {
+    "id": "r9-5900",
+    "n": "AMD Ryzen 9 5900",
+    "p": 169,
+    "inf": "12c/24t · 4.7GHz · AM4 · 65W [2021]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 58
+  },
+  {
+    "id": "r9-5900x",
+    "n": "AMD Ryzen 9 5900X",
+    "p": 189,
+    "inf": "12c/24t · 4.8GHz · AM4 · 105W [2020]",
+    "sk": "AM4",
+    "tdp": 105,
+    "pf": 60
+  },
+  {
+    "id": "r9-5950x",
+    "n": "AMD Ryzen 9 5950X",
+    "p": 249,
+    "inf": "16c/32t · 4.9GHz · AM4 · 105W [2020]",
+    "sk": "AM4",
+    "tdp": 105,
+    "pf": 66
+  },
+  {
+    "id": "g_am5_7000",
+    "g": true,
+    "n": "──── AMD AM5 — Ryzen 7000 (2022-2023) ────"
+  },
+  {
+    "id": "r5-7500f",
+    "n": "AMD Ryzen 5 7500F",
+    "p": 139,
+    "inf": "6c/12t · 5.0GHz · AM5 · 65W · sans iGPU [2023]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 48
+  },
+  {
+    "id": "r5-7600",
+    "n": "AMD Ryzen 5 7600",
+    "p": 149,
+    "inf": "6c/12t · 5.1GHz · AM5 · 65W [2022]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 50
+  },
+  {
+    "id": "r5-7600x",
+    "n": "AMD Ryzen 5 7600X",
+    "p": 159,
+    "inf": "6c/12t · 5.3GHz · AM5 · 105W [2022]",
+    "sk": "AM5",
+    "tdp": 105,
+    "pf": 53
+  },
+  {
+    "id": "r7-7700",
+    "n": "AMD Ryzen 7 7700",
+    "p": 189,
+    "inf": "8c/16t · 5.3GHz · AM5 · 65W [2023]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 62
+  },
+  {
+    "id": "r7-7700x",
+    "n": "AMD Ryzen 7 7700X",
+    "p": 209,
+    "inf": "8c/16t · 5.4GHz · AM5 · 105W [2022]",
+    "sk": "AM5",
+    "tdp": 105,
+    "pf": 65
+  },
+  {
+    "id": "r7-7800x3d",
+    "n": "AMD Ryzen 7 7800X3D ⭐",
+    "p": 299,
+    "inf": "8c/16t · 5.0GHz · AM5 · 120W · 3D V-Cache — roi gaming [2023]",
+    "sk": "AM5",
+    "tdp": 120,
+    "pf": 83
+  },
+  {
+    "id": "r9-7900",
+    "n": "AMD Ryzen 9 7900",
+    "p": 239,
+    "inf": "12c/24t · 5.4GHz · AM5 · 65W [2023]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 68
+  },
+  {
+    "id": "r9-7900x",
+    "n": "AMD Ryzen 9 7900X",
+    "p": 279,
+    "inf": "12c/24t · 5.6GHz · AM5 · 170W [2022]",
+    "sk": "AM5",
+    "tdp": 170,
+    "pf": 72
+  },
+  {
+    "id": "r9-7900x3d",
+    "n": "AMD Ryzen 9 7900X3D",
+    "p": 349,
+    "inf": "12c/24t · 5.6GHz · AM5 · 120W · 3D V-Cache [2023]",
+    "sk": "AM5",
+    "tdp": 120,
+    "pf": 80
+  },
+  {
+    "id": "r9-7950x",
+    "n": "AMD Ryzen 9 7950X",
+    "p": 419,
+    "inf": "16c/32t · 5.7GHz · AM5 · 170W [2022]",
+    "sk": "AM5",
+    "tdp": 170,
+    "pf": 80
+  },
+  {
+    "id": "r9-7950x3d",
+    "n": "AMD Ryzen 9 7950X3D",
+    "p": 489,
+    "inf": "16c/32t · 5.7GHz · AM5 · 170W · 3D V-Cache [2023]",
+    "sk": "AM5",
+    "tdp": 170,
+    "pf": 88
+  },
+  {
+    "id": "g_am5_9000",
+    "g": true,
+    "n": "──── AMD AM5 — Ryzen 9000 Zen 5 (2024-2025) ────"
+  },
+  {
+    "id": "r5-9600",
+    "n": "AMD Ryzen 5 9600",
+    "p": 189,
+    "inf": "6c/12t · 5.3GHz · AM5 · 65W · Zen 5 [2024]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 56
+  },
+  {
+    "id": "r5-9600x",
+    "n": "AMD Ryzen 5 9600X",
+    "p": 219,
+    "inf": "6c/12t · 5.4GHz · AM5 · 65W · Zen 5 [2024]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 60
+  },
+  {
+    "id": "r7-9700",
+    "n": "AMD Ryzen 7 9700",
+    "p": 269,
+    "inf": "8c/16t · 5.4GHz · AM5 · 65W · Zen 5 [2024]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 66
+  },
+  {
+    "id": "r7-9700x",
+    "n": "AMD Ryzen 7 9700X",
+    "p": 299,
+    "inf": "8c/16t · 5.5GHz · AM5 · 65W · Zen 5 [2024]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 70
+  },
+  {
+    "id": "r7-9800x3d",
+    "n": "AMD Ryzen 7 9800X3D ⭐",
+    "p": 449,
+    "inf": "8c/16t · 5.2GHz · AM5 · 120W · Zen 5 3D V-Cache — meilleur gaming 2026 [2024]",
+    "sk": "AM5",
+    "tdp": 120,
+    "pf": 93
+  },
+  {
+    "id": "r9-9900",
+    "n": "AMD Ryzen 9 9900",
+    "p": 329,
+    "inf": "12c/24t · 5.4GHz · AM5 · 65W · Zen 5 [2024]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 76
+  },
+  {
+    "id": "r9-9900x",
+    "n": "AMD Ryzen 9 9900X",
+    "p": 379,
+    "inf": "12c/24t · 5.6GHz · AM5 · 120W · Zen 5 [2024]",
+    "sk": "AM5",
+    "tdp": 120,
+    "pf": 80
+  },
+  {
+    "id": "r9-9950x",
+    "n": "AMD Ryzen 9 9950X",
+    "p": 589,
+    "inf": "16c/32t · 5.7GHz · AM5 · 170W · Zen 5 [2024]",
+    "sk": "AM5",
+    "tdp": 170,
+    "pf": 88
+  },
+  {
+    "id": "r9-9950x3d",
+    "n": "AMD Ryzen 9 9950X3D",
+    "p": 799,
+    "inf": "16c/32t · AM5 · 170W · V-Cache gen2 — ultime 2026 [2025]",
+    "sk": "AM5",
+    "tdp": 170,
+    "pf": 97
+  },
+  {
+    "id": "g_i12",
+    "g": true,
+    "n": "──── Intel LGA1700 — 12e gen Alder Lake (2021-2022) ────"
+  },
+  {
+    "id": "i3-12100",
+    "n": "Intel Core i3-12100",
+    "p": 75,
+    "inf": "4c/8t · 4.3GHz · LGA1700 · 60W · iGPU UHD 730 [2022]",
+    "sk": "LGA1700",
+    "tdp": 60,
+    "pf": 26
+  },
+  {
+    "id": "i3-12100f",
+    "n": "Intel Core i3-12100F",
+    "p": 65,
+    "inf": "4c/8t · 4.3GHz · LGA1700 · 58W · sans iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 58,
+    "pf": 28
+  },
+  {
+    "id": "i5-12400",
+    "n": "Intel Core i5-12400",
+    "p": 119,
+    "inf": "6c/12t · 4.4GHz · LGA1700 · 65W · iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 46
+  },
+  {
+    "id": "i5-12400f",
+    "n": "Intel Core i5-12400F",
+    "p": 99,
+    "inf": "6c/12t · 4.4GHz · LGA1700 · 65W · sans iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 48
+  },
+  {
+    "id": "i5-12600k",
+    "n": "Intel Core i5-12600K",
+    "p": 139,
+    "inf": "10c(6P+4E) · 4.9GHz · LGA1700 · 125W [2021]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 56
+  },
+  {
+    "id": "i5-12600kf",
+    "n": "Intel Core i5-12600KF",
+    "p": 129,
+    "inf": "10c(6P+4E) · 4.9GHz · LGA1700 · 125W · sans iGPU [2021]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 56
+  },
+  {
+    "id": "i7-12700",
+    "n": "Intel Core i7-12700",
+    "p": 159,
+    "inf": "12c(8P+4E) · 4.9GHz · LGA1700 · 65W · iGPU [2021]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 63
+  },
+  {
+    "id": "i7-12700f",
+    "n": "Intel Core i7-12700F",
+    "p": 149,
+    "inf": "12c(8P+4E) · 4.9GHz · LGA1700 · 65W · sans iGPU [2021]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 63
+  },
+  {
+    "id": "i7-12700k",
+    "n": "Intel Core i7-12700K",
+    "p": 179,
+    "inf": "12c(8P+4E) · 5.0GHz · LGA1700 · 125W [2021]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 66
+  },
+  {
+    "id": "i7-12700kf",
+    "n": "Intel Core i7-12700KF",
+    "p": 169,
+    "inf": "12c(8P+4E) · 5.0GHz · LGA1700 · 125W · sans iGPU [2021]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 66
+  },
+  {
+    "id": "i9-12900k",
+    "n": "Intel Core i9-12900K",
+    "p": 249,
+    "inf": "16c(8P+8E) · 5.2GHz · LGA1700 · 241W [2021]",
+    "sk": "LGA1700",
+    "tdp": 241,
+    "pf": 74
+  },
+  {
+    "id": "i9-12900kf",
+    "n": "Intel Core i9-12900KF",
+    "p": 239,
+    "inf": "16c(8P+8E) · 5.2GHz · LGA1700 · 241W · sans iGPU [2021]",
+    "sk": "LGA1700",
+    "tdp": 241,
+    "pf": 74
+  },
+  {
+    "id": "i9-12900ks",
+    "n": "Intel Core i9-12900KS",
+    "p": 279,
+    "inf": "16c(8P+8E) · 5.5GHz · LGA1700 · 150W — boost max [2022]",
+    "sk": "LGA1700",
+    "tdp": 150,
+    "pf": 76
+  },
+  {
+    "id": "g_i13",
+    "g": true,
+    "n": "──── Intel LGA1700 — 13e gen Raptor Lake (2022-2023) ────"
+  },
+  {
+    "id": "i3-13100",
+    "n": "Intel Core i3-13100",
+    "p": 85,
+    "inf": "4c/8t · 4.5GHz · LGA1700 · 60W · iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 60,
+    "pf": 29
+  },
+  {
+    "id": "i3-13100f",
+    "n": "Intel Core i3-13100F",
+    "p": 75,
+    "inf": "4c/8t · 4.5GHz · LGA1700 · 58W · sans iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 58,
+    "pf": 31
+  },
+  {
+    "id": "i5-13400",
+    "n": "Intel Core i5-13400",
+    "p": 149,
+    "inf": "10c(6P+4E) · 4.6GHz · LGA1700 · 65W · iGPU [2023]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 54
+  },
+  {
+    "id": "i5-13400f",
+    "n": "Intel Core i5-13400F",
+    "p": 129,
+    "inf": "10c(6P+4E) · 4.6GHz · LGA1700 · 65W · sans iGPU [2023]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 56
+  },
+  {
+    "id": "i5-13500",
+    "n": "Intel Core i5-13500",
+    "p": 159,
+    "inf": "14c(6P+8E) · 4.8GHz · LGA1700 · 65W · iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 60
+  },
+  {
+    "id": "i5-13600k",
+    "n": "Intel Core i5-13600K",
+    "p": 199,
+    "inf": "14c(6P+8E) · 5.1GHz · LGA1700 · 125W [2022]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 66
+  },
+  {
+    "id": "i5-13600kf",
+    "n": "Intel Core i5-13600KF",
+    "p": 189,
+    "inf": "14c(6P+8E) · 5.1GHz · LGA1700 · 125W · sans iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 66
+  },
+  {
+    "id": "i7-13700",
+    "n": "Intel Core i7-13700",
+    "p": 239,
+    "inf": "16c(8P+8E) · 5.2GHz · LGA1700 · 65W · iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 70
+  },
+  {
+    "id": "i7-13700f",
+    "n": "Intel Core i7-13700F",
+    "p": 229,
+    "inf": "16c(8P+8E) · 5.2GHz · LGA1700 · 65W · sans iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 70
+  },
+  {
+    "id": "i7-13700k",
+    "n": "Intel Core i7-13700K",
+    "p": 269,
+    "inf": "16c(8P+8E) · 5.4GHz · LGA1700 · 125W [2022]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 74
+  },
+  {
+    "id": "i7-13700kf",
+    "n": "Intel Core i7-13700KF",
+    "p": 259,
+    "inf": "16c(8P+8E) · 5.4GHz · LGA1700 · 125W · sans iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 74
+  },
+  {
+    "id": "i9-13900",
+    "n": "Intel Core i9-13900",
+    "p": 319,
+    "inf": "24c(8P+16E) · 5.6GHz · LGA1700 · 65W · iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 80
+  },
+  {
+    "id": "i9-13900f",
+    "n": "Intel Core i9-13900F",
+    "p": 309,
+    "inf": "24c(8P+16E) · 5.6GHz · LGA1700 · 65W · sans iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 80
+  },
+  {
+    "id": "i9-13900k",
+    "n": "Intel Core i9-13900K",
+    "p": 359,
+    "inf": "24c(8P+16E) · 5.8GHz · LGA1700 · 253W [2022]",
+    "sk": "LGA1700",
+    "tdp": 253,
+    "pf": 84
+  },
+  {
+    "id": "i9-13900kf",
+    "n": "Intel Core i9-13900KF",
+    "p": 349,
+    "inf": "24c(8P+16E) · 5.8GHz · LGA1700 · 253W · sans iGPU [2022]",
+    "sk": "LGA1700",
+    "tdp": 253,
+    "pf": 84
+  },
+  {
+    "id": "i9-13900ks",
+    "n": "Intel Core i9-13900KS",
+    "p": 409,
+    "inf": "24c(8P+16E) · 6.0GHz · LGA1700 · 253W — boost max [2023]",
+    "sk": "LGA1700",
+    "tdp": 253,
+    "pf": 86
+  },
+  {
+    "id": "g_i14",
+    "g": true,
+    "n": "──── Intel LGA1700 — 14e gen Raptor Lake Refresh (2023-2024) ────"
+  },
+  {
+    "id": "i3-14100",
+    "n": "Intel Core i3-14100",
+    "p": 95,
+    "inf": "4c/8t · 4.7GHz · LGA1700 · 60W · iGPU [2024]",
+    "sk": "LGA1700",
+    "tdp": 60,
+    "pf": 31
+  },
+  {
+    "id": "i3-14100f",
+    "n": "Intel Core i3-14100F",
+    "p": 85,
+    "inf": "4c/8t · 4.7GHz · LGA1700 · 58W · sans iGPU [2024]",
+    "sk": "LGA1700",
+    "tdp": 58,
+    "pf": 33
+  },
+  {
+    "id": "i5-14400",
+    "n": "Intel Core i5-14400",
+    "p": 159,
+    "inf": "10c(6P+4E) · 4.7GHz · LGA1700 · 65W · iGPU [2024]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 56
+  },
+  {
+    "id": "i5-14400f",
+    "n": "Intel Core i5-14400F",
+    "p": 139,
+    "inf": "10c(6P+4E) · 4.7GHz · LGA1700 · 65W · sans iGPU [2024]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 58
+  },
+  {
+    "id": "i5-14500",
+    "n": "Intel Core i5-14500",
+    "p": 169,
+    "inf": "14c(6P+8E) · 5.0GHz · LGA1700 · 65W · iGPU [2024]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 60
+  },
+  {
+    "id": "i5-14600k",
+    "n": "Intel Core i5-14600K",
+    "p": 209,
+    "inf": "14c(6P+8E) · 5.3GHz · LGA1700 · 125W [2023]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 63
+  },
+  {
+    "id": "i5-14600kf",
+    "n": "Intel Core i5-14600KF",
+    "p": 199,
+    "inf": "14c(6P+8E) · 5.3GHz · LGA1700 · 125W · sans iGPU [2023]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 63
+  },
+  {
+    "id": "i7-14700",
+    "n": "Intel Core i7-14700",
+    "p": 279,
+    "inf": "20c(8P+12E) · 5.4GHz · LGA1700 · 65W · iGPU [2023]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 72
+  },
+  {
+    "id": "i7-14700f",
+    "n": "Intel Core i7-14700F",
+    "p": 269,
+    "inf": "20c(8P+12E) · 5.4GHz · LGA1700 · 65W · sans iGPU [2023]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 72
+  },
+  {
+    "id": "i7-14700k",
+    "n": "Intel Core i7-14700K",
+    "p": 319,
+    "inf": "20c(8P+12E) · 5.6GHz · LGA1700 · 125W [2023]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 76
+  },
+  {
+    "id": "i7-14700kf",
+    "n": "Intel Core i7-14700KF",
+    "p": 309,
+    "inf": "20c(8P+12E) · 5.6GHz · LGA1700 · 125W · sans iGPU [2023]",
+    "sk": "LGA1700",
+    "tdp": 125,
+    "pf": 76
+  },
+  {
+    "id": "i9-14900",
+    "n": "Intel Core i9-14900",
+    "p": 379,
+    "inf": "24c(8P+16E) · 5.8GHz · LGA1700 · 65W · iGPU [2023]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 81
+  },
+  {
+    "id": "i9-14900f",
+    "n": "Intel Core i9-14900F",
+    "p": 369,
+    "inf": "24c(8P+16E) · 5.8GHz · LGA1700 · 65W · sans iGPU [2023]",
+    "sk": "LGA1700",
+    "tdp": 65,
+    "pf": 81
+  },
+  {
+    "id": "i9-14900k",
+    "n": "Intel Core i9-14900K",
+    "p": 449,
+    "inf": "24c(8P+16E) · 6.0GHz · LGA1700 · 253W [2023]",
+    "sk": "LGA1700",
+    "tdp": 253,
+    "pf": 85
+  },
+  {
+    "id": "i9-14900kf",
+    "n": "Intel Core i9-14900KF",
+    "p": 439,
+    "inf": "24c(8P+16E) · 6.0GHz · LGA1700 · 253W · sans iGPU [2023]",
+    "sk": "LGA1700",
+    "tdp": 253,
+    "pf": 85
+  },
+  {
+    "id": "i9-14900ks",
+    "n": "Intel Core i9-14900KS",
+    "p": 499,
+    "inf": "24c(8P+16E) · 6.2GHz · LGA1700 · 253W — boost absolu [2024]",
+    "sk": "LGA1700",
+    "tdp": 253,
+    "pf": 87
+  },
+  {
+    "id": "g_arrow",
+    "g": true,
+    "n": "──── Intel LGA1851 — Arrow Lake Core Ultra 200S (2024-2025) ────"
+  },
+  {
+    "id": "i5-245",
+    "n": "Intel Core Ultra 5 245",
+    "p": 209,
+    "inf": "14c(6P+8E) · 5.1GHz · LGA1851 · 65W · iGPU [2025]",
+    "sk": "LGA1851",
+    "tdp": 65,
+    "pf": 55
+  },
+  {
+    "id": "i5-245k",
+    "n": "Intel Core Ultra 5 245K",
+    "p": 269,
+    "inf": "14c(6P+8E) · 5.2GHz · LGA1851 · 125W · iGPU [2024]",
+    "sk": "LGA1851",
+    "tdp": 125,
+    "pf": 58
+  },
+  {
+    "id": "i5-245kf",
+    "n": "Intel Core Ultra 5 245KF",
+    "p": 249,
+    "inf": "14c(6P+8E) · 5.2GHz · LGA1851 · 125W · sans iGPU [2024]",
+    "sk": "LGA1851",
+    "tdp": 125,
+    "pf": 58
+  },
+  {
+    "id": "i7-265",
+    "n": "Intel Core Ultra 7 265",
+    "p": 289,
+    "inf": "20c(8P+12E) · 5.3GHz · LGA1851 · 65W · iGPU [2025]",
+    "sk": "LGA1851",
+    "tdp": 65,
+    "pf": 68
+  },
+  {
+    "id": "i7-265k",
+    "n": "Intel Core Ultra 7 265K",
+    "p": 379,
+    "inf": "20c(8P+12E) · 5.5GHz · LGA1851 · 125W · iGPU [2024]",
+    "sk": "LGA1851",
+    "tdp": 125,
+    "pf": 73
+  },
+  {
+    "id": "i7-265kf",
+    "n": "Intel Core Ultra 7 265KF",
+    "p": 359,
+    "inf": "20c(8P+12E) · 5.5GHz · LGA1851 · 125W · sans iGPU [2024]",
+    "sk": "LGA1851",
+    "tdp": 125,
+    "pf": 73
+  },
+  {
+    "id": "i9-285",
+    "n": "Intel Core Ultra 9 285",
+    "p": 409,
+    "inf": "24c(8P+16E) · 5.6GHz · LGA1851 · 65W · iGPU [2025]",
+    "sk": "LGA1851",
+    "tdp": 65,
+    "pf": 81
+  },
+  {
+    "id": "i9-285k",
+    "n": "Intel Core Ultra 9 285K",
+    "p": 499,
+    "inf": "24c(8P+16E) · 5.7GHz · LGA1851 · 253W · iGPU [2024]",
+    "sk": "LGA1851",
+    "tdp": 253,
+    "pf": 86
+  },
+  {
+    "id": "g_am4_athlon",
+    "g": true,
+    "n": "──── AMD AM4 — Athlon / Entrée absolue ────"
+  },
+  {
+    "id": "athlon-3000g",
+    "n": "AMD Athlon 3000G",
+    "p": 42,
+    "inf": "2c/4t · 3.5GHz · AM4 · iGPU Vega 3 · 35W — bureau ultra budget",
+    "sk": "AM4",
+    "tdp": 35,
+    "pf": 8
+  },
+  {
+    "id": "athlon-gold-3150g",
+    "n": "AMD Athlon Gold 3150G",
+    "p": 48,
+    "inf": "4c/4t · 3.8GHz · AM4 · iGPU Vega 3 · 65W [2020]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 12
+  },
+  {
+    "id": "r3-4300g",
+    "n": "AMD Ryzen 3 4300G",
+    "p": 69,
+    "inf": "4c/8t · 4.0GHz · AM4 · iGPU Vega 6 · 65W [2020]",
+    "sk": "AM4",
+    "tdp": 65,
+    "pf": 22
+  },
+  {
+    "id": "g_am5_8000",
+    "g": true,
+    "n": "──── AMD AM5 — Ryzen 8000 Hawk Point (2024) ────"
+  },
+  {
+    "id": "r5-8500g",
+    "n": "AMD Ryzen 5 8500G",
+    "p": 149,
+    "inf": "6c/12t · 5.0GHz · AM5 · iGPU Radeon 740M · 65W [2024]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 42
+  },
+  {
+    "id": "r5-8600g",
+    "n": "AMD Ryzen 5 8600G",
+    "p": 189,
+    "inf": "6c/12t · 5.0GHz · AM5 · iGPU Radeon 760M · 65W [2024]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 46
+  },
+  {
+    "id": "r7-8700g",
+    "n": "AMD Ryzen 7 8700G ⭐",
+    "p": 299,
+    "inf": "8c/16t · 5.1GHz · AM5 · iGPU Radeon 780M · 65W — meilleur iGPU [2024]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 58
+  },
+  {
+    "id": "r7-8700",
+    "n": "AMD Ryzen 7 8700",
+    "p": 249,
+    "inf": "8c/16t · 5.2GHz · AM5 · 65W · Zen 4 [2024]",
+    "sk": "AM5",
+    "tdp": 65,
+    "pf": 55
+  },
+  {
+    "id": "g_intel_rocket",
+    "g": true,
+    "n": "──── Intel LGA1200 — Rocket Lake 11e gen (2021) ────"
+  },
+  {
+    "id": "i5-11400f",
+    "n": "Intel Core i5-11400F",
+    "p": 79,
+    "inf": "6c/12t · 4.4GHz · LGA1200 · 65W · sans iGPU — ancienne gen",
+    "sk": "LGA1200",
+    "tdp": 65,
+    "pf": 40
+  },
+  {
+    "id": "i7-11700k",
+    "n": "Intel Core i7-11700K",
+    "p": 109,
+    "inf": "8c/16t · 5.0GHz · LGA1200 · 125W [2021]",
+    "sk": "LGA1200",
+    "tdp": 125,
+    "pf": 55
+  },
+  {
+    "id": "g_intel_lunar",
+    "g": true,
+    "n": "──── Intel LGA1851 — Lunar Lake / Panther Lake (2025-2026) ────"
+  },
+  {
+    "id": "i5-250",
+    "n": "Intel Core Ultra 5 250",
+    "p": 219,
+    "inf": "14c · 5.0GHz · LGA1851 · 65W · iGPU [2025]",
+    "sk": "LGA1851",
+    "tdp": 65,
+    "pf": 52
+  },
+  {
+    "id": "i7-270",
+    "n": "Intel Core Ultra 7 270",
+    "p": 299,
+    "inf": "20c · 5.3GHz · LGA1851 · 65W · iGPU [2025]",
+    "sk": "LGA1851",
+    "tdp": 65,
+    "pf": 65
+  },
+  {
+    "id": "i9-290",
+    "n": "Intel Core Ultra 9 290",
+    "p": 419,
+    "inf": "24c · 5.5GHz · LGA1851 · 65W · iGPU [2025]",
+    "sk": "LGA1851",
+    "tdp": 65,
+    "pf": 79
+  }
 ]
