@@ -39,15 +39,11 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .cdd.open .cdd-trigger{border-color:#60a5fa}
 .cdd.open .cdd-trigger:after{transform:translateY(-50%) rotate(180deg)}
 .cdd-list{position:fixed;background:#1e293b;border:1px solid rgba(96,165,250,.35);border-radius:9px;overflow:hidden;z-index:99999;box-shadow:0 12px 32px rgba(0,0,0,.6);min-width:10px;display:flex;flex-direction:column}
-.cdd-list::-webkit-scrollbar{width:5px}
-.cdd-list::-webkit-scrollbar-track{background:rgba(255,255,255,.05)}
-.cdd-list::-webkit-scrollbar-thumb{background:rgba(96,165,250,.3);border-radius:3px}
 .cdd-search{width:100%;background:#0f172a;border:none;border-bottom:1px solid rgba(96,165,250,.25);color:#fff;padding:8px 12px;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;outline:none;box-sizing:border-box;flex-shrink:0}
 .cdd-search::placeholder{color:#475569}
 .cdd-search:focus{border-bottom-color:rgba(96,165,250,.6)}
 .cdd-items{overflow-y:auto;max-height:390px}
 .cdd-items::-webkit-scrollbar{width:5px}
-.cdd-items::-webkit-scrollbar-track{background:rgba(255,255,255,.05)}
 .cdd-items::-webkit-scrollbar-thumb{background:rgba(96,165,250,.3);border-radius:3px}
 .cdd-item{padding:6px 12px;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;color:#cbd5e1;cursor:pointer;transition:.15s;white-space:nowrap}
 .cdd-item:hover{background:rgba(59,130,246,.18);color:#fff}
@@ -56,11 +52,18 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .inf{margin-top:8px;padding:7px 10px;background:rgba(59,130,246,.08);border-left:2px solid rgba(96,165,250,.4);border-radius:0 7px 7px 0;font-size:15px;color:#93c5fd;min-height:32px;line-height:1.5}
 .inf.e{color:#475569;border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.02)}
 .inf.w{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.4);color:#fbbf24}
-
 .idealo-link{display:inline-block;margin-top:5px;margin-left:4px;font-size:11px;font-weight:700;color:#4ade80;text-decoration:none;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);padding:2px 8px;border-radius:20px;transition:.2s;white-space:nowrap}
 .idealo-link:hover{background:rgba(34,197,94,.22);color:#86efac}
 
-/* OPTIONS SUPPLÉMENTAIRES */
+/* ── ALERTE COMPOSANTS MANQUANTS ── */
+.config-alert{display:none;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+.config-alert.show{display:block}
+.config-alert-title{font-size:12px;font-weight:700;color:#f87171;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.config-alert-list{list-style:none}
+.config-alert-list li{font-size:12px;color:#fca5a5;padding:2px 0;display:flex;align-items:center;gap:6px}
+.config-alert-list li::before{content:'⚠';font-size:11px}
+
+/* OPTIONS */
 .opts-wrap{background:rgba(17,25,40,.82);border-radius:18px;border:1px solid rgba(96,165,250,.18);padding:18px;margin-bottom:22px}
 .opts-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .opts-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
@@ -90,12 +93,13 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .opt-montage-empty{color:#475569;font-size:12px;text-align:center;padding:10px 0;line-height:1.6}
 .opt-montage-tag{font-size:9px;font-weight:700;letter-spacing:2px;color:#60a5fa;text-transform:uppercase;margin-bottom:4px}
 .opt-montage-name{font-size:14px;font-weight:700;color:#fff !important;-webkit-text-fill-color:#fff !important;margin-top:12px}
-.opt-montage-price{font-size:22px;font-weight:900;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;transition:all .4s}
+.opt-montage-price{font-size:22px;font-weight:900;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
 .opt-montage-list{list-style:none}
 .opt-montage-list li{font-size:11px;color:rgba(255,255,255,.8);padding:2px 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .opt-montage-list li:last-child{border:none}
 .opt-montage-badge{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(96,165,250,.2);border:1px solid rgba(96,165,250,.3);color:#60a5fa;margin-top:8px}
 .opt-montage-reco{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80;margin-top:4px;margin-left:4px}
+
 /* RÉCAP */
 .sum{background:rgba(17,25,40,.9);border-radius:18px;border:1px solid rgba(96,165,250,.2);padding:24px}
 .sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
@@ -132,6 +136,8 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .disc b{color:#fbbf24}
 .foot{text-align:center;margin-top:20px;font-size:11px;color:#334155;letter-spacing:1px}
 .foot b{color:#60a5fa}
+
+/* POPUP */
 .popup-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:9999;align-items:center;justify-content:center;padding:16px}
 .popup-overlay.show{display:flex}
 .popup{background:linear-gradient(135deg,#0f172a,#1e1b4b);border:1px solid rgba(96,165,250,.3);border-radius:20px;padding:28px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.6),0 0 40px rgba(59,130,246,.15)}
@@ -189,6 +195,7 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 </div>
 <div class="grid" id="G"></div>
 
+<!-- OPTIONS SUPPLÉMENTAIRES -->
 <div class="opts-wrap">
   <div class="opts-header">
     <div class="opts-icon">⚙️</div>
@@ -233,18 +240,24 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
       <div class="opt-montage-price" id="montage-price">—</div>
       <ul class="opt-montage-list" id="montage-list"></ul>
       <div id="montage-badges"></div>
-      <div class="opt-montage-empty" id="montage-empty">
-        🖥️ Sélectionne tes composants<br>pour voir le forfait adapté
-      </div>
+      <div class="opt-montage-empty" id="montage-empty">🖥️ Sélectionne tes composants<br>pour voir le forfait adapté</div>
     </div>
   </div>
 </div>
 
+<!-- RÉCAPITULATIF -->
 <div class="sum">
   <div class="sh">
     <div class="stit">RÉCAPITULATIF</div>
     <button class="rst" id="RST">↺ Réinitialiser</button>
   </div>
+
+  <!-- ALERTE COMPOSANTS MANQUANTS -->
+  <div class="config-alert" id="configAlert">
+    <div class="config-alert-title">⚠ Attention — configuration incomplète</div>
+    <ul class="config-alert-list" id="configAlertList"></ul>
+  </div>
+
   <div class="rows" id="ROWS"><p class="emp">Aucun composant sélectionné</p></div>
   <div class="tot">
     <span class="tl">TOTAL ESTIMÉ</span>
@@ -267,6 +280,7 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 </div>
 <div class="foot">Configurateur by <b>MLTeC</b> · Montage · Expertise · Technologie · 2026</div>
 
+<!-- POPUP -->
 <div class="popup-overlay" id="popupOverlay">
   <div class="popup">
     <button class="popup-close" id="popupClose">✕</button>
@@ -278,9 +292,22 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
         <span class="popup-total-lbl">Total estimé</span>
         <span class="popup-total-val" id="popupTotalVal">0 €</span>
       </div>
-      <div class="pf-group"><label for="pf-nom">Votre nom *</label><input id="pf-nom" type="text" placeholder="Prénom Nom"></div>
-      <div class="pf-group"><label for="pf-email">Votre adresse e-mail *</label><input id="pf-email" type="email" placeholder="exemple@mail.com"></div>
-      <div class="pf-group"><label for="pf-msg">Message (optionnel)</label><textarea id="pf-msg" placeholder="Précisez vos besoins, votre budget, vos questions…"></textarea></div>
+      <div class="pf-group">
+        <label for="pf-nom">Votre nom *</label>
+        <input id="pf-nom" type="text" placeholder="Prénom Nom">
+      </div>
+      <div class="pf-group">
+        <label for="pf-email">Votre adresse e-mail *</label>
+        <input id="pf-email" type="email" placeholder="exemple@mail.com">
+      </div>
+      <div class="pf-group">
+        <label for="pf-tel">Téléphone (optionnel)</label>
+        <input id="pf-tel" type="tel" placeholder="06 XX XX XX XX">
+      </div>
+      <div class="pf-group">
+        <label for="pf-msg">Message (optionnel)</label>
+        <textarea id="pf-msg" placeholder="Précisez vos besoins, votre budget, vos questions…"></textarea>
+      </div>
       <div class="popup-error" id="popupError">Merci de remplir votre nom et votre adresse e-mail.</div>
       <button class="popup-send" id="popupSend">Envoyer ma demande →</button>
     </div>
@@ -295,7 +322,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 <script>
 emailjs.init('_EeHlzJZOkVpZhwDd');
 
-/* ══ DONNÉES ══ */
 var CATS_ORDER=['cpu','mb','ram','gpu','storage','psu','cooling','pccase'];
 var CATS={
   cpu:    {l:'Processeur (CPU)',      i:'⚙️', s:'Socket & fréquence',       file:'Cpu.json'},
@@ -307,15 +333,15 @@ var CATS={
   cooling:{l:'Refroidissement CPU',   i:'❄️', s:'Air ou watercooling',       file:'Cool.json'},
   pccase: {l:'Boîtier',              i:'🖥️', s:'Format & airflow',          file:'Case.json'}
 };
+
 var PR={
   bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to-kf',psu:'450w-seasonic',cooling:'air-thermalright-ax90',pccase:'case-fractal-node'},
   budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to-wd',psu:'650w-be',cooling:'air-thermalright-paa120',pccase:'case-4000d'},
   mid:{cpu:'r7-7800x3d',mb:'b650-msi-tom',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240-arctic',pccase:'case-meshify2c'},
-  high:{cpu:'r7-9800x3d',mb:'x670-gigabyte',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to-wd',psu:'1000w-seasonic',cooling:'aio-360-corsair',pccase:'case-o11-evo'},
+  high:{cpu:'r7-9800x3d',mb:'x670-gigabyte',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to-wd',psu:'1000w-seasonic',cooling:'aio-360-corsair',pccase:'case-o11-evo'}
 };
-var D={};var S={};
 
-/* ══ OPTIONS ══ */
+var D={};var S={};
 var OPTS={
   windows:{name:'Licence Windows',price:45,selected:false},
   office: {name:'Microsoft Office',price:60,selected:false}
@@ -338,16 +364,10 @@ var FORFAITS={
 /* ══ SAUVEGARDE ══ */
 var LS_KEY='mltec_config';
 function saveConfig(){
-  try{
-    localStorage.setItem(LS_KEY,JSON.stringify({
-      S:S,
-      opts:{windows:OPTS.windows.selected,office:OPTS.office.selected},
-      montage:montageSelected
-    }));
-  }catch(e){}
-}function loadConfig(){try{var s=localStorage.getItem(LS_KEY);return s?JSON.parse(s):null;}catch(e){return null;}}
+  try{localStorage.setItem(LS_KEY,JSON.stringify({S:S,opts:{windows:OPTS.windows.selected,office:OPTS.office.selected},montage:montageSelected}));}catch(e){}
+}
+function loadConfig(){try{var s=localStorage.getItem(LS_KEY);return s?JSON.parse(s):null;}catch(e){return null;}}
 function applyConfig(cfg){
-  // support ancien format (juste S)
   var savedS=cfg.S||cfg;
   Object.keys(savedS).forEach(function(k){
     if(!D[k]||savedS[k]==='none')return;
@@ -358,19 +378,15 @@ function applyConfig(cfg){
     if(dd){var tr=dd.querySelector('.cdd-trigger');if(tr)tr.textContent=item.n;}
     upInf(k);
   });
-  // restaure les options
   if(cfg.opts){
     if(cfg.opts.windows){OPTS.windows.selected=true;updateOptCard('windows');}
     if(cfg.opts.office){OPTS.office.selected=true;updateOptCard('office');}
   }
   upSum();
-  // restaure le montage après upSum (qui calcule currentMontage)
-  if(cfg.montage&&currentMontage){
-    montageSelected=true;updateMontageCard();upSum();
-  }
+  if(cfg.montage&&currentMontage){montageSelected=true;updateMontageCard();upSum();}
 }
 
-/* ══ CUSTOM DROPDOWN ══ */
+/* ══ DROPDOWN ══ */
 var _openDD=null;
 function closeAllDD(){
   if(_openDD){_openDD.classList.remove('open');_openDD=null;}
@@ -382,20 +398,142 @@ function positionList(dd,list){
   var spaceBelow=window.innerHeight-rect.bottom-8;
   var spaceAbove=rect.top-8;
   var maxH=Math.min(440,spaceBelow>120?spaceBelow:Math.max(spaceAbove,120));
-  list.style.width=rect.width+'px';
-  list.style.left=rect.left+'px';
-  if(spaceBelow>=120||spaceBelow>=spaceAbove){
-    list.style.top=(rect.bottom+4)+'px';
-  } else {
-    list.style.top=(rect.top-Math.min(maxH,440)-4)+'px';
+  list.style.width=rect.width+'px';list.style.left=rect.left+'px';
+  list.style.top=(spaceBelow>=120||spaceBelow>=spaceAbove?(rect.bottom+4):(rect.top-Math.min(maxH,440)-4))+'px';
+}
+function isCompatible(k, x){
+  if(!x.id||x.id==='none')return true;
+
+  var cpu=gi('cpu'), mb=gi('mb'), pccase=gi('pccase');
+
+  /* ── CPU : filtré par MB si MB déjà choisie ── */
+  if(k==='cpu'){
+    if(mb&&mb.id!=='none'&&mb.sk&&x.sk){
+      return x.sk===mb.sk;
+    }
+  }
+
+  /* ── MB : filtrée par CPU si CPU déjà choisi ── */
+  if(k==='mb'){
+    if(cpu&&cpu.id!=='none'&&cpu.sk&&x.sk){
+      return x.sk===cpu.sk;
+    }
+  }
+
+  /* ── RAM : filtrée par ddr de la MB ou socket CPU ── */
+  if(k==='ram'){
+    var isDDR4=x.id&&x.id.indexOf('ddr4')>-1;
+    var isDDR5=x.id&&x.id.indexOf('ddr5')>-1;
+    // Priorité : champ ddr de la MB
+    if(mb&&mb.id!=='none'&&mb.ddr){
+      if(mb.ddr==='ddr4'&&isDDR5)return false;
+      if(mb.ddr==='ddr5'&&isDDR4)return false;
+      // 'both' → tout accepté
+    } else if(cpu&&cpu.id!=='none'&&cpu.sk){
+      // Fallback : déduire du socket CPU
+      var needDDR5=(cpu.sk==='AM5'||cpu.sk==='LGA1851'||cpu.sk==='TRX50');
+      var needDDR4=(cpu.sk==='AM4'||cpu.sk==='LGA1200');
+      if(needDDR5&&isDDR4)return false;
+      if(needDDR4&&isDDR5)return false;
+      // LGA1700 sans MB → on ne filtre pas, les deux existent
+    }
+  }
+
+  /* ── Boîtier : filtré par MB si MB choisie ── */
+  if(k==='pccase'){
+    var fmtOrder={ITX:0,mATX:1,ATX:2,EATX:3};
+    if(mb&&mb.id!=='none'&&mb.fmt&&x.fmt){
+      return (fmtOrder[x.fmt]||0)>=(fmtOrder[mb.fmt]||0);
+    }
+  }
+
+  /* ── GPU : filtré par boîtier si boîtier choisi ── */
+  if(k==='gpu'){
+    if(pccase&&pccase.id!=='none'&&pccase.mxgl&&x.gl){
+      return x.gl<=pccase.mxgl;
+    }
+  }
+
+  return true;
+}
+
+function resetIncompatibles(changedKey){
+  var cpu=gi('cpu'), mb=gi('mb'), pccase=gi('pccase');
+  var fmtOrder={ITX:0,mATX:1,ATX:2,EATX:3};
+
+  function resetCat(k){
+    S[k]='none';
+    var dd=document.querySelector('.cdd[data-k="'+k+'"]');
+    if(dd&&D[k]){var tr=dd.querySelector('.cdd-trigger');if(tr)tr.textContent=D[k].d[0].n;}
+    upInf(k);
+  }
+
+  /* Quand CPU change → reset MB et RAM si incompatibles */
+  if(changedKey==='cpu'){
+    if(cpu&&cpu.id!=='none'&&cpu.sk){
+      if(S.mb&&S.mb!=='none'){
+        var mbItem=D.mb.d.filter(function(x){return x.id===S.mb;})[0];
+        if(mbItem&&mbItem.sk&&mbItem.sk!==cpu.sk)resetCat('mb');
+      }
+      // Reset RAM selon CPU (si pas de MB)
+      if(!S.mb||S.mb==='none'){
+        var needDDR5=(cpu.sk==='AM5'||cpu.sk==='LGA1851');
+        var needDDR4=(cpu.sk==='AM4'||cpu.sk==='LGA1700'||cpu.sk==='LGA1200');
+        if(S.ram&&S.ram!=='none'){
+          var isDDR4=S.ram.indexOf('ddr4')>-1;
+          var isDDR5=S.ram.indexOf('ddr5')>-1;
+          if((needDDR5&&isDDR4)||(needDDR4&&isDDR5))resetCat('ram');
+        }
+      }
+    }
+  }
+
+  /* Quand MB change → reset CPU, RAM, Boîtier si incompatibles */
+  if(changedKey==='mb'){
+    if(mb&&mb.id!=='none'){
+      // Reset CPU si socket incompatible
+      if(S.cpu&&S.cpu!=='none'&&mb.sk){
+        var cpuItem=D.cpu.d.filter(function(x){return x.id===S.cpu;})[0];
+        if(cpuItem&&cpuItem.sk&&cpuItem.sk!==mb.sk)resetCat('cpu');
+      }
+      // Reset RAM si DDR incompatible
+      if(S.ram&&S.ram!=='none'&&mb.sk){
+        var isMbDDR4=mb.ddr==='ddr4';
+        var isMbDDR5=mb.ddr==='ddr5';
+        var isDDR4=S.ram.indexOf('ddr4')>-1;
+        var isDDR5=S.ram.indexOf('ddr5')>-1;
+        if((isMbDDR4&&isDDR5)||(isMbDDR5&&isDDR4))resetCat('ram');
+      }
+      // Reset boîtier si format trop petit
+      if(S.pccase&&S.pccase!=='none'&&mb.fmt){
+        var pccItem=D.pccase.d.filter(function(x){return x.id===S.pccase;})[0];
+        if(pccItem&&pccItem.fmt&&(fmtOrder[pccItem.fmt]||0)<(fmtOrder[mb.fmt]||0))resetCat('pccase');
+      }
+    }
+  }
+
+  /* Quand Boîtier change → reset MB si trop grande, GPU si trop long */
+  if(changedKey==='pccase'){
+    if(pccase&&pccase.id!=='none'){
+      if(S.mb&&S.mb!=='none'&&pccase.fmt){
+        var mbItem=D.mb.d.filter(function(x){return x.id===S.mb;})[0];
+        if(mbItem&&mbItem.fmt&&(fmtOrder[mbItem.fmt]||0)>(fmtOrder[pccase.fmt]||0))resetCat('mb');
+      }
+      if(S.gpu&&S.gpu!=='none'&&pccase.mxgl){
+        var gpuItem=D.gpu.d.filter(function(x){return x.id===S.gpu;})[0];
+        if(gpuItem&&gpuItem.gl&&gpuItem.gl>pccase.mxgl)resetCat('gpu');
+      }
+    }
   }
 }
+
 function renderItems(wrap,items,k,trigger,sel,ft){
   wrap.innerHTML='';
   ft=ft.toLowerCase().trim();
-  var lastGrp=null;var shown=0;
+  var lastGrp=null;var shown=0;var hiddenCount=0;
   items.forEach(function(x){
     if(x.g){lastGrp=x;return;}
+    if(!isCompatible(k,x)){hiddenCount++;return;}
     var label=x.n+(x.p>0?' — '+x.p+' €':'');
     if(ft&&label.toLowerCase().indexOf(ft)===-1)return;
     if(lastGrp){
@@ -408,13 +546,21 @@ function renderItems(wrap,items,k,trigger,sel,ft){
     item.textContent=label;
     item.addEventListener('click',function(){
       S[k]=x.id;trigger.textContent=x.n;sel.value=x.id;
+      resetIncompatibles(k);
       upInf(k);upSum();saveConfig();closeAllDD();
     });
     wrap.appendChild(item);shown++;
   });
   if(shown===0&&ft){
-    var nr=document.createElement('div');nr.className='cdd-noresult';
-    nr.textContent='Aucun résultat pour "'+ft+'"';wrap.appendChild(nr);
+    var nr=document.createElement('div');nr.className='cdd-noresult';nr.textContent='Aucun résultat pour "'+ft+'"';wrap.appendChild(nr);
+  } else if(shown===0&&hiddenCount>0){
+    var nr=document.createElement('div');nr.className='cdd-noresult';nr.textContent='Aucun composant compatible — sélectionne d\'abord un autre composant';wrap.appendChild(nr);
+  }
+  if(hiddenCount>0&&!ft){
+    var info=document.createElement('div');
+    info.setAttribute('style','padding:6px 12px;font-size:11px;color:#475569;border-top:1px solid rgba(255,255,255,.06);font-style:italic;');
+    info.textContent='🔒 '+hiddenCount+' composant'+(hiddenCount>1?'s':'')+' incompatible'+(hiddenCount>1?'s':'')+' masqué'+(hiddenCount>1?'s':'');
+    wrap.appendChild(info);
   }
 }
 function makeDD(k,items){
@@ -423,23 +569,20 @@ function makeDD(k,items){
   items.forEach(function(x){var o=document.createElement('option');o.value=x.id||'';o.textContent=x.n;sel.appendChild(o);});
   dd.appendChild(sel);
   var trigger=document.createElement('button');trigger.type='button';trigger.className='cdd-trigger';
-  trigger.textContent=items[0]?items[0].n:'—';
-  dd.appendChild(trigger);
+  trigger.textContent=items[0]?items[0].n:'—';dd.appendChild(trigger);
   trigger.addEventListener('click',function(e){
     e.stopPropagation();
     if(_openDD===dd){closeAllDD();return;}
     closeAllDD();
     var list=document.createElement('div');list.className='cdd-list';
     list.addEventListener('click',function(e){e.stopPropagation();});
-    var search=document.createElement('input');search.type='text';search.className='cdd-search';
-    search.placeholder='🔍 Rechercher…';
+    var search=document.createElement('input');search.type='text';search.className='cdd-search';search.placeholder='🔍 Rechercher…';
     search.addEventListener('click',function(e){e.stopPropagation();});
     var wrap=document.createElement('div');wrap.className='cdd-items';
     search.addEventListener('input',function(){renderItems(wrap,items,k,trigger,sel,this.value);});
     list.appendChild(search);list.appendChild(wrap);
     renderItems(wrap,items,k,trigger,sel,'');
-    document.body.appendChild(list);
-    positionList(dd,list);
+    document.body.appendChild(list);positionList(dd,list);
     dd.classList.add('open');_openDD=dd;
     setTimeout(function(){search.focus();},50);
   });
@@ -453,8 +596,7 @@ window.addEventListener('resize',closeAllDD);
 function build(){
   var g=document.getElementById('G');if(!g)return;g.innerHTML='';
   CATS_ORDER.forEach(function(k){
-    if(!D[k])return;
-    var c=D[k];
+    if(!D[k])return;var c=D[k];
     var el=document.createElement('div');el.className='card';
     el.innerHTML='<div class="ch"><div class="ico">'+c.i+'</div><div><div class="clbl">'+c.s+'</div><div class="ctit">'+c.l+'</div></div></div><div id="I'+k+'" class="inf e">Aucun composant sélectionné</div>';
     var dd=makeDD(k,c.d);el.insertBefore(dd,el.querySelector('#I'+k));g.appendChild(el);
@@ -473,52 +615,31 @@ function upInf(k){
 
 /* ══ OPTIONS ══ */
 function updateOptCard(id){
-  var card=document.getElementById('opt-'+id);
-  var chk=document.getElementById('chk-'+id);
+  var card=document.getElementById('opt-'+id),chk=document.getElementById('chk-'+id);
   if(!card||!chk)return;
-  if(OPTS[id].selected){
-    card.classList.add('selected');
-    chk.style.cssText='background:#4ade80;border-color:#4ade80;color:#0f172a;font-weight:700';
-  } else {
-    card.classList.remove('selected');
-    chk.style.cssText='background:transparent;border-color:rgba(255,255,255,.3);color:transparent';
-  }
+  if(OPTS[id].selected){card.classList.add('selected');chk.style.cssText='background:#4ade80;border-color:#4ade80;color:#0f172a;font-weight:700';}
+  else{card.classList.remove('selected');chk.style.cssText='background:transparent;border-color:rgba(255,255,255,.3);color:transparent';}
 }
 function updateMontageCard(){
-  var card=document.getElementById('opt-montage-card');
-  var chk=document.getElementById('chk-montage');
+  var card=document.getElementById('opt-montage-card'),chk=document.getElementById('chk-montage');
   if(!card||!chk)return;
-  if(montageSelected&&!card.classList.contains('disabled')){
-    card.classList.add('selected');
-    chk.style.cssText='background:#4ade80;border-color:#4ade80;color:#0f172a;font-weight:700';
-  } else {
-    card.classList.remove('selected');
-    chk.style.cssText='background:transparent;border-color:rgba(255,255,255,.3);color:transparent';
-    if(card.classList.contains('disabled'))montageSelected=false;
-  }
+  if(montageSelected&&!card.classList.contains('disabled')){card.classList.add('selected');chk.style.cssText='background:#4ade80;border-color:#4ade80;color:#0f172a;font-weight:700';}
+  else{card.classList.remove('selected');chk.style.cssText='background:transparent;border-color:rgba(255,255,255,.3);color:transparent';if(card.classList.contains('disabled'))montageSelected=false;}
 }
 function upMontage(pc,has){
-  var card=document.getElementById('opt-montage-card');
-  var empty=document.getElementById('montage-empty');
-  var tag=document.getElementById('montage-tag');
-  var name=document.getElementById('montage-name');
-  var price=document.getElementById('montage-price');
-  var list=document.getElementById('montage-list');
-  var badges=document.getElementById('montage-badges');
+  var card=document.getElementById('opt-montage-card'),empty=document.getElementById('montage-empty'),
+      tag=document.getElementById('montage-tag'),name=document.getElementById('montage-name'),
+      price=document.getElementById('montage-price'),list=document.getElementById('montage-list'),
+      badges=document.getElementById('montage-badges');
   if(!has||pc===0){
-    empty.style.display='block';
-    [tag,name,price,list,badges].forEach(function(e){if(e)e.style.display='none';});
+    empty.style.display='block';[tag,name,price,list,badges].forEach(function(e){if(e)e.style.display='none';});
     card.classList.add('disabled');montageSelected=false;updateMontageCard();currentMontage=null;return;
   }
-  card.classList.remove('disabled');
-  empty.style.display='none';
+  card.classList.remove('disabled');empty.style.display='none';
   [tag,name,price,list,badges].forEach(function(e){if(e)e.style.display='block';});
-  var gpu=gi('gpu');
-  var type=(gpu&&gpu.id!=='none'&&gpu.p>0)?'gaming':'bureau';
-  var forfaits=FORFAITS[type];
-  var niveau;
-  if(type==='gaming'){niveau=pc>=75?2:pc>=35?1:0;}
-  else{niveau=pc>=40?2:pc>=15?1:0;}
+  var gpu=gi('gpu');var type=(gpu&&gpu.id!=='none'&&gpu.p>0)?'gaming':'bureau';
+  var forfaits=FORFAITS[type];var niveau;
+  if(type==='gaming'){niveau=pc>=75?2:pc>=35?1:0;}else{niveau=pc>=40?2:pc>=15?1:0;}
   var f=forfaits[niveau];
   if(currentMontage&&currentMontage.name!==f.name)montageSelected=false;
   currentMontage=f;
@@ -529,14 +650,67 @@ function upMontage(pc,has){
 }
 function initOpts(){
   document.querySelectorAll('.opt-card:not(.opt-montage)').forEach(function(card){
-    var id=card.id.replace('opt-','');
-    updateOptCard(id);
+    var id=card.id.replace('opt-','');updateOptCard(id);
     card.addEventListener('click',function(){OPTS[id].selected=!OPTS[id].selected;updateOptCard(id);upSum();saveConfig();});
   });
   document.getElementById('opt-montage-card').addEventListener('click',function(){
     if(this.classList.contains('disabled'))return;
     montageSelected=!montageSelected;updateMontageCard();upSum();saveConfig();
   });
+}
+
+/* ══ ALERTE COMPOSANTS MANQUANTS ══ */
+function upAlert(has){
+  var alertEl=document.getElementById('configAlert');
+  var alertList=document.getElementById('configAlertList');
+  if(!has){alertEl.classList.remove('show');return;}
+
+  var cpu=gi('cpu'),mb=gi('mb'),ram=gi('ram'),gpu=gi('gpu'),psu=gi('psu'),pccase=gi('pccase');
+  var hasIGPU=cpu&&cpu.id&&cpu.id.indexOf('g')>-1&&(!gpu||gpu.id==='none');
+  var alertes=[];
+
+  /* Composants manquants */
+  var labels={cpu:'Processeur (CPU)',mb:'Carte mère',ram:'Mémoire RAM',storage:'Stockage',psu:'Alimentation',cooling:'Refroidissement',pccase:'Boîtier'};
+  Object.keys(labels).forEach(function(k){
+    if(!S[k]||S[k]==='none')alertes.push('Composant manquant : '+labels[k]);
+  });
+  if((!S.gpu||S.gpu==='none')&&!hasIGPU)
+    alertes.push('GPU manquant — ou choisir un CPU avec iGPU (ex: Ryzen G, Intel sans F)');
+
+  /* Incompatibilité RAM DDR */
+  if(mb&&ram&&ram.id!=='none'&&mb.id!=='none'&&mb.ddr&&mb.ddr!=='both'){
+    var isRamDDR4=ram.id&&ram.id.indexOf('ddr4')>-1;
+    var isRamDDR5=ram.id&&ram.id.indexOf('ddr5')>-1;
+    if(mb.ddr==='ddr4'&&isRamDDR5)alertes.push('Incompatibilité critique : carte mère DDR4 + RAM DDR5');
+    if(mb.ddr==='ddr5'&&isRamDDR4)alertes.push('Incompatibilité critique : carte mère DDR5 + RAM DDR4');
+  }
+
+  /* Incompatibilité socket */
+  if(cpu&&mb&&cpu.id!=='none'&&mb.id!=='none'&&mb.sk&&cpu.sk!==mb.sk)
+    alertes.push('Incompatibilité socket : CPU '+cpu.sk+' ≠ carte mère '+mb.sk);
+
+  /* Alimentation insuffisante */
+  if(psu&&cpu&&gpu&&psu.w>0&&cpu.id!=='none'&&gpu.id!=='none'){
+    var t=(cpu.tdp||0)+(gpu.tdp||0)+100;
+    if(t>=psu.w)alertes.push('Alimentation insuffisante : besoin ~'+t+'W, PSU '+psu.w+'W sélectionné');
+  }
+
+  /* Format MB vs boîtier */
+  var fmtOrder={ITX:0,mATX:1,ATX:2,EATX:3};
+  if(mb&&pccase&&mb.id!=='none'&&pccase.id!=='none'&&mb.fmt&&pccase.fmt){
+    if((fmtOrder[mb.fmt]||0)>(fmtOrder[pccase.fmt]||0))
+      alertes.push('Format incompatible : carte mère '+mb.fmt+' trop grande pour boîtier '+pccase.fmt);
+  }
+
+  /* GPU trop long */
+  if(gpu&&pccase&&gpu.id!=='none'&&pccase.id!=='none'&&gpu.gl&&pccase.mxgl){
+    if(gpu.gl>pccase.mxgl)
+      alertes.push('GPU trop long : '+gpu.gl+'mm, max autorisé dans ce boîtier '+pccase.mxgl+'mm');
+  }
+
+  if(alertes.length===0){alertEl.classList.remove('show');return;}
+  alertList.innerHTML=alertes.map(function(a){return'<li>'+a+'</li>';}).join('');
+  alertEl.classList.add('show');
 }
 
 /* ══ RÉCAP ══ */
@@ -579,28 +753,69 @@ function upSum(){
   document.getElementById('PD').textContent=lb;
   compat();
   upMontage(pc,has);
+  upAlert(has);
 }
 
 function compat(){
   var bd=document.getElementById('BD');bd.innerHTML='';
-  var cpu=gi('cpu'),mb=gi('mb'),psu=gi('psu'),gpu=gi('gpu'),cool=gi('cooling'),ram=gi('ram');
-  if(cpu&&mb&&cpu.id!=='none'&&mb.id!=='none'&&mb.sk)
-    cpu.sk===mb.sk?badg(bd,'✔ CPU + Carte mère compatibles','ok'):badg(bd,'✘ Incompatibilité socket CPU / Carte mère','er');
-  if(mb&&ram&&ram.id!=='none'&&mb.sk&&mb.sk!=='AM4')
-    if(ram.id&&ram.id.indexOf('ddr4')>-1)badg(bd,'⚠ Cette carte mère requiert de la DDR5','wn');
+  var cpu=gi('cpu'),mb=gi('mb'),psu=gi('psu'),gpu=gi('gpu'),cool=gi('cooling'),ram=gi('ram'),pccase=gi('pccase');
+
+  /* ── 1. CPU + Carte mère : socket ── */
+  if(cpu&&mb&&cpu.id!=='none'&&mb.id!=='none'&&mb.sk){
+    if(cpu.sk===mb.sk)badg(bd,'✔ CPU + Carte mère compatibles','ok');
+    else badg(bd,'✘ Socket incompatible : CPU '+cpu.sk+' ≠ MB '+mb.sk,'er');
+  }
+
+  /* ── 2. RAM + Carte mère : DDR ── */
+  if(mb&&ram&&ram.id!=='none'&&mb.id!=='none'&&mb.ddr&&mb.ddr!=='both'){
+    var isRamDDR4=ram.id&&ram.id.indexOf('ddr4')>-1;
+    var isRamDDR5=ram.id&&ram.id.indexOf('ddr5')>-1;
+    if(mb.ddr==='ddr4'&&isRamDDR5)badg(bd,'✘ Incompatibilité : carte mère DDR4 + RAM DDR5','er');
+    else if(mb.ddr==='ddr5'&&isRamDDR4)badg(bd,'✘ Incompatibilité : carte mère DDR5 + RAM DDR4','er');
+    else if(isRamDDR4||isRamDDR5)badg(bd,'✔ RAM compatible avec la carte mère','ok');
+  }
+
+  /* ── 3. Alimentation ── */
   if(psu&&cpu&&gpu&&psu.w>0&&cpu.id!=='none'&&gpu.id!=='none'){
     var t=(cpu.tdp||0)+(gpu.tdp||0)+100;
     if(t<psu.w*0.75)badg(bd,'✔ Alimentation suffisante','ok');
-    else if(t<psu.w)badg(bd,'⚠ Alimentation à la limite','wn');
-    else badg(bd,'✘ Alimentation insuffisante','er');
+    else if(t<psu.w)badg(bd,'⚠ Alimentation à la limite ('+t+'W estimé / '+psu.w+'W PSU)','wn');
+    else badg(bd,'✘ Alimentation insuffisante : besoin '+t+'W, PSU '+psu.w+'W','er');
   }
+
+  /* ── 4. Refroidissement vs TDP CPU ── */
   if(cool&&cpu&&cool.id!=='none'&&cpu.id!=='none'){
-    var ba=cool.id==='air-budget'||cool.id==='air-assassin';
-    if(cpu.tdp>=170&&ba)badg(bd,'⚠ CPU haute conso — préférer un AIO 240mm+','wn');
-    else if(cool.id!=='none')badg(bd,'✔ Refroidissement adapté','ok');
+    var stockIds=['air-stock-amd','air-stock-spire','air-intel-box'];
+    var isStock=stockIds.indexOf(cool.id)>-1;
+    var isBudget=cool.id.indexOf('budget')>-1;
+    if(cpu.tdp>=170&&(isStock||isBudget))badg(bd,'⚠ CPU haute conso ('+cpu.tdp+'W) — préférer un AIO 240mm+','wn');
+    else if(cpu.tdp>=125&&isStock)badg(bd,'⚠ CPU 125W+ — ventirad stock insuffisant pour OC','wn');
+    else badg(bd,'✔ Refroidissement adapté','ok');
   }
+
+  /* ── 5. Format carte mère vs boîtier ── */
+  var fmtOrder={ITX:0,mATX:1,ATX:2,EATX:3};
+  if(mb&&pccase&&mb.id!=='none'&&pccase.id!=='none'&&mb.fmt&&pccase.fmt){
+    var mbRank=fmtOrder[mb.fmt];
+    var caseRank=fmtOrder[pccase.fmt];
+    if(caseRank===undefined||mbRank===undefined){}
+    else if(mbRank>caseRank)badg(bd,'✘ Carte mère '+mb.fmt+' trop grande pour ce boîtier '+pccase.fmt,'er');
+    else badg(bd,'✔ Format carte mère compatible avec le boîtier','ok');
+  }
+
+  /* ── 6. Longueur GPU vs boîtier ── */
+  if(gpu&&pccase&&gpu.id!=='none'&&pccase.id!=='none'&&gpu.gl&&pccase.mxgl){
+    if(gpu.gl>pccase.mxgl)badg(bd,'✘ GPU trop long ('+gpu.gl+'mm) pour ce boîtier (max '+pccase.mxgl+'mm)','er');
+    else if(gpu.gl>pccase.mxgl-20)badg(bd,'⚠ GPU long ('+gpu.gl+'mm) — juste dans ce boîtier (max '+pccase.mxgl+'mm)','wn');
+    else badg(bd,'✔ GPU compatible avec le boîtier ('+gpu.gl+'mm / max '+pccase.mxgl+'mm)','ok');
+  }
+
+  /* ── 7. Config complète ── */
   var n=Object.keys(S).filter(function(k){return S[k]!=='none';}).length;
-  if(n>=8)badg(bd,'✔ Configuration complète','ok');
+  var hasIGPU=cpu&&cpu.id&&cpu.id.indexOf('g')>-1&&(!gpu||gpu.id==='none');
+  var needGPU=!hasIGPU;
+  var complete=n>=(needGPU?8:7);
+  if(complete)badg(bd,'✔ Configuration complète','ok');
 }
 function badg(c,t,cl){var b=document.createElement('span');b.className='badge '+cl;b.textContent=t;c.appendChild(b);}
 
@@ -646,8 +861,7 @@ function getConfigText(){
   Object.keys(D).forEach(function(k){var it=gi(k);if(it&&it.p>0)lines.push(D[k].l+' : '+it.n.replace(' ⭐','')+' ('+it.p+' €)');});
   Object.keys(OPTS).forEach(function(k){if(OPTS[k].selected)lines.push('Option : '+OPTS[k].name+' ('+OPTS[k].price+' €)');});
   if(montageSelected&&currentMontage)lines.push('Forfait montage : '+currentMontage.name+' ('+currentMontage.price+' €)');
-  lines.push('---');
-  lines.push('TOTAL : '+calcTotal()+' €');
+  lines.push('---');lines.push('TOTAL : '+calcTotal()+' €');
   return lines.join('\n');
 }
 function openPopup(){
@@ -655,23 +869,20 @@ function openPopup(){
   Object.keys(D).forEach(function(k){
     var it=gi(k);
     if(it&&it.p>0){
-      hasAny=true;
-      var r=document.createElement('div');r.className='popup-recap-row';
+      hasAny=true;var r=document.createElement('div');r.className='popup-recap-row';
       r.innerHTML='<span class="prl">'+D[k].i+' '+D[k].l+'</span><span class="prp">'+it.n.replace(' ⭐','')+'</span>';
       recap.appendChild(r);
     }
   });
   Object.keys(OPTS).forEach(function(k){
     if(OPTS[k].selected){
-      hasAny=true;
-      var r=document.createElement('div');r.className='popup-recap-row opt-row';
+      hasAny=true;var r=document.createElement('div');r.className='popup-recap-row opt-row';
       r.innerHTML='<span class="prl">⚙️ '+OPTS[k].name+'</span><span class="prp">'+OPTS[k].price+' €</span>';
       recap.appendChild(r);
     }
   });
   if(montageSelected&&currentMontage){
-    hasAny=true;
-    var r=document.createElement('div');r.className='popup-recap-row montage-row';
+    hasAny=true;var r=document.createElement('div');r.className='popup-recap-row montage-row';
     r.innerHTML='<span class="prl">🛠️ Forfait '+currentMontage.name+'</span><span class="prp">'+currentMontage.price+' €</span>';
     recap.appendChild(r);
   }
@@ -682,6 +893,7 @@ function openPopup(){
   document.getElementById('popupError').style.display='none';
   document.getElementById('pf-nom').value='';
   document.getElementById('pf-email').value='';
+  document.getElementById('pf-tel').value='';
   document.getElementById('pf-msg').value='';
   document.getElementById('popupOverlay').classList.add('show');
   document.body.style.overflow='hidden';
@@ -690,6 +902,7 @@ function closePopup(){document.getElementById('popupOverlay').classList.remove('
 function sendEmail(){
   var nom=document.getElementById('pf-nom').value.trim();
   var email=document.getElementById('pf-email').value.trim();
+  var tel=document.getElementById('pf-tel').value.trim();
   var msg=document.getElementById('pf-msg').value.trim();
   var errEl=document.getElementById('popupError');
   if(!nom||!email){errEl.style.display='block';return;}
@@ -697,7 +910,8 @@ function sendEmail(){
   var sendBtn=document.getElementById('popupSend');
   sendBtn.disabled=true;sendBtn.textContent='Envoi en cours…';
   emailjs.send('service_ubovst8','template_g0ceasb',{
-    from_name:nom,from_email:email,message:msg||'Aucun message',
+    from_name:nom,from_email:email,
+    message:(tel?'Téléphone : '+tel+'\n':'')+'\n'+(msg||'Aucun message'),
     config:getConfigText()||'Aucun composant sélectionné',
     total:calcTotal()+' €'
   }).then(function(){

@@ -14,49 +14,65 @@
     "id": "case-fractal-node",
     "n": "Fractal Design Node 304",
     "p": 75,
-    "inf": "Mini-ITX · Compact · Format cube — discret"
+    "inf": "Mini-ITX · Compact · Format cube — discret",
+    "fmt": "mATX",
+    "mxgl": 250
   },
   {
     "id": "case-nr200",
     "n": "Cooler Master NR200P",
     "p": 95,
-    "inf": "Mini-ITX · Très bon airflow — populaire ITX"
+    "inf": "Mini-ITX · Très bon airflow — populaire ITX",
+    "fmt": "ITX",
+    "mxgl": 330
   },
   {
     "id": "case-nr200-max",
     "n": "Cooler Master NR200P MAX",
     "p": 185,
-    "inf": "Mini-ITX · AIO 280mm intégré · PSU SFX inclus"
+    "inf": "Mini-ITX · AIO 280mm intégré · PSU SFX inclus",
+    "fmt": "ITX",
+    "mxgl": 330
   },
   {
     "id": "case-dan-a4",
     "n": "Dan Cases A4-SFX v5",
     "p": 145,
-    "inf": "Mini-ITX · Ultra compact · SFX PSU — elite ITX"
+    "inf": "Mini-ITX · Ultra compact · SFX PSU — elite ITX",
+    "fmt": "ITX",
+    "mxgl": 295
   },
   {
     "id": "case-lian-a4",
     "n": "Lian Li A4-H2O",
     "p": 115,
-    "inf": "Mini-ITX · Compact · watercooling friendly"
+    "inf": "Mini-ITX · Compact · watercooling friendly",
+    "fmt": "ITX",
+    "mxgl": 320
   },
   {
     "id": "case-ncase",
     "n": "NCASE M1 v6.1",
     "p": 165,
-    "inf": "Mini-ITX · Ultra compact · premium — référence ITX"
+    "inf": "Mini-ITX · Ultra compact · premium — référence ITX",
+    "fmt": "ITX",
+    "mxgl": 320
   },
   {
     "id": "case-sliger",
     "n": "Sliger SM550",
     "p": 139,
-    "inf": "Mini-ITX · Ultra compact · qualité premium"
+    "inf": "Mini-ITX · Ultra compact · qualité premium",
+    "fmt": "ITX",
+    "mxgl": 295
   },
   {
     "id": "case-asus-pn",
     "n": "ASUS Prime AP201 Mesh",
     "p": 79,
-    "inf": "Mini-ITX · Mesh · airflow excellent · compact [2023]"
+    "inf": "Mini-ITX · Mesh · airflow excellent · compact [2023]",
+    "fmt": "ITX",
+    "mxgl": 260
   },
   {
     "id": "g_matx",
@@ -67,43 +83,57 @@
     "id": "case-arc-mini",
     "n": "Fractal Design Arc Mini R2",
     "p": 65,
-    "inf": "mATX · Mid-Tower · Bon airflow"
+    "inf": "mATX · Mid-Tower · Bon airflow",
+    "fmt": "mATX",
+    "mxgl": 320
   },
   {
     "id": "case-meshify-mini",
     "n": "Fractal Design Meshify C Mini",
     "p": 85,
-    "inf": "mATX · Mid-Tower · Excellent airflow mesh"
+    "inf": "mATX · Mid-Tower · Excellent airflow mesh",
+    "fmt": "mATX",
+    "mxgl": 315
   },
   {
     "id": "case-h400",
     "n": "NZXT H400",
     "p": 75,
-    "inf": "mATX · Mid-Tower · Design épuré"
+    "inf": "mATX · Mid-Tower · Design épuré",
+    "fmt": "mATX",
+    "mxgl": 310
   },
   {
     "id": "case-pure-mini",
     "n": "Be Quiet! Pure Base 500 Mini",
     "p": 75,
-    "inf": "mATX · Mid-Tower · Silencieux"
+    "inf": "mATX · Mid-Tower · Silencieux",
+    "fmt": "mATX",
+    "mxgl": 350
   },
   {
     "id": "case-phanteks-m",
     "n": "Phanteks Eclipse G300A",
     "p": 79,
-    "inf": "mATX · Mid-Tower · Mesh · excellent airflow"
+    "inf": "mATX · Mid-Tower · Mesh · excellent airflow",
+    "fmt": "mATX",
+    "mxgl": 350
   },
   {
     "id": "case-deepcool-matx",
     "n": "DeepCool CH360 Digital",
     "p": 85,
-    "inf": "mATX · Mid-Tower · ARGB · LCD display"
+    "inf": "mATX · Mid-Tower · ARGB · LCD display",
+    "fmt": "mATX",
+    "mxgl": 320
   },
   {
     "id": "case-lian-matx",
     "n": "Lian Li LANCOOL 205M",
     "p": 79,
-    "inf": "mATX · Mid-Tower · Bon airflow"
+    "inf": "mATX · Mid-Tower · Bon airflow",
+    "fmt": "mATX",
+    "mxgl": 340
   },
   {
     "id": "g_atx_budget",
@@ -114,55 +144,73 @@
     "id": "case-h5",
     "n": "NZXT H5 Flow",
     "p": 89,
-    "inf": "ATX · Mid-Tower · Excellent airflow · verre trempé"
+    "inf": "ATX · Mid-Tower · Excellent airflow · verre trempé",
+    "fmt": "ATX",
+    "mxgl": 355
   },
   {
     "id": "case-4000d",
     "n": "Corsair 4000D Airflow ⭐",
     "p": 95,
-    "inf": "ATX · Mid-Tower · Airflow optimisé — très populaire"
+    "inf": "ATX · Mid-Tower · Airflow optimisé — très populaire",
+    "fmt": "ATX",
+    "mxgl": 360
   },
   {
     "id": "case-pure-base",
     "n": "Be Quiet! Pure Base 500",
     "p": 85,
-    "inf": "ATX · Mid-Tower · Silencieux — budget silencieux"
+    "inf": "ATX · Mid-Tower · Silencieux — budget silencieux",
+    "fmt": "ATX",
+    "mxgl": 369
   },
   {
     "id": "case-p400a",
     "n": "Phanteks Eclipse P400A",
     "p": 85,
-    "inf": "ATX · Mid-Tower · Mesh frontal · excellent airflow"
+    "inf": "ATX · Mid-Tower · Mesh frontal · excellent airflow",
+    "fmt": "ATX",
+    "mxgl": 380
   },
   {
     "id": "case-deepcool-cc560",
     "n": "DeepCool CC560",
     "p": 65,
-    "inf": "ATX · Mid-Tower · ARGB · bon airflow — ultra budget"
+    "inf": "ATX · Mid-Tower · ARGB · bon airflow — ultra budget",
+    "fmt": "ATX",
+    "mxgl": 320
   },
   {
     "id": "case-antec-p120",
     "n": "Antec P120 Crystal",
     "p": 79,
-    "inf": "ATX · Mid-Tower · Verre trempé · airflow correct"
+    "inf": "ATX · Mid-Tower · Verre trempé · airflow correct",
+    "fmt": "ATX",
+    "mxgl": 360
   },
   {
     "id": "case-thermaltake-view",
     "n": "Thermaltake View 71 TG",
     "p": 89,
-    "inf": "ATX · Full-Tower · Panoramique 4 faces verre"
+    "inf": "ATX · Full-Tower · Panoramique 4 faces verre",
+    "fmt": "ATX",
+    "mxgl": 410
   },
   {
     "id": "case-lian-lancool215",
     "n": "Lian Li LANCOOL 215",
     "p": 95,
-    "inf": "ATX · Mid-Tower · Bon airflow · compact"
+    "inf": "ATX · Mid-Tower · Bon airflow · compact",
+    "fmt": "ATX",
+    "mxgl": 360
   },
   {
     "id": "case-be-900",
     "n": "Be Quiet! Shadow Base 800",
     "p": 99,
-    "inf": "ATX · Mid-Tower · Silencieux · airflow [2023]"
+    "inf": "ATX · Mid-Tower · Silencieux · airflow [2023]",
+    "fmt": "ATX",
+    "mxgl": 395
   },
   {
     "id": "g_atx_mid",
@@ -173,127 +221,169 @@
     "id": "case-meshify2c",
     "n": "Fractal Design Meshify 2 Compact ⭐",
     "p": 105,
-    "inf": "ATX · Mid-Tower · Airflow mesh exceptionnel — recommandé"
+    "inf": "ATX · Mid-Tower · Airflow mesh exceptionnel — recommandé",
+    "fmt": "ATX",
+    "mxgl": 360
   },
   {
     "id": "case-define7c",
     "n": "Fractal Design Define 7 Compact",
     "p": 125,
-    "inf": "ATX · Mid-Tower · Silencieux · isolation phonique"
+    "inf": "ATX · Mid-Tower · Silencieux · isolation phonique",
+    "fmt": "ATX",
+    "mxgl": 315
   },
   {
     "id": "case-define7",
     "n": "Fractal Design Define 7",
     "p": 145,
-    "inf": "ATX/E-ATX · Mid-Tower · Silencieux · premium"
+    "inf": "ATX/E-ATX · Mid-Tower · Silencieux · premium",
+    "fmt": "EATX",
+    "mxgl": 440
   },
   {
     "id": "case-meshify2",
     "n": "Fractal Design Meshify 2",
     "p": 135,
-    "inf": "ATX · Mid-Tower · Airflow mesh · E-ATX compatible"
+    "inf": "ATX · Mid-Tower · Airflow mesh · E-ATX compatible",
+    "fmt": "EATX",
+    "mxgl": 440
   },
   {
     "id": "case-torrent-nano",
     "n": "Fractal Design Torrent Nano",
     "p": 115,
-    "inf": "Mini-ITX · Airflow EXTRÊME · 2×140mm fans"
+    "inf": "Mini-ITX · Airflow EXTRÊME · 2×140mm fans",
+    "fmt": "ITX",
+    "mxgl": 338
   },
   {
     "id": "case-p500a",
     "n": "Phanteks Eclipse P500A",
     "p": 115,
-    "inf": "ATX · Mid-Tower · Mesh frontal · très bon airflow"
+    "inf": "ATX · Mid-Tower · Mesh frontal · très bon airflow",
+    "fmt": "ATX",
+    "mxgl": 420
   },
   {
     "id": "case-p600s",
     "n": "Phanteks Eclipse P600S",
     "p": 145,
-    "inf": "ATX · Mid-Tower · Hybride silence/airflow"
+    "inf": "ATX · Mid-Tower · Hybride silence/airflow",
+    "fmt": "ATX",
+    "mxgl": 420
   },
   {
     "id": "case-pure500",
     "n": "Be Quiet! Pure Base 500DX",
     "p": 105,
-    "inf": "ATX · Mid-Tower · Silencieux · RGB intégré"
+    "inf": "ATX · Mid-Tower · Silencieux · RGB intégré",
+    "fmt": "ATX",
+    "mxgl": 369
   },
   {
     "id": "case-lancool",
     "n": "Lian Li LANCOOL 216",
     "p": 115,
-    "inf": "ATX · Mid-Tower · Excellent airflow dual-fan 200mm"
+    "inf": "ATX · Mid-Tower · Excellent airflow dual-fan 200mm",
+    "fmt": "ATX",
+    "mxgl": 370
   },
   {
     "id": "case-lancool3",
     "n": "Lian Li LANCOOL III",
     "p": 135,
-    "inf": "ATX/E-ATX · Mid-Tower · Airflow exceptionnel [2024]"
+    "inf": "ATX/E-ATX · Mid-Tower · Airflow exceptionnel [2024]",
+    "fmt": "EATX",
+    "mxgl": 400
   },
   {
     "id": "case-h7",
     "n": "NZXT H7 Flow",
     "p": 135,
-    "inf": "ATX · Mid-Tower · Airflow premium · RGB"
+    "inf": "ATX · Mid-Tower · Airflow premium · RGB",
+    "fmt": "ATX",
+    "mxgl": 380
   },
   {
     "id": "case-h7-elite",
     "n": "NZXT H7 Elite",
     "p": 165,
-    "inf": "ATX · Mid-Tower · Full RGB · LCD strip"
+    "inf": "ATX · Mid-Tower · Full RGB · LCD strip",
+    "fmt": "ATX",
+    "mxgl": 380
   },
   {
     "id": "case-torrent",
     "n": "Fractal Design Torrent",
     "p": 175,
-    "inf": "ATX · Mid-Tower · Airflow EXTRÊME · 2×180mm fans"
+    "inf": "ATX · Mid-Tower · Airflow EXTRÊME · 2×180mm fans",
+    "fmt": "ATX",
+    "mxgl": 420
   },
   {
     "id": "case-corsair-4000x",
     "n": "Corsair 4000X RGB",
     "p": 115,
-    "inf": "ATX · Mid-Tower · RGB · panneau verre"
+    "inf": "ATX · Mid-Tower · RGB · panneau verre",
+    "fmt": "ATX",
+    "mxgl": 360
   },
   {
     "id": "case-corsair-5000x",
     "n": "Corsair 5000X RGB",
     "p": 185,
-    "inf": "ATX · Mid-Tower · RGB · panoramique verre"
+    "inf": "ATX · Mid-Tower · RGB · panoramique verre",
+    "fmt": "ATX",
+    "mxgl": 420
   },
   {
     "id": "case-deepcool-ch780",
     "n": "DeepCool CH780 Digital",
     "p": 159,
-    "inf": "E-ATX · Mid-Tower · LCD · ARGB · airflow [2024]"
+    "inf": "E-ATX · Mid-Tower · LCD · ARGB · airflow [2024]",
+    "fmt": "EATX",
+    "mxgl": 420
   },
   {
     "id": "case-msi-mag",
     "n": "MSI MAG FORGE 321R AIRFLOW",
     "p": 89,
-    "inf": "ATX · Mid-Tower · Mesh · ARGB · bon airflow"
+    "inf": "ATX · Mid-Tower · Mesh · ARGB · bon airflow",
+    "fmt": "ATX",
+    "mxgl": 360
   },
   {
     "id": "case-asus-gt502",
     "n": "ASUS TUF Gaming GT502",
     "p": 129,
-    "inf": "ATX · Mid-Tower · Dual chamber · airflow optimisé"
+    "inf": "ATX · Mid-Tower · Dual chamber · airflow optimisé",
+    "fmt": "ATX",
+    "mxgl": 400
   },
   {
     "id": "case-lian-011d-mini",
     "n": "Lian Li O11 Dynamic Mini",
     "p": 99,
-    "inf": "mATX · Mid-Tower · Showcase · watercooling friendly"
+    "inf": "mATX · Mid-Tower · Showcase · watercooling friendly",
+    "fmt": "mATX",
+    "mxgl": 320
   },
   {
     "id": "case-montech-air903",
     "n": "Montech AIR 903 MAX",
     "p": 89,
-    "inf": "ATX · Mid-Tower · Mesh 360° · airflow extrême [2024]"
+    "inf": "ATX · Mid-Tower · Mesh 360° · airflow extrême [2024]",
+    "fmt": "ATX",
+    "mxgl": 400
   },
   {
     "id": "case-corsair-3000d",
     "n": "Corsair 3000D Airflow",
     "p": 85,
-    "inf": "ATX · Mid-Tower · Airflow · verre trempé"
+    "inf": "ATX · Mid-Tower · Airflow · verre trempé",
+    "fmt": "ATX",
+    "mxgl": 360
   },
   {
     "id": "g_atx_high",
@@ -304,91 +394,121 @@
     "id": "case-o11-evo",
     "n": "Lian Li O11 Dynamic EVO ⭐",
     "p": 149,
-    "inf": "ATX/E-ATX · Mid-Tower · Parfait custom loop · showcase"
+    "inf": "ATX/E-ATX · Mid-Tower · Parfait custom loop · showcase",
+    "fmt": "EATX",
+    "mxgl": 446
   },
   {
     "id": "case-o11-air",
     "n": "Lian Li O11 Air Mini",
     "p": 125,
-    "inf": "ATX · Mid-Tower · Mesh 360° · airflow maximal"
+    "inf": "ATX · Mid-Tower · Mesh 360° · airflow maximal",
+    "fmt": "ATX",
+    "mxgl": 430
   },
   {
     "id": "case-o11-xl",
     "n": "Lian Li O11 XL",
     "p": 209,
-    "inf": "E-ATX · Full-Tower · Grand radiateur · custom loop"
+    "inf": "E-ATX · Full-Tower · Grand radiateur · custom loop",
+    "fmt": "EATX",
+    "mxgl": 446
   },
   {
     "id": "case-o11d-evo-rgb",
     "n": "Lian Li O11 Dynamic EVO RGB",
     "p": 165,
-    "inf": "ATX/E-ATX · Mid-Tower · RGB · showcase premium"
+    "inf": "ATX/E-ATX · Mid-Tower · RGB · showcase premium",
+    "fmt": "EATX",
+    "mxgl": 446
   },
   {
     "id": "case-h9elite",
     "n": "NZXT H9 Elite",
     "p": 239,
-    "inf": "ATX · Mid-Tower · Panoramique 4 faces verre · RGB"
+    "inf": "ATX · Mid-Tower · Panoramique 4 faces verre · RGB",
+    "fmt": "ATX",
+    "mxgl": 425
   },
   {
     "id": "case-h9flow",
     "n": "NZXT H9 Flow",
     "p": 195,
-    "inf": "ATX · Mid-Tower · 4 faces verre · airflow optimisé"
+    "inf": "ATX · Mid-Tower · 4 faces verre · airflow optimisé",
+    "fmt": "ATX",
+    "mxgl": 425
   },
   {
     "id": "case-phanteks-pro",
     "n": "Phanteks Enthoo Pro 2",
     "p": 185,
-    "inf": "E-ATX · Full-Tower · Spacieux · excellent airflow"
+    "inf": "E-ATX · Full-Tower · Spacieux · excellent airflow",
+    "fmt": "EATX",
+    "mxgl": 450
   },
   {
     "id": "case-phanteks-evolv",
     "n": "Phanteks Enthoo Evolv X",
     "p": 195,
-    "inf": "E-ATX · Mid-Tower · Double chambre · premium"
+    "inf": "E-ATX · Mid-Tower · Double chambre · premium",
+    "fmt": "EATX",
+    "mxgl": 420
   },
   {
     "id": "case-corsair-7000d",
     "n": "Corsair 7000D AIRFLOW",
     "p": 219,
-    "inf": "E-ATX · Full-Tower · Airflow maximal · 3 fans 140mm"
+    "inf": "E-ATX · Full-Tower · Airflow maximal · 3 fans 140mm",
+    "fmt": "EATX",
+    "mxgl": 490
   },
   {
     "id": "case-rog-strix",
     "n": "ASUS ROG Strix Helios GX601",
     "p": 225,
-    "inf": "E-ATX · Mid-Tower · RGB · window panel · premium"
+    "inf": "E-ATX · Mid-Tower · RGB · window panel · premium",
+    "fmt": "EATX",
+    "mxgl": 420
   },
   {
     "id": "case-asus-gt604",
     "n": "ASUS TUF Gaming GT604",
     "p": 149,
-    "inf": "E-ATX · Mid-Tower · Dual chamber ARGB · airflow [2024]"
+    "inf": "E-ATX · Mid-Tower · Dual chamber ARGB · airflow [2024]",
+    "fmt": "EATX",
+    "mxgl": 435
   },
   {
     "id": "case-lian-v3000",
     "n": "Lian Li V3000 Plus",
     "p": 399,
-    "inf": "E-ATX · Full-Tower · Ultra haut de gamme · watercooling"
+    "inf": "E-ATX · Full-Tower · Ultra haut de gamme · watercooling",
+    "fmt": "EATX",
+    "mxgl": 490
   },
   {
     "id": "case-be-900",
     "n": "Be Quiet! Silent Base 802",
     "p": 169,
-    "inf": "ATX · Mid-Tower · Silencieux absolu · modulable"
+    "inf": "ATX · Mid-Tower · Silencieux absolu · modulable",
+    "fmt": "ATX",
+    "mxgl": 395
   },
   {
     "id": "case-fractal-north",
     "n": "Fractal Design North",
     "p": 109,
-    "inf": "ATX · Mid-Tower · Design bois · silencieux · original [2023]"
+    "inf": "ATX · Mid-Tower · Design bois · silencieux · original [2023]",
+    "fmt": "ATX",
+    "mxgl": 355
   },
   {
     "id": "case-fractal-terra",
     "n": "Fractal Design Terra",
     "p": 149,
-    "inf": "Mini-ITX · Design bois · premium · compact [2023]"
+    "inf": "Mini-ITX · Design bois · premium · compact [2023]",
+    "fmt": "ITX",
+    "mxgl": 316
   },
   {
     "id": "g_eatx",
@@ -399,31 +519,41 @@
     "id": "case-rog",
     "n": "ASUS ROG Hyperion GR701",
     "p": 279,
-    "inf": "E-ATX · Full-Tower · RGB · ultra haut de gamme [2023]"
+    "inf": "E-ATX · Full-Tower · RGB · ultra haut de gamme [2023]",
+    "fmt": "EATX",
+    "mxgl": 490
   },
   {
     "id": "case-haf700",
     "n": "Cooler Master HAF 700 EVO",
     "p": 389,
-    "inf": "E-ATX · Full-Tower · Airflow extrême · LCD · ARGB"
+    "inf": "E-ATX · Full-Tower · Airflow extrême · LCD · ARGB",
+    "fmt": "EATX",
+    "mxgl": 490
   },
   {
     "id": "case-cosmos",
     "n": "Cooler Master Cosmos Infinity 30th",
     "p": 489,
-    "inf": "E-ATX · Full-Tower · Edition luxe · aluminium"
+    "inf": "E-ATX · Full-Tower · Edition luxe · aluminium",
+    "fmt": "EATX",
+    "mxgl": 500
   },
   {
     "id": "case-phanteks-elite",
     "n": "Phanteks Enthoo Elite",
     "p": 569,
-    "inf": "E-ATX · Full-Tower · Watercooling intégré · flagship absolu"
+    "inf": "E-ATX · Full-Tower · Watercooling intégré · flagship absolu",
+    "fmt": "EATX",
+    "mxgl": 500
   },
   {
     "id": "case-lian-011d-xl",
     "n": "Lian Li O11 Dynamic EVO XL",
     "p": 259,
-    "inf": "E-ATX · Full-Tower · Custom loop · showcase premium"
+    "inf": "E-ATX · Full-Tower · Custom loop · showcase premium",
+    "fmt": "EATX",
+    "mxgl": 490
   },
   {
     "id": "g_case_btf",
@@ -434,31 +564,41 @@
     "id": "case-btf-gigabyte",
     "n": "Gigabyte AORUS BTF Case",
     "p": 149,
-    "inf": "ATX · Mid-Tower · BTF connecteurs arrière · 0 câble visible [2024]"
+    "inf": "ATX · Mid-Tower · BTF connecteurs arrière · 0 câble visible [2024]",
+    "fmt": "ATX",
+    "mxgl": 380
   },
   {
     "id": "case-btf-msi",
     "n": "MSI MAG PANO 100R BTF",
     "p": 99,
-    "inf": "ATX · Mid-Tower · BTF · verre panoramique · ARGB [2024]"
+    "inf": "ATX · Mid-Tower · BTF · verre panoramique · ARGB [2024]",
+    "fmt": "ATX",
+    "mxgl": 360
   },
   {
     "id": "case-btf-asus",
     "n": "ASUS Prime AP201 BTF",
     "p": 95,
-    "inf": "mATX · Mid-Tower · BTF · compact [2025]"
+    "inf": "mATX · Mid-Tower · BTF · compact [2025]",
+    "fmt": "mATX",
+    "mxgl": 330
   },
   {
     "id": "case-btf-deepcool",
     "n": "DeepCool CH560 Digital BTF",
     "p": 109,
-    "inf": "ATX · Mid-Tower · BTF · LCD display · ARGB [2024]"
+    "inf": "ATX · Mid-Tower · BTF · LCD display · ARGB [2024]",
+    "fmt": "ATX",
+    "mxgl": 380
   },
   {
     "id": "case-btf-be",
     "n": "Be Quiet! Pure Base 501 BTF",
     "p": 119,
-    "inf": "ATX · Mid-Tower · BTF · silencieux [2025]"
+    "inf": "ATX · Mid-Tower · BTF · silencieux [2025]",
+    "fmt": "ATX",
+    "mxgl": 380
   },
   {
     "id": "g_case_open",
@@ -469,19 +609,25 @@
     "id": "case-open-lian",
     "n": "Lian Li O11 Dynamic EVO Open Frame",
     "p": 109,
-    "inf": "Open Frame · ATX · showcase · watercooling extrême"
+    "inf": "Open Frame · ATX · showcase · watercooling extrême",
+    "fmt": "EATX",
+    "mxgl": 999
   },
   {
     "id": "case-open-thermaltake",
     "n": "Thermaltake Core P3 TG",
     "p": 119,
-    "inf": "Open Frame · ATX · verre trempé · mural ou posé"
+    "inf": "Open Frame · ATX · verre trempé · mural ou posé",
+    "fmt": "ATX",
+    "mxgl": 999
   },
   {
     "id": "case-open-streacom",
     "n": "Streacom BC1 Open Benchtable",
     "p": 89,
-    "inf": "Test bench · ATX/mATX · aluminium · open air"
+    "inf": "Test bench · ATX/mATX · aluminium · open air",
+    "fmt": "ATX",
+    "mxgl": 999
   },
   {
     "id": "g_case_extra",
@@ -492,90 +638,120 @@
     "id": "case-montech-king",
     "n": "Montech KING 95 PRO",
     "p": 109,
-    "inf": "ATX · Mid-Tower · Mesh 270° · airflow extrême [2024]"
+    "inf": "ATX · Mid-Tower · Mesh 270° · airflow extrême [2024]",
+    "fmt": "ATX",
+    "mxgl": 400
   },
   {
     "id": "case-montech-air1000",
     "n": "Montech AIR 1000 Ultra",
     "p": 129,
-    "inf": "ATX · Mid-Tower · Mesh · ARGB · premium [2024]"
+    "inf": "ATX · Mid-Tower · Mesh · ARGB · premium [2024]",
+    "fmt": "ATX",
+    "mxgl": 400
   },
   {
     "id": "case-lian-v2000h",
     "n": "Lian Li V2000H PLUS",
     "p": 219,
-    "inf": "E-ATX · Mid-Tower · LCD panoramique · watercooling [2024]"
+    "inf": "E-ATX · Mid-Tower · LCD panoramique · watercooling [2024]",
+    "fmt": "EATX",
+    "mxgl": 420
   },
   {
     "id": "case-asus-gt601",
     "n": "ASUS ROG Strix Helios GX601 White",
     "p": 235,
-    "inf": "E-ATX · Mid-Tower · Blanc · RGB · premium"
+    "inf": "E-ATX · Mid-Tower · Blanc · RGB · premium",
+    "fmt": "EATX",
+    "mxgl": 420
   },
   {
     "id": "case-phanteks-p600s-w",
     "n": "Phanteks Eclipse P600S White",
     "p": 155,
-    "inf": "ATX · Mid-Tower · Blanc · hybride silence/airflow"
+    "inf": "ATX · Mid-Tower · Blanc · hybride silence/airflow",
+    "fmt": "ATX",
+    "mxgl": 420
   },
   {
     "id": "case-fractal-pop-air",
     "n": "Fractal Design Pop Air RGB",
     "p": 79,
-    "inf": "ATX · Mid-Tower · Mesh · RGB · couleurs disponibles [2022]"
+    "inf": "ATX · Mid-Tower · Mesh · RGB · couleurs disponibles [2022]",
+    "fmt": "ATX",
+    "mxgl": 340
   },
   {
     "id": "case-fractal-pop-xl",
     "n": "Fractal Design Pop XL Silent",
     "p": 109,
-    "inf": "E-ATX · Full-Tower · Silencieux · spacieux [2022]"
+    "inf": "E-ATX · Full-Tower · Silencieux · spacieux [2022]",
+    "fmt": "EATX",
+    "mxgl": 460
   },
   {
     "id": "case-corsair-2000d",
     "n": "Corsair 2000D Airflow",
     "p": 109,
-    "inf": "Mini-ITX · Compact · excellent airflow [2023]"
+    "inf": "Mini-ITX · Compact · excellent airflow [2023]",
+    "fmt": "ITX",
+    "mxgl": 305
   },
   {
     "id": "case-nzxt-h6-flow",
     "n": "NZXT H6 Flow",
     "p": 99,
-    "inf": "ATX · Mid-Tower · 2 faces verre · dual chamber airflow [2023]"
+    "inf": "ATX · Mid-Tower · 2 faces verre · dual chamber airflow [2023]",
+    "fmt": "ATX",
+    "mxgl": 365
   },
   {
     "id": "case-nzxt-h6-elite",
     "n": "NZXT H6 Flow RGB",
     "p": 119,
-    "inf": "ATX · Mid-Tower · 2 faces verre · RGB [2023]"
+    "inf": "ATX · Mid-Tower · 2 faces verre · RGB [2023]",
+    "fmt": "ATX",
+    "mxgl": 365
   },
   {
     "id": "case-inwin-301c",
     "n": "InWin 301C",
     "p": 109,
-    "inf": "mATX · Mid-Tower · Design premium · aluminium"
+    "inf": "mATX · Mid-Tower · Design premium · aluminium",
+    "fmt": "mATX",
+    "mxgl": 320
   },
   {
     "id": "case-inwin-915",
     "n": "InWin 915 Full Tower",
     "p": 349,
-    "inf": "E-ATX · Full-Tower · Premium aluminium · showcase"
+    "inf": "E-ATX · Full-Tower · Premium aluminium · showcase",
+    "fmt": "EATX",
+    "mxgl": 500
   },
   {
     "id": "case-lian-o11-mini",
     "n": "Lian Li O11 Dynamic Mini Snow",
     "p": 115,
-    "inf": "mATX · Mid-Tower · Blanc · showcase · watercooling"
+    "inf": "mATX · Mid-Tower · Blanc · showcase · watercooling",
+    "fmt": "mATX",
+    "mxgl": 320
   },
   {
     "id": "case-cooler-td300",
     "n": "Cooler Master TD300 Mesh",
     "p": 75,
-    "inf": "mATX · Mid-Tower · Mesh · ARGB · bon Q/P [2024]"
+    "inf": "mATX · Mid-Tower · Mesh · ARGB · bon Q/P [2024]",
+    "fmt": "mATX",
+    "mxgl": 320
   },
   {
     "id": "case-cooler-haf500",
     "n": "Cooler Master HAF 500",
     "p": 99,
-    "inf": "ATX · Mid-Tower · Airflow extrême · 2×200mm fans"
+    "inf": "ATX · Mid-Tower · Airflow extrême · 2×200mm fans",
+    "fmt": "ATX",
+    "mxgl": 410
   }
 ]
