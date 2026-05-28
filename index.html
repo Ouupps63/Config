@@ -56,6 +56,10 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .inf{margin-top:8px;padding:7px 10px;background:rgba(59,130,246,.08);border-left:2px solid rgba(96,165,250,.4);border-radius:0 7px 7px 0;font-size:15px;color:#93c5fd;min-height:32px;line-height:1.5}
 .inf.e{color:#475569;border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.02)}
 .inf.w{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.4);color:#fbbf24}
+
+.idealo-link{display:inline-block;margin-top:5px;margin-left:4px;font-size:11px;font-weight:700;color:#4ade80;text-decoration:none;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);padding:2px 8px;border-radius:20px;transition:.2s;white-space:nowrap}
+.idealo-link:hover{background:rgba(34,197,94,.22);color:#86efac}
+
 /* OPTIONS SUPPLÉMENTAIRES */
 .opts-wrap{background:rgba(17,25,40,.82);border-radius:18px;border:1px solid rgba(96,165,250,.18);padding:18px;margin-bottom:22px}
 .opts-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
@@ -304,11 +308,10 @@ var CATS={
   pccase: {l:'Boîtier',              i:'🖥️', s:'Format & airflow',          file:'Case.json'}
 };
 var PR={
-  bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to-kf',psu:'450w-seasonic',cooling:'air-thermalright-ax90',pccase:'case-core1000'},
-  budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to',psu:'650w-bequiet',cooling:'air-assassin',pccase:'case-4000d'},
-  mid:{cpu:'r7-7800x3d',mb:'b650e-msi',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240',pccase:'case-meshify2c'},
+  bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to-kf',psu:'450w-seasonic',cooling:'air-thermalright-ax90',pccase:'case-fractal-node'},
+  budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to-wd',psu:'650w-be',cooling:'air-thermalright-paa120',pccase:'case-4000d'},
+  mid:{cpu:'r7-7800x3d',mb:'b650-msi-tom',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240-arctic',pccase:'case-meshify2c'},
   high:{cpu:'r7-9800x3d',mb:'x670-gigabyte',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to-wd',psu:'1000w-seasonic',cooling:'aio-360-corsair',pccase:'case-o11-evo'},
-
 };
 var D={};var S={};
 
@@ -463,8 +466,9 @@ function gi(k){var a=D[k].d;for(var i=0;i<a.length;i++){if(a[i].id===S[k])return
 function upInf(k){
   var it=gi(k),el=document.getElementById('I'+k);if(!el)return;
   if(!it||!it.inf){el.textContent='Aucun composant sélectionné';el.className='inf e';return;}
-  el.textContent=it.inf;
   el.className='inf'+(it.id&&(it.id.indexOf('ddr5')>-1||it.id.indexOf('gen5')>-1)?' w':'');
+  var query=encodeURIComponent(it.n.replace(' ⭐',''));
+  el.innerHTML='<span>'+it.inf+'</span><br><a class="idealo-link" href="https://www.idealo.fr/prechcat.html?q='+query+'" target="_blank" rel="noopener">🔍 Vérifier le prix actuel</a>';
 }
 
 /* ══ OPTIONS ══ */
