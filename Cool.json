@@ -1,556 +1,174 @@
 [
-  {
-    "id": "none",
-    "n": "-- Choisir un refroidissement --",
-    "p": 0,
-    "inf": ""
-  },
-  {
-    "id": "g_air_entry",
-    "g": true,
-    "n": "──── Ventirad — Entrée de gamme ────"
-  },
-  {
-    "id": "air-stock-amd",
-    "n": "Ventirad AMD Wraith Stealth (inclus)",
-    "p": 0,
-    "inf": "Air cooling · 65W TDP max · inclus CPU AMD box [gratuit]"
-  },
-  {
-    "id": "air-stock-spire",
-    "n": "Ventirad AMD Wraith Spire (inclus)",
-    "p": 0,
-    "inf": "Air cooling · 95W TDP max · inclus Ryzen 5/7 box [gratuit]"
-  },
-  {
-    "id": "air-intel-box",
-    "n": "Ventirad Intel Box (inclus)",
-    "p": 0,
-    "inf": "Air cooling · 65W TDP max · inclus CPU Intel box [gratuit]"
-  },
-  {
-    "id": "air-id-se224",
-    "n": "ID-COOLING SE-224-XT",
-    "p": 24,
-    "inf": "Air cooling · 180W TDP max · très bon Q/P budget"
-  },
-  {
-    "id": "air-id-se214",
-    "n": "ID-COOLING SE-214-XT",
-    "p": 19,
-    "inf": "Air cooling · 130W TDP max · compact budget"
-  },
-  {
-    "id": "air-thermalright-ax120",
-    "n": "Thermalright Assassin X 120",
-    "p": 27,
-    "inf": "Air cooling · 200W TDP max · silencieux compact"
-  },
-  {
-    "id": "air-thermalright-ax90",
-    "n": "Thermalright Assassin X 90 SE",
-    "p": 22,
-    "inf": "Air cooling · 150W TDP max · compact low profile"
-  },
-  {
-    "id": "air-cm-212-black",
-    "n": "Cooler Master Hyper 212 Black",
-    "p": 33,
-    "inf": "Air cooling · 150W TDP max — référence entrée"
-  },
-  {
-    "id": "air-cm-212-rgb",
-    "n": "Cooler Master Hyper 212 Spectrum V3 RGB",
-    "p": 37,
-    "inf": "Air cooling · 150W TDP max · ARGB"
-  },
-  {
-    "id": "air-cm-212-evo",
-    "n": "Cooler Master Hyper 212 EVO V2",
-    "p": 35,
-    "inf": "Air cooling · 150W TDP max · dual fan optionnel"
-  },
-  {
-    "id": "g_air_mid",
-    "g": true,
-    "n": "──── Ventirad — Milieu de gamme ────"
-  },
-  {
-    "id": "air-thermalright-pa120",
-    "n": "Thermalright PA120 SE ⭐",
-    "p": 33,
-    "inf": "Air cooling dual fan · 250W TDP max — excellent Q/P"
-  },
-  {
-    "id": "air-thermalright-paa120",
-    "n": "Thermalright Peerless Assassin 120 SE",
-    "p": 37,
-    "inf": "Air cooling · 260W TDP max · très silencieux — meilleur Q/P 2026"
-  },
-  {
-    "id": "air-thermalright-paa120-ex",
-    "n": "Thermalright Peerless Assassin 120 EX",
-    "p": 46,
-    "inf": "Air cooling · 280W TDP max · version améliorée"
-  },
-  {
-    "id": "air-be-pure2",
-    "n": "Be Quiet! Pure Rock 2",
-    "p": 37,
-    "inf": "Air cooling · 150W TDP max · silencieux"
-  },
-  {
-    "id": "air-be-pure2-fx",
-    "n": "Be Quiet! Pure Rock 2 FX",
-    "p": 44,
-    "inf": "Air cooling · 150W TDP max · ARGB · silencieux"
-  },
-  {
-    "id": "air-be-dr4",
-    "n": "Be Quiet! Dark Rock 4",
-    "p": 57,
-    "inf": "Air cooling · 200W TDP max · très silencieux"
-  },
-  {
-    "id": "air-noctua-u12s",
-    "n": "Noctua NH-U12S Redux",
-    "p": 47,
-    "inf": "Air cooling · 200W TDP max · ultra silencieux"
-  },
-  {
-    "id": "air-noctua-u12a",
-    "n": "Noctua NH-U12A",
-    "p": 85,
-    "inf": "Air cooling · 250W TDP max · référence compact"
-  },
-  {
-    "id": "air-noctua-u14s",
-    "n": "Noctua NH-U14S",
-    "p": 75,
-    "inf": "Air cooling · 250W TDP max · très silencieux"
-  },
-  {
-    "id": "air-scythe-fuma",
-    "n": "Scythe Fuma 3",
-    "p": 45,
-    "inf": "Air cooling · 220W TDP max · dual fan silencieux [2024]"
-  },
-  {
-    "id": "air-scythe-mugen",
-    "n": "Scythe Mugen 6",
-    "p": 52,
-    "inf": "Air cooling · 240W TDP max · dual fan"
-  },
-  {
-    "id": "air-deepcool-ak620",
-    "n": "DeepCool AK620",
-    "p": 49,
-    "inf": "Air cooling · 260W TDP max · dual tower silencieux"
-  },
-  {
-    "id": "air-deepcool-ag620",
-    "n": "DeepCool AG620 ARGB",
-    "p": 42,
-    "inf": "Air cooling · 240W TDP max · ARGB"
-  },
-  {
-    "id": "g_air_high",
-    "g": true,
-    "n": "──── Ventirad — Premium ────"
-  },
-  {
-    "id": "air-be-drp5",
-    "n": "Be Quiet! Dark Rock Pro 5",
-    "p": 85,
-    "inf": "Air cooling · 270W TDP max · silencieux · double tour"
-  },
-  {
-    "id": "air-be-elite",
-    "n": "Be Quiet! Dark Rock Elite",
-    "p": 99,
-    "inf": "Air cooling · 300W TDP max · ultra silencieux [2023]"
-  },
-  {
-    "id": "air-noctua-d15",
-    "n": "Noctua NH-D15 G2 ⭐",
-    "p": 105,
-    "inf": "Air cooling premium · 300W TDP max · ultra silencieux — référence"
-  },
-  {
-    "id": "air-noctua-d15-black",
-    "n": "Noctua NH-D15 G2 chromax.black",
-    "p": 115,
-    "inf": "Air cooling premium · 300W TDP max · version noire"
-  },
-  {
-    "id": "air-thermalright-frozen",
-    "n": "Thermalright Frozen Warframe",
-    "p": 59,
-    "inf": "Air cooling · 300W TDP max · dual tower silencieux [2024]"
-  },
-  {
-    "id": "air-deepcool-ak620-zero",
-    "n": "DeepCool AK620 Zero Dark ARGB",
-    "p": 65,
-    "inf": "Air cooling · 260W TDP max · ARGB premium"
-  },
-  {
-    "id": "g_aio_120_240",
-    "g": true,
-    "n": "──── AIO Watercooling — 120mm / 240mm ────"
-  },
-  {
-    "id": "aio-120-corsair",
-    "n": "AIO 120mm (Corsair H60x)",
-    "p": 44,
-    "inf": "Watercooling · 120mm · 150W TDP max"
-  },
-  {
-    "id": "aio-120-arctic",
-    "n": "AIO 120mm (ARCTIC Liquid Freezer III 120)",
-    "p": 47,
-    "inf": "Watercooling · 120mm · 180W TDP max"
-  },
-  {
-    "id": "aio-120-be",
-    "n": "AIO 120mm (Be Quiet! Pure Loop 2)",
-    "p": 52,
-    "inf": "Watercooling · 120mm · 180W TDP max · silencieux"
-  },
-  {
-    "id": "aio-240-arctic-ii",
-    "n": "AIO 240mm (ARCTIC Liquid Freezer II 240)",
-    "p": 67,
-    "inf": "Watercooling · 240mm · 280W TDP max"
-  },
-  {
-    "id": "aio-240-arctic",
-    "n": "AIO 240mm (ARCTIC Liquid Freezer III 240) ⭐",
-    "p": 75,
-    "inf": "Watercooling · 240mm · 300W TDP max — meilleur Q/P AIO"
-  },
-  {
-    "id": "aio-240-corsair-h100",
-    "n": "AIO 240mm (Corsair iCUE H100i Elite)",
-    "p": 95,
-    "inf": "Watercooling · 240mm · 300W TDP max · LCD · RGB"
-  },
-  {
-    "id": "aio-240-nzxt",
-    "n": "AIO 240mm (NZXT Kraken 240)",
-    "p": 85,
-    "inf": "Watercooling · 240mm · 300W TDP max · LCD"
-  },
-  {
-    "id": "aio-240-be",
-    "n": "AIO 240mm (Be Quiet! Pure Loop 2 FX)",
-    "p": 85,
-    "inf": "Watercooling · 240mm · 300W TDP max · silencieux"
-  },
-  {
-    "id": "aio-240-asus-ryujin",
-    "n": "AIO 240mm (ASUS ROG RYUJIN III 240)",
-    "p": 149,
-    "inf": "Watercooling · 240mm · LCD · RGB premium"
-  },
-  {
-    "id": "aio-240-deepcool",
-    "n": "AIO 240mm (DeepCool LT720)",
-    "p": 79,
-    "inf": "Watercooling · 240mm · 300W TDP max · ARGB"
-  },
-  {
-    "id": "aio-240-msi",
-    "n": "AIO 240mm (MSI MAG CoreLiquid 240R V2)",
-    "p": 72,
-    "inf": "Watercooling · 240mm · 280W TDP max · ARGB"
-  },
-  {
-    "id": "aio-240-ek",
-    "n": "AIO 240mm (EK-Nucleus AIO CR240)",
-    "p": 109,
-    "inf": "Watercooling · 240mm · 300W TDP max · EK Build Quality"
-  },
-  {
-    "id": "aio-240-fractal",
-    "n": "AIO 240mm (Fractal Design Lumen S24 RGB)",
-    "p": 89,
-    "inf": "Watercooling · 240mm · 300W TDP max"
-  },
-  {
-    "id": "g_aio_280_360",
-    "g": true,
-    "n": "──── AIO Watercooling — 280mm / 360mm ────"
-  },
-  {
-    "id": "aio-280-arctic",
-    "n": "AIO 280mm (ARCTIC Liquid Freezer III 280)",
-    "p": 85,
-    "inf": "Watercooling · 280mm · 350W TDP max"
-  },
-  {
-    "id": "aio-280-be",
-    "n": "AIO 280mm (Be Quiet! Pure Loop 2 FX 280)",
-    "p": 95,
-    "inf": "Watercooling · 280mm · 320W TDP max · silencieux"
-  },
-  {
-    "id": "aio-280-corsair",
-    "n": "AIO 280mm (Corsair iCUE H115i Elite)",
-    "p": 115,
-    "inf": "Watercooling · 280mm · 350W TDP max · RGB"
-  },
-  {
-    "id": "aio-360-arctic",
-    "n": "AIO 360mm (ARCTIC Liquid Freezer III 360)",
-    "p": 115,
-    "inf": "Watercooling · 360mm · 400W TDP max — excellent Q/P"
-  },
-  {
-    "id": "aio-360-be",
-    "n": "AIO 360mm (Be Quiet! Silent Loop 3)",
-    "p": 155,
-    "inf": "Watercooling · 360mm · 400W TDP max · silencieux absolu"
-  },
-  {
-    "id": "aio-360-corsair",
-    "n": "AIO 360mm (Corsair iCUE H150i Elite)",
-    "p": 145,
-    "inf": "Watercooling · 360mm · 400W TDP max · RGB"
-  },
-  {
-    "id": "aio-360-asus",
-    "n": "AIO 360mm (ASUS ROG RYUJIN III 360)",
-    "p": 195,
-    "inf": "Watercooling · 360mm · LCD · RGB premium"
-  },
-  {
-    "id": "aio-360-nzxt",
-    "n": "AIO 360mm (NZXT Kraken Elite 360)",
-    "p": 225,
-    "inf": "Watercooling · 360mm · grand LCD"
-  },
-  {
-    "id": "aio-360-deepcool",
-    "n": "AIO 360mm (DeepCool LT720 360)",
-    "p": 119,
-    "inf": "Watercooling · 360mm · 400W TDP max · ARGB"
-  },
-  {
-    "id": "aio-360-msi",
-    "n": "AIO 360mm (MSI MAG CoreLiquid 360R V2)",
-    "p": 105,
-    "inf": "Watercooling · 360mm · 400W TDP max · ARGB"
-  },
-  {
-    "id": "aio-360-ek",
-    "n": "AIO 360mm (EK-Nucleus AIO CR360)",
-    "p": 149,
-    "inf": "Watercooling · 360mm · 400W TDP max · EK Build Quality"
-  },
-  {
-    "id": "aio-360-fractal",
-    "n": "AIO 360mm (Fractal Design Lumen S36 RGB)",
-    "p": 115,
-    "inf": "Watercooling · 360mm · 400W TDP max"
-  },
-  {
-    "id": "g_aio_420",
-    "g": true,
-    "n": "──── AIO Watercooling — 420mm ────"
-  },
-  {
-    "id": "aio-420-arctic",
-    "n": "AIO 420mm (ARCTIC Liquid Freezer III 420)",
-    "p": 145,
-    "inf": "Watercooling · 420mm · 500W TDP max — silencieux extrême"
-  },
-  {
-    "id": "aio-420-corsair",
-    "n": "AIO 420mm (Corsair iCUE H170i Elite)",
-    "p": 175,
-    "inf": "Watercooling · 420mm · 500W TDP max · LCD · RGB"
-  },
-  {
-    "id": "aio-420-be",
-    "n": "AIO 420mm (Be Quiet! Silent Loop 3 420)",
-    "p": 185,
-    "inf": "Watercooling · 420mm · 500W TDP max · silencieux absolu"
-  },
-  {
-    "id": "aio-420-nzxt",
-    "n": "AIO 420mm (NZXT Kraken 420)",
-    "p": 165,
-    "inf": "Watercooling · 420mm · 500W TDP max · LCD"
-  },
-  {
-    "id": "g_custom",
-    "g": true,
-    "n": "──── Custom Loop ────"
-  },
-  {
-    "id": "custom-240-ek",
-    "n": "Kit custom 240mm (EK Quantum Basic Kit)",
-    "p": 225,
-    "inf": "Watercooling custom · 400W+ TDP max · silence absolu"
-  },
-  {
-    "id": "custom-360-ek",
-    "n": "Kit custom 360mm (EK Quantum Deluxe Kit)",
-    "p": 279,
-    "inf": "Watercooling custom · 500W+ TDP max"
-  },
-  {
-    "id": "custom-360-alphacool",
-    "n": "Kit custom 360mm (Alphacool Eiswolf 2)",
-    "p": 309,
-    "inf": "Watercooling custom · 500W+ TDP max · sans compromis"
-  },
-  {
-    "id": "custom-480-ek",
-    "n": "Kit custom 480mm (EK Pro Kit)",
-    "p": 429,
-    "inf": "Watercooling custom · 600W+ TDP max · workstation"
-  },
-  {
-    "id": "custom-480-alphacool",
-    "n": "Kit custom 480mm (Alphacool Eissturm)",
-    "p": 459,
-    "inf": "Watercooling custom · 600W+ TDP max · ultra silencieux"
-  },
-  {
-    "id": "g_air_lowprofile",
-    "g": true,
-    "n": "──── Ventirad Low Profile (boîtiers plats) ────"
-  },
-  {
-    "id": "air-lp-noctua-l9",
-    "n": "Noctua NH-L9i-17xx (LGA1700)",
-    "p": 45,
-    "inf": "Air cooling low profile · 65W TDP max · 37mm hauteur — HTPC"
-  },
-  {
-    "id": "air-lp-noctua-l12",
-    "n": "Noctua NH-L12 Ghost S1",
-    "p": 65,
-    "inf": "Air cooling low profile · 95W TDP max · 70mm hauteur"
-  },
-  {
-    "id": "air-lp-be-pure",
-    "n": "Be Quiet! Shadow Rock LP",
-    "p": 39,
-    "inf": "Air cooling low profile · 130W TDP max · 75mm hauteur"
-  },
-  {
-    "id": "air-lp-thermalright-ax47",
-    "n": "Thermalright AXP90-X47 Full Copper",
-    "p": 34,
-    "inf": "Air cooling low profile · 150W TDP max · 47mm · cuivre"
-  },
-  {
-    "id": "air-lp-scythe-big-shuriken",
-    "n": "Scythe Big Shuriken 3",
-    "p": 42,
-    "inf": "Air cooling low profile · 120W TDP max · 58mm hauteur"
-  },
-  {
-    "id": "air-lp-id-se-207",
-    "n": "ID-COOLING IS-55 V2 ARGB",
-    "p": 28,
-    "inf": "Air cooling low profile · 100W TDP max · 55mm · ARGB"
-  },
-  {
-    "id": "air-lp-alpenfohn",
-    "n": "Alpenfohn Silvretta",
-    "p": 35,
-    "inf": "Air cooling low profile · 95W TDP max · 45mm hauteur"
-  },
-  {
-    "id": "g_aio_extra",
-    "g": true,
-    "n": "──── AIO supplémentaires 2024-2026 ────"
-  },
-  {
-    "id": "aio-240-thermalright",
-    "n": "AIO 240mm (Thermalright Frozen Edge 240)",
-    "p": 65,
-    "inf": "Watercooling · 240mm · 300W TDP max · silencieux · bon Q/P [2024]"
-  },
-  {
-    "id": "aio-360-thermalright",
-    "n": "AIO 360mm (Thermalright Frozen Edge 360)",
-    "p": 95,
-    "inf": "Watercooling · 360mm · 400W TDP max · silencieux [2024]"
-  },
-  {
-    "id": "aio-240-peerless",
-    "n": "AIO 240mm (Thermalright Aqua Elite 360 V3)",
-    "p": 89,
-    "inf": "Watercooling · 240mm · LCD · bon airflow [2024]"
-  },
-  {
-    "id": "aio-360-asus-tuf",
-    "n": "AIO 360mm (ASUS TUF Gaming LC II 360)",
-    "p": 129,
-    "inf": "Watercooling · 360mm · ARGB · ATX 3.0 [2024]"
-  },
-  {
-    "id": "aio-360-msi-dragon",
-    "n": "AIO 360mm (MSI MAG CoreLiquid P360)",
-    "p": 119,
-    "inf": "Watercooling · 360mm · ARGB · 400W TDP max [2024]"
-  },
-  {
-    "id": "aio-240-gigabyte",
-    "n": "AIO 240mm (Gigabyte AORUS LIQUID COOLER 240)",
-    "p": 99,
-    "inf": "Watercooling · 240mm · LCD · ARGB"
-  },
-  {
-    "id": "aio-360-gigabyte",
-    "n": "AIO 360mm (Gigabyte AORUS LIQUID COOLER 360)",
-    "p": 129,
-    "inf": "Watercooling · 360mm · LCD · ARGB"
-  },
-  {
-    "id": "aio-360-corsair-h170",
-    "n": "AIO 360mm (Corsair iCUE H170i Elite Capellix XT)",
-    "p": 175,
-    "inf": "Watercooling · 360mm · LCD · RGB · premium [2023]"
-  },
-  {
-    "id": "g_air_2026",
-    "g": true,
-    "n": "──── Nouveaux ventirads 2024-2026 ────"
-  },
-  {
-    "id": "air-thermalright-archon",
-    "n": "Thermalright Archon SE ARGB",
-    "p": 69,
-    "inf": "Air cooling · 280W TDP max · dual tower · ARGB [2024]"
-  },
-  {
-    "id": "air-deepcool-assassin4",
-    "n": "DeepCool Assassin IV",
-    "p": 95,
-    "inf": "Air cooling · 300W TDP max · ultra silencieux dual tower [2024]"
-  },
-  {
-    "id": "air-be-shadow",
-    "n": "Be Quiet! Shadow Rock 3",
-    "p": 49,
-    "inf": "Air cooling · 190W TDP max · compact silencieux [2024]"
-  },
-  {
-    "id": "air-lc-tron",
-    "n": "Lian Li GALAHAD II Trinity SL360",
-    "p": 189,
-    "inf": "AIO 360mm · LCD + ARGB · 400W TDP max · premium [2024]"
-  },
-  {
-    "id": "air-id-se-234",
-    "n": "ID-COOLING SE-234-XT V2",
-    "p": 26,
-    "inf": "Air cooling · 220W TDP max · ultra budget Q/P [2025]"
-  }
+  {"id":"none","n":"-- Choisir un refroidissement --","p":0,"inf":""},
+
+  {"id":"g_stock","g":true,"n":"──── Ventirads Stock (inclus avec CPU) ────"},
+  {"id":"cool-wraith-stealth","n":"AMD Wraith Stealth (inclus CPU)","p":0,"inf":"Air · 65W TDP max · inclus CPU AMD 65W box [gratuit]"},
+  {"id":"cool-wraith-spire","n":"AMD Wraith Spire (inclus CPU)","p":0,"inf":"Air · 95W TDP max · inclus Ryzen 5/7 box [gratuit]"},
+  {"id":"cool-wraith-prism","n":"AMD Wraith Prism RGB (inclus CPU)","p":0,"inf":"Air · 105W TDP max · inclus Ryzen 7/9 box · RGB [gratuit]"},
+  {"id":"cool-intel-box-65w","n":"Intel Box Cooler 65W (inclus CPU)","p":0,"inf":"Air · 65W TDP max · inclus CPU Intel 65W box [gratuit]"},
+  {"id":"cool-intel-box-125w","n":"Intel Box Cooler 125W (inclus CPU)","p":0,"inf":"Air · 125W TDP max · inclus CPU Intel K-series [gratuit]"},
+
+  {"id":"g_ventirad_lowprofile","g":true,"n":"──── Ventirads Low Profile (boîtiers plats/HTPC) ────"},
+  {"id":"cool-noctua-l9i","n":"Noctua NH-L9i-17xx (LGA1700)","p":45,"inf":"Air · 65W TDP · 37mm hauteur · HTPC · ultra silencieux"},
+  {"id":"cool-noctua-l9a","n":"Noctua NH-L9a-AM5 (AM5)","p":45,"inf":"Air · 65W TDP · 37mm hauteur · HTPC · ultra silencieux"},
+  {"id":"cool-noctua-l12s","n":"Noctua NH-L12S","p":55,"inf":"Air · 120W TDP · 70mm hauteur · silencieux"},
+  {"id":"cool-be-shadow-lp","n":"Be Quiet! Shadow Rock LP","p":39,"inf":"Air · 130W TDP · 75mm hauteur"},
+  {"id":"cool-thermalright-ax90","n":"Thermalright Assassin X 90 SE","p":22,"inf":"Air · 150W TDP · compact · 90mm hauteur"},
+  {"id":"cool-thermalright-ax47","n":"Thermalright AXP90-X47 Full Copper","p":34,"inf":"Air · 150W TDP · 47mm · cuivre · low profile"},
+  {"id":"cool-id-se-214","n":"ID-COOLING SE-214-XT","p":19,"inf":"Air · 130W TDP · 154mm hauteur · budget compact"},
+  {"id":"cool-id-is55","n":"ID-COOLING IS-55 V2 ARGB","p":28,"inf":"Air · 100W TDP · 55mm · ARGB · low profile"},
+  {"id":"cool-scythe-shuriken3","n":"Scythe Big Shuriken 3","p":42,"inf":"Air · 120W TDP · 58mm hauteur · silencieux"},
+  {"id":"cool-alpenfohn-silvretta","n":"Alpenfohn Silvretta","p":35,"inf":"Air · 95W TDP · 45mm hauteur"},
+  {"id":"cool-silverstone-ar11","n":"SilverStone AR11","p":29,"inf":"Air · 95W TDP · 47mm hauteur · budget LP"},
+  {"id":"cool-cooler-geminii-m5","n":"Cooler Master GeminII M5","p":35,"inf":"Air · 150W TDP · 58mm hauteur · 120mm fan"},
+
+  {"id":"g_ventirad_entry","g":true,"n":"──── Ventirads — Entrée de gamme ────"},
+  {"id":"cool-cm-hyper212-black","n":"Cooler Master Hyper 212 Black","p":33,"inf":"Air · 150W TDP · 158mm · simple tour — référence budget"},
+  {"id":"cool-cm-hyper212-rgb","n":"Cooler Master Hyper 212 Spectrum V3 RGB","p":37,"inf":"Air · 150W TDP · 158mm · ARGB"},
+  {"id":"cool-cm-hyper212-evo","n":"Cooler Master Hyper 212 EVO V2","p":35,"inf":"Air · 150W TDP · 159mm · dual fan optionnel"},
+  {"id":"cool-id-se224","n":"ID-COOLING SE-224-XT","p":24,"inf":"Air · 180W TDP · très bon Q/P budget · 4 caloducs"},
+  {"id":"cool-id-se234","n":"ID-COOLING SE-234-XT V2","p":26,"inf":"Air · 220W TDP · ultra budget Q/P [2025] · 4 caloducs"},
+  {"id":"cool-deepcool-gammax","n":"DeepCool GAMMAXX GT","p":28,"inf":"Air · 130W TDP · RGB · budget · simple tour"},
+  {"id":"cool-deepcool-ag300","n":"DeepCool AG300","p":29,"inf":"Air · 150W TDP · 3 caloducs · budget"},
+  {"id":"cool-thermalright-ax120","n":"Thermalright Assassin X 120","p":27,"inf":"Air · 200W TDP · silencieux compact · 120mm"},
+  {"id":"cool-antec-a40-pro","n":"Antec A40 Pro","p":25,"inf":"Air · 120W TDP · 4 caloducs · RGB · budget"},
+  {"id":"cool-silverstone-ar12","n":"SilverStone AR12 TUF","p":29,"inf":"Air · 150W TDP · 120mm · RGB · compact"},
+  {"id":"cool-cooler-t620","n":"Cooler Master T620","p":32,"inf":"Air · 200W TDP · 2×120mm · budget dual fan"},
+  {"id":"cool-scythe-katana4","n":"Scythe Katana 4","p":29,"inf":"Air · 110W TDP · compact · 92mm"},
+
+  {"id":"g_ventirad_mid","g":true,"n":"──── Ventirads — Milieu de gamme ────"},
+  {"id":"cool-thermalright-pa120","n":"Thermalright PA120 SE ⭐","p":33,"inf":"Air · dual fan 120mm · 250W TDP — excellent Q/P"},
+  {"id":"cool-thermalright-paa120","n":"Thermalright Peerless Assassin 120 SE","p":37,"inf":"Air · dual tower · 260W TDP · très silencieux — meilleur Q/P 2026"},
+  {"id":"cool-thermalright-paa120-ex","n":"Thermalright Peerless Assassin 120 EX","p":46,"inf":"Air · dual tower · 280W TDP · version améliorée"},
+  {"id":"cool-thermalright-frozen","n":"Thermalright Frozen Warframe","p":59,"inf":"Air · dual tower · 300W TDP · silencieux [2024]"},
+  {"id":"cool-thermalright-archon","n":"Thermalright Archon SE ARGB","p":69,"inf":"Air · dual tower · 280W TDP · ARGB [2024]"},
+  {"id":"cool-deepcool-ak400","n":"DeepCool AK400","p":35,"inf":"Air · single tower · 220W TDP · silencieux · 4 caloducs"},
+  {"id":"cool-deepcool-ak500","n":"DeepCool AK500","p":42,"inf":"Air · single tower · 240W TDP · 5 caloducs · silencieux"},
+  {"id":"cool-deepcool-ak620","n":"DeepCool AK620 ⭐","p":49,"inf":"Air · dual tower · 260W TDP · dual fan silencieux"},
+  {"id":"cool-deepcool-ag620","n":"DeepCool AG620 ARGB","p":42,"inf":"Air · dual tower · 240W TDP · ARGB"},
+  {"id":"cool-deepcool-ak620-zero","n":"DeepCool AK620 Zero Dark ARGB","p":65,"inf":"Air · dual tower · 260W TDP · ARGB premium"},
+  {"id":"cool-deepcool-assasin4","n":"DeepCool Assassin IV","p":95,"inf":"Air · dual tower · 300W TDP · ultra silencieux [2024]"},
+  {"id":"cool-be-pure-rock2","n":"Be Quiet! Pure Rock 2","p":37,"inf":"Air · single tower · 150W TDP · silencieux"},
+  {"id":"cool-be-pure-rock2-fx","n":"Be Quiet! Pure Rock 2 FX","p":44,"inf":"Air · single tower · 150W TDP · ARGB · silencieux"},
+  {"id":"cool-be-dark-rock4","n":"Be Quiet! Dark Rock 4","p":57,"inf":"Air · single tower · 200W TDP · très silencieux"},
+  {"id":"cool-be-shadow-rock3","n":"Be Quiet! Shadow Rock 3","p":49,"inf":"Air · single tower · 190W TDP · silencieux [2024]"},
+  {"id":"cool-noctua-u12s","n":"Noctua NH-U12S Redux","p":47,"inf":"Air · single tower · 200W TDP · ultra silencieux"},
+  {"id":"cool-noctua-u12a","n":"Noctua NH-U12A","p":85,"inf":"Air · single tower · 250W TDP · référence compact"},
+  {"id":"cool-noctua-u14s","n":"Noctua NH-U14S","p":75,"inf":"Air · single tower · 250W TDP · 140mm fan · très silencieux"},
+  {"id":"cool-scythe-fuma3","n":"Scythe Fuma 3","p":45,"inf":"Air · dual tower asymétrique · 220W TDP · silencieux [2024]"},
+  {"id":"cool-scythe-mugen6","n":"Scythe Mugen 6","p":52,"inf":"Air · dual tower · 240W TDP · dual fan"},
+  {"id":"cool-scythe-ninja5","n":"Scythe Ninja 5","p":55,"inf":"Air · low profile large · 140W TDP · très silencieux"},
+  {"id":"cool-cooler-ma624","n":"Cooler Master MA624 Stealth","p":55,"inf":"Air · dual tower · 250W TDP · silencieux [2024]"},
+  {"id":"cool-enermax-ets-t50","n":"Enermax ETS-T50 AXE ARGB","p":44,"inf":"Air · single tower · 230W TDP · ARGB"},
+  {"id":"cool-arctic-freezer34","n":"ARCTIC Freezer 34 eSports DUO","p":35,"inf":"Air · single tower · 210W TDP · dual fan · excellent Q/P"},
+  {"id":"cool-arctic-freezer36","n":"ARCTIC Freezer 36 ⭐","p":29,"inf":"Air · single tower · 250W TDP · dual fan · meilleur Q/P 2026"},
+  {"id":"cool-jonsbo-cr1000","n":"Jonsbo CR-1000 ARGB","p":39,"inf":"Air · single tower · 200W TDP · ARGB"},
+  {"id":"cool-cooler-rr612","n":"Cooler Master RR-612 Vortex","p":39,"inf":"Air · single tower · 180W TDP"},
+
+  {"id":"g_ventirad_high","g":true,"n":"──── Ventirads — Premium / Haut de gamme ────"},
+  {"id":"cool-be-dark-rock-pro5","n":"Be Quiet! Dark Rock Pro 5","p":85,"inf":"Air · dual tower · 270W TDP · silencieux · 2 fans"},
+  {"id":"cool-be-dark-rock-elite","n":"Be Quiet! Dark Rock Elite","p":99,"inf":"Air · dual tower · 300W TDP · ultra silencieux [2023]"},
+  {"id":"cool-noctua-d15-g2","n":"Noctua NH-D15 G2 ⭐","p":105,"inf":"Air · dual tower · 300W TDP · ultra silencieux — référence absolue"},
+  {"id":"cool-noctua-d15-g2-black","n":"Noctua NH-D15 G2 chromax.black","p":115,"inf":"Air · dual tower · 300W TDP · version noire"},
+  {"id":"cool-noctua-d15-g2-lbc","n":"Noctua NH-D15 G2 LBC","p":119,"inf":"Air · dual tower · 320W TDP · offset pour RAM · [2025]"},
+  {"id":"cool-noctua-u12a-chromax","n":"Noctua NH-U12A chromax.black","p":95,"inf":"Air · single tower · 250W TDP · noir · très silencieux"},
+  {"id":"cool-thermalright-phantom120","n":"Thermalright Phantom Spirit 120 SE","p":49,"inf":"Air · single tower · 250W TDP · silencieux"},
+  {"id":"cool-deepcool-ltmp","n":"DeepCool LT400","p":55,"inf":"Air · dual tower · 260W TDP · ARGB · 4×6mm caloducs"},
+  {"id":"cool-enermax-aquafusion","n":"Enermax AQUAFUSION ADV 240","p":79,"inf":"Air · 240W TDP · tour avec radiateur intégré"},
+  {"id":"cool-scythe-noctuaequiv","n":"Scythe Fuma 3 ARGB","p":55,"inf":"Air · dual tower · 220W TDP · ARGB [2024]"},
+
+  {"id":"g_aio_120","g":true,"n":"──── AIO Watercooling — 120mm ────"},
+  {"id":"cool-arctic-120","n":"ARCTIC Liquid Freezer III 120","p":47,"inf":"AIO · 120mm · 180W TDP · 1×120mm · bon Q/P"},
+  {"id":"cool-corsair-h60x","n":"Corsair iCUE H60x Elite","p":49,"inf":"AIO · 120mm · 150W TDP · 1×120mm · LCD"},
+  {"id":"cool-deepcool-lt360-120","n":"DeepCool LS320","p":45,"inf":"AIO · 120mm · 180W TDP · 1×120mm · budget"},
+  {"id":"cool-be-pure-loop2-120","n":"Be Quiet! Pure Loop 2 120mm","p":52,"inf":"AIO · 120mm · 180W TDP · 1×120mm · silencieux"},
+  {"id":"cool-thermalright-frozen120","n":"Thermalright Frozen Edge 120","p":39,"inf":"AIO · 120mm · 200W TDP · 1×120mm · meilleur Q/P budget"},
+  {"id":"cool-enermax-liqfusion120","n":"Enermax LIQFUSION 120","p":44,"inf":"AIO · 120mm · 180W TDP · 1×120mm · ARGB"},
+  {"id":"cool-nzxt-kraken120","n":"NZXT Kraken 120","p":69,"inf":"AIO · 120mm · 200W TDP · 1×120mm · LCD"},
+
+  {"id":"g_aio_240","g":true,"n":"──── AIO Watercooling — 240mm ────"},
+  {"id":"cool-arctic-240-ii","n":"ARCTIC Liquid Freezer II 240","p":67,"inf":"AIO · 240mm · 280W TDP · 2×120mm"},
+  {"id":"cool-arctic-240","n":"ARCTIC Liquid Freezer III 240 ⭐","p":75,"inf":"AIO · 240mm · 300W TDP — meilleur Q/P AIO 240mm"},
+  {"id":"cool-thermalright-frozen240","n":"Thermalright Frozen Edge 240","p":65,"inf":"AIO · 240mm · 300W TDP · silencieux · excellent Q/P [2024]"},
+  {"id":"cool-thermalright-aqua240","n":"Thermalright Aqua Elite 240 V3","p":89,"inf":"AIO · 240mm · 300W TDP · LCD · ARGB [2024]"},
+  {"id":"cool-be-pure-loop2-240","n":"Be Quiet! Pure Loop 2 FX 240mm","p":85,"inf":"AIO · 240mm · 300W TDP · silencieux"},
+  {"id":"cool-be-silent-loop3-240","n":"Be Quiet! Silent Loop 3 240mm","p":129,"inf":"AIO · 240mm · 350W TDP · silencieux premium"},
+  {"id":"cool-corsair-h100i","n":"Corsair iCUE H100i Elite LCD","p":95,"inf":"AIO · 240mm · 300W TDP · LCD · RGB"},
+  {"id":"cool-corsair-h100i-pro","n":"Corsair iCUE H100i Elite Capellix XT","p":115,"inf":"AIO · 240mm · 300W TDP · LCD · RGB premium [2023]"},
+  {"id":"cool-nzxt-kraken240","n":"NZXT Kraken 240","p":85,"inf":"AIO · 240mm · 300W TDP · LCD"},
+  {"id":"cool-nzxt-kraken240-elite","n":"NZXT Kraken Elite 240","p":149,"inf":"AIO · 240mm · 300W TDP · grand LCD"},
+  {"id":"cool-deepcool-lt240","n":"DeepCool LT240","p":79,"inf":"AIO · 240mm · 300W TDP · ARGB · anti-leak"},
+  {"id":"cool-deepcool-ls720-240","n":"DeepCool LT520","p":89,"inf":"AIO · 240mm · 300W TDP · LCD · ARGB"},
+  {"id":"cool-asus-rog-ryujin240","n":"ASUS ROG RYUJIN III 240","p":149,"inf":"AIO · 240mm · LCD · RGB premium"},
+  {"id":"cool-asus-tuf-lc240","n":"ASUS TUF Gaming LC II 240","p":119,"inf":"AIO · 240mm · ARGB · ATX 3.0 [2024]"},
+  {"id":"cool-msi-coreliquid240r","n":"MSI MAG CoreLiquid 240R V2","p":72,"inf":"AIO · 240mm · 280W TDP · ARGB"},
+  {"id":"cool-msi-coreliquid-e240","n":"MSI MEG CoreLiquid E240","p":129,"inf":"AIO · 240mm · LCD · ARGB · premium"},
+  {"id":"cool-gigabyte-aio240","n":"Gigabyte AORUS LIQUID COOLER 240","p":99,"inf":"AIO · 240mm · LCD · ARGB"},
+  {"id":"cool-fractal-lumen240","n":"Fractal Design Lumen S24 RGB","p":89,"inf":"AIO · 240mm · 300W TDP · ARGB"},
+  {"id":"cool-ek-nucleus240","n":"EK-Nucleus AIO CR240","p":109,"inf":"AIO · 240mm · 300W TDP · EK Build Quality"},
+  {"id":"cool-thermaltake-toughliquid240","n":"Thermaltake TOUGHLIQUID Ultra 240","p":119,"inf":"AIO · 240mm · LCD · RGB · premium"},
+  {"id":"cool-antec-neptune240","n":"Antec Neptune 240 ARGB","p":69,"inf":"AIO · 240mm · 280W TDP · ARGB · budget"},
+  {"id":"cool-silverstone-permafrost240","n":"SilverStone PERMAFROST PF240W","p":79,"inf":"AIO · 240mm · 300W TDP · ARGB"},
+  {"id":"cool-arctic-240-white","n":"ARCTIC Liquid Freezer III 240 Blanc","p":79,"inf":"AIO · 240mm · 300W TDP · version blanche"},
+  {"id":"cool-lianli-galahad240","n":"Lian Li GALAHAD II Trinity 240 SL","p":129,"inf":"AIO · 240mm · LCD + ARGB · 300W TDP · premium [2024]"},
+  {"id":"cool-coolermaster-ml240r","n":"Cooler Master MasterLiquid ML240R","p":79,"inf":"AIO · 240mm · 280W TDP · ARGB dual chamber"},
+  {"id":"cool-enermax-elc240","n":"Enermax LIQMAX III ARGB 240","p":74,"inf":"AIO · 240mm · 280W TDP · ARGB"},
+
+  {"id":"g_aio_280","g":true,"n":"──── AIO Watercooling — 280mm ────"},
+  {"id":"cool-arctic-280","n":"ARCTIC Liquid Freezer III 280","p":85,"inf":"AIO · 280mm · 350W TDP · 2×140mm"},
+  {"id":"cool-arctic-280-white","n":"ARCTIC Liquid Freezer III 280 Blanc","p":89,"inf":"AIO · 280mm · 350W TDP · version blanche"},
+  {"id":"cool-be-pure-loop2-280","n":"Be Quiet! Pure Loop 2 FX 280mm","p":95,"inf":"AIO · 280mm · 320W TDP · silencieux"},
+  {"id":"cool-corsair-h115i","n":"Corsair iCUE H115i Elite LCD","p":115,"inf":"AIO · 280mm · 350W TDP · LCD · RGB"},
+  {"id":"cool-nzxt-kraken280","n":"NZXT Kraken 280","p":99,"inf":"AIO · 280mm · 320W TDP · LCD"},
+  {"id":"cool-deepcool-lt280","n":"DeepCool LT720 280","p":95,"inf":"AIO · 280mm · 320W TDP · ARGB"},
+  {"id":"cool-ek-nucleus280","n":"EK-Nucleus AIO CR280","p":129,"inf":"AIO · 280mm · 350W TDP · EK Quality"},
+  {"id":"cool-thermaltake-tl280","n":"Thermaltake TOUGHLIQUID Ultra 280","p":129,"inf":"AIO · 280mm · LCD · RGB"},
+  {"id":"cool-fractal-celsius280","n":"Fractal Design Celsius S28 Dynamic","p":109,"inf":"AIO · 280mm · 300W TDP · sans RGB · discret"},
+
+  {"id":"g_aio_360","g":true,"n":"──── AIO Watercooling — 360mm ────"},
+  {"id":"cool-arctic-360","n":"ARCTIC Liquid Freezer III 360 ⭐","p":115,"inf":"AIO · 360mm · 400W TDP — excellent Q/P AIO 360mm"},
+  {"id":"cool-arctic-360-white","n":"ARCTIC Liquid Freezer III 360 Blanc","p":119,"inf":"AIO · 360mm · 400W TDP · version blanche"},
+  {"id":"cool-thermalright-frozen360","n":"Thermalright Frozen Edge 360 ⭐","p":95,"inf":"AIO · 360mm · 400W TDP · silencieux [2024]"},
+  {"id":"cool-thermalright-aqua360","n":"Thermalright Aqua Elite 360 V3","p":109,"inf":"AIO · 360mm · LCD · ARGB [2024]"},
+  {"id":"cool-be-silent-loop3-360","n":"Be Quiet! Silent Loop 3 360mm","p":155,"inf":"AIO · 360mm · 400W TDP · silencieux absolu"},
+  {"id":"cool-be-pure-loop2-360","n":"Be Quiet! Pure Loop 2 FX 360mm","p":115,"inf":"AIO · 360mm · 400W TDP · silencieux"},
+  {"id":"cool-corsair-h150i","n":"Corsair iCUE H150i Elite LCD","p":145,"inf":"AIO · 360mm · 400W TDP · LCD · RGB"},
+  {"id":"cool-corsair-h170i","n":"Corsair iCUE H170i Elite Capellix XT","p":175,"inf":"AIO · 360mm · 400W TDP · LCD · RGB premium [2023]"},
+  {"id":"cool-nzxt-kraken360","n":"NZXT Kraken 360","p":129,"inf":"AIO · 360mm · 400W TDP · LCD"},
+  {"id":"cool-nzxt-kraken360-elite","n":"NZXT Kraken Elite 360","p":225,"inf":"AIO · 360mm · 400W TDP · grand LCD"},
+  {"id":"cool-deepcool-lt360","n":"DeepCool LT720 360","p":119,"inf":"AIO · 360mm · 400W TDP · ARGB"},
+  {"id":"cool-deepcool-ls720","n":"DeepCool LT720","p":139,"inf":"AIO · 360mm · 400W TDP · LCD · ARGB premium"},
+  {"id":"cool-asus-rog-ryujin360","n":"ASUS ROG RYUJIN III 360","p":195,"inf":"AIO · 360mm · LCD · RGB premium"},
+  {"id":"cool-asus-tuf-lc360","n":"ASUS TUF Gaming LC II 360","p":129,"inf":"AIO · 360mm · ARGB · ATX 3.0 [2024]"},
+  {"id":"cool-msi-coreliquid360r","n":"MSI MAG CoreLiquid 360R V2","p":105,"inf":"AIO · 360mm · 400W TDP · ARGB"},
+  {"id":"cool-msi-meg360","n":"MSI MEG CoreLiquid E360","p":169,"inf":"AIO · 360mm · LCD · ARGB · flagship MSI"},
+  {"id":"cool-gigabyte-aio360","n":"Gigabyte AORUS LIQUID COOLER 360","p":129,"inf":"AIO · 360mm · LCD · ARGB"},
+  {"id":"cool-fractal-lumen360","n":"Fractal Design Lumen S36 RGB","p":115,"inf":"AIO · 360mm · 400W TDP · ARGB"},
+  {"id":"cool-ek-nucleus360","n":"EK-Nucleus AIO CR360","p":149,"inf":"AIO · 360mm · 400W TDP · EK Build Quality"},
+  {"id":"cool-ek-basic360","n":"EK-Basic AIO 360","p":119,"inf":"AIO · 360mm · 400W TDP · entrée gamme EK"},
+  {"id":"cool-thermaltake-tl360","n":"Thermaltake TOUGHLIQUID Ultra 360","p":145,"inf":"AIO · 360mm · LCD · RGB"},
+  {"id":"cool-lianli-galahad360","n":"Lian Li GALAHAD II Trinity 360 SL","p":189,"inf":"AIO · 360mm · LCD + ARGB · 400W TDP · premium [2024]"},
+  {"id":"cool-coolermaster-ml360r","n":"Cooler Master MasterLiquid ML360R","p":99,"inf":"AIO · 360mm · 400W TDP · ARGB"},
+  {"id":"cool-coolermaster-ml360sub","n":"Cooler Master MasterLiquid PL360 Flux","p":129,"inf":"AIO · 360mm · 400W TDP · ARGB dual chamber"},
+  {"id":"cool-silverstone-permafrost360","n":"SilverStone PERMAFROST PF360W","p":99,"inf":"AIO · 360mm · 400W TDP · ARGB"},
+  {"id":"cool-antec-neptune360","n":"Antec Neptune 360 ARGB","p":89,"inf":"AIO · 360mm · 380W TDP · ARGB · bon Q/P"},
+  {"id":"cool-enermax-elc360","n":"Enermax LIQMAX III ARGB 360","p":99,"inf":"AIO · 360mm · 380W TDP · ARGB"},
+  {"id":"cool-phanteks-glacier360","n":"Phanteks Glacier One 360 D30","p":129,"inf":"AIO · 360mm · 400W TDP · D-RGB · silencieux"},
+  {"id":"cool-deepcool-assassin3-aio","n":"DeepCool MYSTIQUE 360","p":149,"inf":"AIO · 360mm · LCD · ARGB · premium [2024]"},
+
+  {"id":"g_aio_420","g":true,"n":"──── AIO Watercooling — 420mm ────"},
+  {"id":"cool-arctic-420","n":"ARCTIC Liquid Freezer III 420","p":145,"inf":"AIO · 420mm · 3×140mm · 500W TDP — silencieux extrême"},
+  {"id":"cool-arctic-420-white","n":"ARCTIC Liquid Freezer III 420 Blanc","p":149,"inf":"AIO · 420mm · 500W TDP · version blanche"},
+  {"id":"cool-corsair-h170i-420","n":"Corsair iCUE H170i Elite LCD 420mm","p":175,"inf":"AIO · 420mm · 3×140mm · 500W TDP · LCD · RGB"},
+  {"id":"cool-be-silent-loop3-420","n":"Be Quiet! Silent Loop 3 420mm","p":185,"inf":"AIO · 420mm · 3×140mm · 500W TDP · silencieux absolu"},
+  {"id":"cool-nzxt-kraken420","n":"NZXT Kraken 420","p":165,"inf":"AIO · 420mm · 3×140mm · 500W TDP · LCD"},
+  {"id":"cool-deepcool-lt420","n":"DeepCool LT720 420","p":149,"inf":"AIO · 420mm · 3×140mm · 500W TDP · ARGB"},
+  {"id":"cool-ek-nucleus420","n":"EK-Nucleus AIO CR420","p":199,"inf":"AIO · 420mm · 3×140mm · 500W TDP · EK Quality"},
+
+  {"id":"g_custom_loop","g":true,"n":"──── Custom Loop Watercooling ────"},
+  {"id":"cool-ek-kit240","n":"Kit Custom 240mm (EK Quantum Basic)","p":225,"inf":"Watercooling custom · 400W+ TDP · silence absolu"},
+  {"id":"cool-ek-kit360","n":"Kit Custom 360mm (EK Quantum Deluxe)","p":279,"inf":"Watercooling custom · 500W+ TDP"},
+  {"id":"cool-alphacool-eiswolf360","n":"Kit Custom 360mm (Alphacool Eiswolf 2)","p":309,"inf":"Watercooling custom · 500W+ TDP · sans compromis"},
+  {"id":"cool-ek-kit480","n":"Kit Custom 480mm (EK Pro Kit)","p":429,"inf":"Watercooling custom · 600W+ TDP · workstation"},
+  {"id":"cool-alphacool-eissturm","n":"Kit Custom 480mm (Alphacool Eissturm)","p":459,"inf":"Watercooling custom · 600W+ TDP · ultra silencieux"}
 ]
