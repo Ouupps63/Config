@@ -45,11 +45,7 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .cdd-items{overflow-y:auto;max-height:390px}
 .cdd-items::-webkit-scrollbar{width:5px}
 .cdd-items::-webkit-scrollbar-thumb{background:rgba(96,165,250,.3);border-radius:3px}
-.cdd-item{padding:6px 12px;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;color:#cbd5e1;cursor:pointer;transition:.15s;white-space:nowrap;display:flex;align-items:center;justify-content:space-between;gap:8px}
-.cdd-label{overflow:hidden;text-overflow:ellipsis}
-.cdd-photo{opacity:0;font-size:13px;text-decoration:none;flex-shrink:0;transition:.15s;cursor:pointer}
-.cdd-item:hover .cdd-photo{opacity:.85}
-.cdd-photo:hover{opacity:1!important;transform:scale(1.2)}
+.cdd-item{padding:6px 12px;font-family:'Rajdhani',Arial,sans-serif;font-size:13px;font-weight:600;color:#cbd5e1;cursor:pointer;transition:.15s;white-space:nowrap}
 .cdd-item:hover{background:rgba(59,130,246,.18);color:#fff}
 .cdd-item.selected{color:#60a5fa;background:rgba(59,130,246,.1)}
 .cdd-noresult{padding:10px 12px;font-size:12px;color:#475569;font-style:italic;text-align:center}
@@ -58,8 +54,6 @@ body{font-family:'Rajdhani',Arial,sans-serif;background:linear-gradient(-45deg,#
 .inf.w{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.4);color:#fbbf24}
 .idealo-link{display:inline-block;margin-top:5px;margin-left:4px;font-size:11px;font-weight:700;color:#4ade80;text-decoration:none;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);padding:2px 8px;border-radius:20px;transition:.2s;white-space:nowrap}
 .idealo-link:hover{background:rgba(34,197,94,.22);color:#86efac}
-.photo-link{display:inline-block;margin-top:5px;margin-left:6px;font-size:11px;font-weight:700;color:#60a5fa;text-decoration:none;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);padding:2px 8px;border-radius:20px;transition:.2s;white-space:nowrap}
-.photo-link:hover{background:rgba(59,130,246,.22);color:#93c5fd}
 
 /* ── ALERTE COMPOSANTS MANQUANTS ── */
 .config-alert{display:none;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:12px;padding:12px 16px;margin-bottom:14px}
@@ -341,10 +335,10 @@ var CATS={
 };
 
 var PR={
-  bureau:{cpu:'r3-5300g',mb:'b450-msi',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to-kf',psu:'450w-seasonic',cooling:'air-thermalright-ax90',pccase:'case-fractal-node'},
-  budget:{cpu:'r5-5600',mb:'b550-asrock',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to-wd',psu:'650w-be',cooling:'air-thermalright-paa120',pccase:'case-4000d'},
-  mid:{cpu:'r7-7800x3d',mb:'b650-msi-tom',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240-arctic',pccase:'case-meshify2c'},
-  high:{cpu:'r7-9800x3d',mb:'x670-gigabyte',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to-wd',psu:'1000w-seasonic',cooling:'aio-360-corsair',pccase:'case-o11-evo'}
+  bureau:{cpu:'r3-5300g',mb:'b450-msi-pro-vdh',ram:'16-ddr4-3200',gpu:'none',storage:'sata-1to-kf',psu:'450w-seasonic',cooling:'air-thermalright-ax90',pccase:'case-fractal-node'},
+  budget:{cpu:'r5-5600',mb:'b550-asrock-steel',ram:'32-ddr4-3600',gpu:'rtx5060',storage:'nvme3-1to-wd',psu:'650w-be',cooling:'air-thermalright-paa120',pccase:'case-4000d'},
+  mid:{cpu:'r7-7800x3d',mb:'b650-msi-tomahawk',ram:'32-ddr5-6000',gpu:'rx9070xt',storage:'gen4-1to-wd',psu:'850w-seasonic',cooling:'aio-240-arctic',pccase:'case-meshify2c'},
+  high:{cpu:'r7-9800x3d',mb:'x670-gigabyte-elite',ram:'32-ddr5-6400',gpu:'rtx5080',storage:'gen4-2to-wd',psu:'1000w-seasonic',cooling:'aio-360-corsair',pccase:'case-o11-evo'}
 };
 
 var D={};var S={};
@@ -549,13 +543,7 @@ function renderItems(wrap,items,k,trigger,sel,ft){
     }
     var item=document.createElement('div');item.className='cdd-item';
     if(S[k]===x.id)item.classList.add('selected');
-    var lbl=document.createElement('span');lbl.className='cdd-label';lbl.textContent=label;
-    item.appendChild(lbl);
-    var pbtn=document.createElement('a');pbtn.className='cdd-photo';pbtn.textContent='📷';pbtn.title='Voir les photos';
-    pbtn.href='https://www.google.com/search?tbm=isch&q='+encodeURIComponent(x.n.replace(' ⭐',''));
-    pbtn.target='_blank';pbtn.rel='noopener';
-    pbtn.addEventListener('click',function(e){e.stopPropagation();});
-    item.appendChild(pbtn);
+    item.textContent=label;
     item.addEventListener('click',function(){
       S[k]=x.id;trigger.textContent=x.n;sel.value=x.id;
       resetIncompatibles(k);
@@ -622,7 +610,7 @@ function upInf(k){
   if(!it||!it.inf){el.textContent='Aucun composant sélectionné';el.className='inf e';return;}
   el.className='inf'+(it.id&&(it.id.indexOf('ddr5')>-1||it.id.indexOf('gen5')>-1)?' w':'');
   var query=encodeURIComponent(it.n.replace(' ⭐',''));
-  el.innerHTML='<span>'+it.inf+'</span><br><a class="idealo-link" href="https://www.idealo.fr/prechcat.html?q='+query+'" target="_blank" rel="noopener">🔍 Vérifier le prix actuel</a><a class="photo-link" href="https://www.google.com/search?tbm=isch&q='+query+'" target="_blank" rel="noopener">📷 Voir photos</a>';
+  el.innerHTML='<span>'+it.inf+'</span><br><a class="idealo-link" href="https://www.idealo.fr/prechcat.html?q='+query+'" target="_blank" rel="noopener">🔍 Vérifier le prix actuel</a>';
 }
 
 /* ══ OPTIONS ══ */
